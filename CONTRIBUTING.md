@@ -1,15 +1,8 @@
 # Contribuindo
 
-Em primeiro lugar, obrigado por dedicar seu tempo para contribuir!  ❤️
+Em primeiro lugar, obrigado por dedicar seu tempo para contribuir! :hearts:
 
-Todos os tipos de contribuições são incentivados e valorizados.  Consulte o [Índice](#índice) para diferentes maneiras de ajudar e detalhes sobre como este projeto lida com elas.  Por favor, certifique-se de ler a seção relevante antes de fazer sua contribuição.  Isso tornará tudo muito mais fácil para nós, mantenedores, e facilitará a experiência para todos os envolvidos.  A comunidade aguarda suas contribuições.  🎉
-
-> [!NOTE]
-> And if you like the project, but just don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
-> - Star the project
-> - Tweet about it
-> - Refer this project in your project's readme
-> - Mention the project at local meetups and tell your friends/colleagues
+Todos os tipos de contribuições são incentivados e valorizados.  Consulte o [Índice](#índice) para diferentes maneiras de ajudar e detalhes sobre como este projeto lida com elas.  Por favor, certifique-se de ler a seção relevante antes de fazer sua contribuição.  Isso tornará tudo muito mais fácil para nós, mantenedores, e facilitará a experiência para todos os envolvidos.  A comunidade aguarda suas contribuições. :tada:
 
 
 ## Índice 
@@ -31,9 +24,13 @@ Para contribuir com este projeto, siga estes passos:
 4. Push para a branch (`git push origin feature/nome-da-feature`).
 5. Abra um Pull Request descrevendo as mudanças propostas e os problemas resolvidos.
 
+
 ## Reportando Bugs
 
-Utilize o Formulário deixado dentro da aplicação para reportar bugs.
+Se você encontrar um problema/bug com o projeto, por favor:
+- Verifique se o problema já foi reportado, antes de criar um novo.
+- Descreva claramente o problema encontrado e forneça passos para reproduzi-lo, se possível.
+- Ou utilize o formulário que está disponível na aplicação.
 
 ## Diretrizes de Contribuição
 
@@ -41,22 +38,18 @@ Utilize o Formulário deixado dentro da aplicação para reportar bugs.
 - Teste todas as mudanças feitas.
 - Documente adequadamente novas funcionalidades ou mudanças significativas no código.
 
+
 ## Fluxo de Trabalho com Pull Requests
 
 - Garanta que cada Pull Request tenha uma descrição clara do que foi feito e por quê.
 - Mantenha discussões construtivas e respeitosas durante o processo de revisão.
 
-## Reportando Problemas
-
-Se você encontrar um problema com o projeto, por favor:
-- Verifique se o problema já foi reportado, antes de criar um novo.
-- Descreva claramente o problema encontrado e forneça passos para reproduzi-lo, se possível.
 
 ## Styleguides
 
 ### Documentação do Código
 
-O código deve ser documentado utilizando JsDoc e deve possuir tags como: `@param`, `@returns`, `@example`, `@description`, caso seja necessário.
+O código deve ser documentado utilizando [JsDoc](https://jsdoc.app/) e deve possuir tags como: `@param`, `@returns`, `@example`, `@description`, caso seja necessário.
 
 ### Commit Messages
 
@@ -88,12 +81,25 @@ As mensagens de Commit seguem um padrão:
     <td>Reestruturações no código existente sem alterar seu comportamento externo.</td>
   </tr>
   <tr>
-    <td><code>chore</code></td>
-    <td>Usado para commits que envolvem tarefas administrativas ou de manutenção no projeto, como atualizações de dependências,</td>
+    <td><code>*!</code></td>
+    <td>Use '!' para indicar mudanças drásticas de qualquer tipo.</td>
   </tr>
 </table>
+
+```bash
+<type>(<scope>): <subject>
+  │       │         │
+  │       │         └─ Alterações feitas
+  │       └─ Escopo da Commit(Opcional)
+  └─ Qual tipo de commit
+
+exemplo:
+  docs: made the basis of contribution documentation
+```
+> [!TIP]
+> Caso queira conhecer mais sobre esse tipo de padrão de commit acesse o site: [Conventional Commits](https://www.conventionalcommits.org/pt-br/v1.0.0/)
+
 
 ## Agradecimentos
 
 Agradecemos antecipadamente por suas contribuições para este projeto!
-
