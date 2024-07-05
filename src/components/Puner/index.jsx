@@ -2,8 +2,8 @@ import './Puner.css';
 import { Quadro } from './quadro';
 
 export const Puner = () => {
-    let aleloPai = ['a', 'a'];
-    let aleloMae = ['a', 'A'];
+    const aleloPai = ['a', 'a'];
+    const aleloMae = ['a', 'A'];
 
     return (
         <>
