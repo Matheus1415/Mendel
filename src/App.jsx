@@ -1,15 +1,19 @@
-import * as React from 'react';
-import { useState } from 'react';
+// src/App.js
+import React, { useState } from 'react';
+import ParentInput from './components/ParentInput';
+import PunnettSquare from './components/PunnettSquare';
 import './App.css';
-import { Puner } from './components/Puner';
 
-function App() {
-  return (
-    <>
-      <h1>Ola mundo</h1>
-      <Puner />
-    </>
-  );
-}
+const App = () => {
+    const [parents, setParents] = useState([]);
+
+    return (
+        <div className="App">
+            <h1>Punnett Square Generator</h1>
+            <ParentInput setParents={setParents} />
+            <PunnettSquare parents={parents} />
+        </div>
+    );
+};
 
 export default App;
