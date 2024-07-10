@@ -1,13 +1,19 @@
 import { extendTheme } from '@chakra-ui/react';
 import { colors } from './foundations/colors.js';
 import { FontSize } from './foundations/FontSize.js';
-import { Heights } from './foundations/Heights.js';
+import { sizes } from './foundations/Sizes.js';
+import { globalStyles } from './globalStyles.js';
 
 const theme = extendTheme({
   // Configurações globais do tema
-  colors:colors,
+  colors,
   fontSizes: FontSize,
-  height: Heights,
+  sizes,
+  styles: {
+    global:{
+      ...globalStyles
+    }
+  },
 
   //configuração dos componentes
   components: {
