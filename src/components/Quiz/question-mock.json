@@ -1,0 +1,40 @@
+[
+    {
+        "question": "Favorite Naruto Character?",
+        "options": [
+            {
+                "content": "Naruto",
+                "isTheCorrect": true
+            },
+            {
+                "content": "Nagato",
+                "isTheCorrect": false
+            },
+            {
+                "content": "Sasuke",
+                "isTheCorrect": false
+            },
+            {
+                "content": "Jiraya",
+                "isTheCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Html é uma linguagem de programação?",
+        "options": [
+            {
+                "content": "Sim",
+                "isTheCorrect": true
+            },
+            {
+                "content": "Claro",
+                "isTheCorrect": false
+            },
+            {
+                "content": "Com certeza",
+                "isTheCorrect": false
+            }
+        ]
+    }
+]
