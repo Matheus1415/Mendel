@@ -4,18 +4,19 @@ import { FontSize } from './foundations/FontSize.js';
 import { sizes } from './foundations/Sizes.js';
 import { globalStyles } from './globalStyles.js';
 
+
 const theme = extendTheme({
   // Configurações globais do tema
   colors,
   fontSizes: FontSize,
   sizes,
   styles: {
-    global:{
+    global: {
       ...globalStyles
     }
   },
 
-  //configuração dos componentes
+  // Configuração dos componentes
   components: {
     Text: {
       baseStyle: {
@@ -25,11 +26,10 @@ const theme = extendTheme({
         // Variantes para o componente Text
       }
     },
-    Flex: {
+   
       
     }
-
   }
-});
+);
 
-export default extendTheme(theme);
+export default theme;
