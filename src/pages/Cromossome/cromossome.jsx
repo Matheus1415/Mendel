@@ -10,7 +10,7 @@ import { Heading,
         Stack 
 } from '@chakra-ui/react'
 import { Quiz } from '../components/Quiz'
-import questionMock from '../components/Quiz/question-mock.json'
+import questionMock from '../../components/Quiz/question-mock.json'
 
 export function Chromosomes(){
     //onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
