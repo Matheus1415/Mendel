@@ -2,8 +2,8 @@ import { Text } from "@chakra-ui/react"
 
 export const Alelos = () => {
     return(
-        <Text>
-            Ola mundo
-        </Text>
+            <Text variant="link">
+                Ola mundo
+            </Text>
     )
 }
