@@ -1,13 +1,16 @@
-// src/components/PunnettSquare.js
 import React from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 
 const PunnettSquare = ({ parents }) => {
-    if (!parents.length) return null; // Retorna null se não houver pais definidos
+    // Verifica se há exatamente 2 pais e se eles são válidos
+    if (!Array.isArray(parents) || parents.length !== 2 || !parents[0].length || !parents[1].length) {
+        return null;
+    }
 
-    const [parent1, parent2] = parents; // Destrutura o array de pais
-    const combinations = [];
+    const [parent1, parent2] = parents; // Destructuring dos pais
 
     // Gera todas as combinações possíveis de alelos entre parent1 e parent2
+    const combinations = [];
     for (let i = 0; i < parent1.length; i++) {
         for (let j = 0; j < parent2.length; j++) {
             combinations.push(`${parent1[i]}${parent2[j]}`);
@@ -27,54 +30,53 @@ const PunnettSquare = ({ parents }) => {
 
     return (
         <div>
-            <table className="punnett-square">
-                <thead>
-                    <tr>
-                        <th></th>
-                        {parent2.split('').map((allele, idx) => (
-                            <th key={idx}>{allele}</th> // Cabeçalhos da tabela com os alelos de parent2
+            <Table variant="striped" colorScheme="teal">
+                <Thead>
+                    <Tr>
+                        <Th></Th>
+                        {parent2.map((allele, idx) => (
+                            <Th key={idx}>{allele}</Th>
                         ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {parent1.split('').map((allele1, idx1) => (
-                        <tr key={idx1}>
-                            <th>{allele1}</th> {/* Célula com o alelo de parent1 */}
-                            {parent2.split('').map((allele2, idx2) => (
-                                <td key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</td>
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    {parent1.map((allele1, idx1) => (
+                        <Tr key={idx1}>
+                            <Th>{allele1}</Th>
+                            {parent2.map((allele2, idx2) => (
+                                <Td key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</Td>
                             ))}
-                        </tr>
+                        </Tr>
                     ))}
-                </tbody>
-            </table>
-            <AlleleTable alleleCounts={alleleCounts} totalCombinations={totalCombinations} /> {/* Renderiza a tabela de frequência de alelos */}
+                </Tbody>
+            </Table>
+            <AlleleTable alleleCounts={alleleCounts} totalCombinations={totalCombinations} />
         </div>
     );
 };
 
-// Componente para exibir a tabela de frequência de alelos
 const AlleleTable = ({ alleleCounts, totalCombinations }) => {
     return (
         <div>
             <h3>Allele Frequencies</h3>
-            <table className="allele-table">
-                <thead>
-                    <tr>
-                        <th>Allele</th>
-                        <th>Count</th>
-                        <th>Percentage</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Table variant="simple" colorScheme="teal">
+                <Thead>
+                    <Tr>
+                        <Th>Allele</Th>
+                        <Th>Count</Th>
+                        <Th>Percentage</Th>
+                    </Tr>
+                </Thead>
+                <Tbody>
                     {Object.entries(alleleCounts).map(([allele, count], idx) => (
-                        <tr key={idx}>
-                            <td>{allele}</td>
-                            <td>{count}</td>
-                            <td>{((count / totalCombinations) * 100).toFixed(2)}%</td> {/* Calcula e exibe a porcentagem de cada alelo */}
-                        </tr>
+                        <Tr key={idx}>
+                            <Td>{allele}</Td>
+                            <Td>{count}</Td>
+                            <Td>{((count / totalCombinations) * 100).toFixed(2)}%</Td>
+                        </Tr>
                     ))}
-                </tbody>
-            </table>
+                </Tbody>
+            </Table>
         </div>
     );
 };
