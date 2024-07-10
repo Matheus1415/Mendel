@@ -24,7 +24,11 @@ const theme = extendTheme({
       variants: {
         // Variantes para o componente Text
       }
+    },
+    Flex: {
+      
     }
+
   }
 });
 
