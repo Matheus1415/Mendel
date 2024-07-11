@@ -1,15 +1,70 @@
-import React from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
+import React, { useState, useEffect } from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box } from '@chakra-ui/react';
+import AlleleTable from '../AlleleTable'; 
 
-const PunnettSquare = ({ parents }) => {
-    // Verifica se há exatamente 2 pais e se eles são válidos
-    if (!Array.isArray(parents) || parents.length !== 2 || !parents[0].length || !parents[1].length) {
+const PunnettSquare = ({ parents, maxAlelo }) => {
+    const [isVisibleAlert, setIsVisibleAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState('');
+    const [alertStatus, setAlertStatus] = useState('error');
+    const [parentsValid, setParentsValid] = useState(false);
+
+    useEffect(() => {
+        if (Array.isArray(parents) && parents.length === 2 && parents[0].length && parents[1].length) {
+            if (parents[0].length === parents[1].length) {
+                if (parents[0].length <= maxAlelo && parents[1].length <= maxAlelo) {
+                    setParentsValid(true);
+                } else {
+                    setAlertMessage(`Ops! Parece que a quantidade de alelos ultrapassou. A quantidade máxima é ${maxAlelo}`);
+                    setAlertStatus('warning');
+                    setIsVisibleAlert(true);
+                    setParentsValid(false);
+                }
+            } else {
+                setAlertMessage('Ops! Parece que a quantidade de alelos da mãe e do pai não são iguais');
+                setAlertStatus('error');
+                setIsVisibleAlert(true);
+                setParentsValid(false);
+            }
+        } else {
+            setParentsValid(false);
+        }
+
+        if (isVisibleAlert) {
+            const timer = setTimeout(() => {
+                setIsVisibleAlert(false);
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [parents, isVisibleAlert]);
+
+    if (isVisibleAlert) {
+        return (
+            <Alert
+                maxW="400px"
+                position="fixed"
+                top="10px"
+                right="10px"
+                bg={alertStatus === 'error' ? 'red.500' : 'yellow.500'}
+                color="white"
+                padding="20px"
+                borderRadius="md"
+                boxShadow="lg"
+                zIndex="1000"
+                status={alertStatus}
+                variant='left-accent'
+            >
+                <AlertIcon />
+                {alertMessage}
+            </Alert>
+        );
+    }
+
+    if (!parentsValid) {
         return null;
     }
 
-    const [parent1, parent2] = parents; // Destructuring dos pais
+    const [parent1, parent2] = parents;
 
-    // Gera todas as combinações possíveis de alelos entre parent1 e parent2
     const combinations = [];
     for (let i = 0; i < parent1.length; i++) {
         for (let j = 0; j < parent2.length; j++) {
@@ -17,7 +72,6 @@ const PunnettSquare = ({ parents }) => {
         }
     }
 
-    // Função para contar a frequência de cada alelo nas combinações
     const countAlleles = (arr) => {
         return arr.reduce((acc, allele) => {
             acc[allele] = (acc[allele] || 0) + 1;
@@ -25,59 +79,36 @@ const PunnettSquare = ({ parents }) => {
         }, {});
     };
 
-    const alleleCounts = countAlleles(combinations); // Objeto com a contagem de cada alelo
-    const totalCombinations = combinations.length; // Número total de combinações
+    const alleleCounts = countAlleles(combinations);
+    const totalCombinations = combinations.length;
 
     return (
-        <div>
-            <Table variant="striped" colorScheme="teal">
-                <Thead>
-                    <Tr>
-                        <Th></Th>
-                        {parent2.map((allele, idx) => (
-                            <Th key={idx}>{allele}</Th>
-                        ))}
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    {parent1.map((allele1, idx1) => (
-                        <Tr key={idx1}>
-                            <Th>{allele1}</Th>
-                            {parent2.map((allele2, idx2) => (
-                                <Td key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</Td>
+        <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
+            <Box maxW="600px" mb="6">
+                <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
+                <Table border="2px" borderColor="gray.200" mb="4">
+                    <Thead>
+                        <Tr>
+                            <Th></Th>
+                            {parent2.map((allele, idx) => (
+                                <Th key={idx}>{allele}</Th>
                             ))}
                         </Tr>
-                    ))}
-                </Tbody>
-            </Table>
+                    </Thead>
+                    <Tbody>
+                        {parent1.map((allele1, idx1) => (
+                            <Tr key={idx1}>
+                                <Th>{allele1}</Th>
+                                {parent2.map((allele2, idx2) => (
+                                    <Td key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</Td>
+                                ))}
+                            </Tr>
+                        ))}
+                    </Tbody>
+                </Table>
+            </Box>
             <AlleleTable alleleCounts={alleleCounts} totalCombinations={totalCombinations} />
-        </div>
-    );
-};
-
-const AlleleTable = ({ alleleCounts, totalCombinations }) => {
-    return (
-        <div>
-            <h3>Allele Frequencies</h3>
-            <Table variant="simple" colorScheme="teal">
-                <Thead>
-                    <Tr>
-                        <Th>Allele</Th>
-                        <Th>Count</Th>
-                        <Th>Percentage</Th>
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    {Object.entries(alleleCounts).map(([allele, count], idx) => (
-                        <Tr key={idx}>
-                            <Td>{allele}</Td>
-                            <Td>{count}</Td>
-                            <Td>{((count / totalCombinations) * 100).toFixed(2)}%</Td>
-                        </Tr>
-                    ))}
-                </Tbody>
-            </Table>
-        </div>
+        </Flex>
     );
 };
 

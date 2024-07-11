@@ -18,25 +18,39 @@ const ParentInput = ({ setParents }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Flex justify="center" align="center" maxW="100%" color="Second">
-                <Box padding="10px" w="50%">
-                    <Text variant="p">Parent 1 Alleles:</Text>
-                    <Input
-                        placeholder='Enter alleles for parent 1'
-                        value={parent1}
-                        onChange={(e) => setParent1(e.target.value)}
-                    />
-                </Box>
-                <Box padding="10px" w="50%">
-                    <Text variant="p">Parent 2 Alleles:</Text>
-                    <Input
-                        placeholder='Enter alleles for parent 2'
-                        value={parent2}
-                        onChange={(e) => setParent2(e.target.value)}
-                    />
-                </Box>
+            <Flex direction="column" justify="center" align="center" maxW="100%" color="Second" justifyContent="center">
+                <Flex justify="center" align="center">
+                    <Box padding="10px" maxW="500px">
+                        <Text variant="p">Parent 1 Alleles:</Text>
+                        <Input
+                            placeholder='Enter alleles for parent 1'
+                            value={parent1}
+                            onChange={(e) => setParent1(e.target.value)}
+                        />
+                    </Box>
+                    <Box padding="10px" maxW="500px">
+                        <Text variant="p">Parent 2 Alleles:</Text>
+                        <Input
+                            placeholder='Enter alleles for parent 2'
+                            value={parent2}
+                            onChange={(e) => setParent2(e.target.value)}
+                        />
+                    </Box>
+                </Flex>
+                <Button 
+                _hover={{
+                    bg: 'Quarter'
+                }}
+                bg="Terciario" 
+                color="white" 
+                type="submit" 
+                marginTop="10px" 
+                marginBottom="40px" 
+                w="100%"
+                maxW="500px"
+            >Generate Punnett Square</Button>
+
             </Flex>
-            <Button colorScheme='purple' type="submit" marginTop="10px" marginBottom="40px" w="100%">Generate Punnett Square</Button>
         </form>
     );
 };
