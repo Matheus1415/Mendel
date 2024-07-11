@@ -1,0 +1,9 @@
+#Image_area #Image_anot{
+    display: none;
+}
+#Image_area:hover #Image_mendel{
+    display: none;
+}
+#Image_area:hover #Image_anot{
+    display: block;
+}
