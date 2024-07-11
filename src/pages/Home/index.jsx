@@ -20,7 +20,7 @@ export const Home = () => {
 
                     <Text fontSize={{ base: '3xl', md: '4xl' }} fontWeight='thin' mb={-7}>Seja bem-vindo(a) ao </Text>
 
-                    <Text fontSize={{ base: '7xl', md: '8xl' }} fontWeight='light' mb={4}>Mendel</Text>
+                    <Text fontSize={{ base: '8xl', md: '8xl' }} fontWeight='light' mb={4}>Mendel</Text>
 
                     <Text
                         fontSize='sm'
@@ -41,7 +41,7 @@ export const Home = () => {
 
                     <Image
                         src="/Dna-da-direita.png"
-                        width={{ base: "80%", md: "120%" }}  // Largura responsiva
+                        width={{ base: "85%", md: "130%" }}  // Largura responsiva
                         ml={{ base: "0", md: "-5%" }}        // Margem esquerda responsiva
                     />
 
