@@ -1,9 +1,23 @@
+#Image_area{
+    width: 500px;
+    height: 500px;
+}
+#Image_area #Image_mendel, #Image_anot{
+    margin-right: 5%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transition: opacity 0.8s ease;
+}
 #Image_area #Image_anot{
-    display: none;
+    opacity: 0;
 }
 #Image_area:hover #Image_mendel{
-    display: none;
+    opacity: 0;
 }
 #Image_area:hover #Image_anot{
-    display: block;
+    opacity: 1;
 }

@@ -1,45 +1,52 @@
-import { Heading, Flex, Text, Image, Highlight} from "@chakra-ui/react";
+import { Flex, Heading, Highlight, Image, Text  } from "@chakra-ui/react";
 import '../themes/biography.css'
+import '../themes/response.css'
 import GregorMendelImage from '../images/Gregor_Mendel.jpg'
 import GregorNotesImage from '../images/Anotacoes_Mendel.jpg'
+import { MdOpacity } from "react-icons/md";
 
 export function Biography() {
   return (
   <Flex aling="Center" direction="column">
 
-    <Heading size='4xl' marginLeft="5%">
+{/*Title*/}
+
+    <Heading size='4xl' marginLeft="5%" id="Title">
       <Highlight query='Mendel' styles={{color: "#00FF7F"}}>
         Quem foi Mendel ?
       </Highlight> 
     </Heading>
 
-    {/* conteudo da pagina */}
+{/* Pages's content */}
 
-    <Flex aling="center" direction="Row" justify='space-between' padding="24px 24px" marginTop="20px">
-        <Text fontSize= '2xl' maxWidth = {600} marginLeft="5%" textAlign='justify' marginTop="50px" fontWeight='700'> 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minima ex exercitationem eveniet quaerat ipsam distinctio obcaecati sunt ab. Omnis earum aut ipsam possimus quisquam recusandae debitis, dolor natus dolorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio exercitationem consequuntur, repellendus neque, eum ipsam tempore quod obcaecati labore accusantium asperiores assumenda eaque illum voluptatem harum in similique amet non!
+    <Flex aling="center" direction="Row" justify='space-between' padding="24px 24px" marginTop="20px" id="Container">
+        <Text fontSize= '2xl' maxWidth = {600} marginLeft="5%" textAlign='justify' aling="center" marginTop="18px" fontWeight='700' id="Bio"> 
+          Nascido no Império Austro-Húngaro (hoje República Tcheca), foi um
+          professor, botânico e prelado agostiniano, primeiro cientista a
+          modelar o conceito de hereditariedade, complementando a Teoria de
+          Charles Darwin. Nascido e criado em ambiente rural, teve sua
+          capacidade acadêmica reconhecida pelo padre local, o que levou seus
+          pais a o colocarem no colégio aos 11 anos. Seus estudos de Gymnasium
+          (escola secundária) concluídos em 1840, Mendel entrou em um programa
+          de dois anos em filosofia no Instituto Filosófico da Universidade de
+          Olmütz (Olomouc, República Tcheca), onde se destacou em física e
+          matemática, concluindo seus estudos em 1843.
         </Text>
 
-    {/*Imagem da página*/}
-    <Flex position="relative" marginRight="5%" id="Image_area">
-      <Image
-        id="Image_mendel"
-        src={GregorMendelImage}
-        alt='Imagem do Mendel'
-        boxSize='500px'
-        borderRadius='50%'
-        marginRight="5%"
-        cursor="pointer" />
+{/* Page's images */}
+        <Flex position="relative" marginRight="5%" id="Image_area" marginLeft="5%">
+          <Image
+            id="Image_mendel"
+            src={GregorMendelImage}
+            alt='Imagem do Mendel'
+            borderRadius='50%' />
 
-      <Image
-        id="Image_anot"
-        src={GregorNotesImage}
-        alt='Imagem anotações'
-        boxSize='500px'
-        marginRight="5%"
-        cursor='pointer'
-      />
-    </Flex>
+          <Image
+            id="Image_anot"
+            src={GregorNotesImage}
+            alt='Imagem anotações'/>
+
+        </Flex>
     </Flex>
   </Flex>
   )
