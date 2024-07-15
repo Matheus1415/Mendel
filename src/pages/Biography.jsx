@@ -11,7 +11,7 @@ export function Biography() {
       <Box>
         <Heading fontSize='40px' marginLeft="5%" id="Title" top='111px' left='178pxs'  fontWeight='275' lineHeight='60px'>
           <Highlight query='Biografia' styles={{color: "#00FF7F"}}>
-            BIOGRAFIA
+            biografia
           </Highlight> 
         </Heading>
         <Text fontSize={['md', '2xl', '2xl', '2xl']} w = {[300, 600]} marginLeft="5%" textAlign='justify' aling="center" marginTop="0px" fontWeight='700' id="Bio"> 
