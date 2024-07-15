@@ -4,6 +4,8 @@ import { FontSize } from './foundations/FontSize.js';
 import { sizes } from './foundations/Sizes.js';
 import { globalStyles } from './globalStyles.js';
 import { Text } from './components/TextStyle.js';
+import Radio from './components/Radio.js';
+
 const theme = extendTheme({
   // Configurações globais do tema
   colors,
@@ -18,6 +20,7 @@ const theme = extendTheme({
   //configuração dos componentes
   components: {
     Text,
+    Radio
   }
 });
 
