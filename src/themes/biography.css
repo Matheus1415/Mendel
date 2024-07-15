@@ -8,8 +8,6 @@
     left: 0;
     cursor: pointer;
     position: absolute;
-    width: 500px;
-    height: 500px;
     transition: opacity 0.8s ease;
 }
 #Image_area #Image_anot{
