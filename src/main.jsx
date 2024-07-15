@@ -3,12 +3,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import theme from './theme';
-import { RouterAsRouter } from "./router/Router";
+import {Chromosomes} from './pages/Chromosomes'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <ChakraProvider theme={theme}>
-    <RouterAsRouter />
+    <Chromosomes />
   </ChakraProvider>
 );
