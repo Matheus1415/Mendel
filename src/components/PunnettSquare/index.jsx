@@ -1,82 +1,127 @@
-// src/components/PunnettSquare.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box } from '@chakra-ui/react';
+import AlleleTable from '../AlleleTable';
 
-const PunnettSquare = ({ parents }) => {
-    if (!parents.length) return null; // Retorna null se não houver pais definidos
+const PunnettSquare = ({ parents, maxAlelo }) => {
+  const [isVisibleAlert, setIsVisibleAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+  const [alertStatus, setAlertStatus] = useState('error');
+  const [parentsValid, setParentsValid] = useState(false);
+  const [countDominant, setCountDominant] = useState(0);
+  const [countRecessive, setCountRecessive] = useState(0);
 
-    const [parent1, parent2] = parents; // Destrutura o array de pais
-    const combinations = [];
-
-    // Gera todas as combinações possíveis de alelos entre parent1 e parent2
-    for (let i = 0; i < parent1.length; i++) {
-        for (let j = 0; j < parent2.length; j++) {
-            combinations.push(`${parent1[i]}${parent2[j]}`);
+  useEffect(() => {
+    if (Array.isArray(parents) && parents.length === 2 && parents[0].length && parents[1].length) {
+      if (parents[0].length === parents[1].length) {
+        if (parents[0].length <= maxAlelo && parents[1].length <= maxAlelo) {
+          setParentsValid(true);
+          countAlleles(parents);
+        } else {
+          setAlertMessage(`Ops! Parece que a quantidade de alelos ultrapassou. A quantidade máxima é ${maxAlelo}`);
+          setAlertStatus('warning');
+          setIsVisibleAlert(true);
+          setParentsValid(false);
         }
+      } else {
+        setAlertMessage('Ops! Parece que a quantidade de alelos da mãe e do pai não são iguais');
+        setAlertStatus('error');
+        setIsVisibleAlert(true);
+        setParentsValid(false);
+      }
+    } else {
+      setParentsValid(false);
     }
 
-    // Função para contar a frequência de cada alelo nas combinações
-    const countAlleles = (arr) => {
-        return arr.reduce((acc, allele) => {
-            acc[allele] = (acc[allele] || 0) + 1;
-            return acc;
-        }, {});
-    };
+    // Desativa o alerta após 3 segundos
+    if (isVisibleAlert) {
+      const timer = setTimeout(() => {
+        setIsVisibleAlert(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [parents, isVisibleAlert]);
 
-    const alleleCounts = countAlleles(combinations); // Objeto com a contagem de cada alelo
-    const totalCombinations = combinations.length; // Número total de combinações
+  // Função para contar a frequência de cada tipo de alelo
+  const countAlleles = (parents) => {
+    const [parent1, parent2] = parents;
+    const combinations = [];
+    for (let i = 0; i < parent1.length; i++) {
+      for (let j = 0; j < parent2.length; j++) {
+        combinations.push(`${parent1[i]}${parent2[j]}`);
+      }
+    }
 
-    return (
-        <div>
-            <table className="punnett-square">
-                <thead>
-                    <tr>
-                        <th></th>
-                        {parent2.split('').map((allele, idx) => (
-                            <th key={idx}>{allele}</th> // Cabeçalhos da tabela com os alelos de parent2
-                        ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {parent1.split('').map((allele1, idx1) => (
-                        <tr key={idx1}>
-                            <th>{allele1}</th> {/* Célula com o alelo de parent1 */}
-                            {parent2.split('').map((allele2, idx2) => (
-                                <td key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            <AlleleTable alleleCounts={alleleCounts} totalCombinations={totalCombinations} /> {/* Renderiza a tabela de frequência de alelos */}
-        </div>
-    );
-};
+    let dominantCount = 0;
+    let recessiveCount = 0;
 
-// Componente para exibir a tabela de frequência de alelos
-const AlleleTable = ({ alleleCounts, totalCombinations }) => {
-    return (
-        <div>
-            <h3>Allele Frequencies</h3>
-            <table className="allele-table">
-                <thead>
-                    <tr>
-                        <th>Allele</th>
-                        <th>Count</th>
-                        <th>Percentage</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {Object.entries(alleleCounts).map(([allele, count], idx) => (
-                        <tr key={idx}>
-                            <td>{allele}</td>
-                            <td>{count}</td>
-                            <td>{((count / totalCombinations) * 100).toFixed(2)}%</td> {/* Calcula e exibe a porcentagem de cada alelo */}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
+    combinations.forEach(combination => {
+      if (isDominant(combination)) {
+        dominantCount++;
+      } else if (isRecessive(combination)) {
+        recessiveCount++;
+      }
+    });
+
+    setCountDominant(dominantCount);
+    setCountRecessive(recessiveCount);
+  };
+
+  // Função para determinar se um alelo é dominante (pelo menos uma letra maiúscula)
+  const isDominant = (allele) => /[A-Z]/.test(allele);
+
+  // Função para determinar se um alelo é recessivo (todas as letras minúsculas)
+  const isRecessive = (allele) => allele === allele.toLowerCase();
+
+  if (!parentsValid) {
+    return isVisibleAlert ? (
+      <Alert
+        maxW="400px"
+        position="fixed"
+        top="10px"
+        right="10px"
+        bg="red.500"
+        color="white"
+        padding="20px"
+        borderRadius="md"
+        boxShadow="lg"
+        zIndex="1000"
+        status='error'
+        variant='left-accent'
+      >
+        <AlertIcon />
+        {alertMessage}
+      </Alert>
+    ) : null;
+  }
+
+  return (
+    <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
+      <Box maxW="600px" mb="6">
+        <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
+        <Table border="2px" borderColor="gray.300" mb="4">
+          <Thead borderColor="gray.300">
+            <Tr borderColor="gray.300">
+              <Th border="2px" borderColor="gray.300" bg="gray.400"></Th>
+              {parents[1].map((allele, idx) => (
+                <Th border="2px" borderColor="gray.300" key={idx}>{allele}</Th>
+              ))}
+            </Tr>
+          </Thead>
+          <Tbody borderColor="gray.300">
+            {parents[0].map((allele1, idx1) => (
+              <Tr borderColor="gray.300" key={idx1}>
+                <Th border="2px" borderColor="gray.300">{allele1}</Th>
+                {parents[1].map((allele2, idx2) => (
+                  <Td border="2px" borderColor="gray.300" key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</Td>
+                ))}
+              </Tr>
+            ))}
+          </Tbody>
+        </Table>
+      </Box>
+      <AlleleTable countDominant={countDominant} countRecessive={countRecessive} />
+    </Flex>
+  );
 };
 
 export default PunnettSquare;

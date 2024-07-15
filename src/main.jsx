@@ -1,14 +1,15 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {Biography} from "./pages/Biography"
-import {Curiosities } from "./pages/Curiosities";
+import App from "./App";
+import theme from './theme';
+import { RouterAsRouter } from "./router/Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <ChakraProvider>
-    <Biography />
-    <Curiosities />
+
+  <ChakraProvider theme={theme}>
+    <RouterAsRouter />
   </ChakraProvider>
 );
