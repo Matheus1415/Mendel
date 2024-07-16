@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { CaracteristicaContext } from '../../contexts/CaracteristicaContext'; // Importe o contexto necessário
 
 // Registrar os componentes necessários do Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const AlleleTable = ({ countDominant, countRecessive, isTable = false }) => {
+const AlleleTable = ({ isTable = false }) => {
+  const {
+     countDominant, 
+     countRecessive, 
+     caracteristica,
+     backgroundColorDominant,
+     backgroundColorRecessive,
+   } = useContext(CaracteristicaContext); // Use o useContext para acessar o contexto
+
   // Convert alleleCounts to data array for PieChart
   const data = {
-    labels: ['Dominante', 'Recessivo'],
+    labels: [`Dominante | ${caracteristica[0]}`, `Recessivo | ${caracteristica[1]}`],
     datasets: [
       {
         label: 'Frequência de Alelo',
         data: [countDominant, countRecessive],
-        backgroundColor: ['#FF6384', '#36A2EB'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB']
+        backgroundColor: [backgroundColorDominant,backgroundColorRecessive],
+        hoverBackgroundColor: [backgroundColorDominant,backgroundColorRecessive]
       }
     ]
   };

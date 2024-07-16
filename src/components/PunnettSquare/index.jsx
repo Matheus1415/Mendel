@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react'; 
 import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box } from '@chakra-ui/react';
 import AlleleTable from '../AlleleTable';
+import { CaracteristicaContext } from '../../contexts/CaracteristicaContext';
 
 const PunnettSquare = ({ parents, maxAlelo }) => {
+  const {
+    countDominant,
+    setCountDominant,
+    countRecessive,
+    setCountRecessive
+  } = useContext(CaracteristicaContext);
+
   const [isVisibleAlert, setIsVisibleAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
   const [alertStatus, setAlertStatus] = useState('error');
   const [parentsValid, setParentsValid] = useState(false);
-  const [countDominant, setCountDominant] = useState(0);
-  const [countRecessive, setCountRecessive] = useState(0);
 
   useEffect(() => {
     if (Array.isArray(parents) && parents.length === 2 && parents[0].length && parents[1].length) {
@@ -39,7 +45,7 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
       }, 3000);
       return () => clearTimeout(timer);
     }
-  }, [parents, isVisibleAlert]);
+  }, [parents, isVisibleAlert, maxAlelo]);
 
   // Função para contar a frequência de cada tipo de alelo
   const countAlleles = (parents) => {
@@ -55,22 +61,17 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
     let recessiveCount = 0;
 
     combinations.forEach(combination => {
-      if (isDominant(combination)) {
+      if (/[A-Z]/.test(combination)) {
         dominantCount++;
-      } else if (isRecessive(combination)) {
+      } else {
         recessiveCount++;
       }
     });
 
+    // Atualiza os valores no contexto
     setCountDominant(dominantCount);
     setCountRecessive(recessiveCount);
   };
-
-  // Função para determinar se um alelo é dominante (pelo menos uma letra maiúscula)
-  const isDominant = (allele) => /[A-Z]/.test(allele);
-
-  // Função para determinar se um alelo é recessivo (todas as letras minúsculas)
-  const isRecessive = (allele) => allele === allele.toLowerCase();
 
   if (!parentsValid) {
     return isVisibleAlert ? (
@@ -119,7 +120,9 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
           </Tbody>
         </Table>
       </Box>
-      <AlleleTable countDominant={countDominant} countRecessive={countRecessive} />
+      <AlleleTable 
+        isTable={false}
+      />
     </Flex>
   );
 };
