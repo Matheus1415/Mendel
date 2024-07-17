@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import { Home } from '../pages/Home';
 import { Alelos } from '../pages/Alelos';
 import { Puner } from '../pages/Puner';
-import { Mendel } from '../pages/Mendel';
+import { FatorRh } from '../pages/FatorRh';
+
+
 
 export const RouterAsRouter = () => {
   return (
@@ -13,7 +15,7 @@ export const RouterAsRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/alelos" element={<Alelos />} />
         <Route path="/puner" element={<Puner />} />
-        <Route path="/fatorrh" element={<Mendel />} />
+        <Route path="/FatorRh" element={<FatorRh/>} />
       </Routes>
     </BrowserRouter>
   );
