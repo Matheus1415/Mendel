@@ -8,7 +8,9 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
     countDominant,
     setCountDominant,
     countRecessive,
-    setCountRecessive
+    setCountRecessive,
+    backgroundColorDominant,
+    backgroundColorRecessive,
   } = useContext(CaracteristicaContext);
 
   const [isVisibleAlert, setIsVisibleAlert] = useState(false);
@@ -42,7 +44,7 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
     if (isVisibleAlert) {
       const timer = setTimeout(() => {
         setIsVisibleAlert(false);
-      }, 3000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [parents, isVisibleAlert, maxAlelo]);
@@ -99,21 +101,27 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
     <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">
         <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
-        <Table border="2px" borderColor="gray.300" mb="4">
-          <Thead borderColor="gray.300">
-            <Tr borderColor="gray.300">
-              <Th border="2px" borderColor="gray.300" bg="gray.400"></Th>
+        <Table border="2px" borderColor="gray.500" mb="4">
+          <Thead borderColor="gray.500">
+            <Tr borderColor="gray.500">
+              <Th border="2px" borderColor="gray.500" bg="gray.400"></Th>
               {parents[1].map((allele, idx) => (
-                <Th border="2px" borderColor="gray.300" key={idx}>{allele}</Th>
+                <Th border="2px" borderColor="gray.500" key={idx} sx={{ textTransform: 'none' }}>
+                  {allele}
+                </Th>
               ))}
             </Tr>
           </Thead>
-          <Tbody borderColor="gray.300">
+          <Tbody borderColor="gray.500">
             {parents[0].map((allele1, idx1) => (
-              <Tr borderColor="gray.300" key={idx1}>
-                <Th border="2px" borderColor="gray.300">{allele1}</Th>
+              <Tr borderColor="gray.500" key={idx1}>
+                <Th border="2px" borderColor="gray.500" sx={{ textTransform: 'none' }} >
+                  {allele1}
+                </Th>
                 {parents[1].map((allele2, idx2) => (
-                  <Td border="2px" borderColor="gray.300" key={`${idx1}-${idx2}`}>{`${allele1}${allele2}`}</Td>
+                  <Td border="2px" borderColor="gray.500" key={`${idx1}-${idx2}`} bg={/[A-Z]/.test(`${allele1}${allele2}`)? backgroundColorDominant: backgroundColorRecessive}>
+                    {`${allele1}${allele2}`}
+                  </Td>
                 ))}
               </Tr>
             ))}

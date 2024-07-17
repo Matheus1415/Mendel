@@ -20,15 +20,17 @@ const PunnettSquareDraggable = ({ maxAlelo }) => {
         e.preventDefault();
     };
 
+    console.log(grid);
+
     return (
         <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
             <Text variant="h3" align="center">Quadro de Punnett Draggable</Text>
             <Table border="2px" borderColor="gray.300" mb="4">
                 <Thead>
                     <Tr>
-                        <Th border="2px" borderColor="gray.300" bg="gray.400"></Th>
+                        <Th border="2px" borderColor="gray.300" bg="gray.400" sx={{ textTransform: 'none' }}></Th>
                         {Array(maxAlelo).fill().map((_, idx) => (
-                            <Th key={idx} border="2px" borderColor="gray.300">B{idx + 1}</Th>
+                            <Th key={idx} border="2px" borderColor="gray.300" sx={{ textTransform: 'none' }}>B{idx + 1}</Th>
                         ))}
                     </Tr>
                 </Thead>
