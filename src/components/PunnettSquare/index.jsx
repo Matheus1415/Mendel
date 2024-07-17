@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box } from '@chakra-ui/react';
 import AlleleTable from '../AlleleTable';
 import { CaracteristicaContext } from '../../contexts/CaracteristicaContext';
+import { CheckAlleleEntry } from '../../config/checkAlleleEntry';
+import { CountAlleles } from '../../config/countAlleles';
 
 const PunnettSquare = ({ parents, maxAlelo }) => {
   const {
@@ -19,61 +21,25 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
   const [parentsValid, setParentsValid] = useState(false);
 
   useEffect(() => {
-    if (Array.isArray(parents) && parents.length === 2 && parents[0].length && parents[1].length) {
-      if (parents[0].length === parents[1].length) {
-        if (parents[0].length <= maxAlelo && parents[1].length <= maxAlelo) {
-          setParentsValid(true);
-          countAlleles(parents);
-        } else {
-          setAlertMessage(`Ops! Parece que a quantidade de alelos ultrapassou. A quantidade máxima é ${maxAlelo}`);
-          setAlertStatus('warning');
-          setIsVisibleAlert(true);
-          setParentsValid(false);
-        }
-      } else {
-        setAlertMessage('Ops! Parece que a quantidade de alelos da mãe e do pai não são iguais');
-        setAlertStatus('error');
-        setIsVisibleAlert(true);
-        setParentsValid(false);
-      }
-    } else {
-      setParentsValid(false);
-    }
+    CheckAlleleEntry(
+      parents,
+      maxAlelo,
+      setParentsValid,
+      () => CountAlleles(parents, setCountDominant, setCountRecessive),
+      setAlertMessage,
+      setAlertStatus,
+      setIsVisibleAlert,
+    );
+  }, [parents, maxAlelo]);
 
-    // Desativa o alerta após 3 segundos
+  useEffect(() => {
     if (isVisibleAlert) {
       const timer = setTimeout(() => {
         setIsVisibleAlert(false);
       }, 5000);
       return () => clearTimeout(timer);
     }
-  }, [parents, isVisibleAlert, maxAlelo]);
-
-  // Função para contar a frequência de cada tipo de alelo
-  const countAlleles = (parents) => {
-    const [parent1, parent2] = parents;
-    const combinations = [];
-    for (let i = 0; i < parent1.length; i++) {
-      for (let j = 0; j < parent2.length; j++) {
-        combinations.push(`${parent1[i]}${parent2[j]}`);
-      }
-    }
-
-    let dominantCount = 0;
-    let recessiveCount = 0;
-
-    combinations.forEach(combination => {
-      if (/[A-Z]/.test(combination)) {
-        dominantCount++;
-      } else {
-        recessiveCount++;
-      }
-    });
-
-    // Atualiza os valores no contexto
-    setCountDominant(dominantCount);
-    setCountRecessive(recessiveCount);
-  };
+  }, [isVisibleAlert]);
 
   if (!parentsValid) {
     return isVisibleAlert ? (
@@ -88,7 +54,7 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
         borderRadius="md"
         boxShadow="lg"
         zIndex="1000"
-        status='error'
+        status={alertStatus}
         variant='left-accent'
       >
         <AlertIcon />
@@ -115,11 +81,11 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
           <Tbody borderColor="gray.500">
             {parents[0].map((allele1, idx1) => (
               <Tr borderColor="gray.500" key={idx1}>
-                <Th border="2px" borderColor="gray.500" sx={{ textTransform: 'none' }} >
+                <Th border="2px" borderColor="gray.500" sx={{ textTransform: 'none' }}>
                   {allele1}
                 </Th>
                 {parents[1].map((allele2, idx2) => (
-                  <Td border="2px" borderColor="gray.500" key={`${idx1}-${idx2}`} bg={/[A-Z]/.test(`${allele1}${allele2}`)? backgroundColorDominant: backgroundColorRecessive}>
+                  <Td border="2px" borderColor="gray.500" key={`${idx1}-${idx2}`} bg={/[A-Z]/.test(`${allele1}${allele2}`) ? backgroundColorDominant : backgroundColorRecessive}>
                     {`${allele1}${allele2}`}
                   </Td>
                 ))}

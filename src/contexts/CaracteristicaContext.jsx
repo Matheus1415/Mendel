@@ -8,6 +8,8 @@ export const CaracteristicaProvider = ({ children }) => {
     const [countRecessive, setCountRecessive] = useState(0);
     const [backgroundColorRecessive, setBackgroundColorRecessive] = useState('#81ff8b');
     const [backgroundColorDominant, setBackgroundColorDominant] = useState('#ff7171');
+    const [parents, setParents] = useState([[], []]); // [motherParents, fatherParents]
+
 
     return (
         <CaracteristicaContext.Provider value={{
@@ -20,7 +22,9 @@ export const CaracteristicaProvider = ({ children }) => {
             backgroundColorRecessive,
             setBackgroundColorRecessive,
             backgroundColorDominant,
-            setBackgroundColorDominant
+            setBackgroundColorDominant,
+            parents,
+            setParents,
         }}>
             {children}
         </CaracteristicaContext.Provider>
