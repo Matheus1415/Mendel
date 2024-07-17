@@ -1,4 +1,5 @@
-import {Card, CardBody, CardHeader, Flex, Grid, Heading, Text} from '@chakra-ui/react'
+import {Card, CardBody, CardHeader, Flex, Grid, Heading, HStack, Stack, Text} from '@chakra-ui/react'
+import { VerticalBar } from './VerticalBar'
 export function Curiosities () {
 return ( 
     <Flex aling="Center" direction="column" bg='#02161F'>
@@ -7,18 +8,28 @@ return (
        </Heading>
 
         <Grid bg='#02161F' templateColumns='repeat(2, 523px)' margin='20px auto' >
-        
-                <Card maxWidth='523' bg='#02161F' >
+            <Stack>
+            <HStack spacing='24px'>
+            <VerticalBar/>
+                <Card maxWidth='523' bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='275' fontSize='25px'>
                     Abade do Mosteiro
                 </CardHeader>
                 <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                    
                     <Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
+                    
                 </CardBody>
-            </Card>
+                </Card> 
+                </HStack> 
+                </Stack>
 
+                <Stack>
+                <HStack spacing='0px'>
+                <VerticalBar/>
                 <Card maxWidth='523' bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                     Apicultor
@@ -28,9 +39,13 @@ return (
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
                 </CardBody>
-            </Card>
+                </Card>
+                </HStack> 
+                </Stack>
 
-           
+                <Stack>
+                <HStack spacing='0px'>
+                <VerticalBar/>
                 <Card maxWidth='523' bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                     Jardim do Mosteiro
@@ -40,9 +55,13 @@ return (
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
                 </CardBody>
-            </Card>
+                </Card>
+                </HStack> 
+                </Stack>
 
-            
+                <Stack>
+                <HStack spacing='0px'>
+                <VerticalBar/>
                 <Card maxWidth='523' bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                     Monge Agostiniano
@@ -52,10 +71,14 @@ return (
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
                 </CardBody>
-            </Card>
+                </Card>
+                </HStack> 
+                </Stack>
 
-            
-                <Card maxWidth='523' bg='#02161F'>
+                <Stack>
+                <HStack spacing='0px'>
+                <VerticalBar/>
+                <Card maxWidth='523' bg='#02161F' >
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                         Problemas de Saúde
                 </CardHeader>
@@ -65,8 +88,12 @@ return (
                     </Text>
                 </CardBody>
                 </Card>
+                </HStack> 
+                </Stack>
 
-            
+                <Stack>
+                <HStack spacing='0px'>
+                <VerticalBar/>
                 <Card maxWidth='523' bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                    Origem Humilde
@@ -77,6 +104,8 @@ return (
                     </Text>
                     </CardBody>
                 </Card>
+                </HStack> 
+                </Stack>
         </Grid>
     </Flex>
     )
