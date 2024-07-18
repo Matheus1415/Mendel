@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react'; 
 import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box } from '@chakra-ui/react';
 import AlleleTable from '../AlleleTable';
-import { CaracteristicaContext } from '../../contexts/CaracteristicaContext';
-import { CheckAlleleEntry } from '../../config/checkAlleleEntry';
-import { CountAlleles } from '../../config/countAlleles';
+import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
+import { CheckAlleleEntry } from '../../../config/checkAlleleEntry';
+import { CountAlleles } from '../../../config/countAlleles';
 
-const PunnettSquare = ({ parents, maxAlelo }) => {
+const PunnettSquare = () => {
   const {
     countDominant,
     setCountDominant,
@@ -13,6 +13,8 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
     setCountRecessive,
     backgroundColorDominant,
     backgroundColorRecessive,
+    parentsAlelo,
+    amountAlelo
   } = useContext(CaracteristicaContext);
 
   const [isVisibleAlert, setIsVisibleAlert] = useState(false);
@@ -22,15 +24,15 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
 
   useEffect(() => {
     CheckAlleleEntry(
-      parents,
-      maxAlelo,
+      parentsAlelo,
+      amountAlelo,
       setParentsValid,
-      () => CountAlleles(parents, setCountDominant, setCountRecessive),
+      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive),
       setAlertMessage,
       setAlertStatus,
       setIsVisibleAlert,
     );
-  }, [parents, maxAlelo]);
+  }, [parentsAlelo, amountAlelo]);
 
   useEffect(() => {
     if (isVisibleAlert) {
@@ -71,7 +73,7 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
           <Thead borderColor="gray.500">
             <Tr borderColor="gray.500">
               <Th border="2px" borderColor="gray.500" bg="gray.400"></Th>
-              {parents[1].map((allele, idx) => (
+              {parentsAlelo[1].map((allele, idx) => (
                 <Th border="2px" borderColor="gray.500" key={idx} sx={{ textTransform: 'none' }}>
                   {allele}
                 </Th>
@@ -79,12 +81,12 @@ const PunnettSquare = ({ parents, maxAlelo }) => {
             </Tr>
           </Thead>
           <Tbody borderColor="gray.500">
-            {parents[0].map((allele1, idx1) => (
+            {parentsAlelo[0].map((allele1, idx1) => (
               <Tr borderColor="gray.500" key={idx1}>
                 <Th border="2px" borderColor="gray.500" sx={{ textTransform: 'none' }}>
                   {allele1}
                 </Th>
-                {parents[1].map((allele2, idx2) => (
+                {parentsAlelo[1].map((allele2, idx2) => (
                   <Td border="2px" borderColor="gray.500" key={`${idx1}-${idx2}`} bg={/[A-Z]/.test(`${allele1}${allele2}`) ? backgroundColorDominant : backgroundColorRecessive}>
                     {`${allele1}${allele2}`}
                   </Td>
