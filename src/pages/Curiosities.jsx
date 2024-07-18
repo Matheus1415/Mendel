@@ -9,7 +9,7 @@ return (
 
         <Grid bg='#02161F' templateColumns='repeat(2, 523px)' margin='20px auto' >
             <Stack>
-            <HStack spacing='24px'>
+            <HStack>
             <VerticalBar/>
                 <Card maxWidth='523' bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='275' fontSize='25px'>
