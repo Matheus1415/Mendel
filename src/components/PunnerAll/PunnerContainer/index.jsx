@@ -8,7 +8,7 @@ export const PunerContainer = () => {
   const { setAmountAlelo } = useContext(CaracteristicaContext);
 
   useEffect(() =>{
-    setAmountAlelo(4); 
+    setAmountAlelo(2); 
   },[setAmountAlelo]);
 
   return (

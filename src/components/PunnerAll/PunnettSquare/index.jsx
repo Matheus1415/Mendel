@@ -4,6 +4,7 @@ import AlleleTable from '../AlleleTable';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { CheckAlleleEntry } from '../../../config/checkAlleleEntry';
 import { CountAlleles } from '../../../config/countAlleles';
+import PunnettTable from '../PunnerTable';
 
 const PunnettSquare = () => {
   const {
@@ -27,7 +28,7 @@ const PunnettSquare = () => {
       parentsAlelo,
       amountAlelo,
       setParentsValid,
-      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive),
+      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive, amountAlelo),
       setAlertMessage,
       setAlertStatus,
       setIsVisibleAlert,
@@ -65,36 +66,17 @@ const PunnettSquare = () => {
     ) : null;
   }
 
+
   return (
     <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">
         <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
-        <Table border="2px" borderColor="gray.500" mb="4">
-          <Thead borderColor="gray.500">
-            <Tr borderColor="gray.500">
-              <Th border="2px" borderColor="gray.500" bg="gray.400"></Th>
-              {parentsAlelo[1].map((allele, idx) => (
-                <Th border="2px" borderColor="gray.500" key={idx} sx={{ textTransform: 'none' }}>
-                  {allele}
-                </Th>
-              ))}
-            </Tr>
-          </Thead>
-          <Tbody borderColor="gray.500">
-            {parentsAlelo[0].map((allele1, idx1) => (
-              <Tr borderColor="gray.500" key={idx1}>
-                <Th border="2px" borderColor="gray.500" sx={{ textTransform: 'none' }}>
-                  {allele1}
-                </Th>
-                {parentsAlelo[1].map((allele2, idx2) => (
-                  <Td border="2px" borderColor="gray.500" key={`${idx1}-${idx2}`} bg={/[A-Z]/.test(`${allele1}${allele2}`) ? backgroundColorDominant : backgroundColorRecessive}>
-                    {`${allele1}${allele2}`}
-                  </Td>
-                ))}
-              </Tr>
-            ))}
-          </Tbody>
-        </Table>
+        <PunnettTable
+          amountAlelo={amountAlelo}
+          parentsAlelo={parentsAlelo}
+          backgroundColorDominant={backgroundColorDominant}
+          backgroundColorRecessive={backgroundColorRecessive}
+        />
       </Box>
       <AlleleTable 
         isTable={false}
