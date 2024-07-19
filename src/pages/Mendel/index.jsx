@@ -1,9 +1,9 @@
-import { Biography } from "../Biography";
-import { Curiosities } from "../Curiosities"
+import { Biography } from "../../components/MendelPage/Biography";
+import { Curiosities } from "../../components/MendelPage/Curiosities"
 
 export function Mendel(){
     return(
-        <div className="mendel" style={{backgroundColor: 'red'}}>
+        <div className="mendel">
             <Biography/>
             <Curiosities />
         </div>

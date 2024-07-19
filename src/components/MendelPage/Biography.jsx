@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Image, Text  } from "@chakra-ui/react";
-import GregorMendelImage from '../images/Gregor_Mendel.jpg'
+import { Box, Flex, Heading, Highlight, Image, Text  } from "@chakra-ui/react";
+import GregorMendelImage from '../../images/Gregor_Mendel.jpg'
+import GregorMendelAnotacoes from '../../images/Anotacoes_Mendel.jpg'
 
 export function Biography() {
   return (
@@ -13,10 +14,12 @@ export function Biography() {
           </Text> 
         </Heading>
         <Text fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
-            Nascido no Império Austro-Húngaro (hoje República Tcheca), foi um
-            professor, botânico e prelado agostiniano, primeiro cientista a
-            modelar o conceito de hereditariedade, complementando a Teoria de
-            Charles Darwin.
+          <Highlight query={'professor, botânico e prelado agostiniano'} styles={{bgGradient: 'linear(to-r, #0D606780, #19BFCD80)', bgClip: 'text'}}>
+              Nascido no Império Austro-Húngaro (hoje República Tcheca), foi um
+              professor, botânico e prelado agostiniano, primeiro cientista a
+              modelar o conceito de hereditariedade, complementando a Teoria de
+              Charles Darwin.
+            </Highlight>
         </Text>
 
         <Text  fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
@@ -43,6 +46,11 @@ export function Biography() {
       </Box>
 
 {/* Page's image */}
+        <Box 
+        marginLeft='5%'
+        position='relative'
+        sx={{}}
+        >
           <Image
             src={GregorMendelImage}
             alt='Imagem do Mendel'
@@ -50,10 +58,23 @@ export function Biography() {
             h={[346, 826]}
             borderRadius='15px'
             cursor='pointer'
-            marginLeft='5%'
             alignSelf='center'
-            justifySelf='center'/>
+            justifySelf='center'
+            position='absolute'
+            sx={{transition: ' opacity 1s ease'}}
+            _hover={{opacity: 0}}/>  
 
+          <Image
+            src={GregorMendelAnotacoes}
+            alt='Anotações do Mendel'
+            maxW={[246, 546]}
+            h={[346, 826]}
+            borderRadius='15px'
+            cursor='pointer'
+            alignSelf='center'
+            justifySelf='center'
+            position='asolute' />
+        </Box>
     </Flex>
   </Flex>
   )

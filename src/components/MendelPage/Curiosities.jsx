@@ -7,11 +7,11 @@ return (
             CURIOSIDADES SOBRE MENDEL
        </Heading>
 
-        <Grid bg='#02161F' templateColumns='repeat(2, 523px)' margin='20px auto' >
+        <Grid bg='#02161F' templateColumns={['repeat(1, 523px)', 'repeat(1, 523px)', 'repeat(1, 523px)','repeat(2, 523px)']} margin='20px auto' >
             <Stack>
             <HStack>
             <VerticalBar/>
-                <Card maxWidth='523' bg='#02161F'>
+                <Card maxWidth={['400', '523']} bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='275' fontSize='25px'>
                     Abade do Mosteiro
                 </CardHeader>
@@ -30,7 +30,7 @@ return (
                 <Stack>
                 <HStack spacing='0px'>
                 <VerticalBar/>
-                <Card maxWidth='523' bg='#02161F'>
+                <Card maxWidth={['400', '523']} bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                     Apicultor
                 </CardHeader>
@@ -46,7 +46,7 @@ return (
                 <Stack>
                 <HStack spacing='0px'>
                 <VerticalBar/>
-                <Card maxWidth='523' bg='#02161F'>
+                <Card maxWidth={['400', '523']} bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                     Jardim do Mosteiro
                 </CardHeader>
@@ -62,7 +62,7 @@ return (
                 <Stack>
                 <HStack spacing='0px'>
                 <VerticalBar/>
-                <Card maxWidth='523' bg='#02161F'>
+                <Card maxWidth={['400', '523']} bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                     Monge Agostiniano
                 </CardHeader>
@@ -78,7 +78,7 @@ return (
                 <Stack>
                 <HStack spacing='0px'>
                 <VerticalBar/>
-                <Card maxWidth='523' bg='#02161F' >
+                <Card maxWidth={['400', '523']} bg='#02161F' >
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                         Problemas de Saúde
                 </CardHeader>
@@ -94,7 +94,7 @@ return (
                 <Stack>
                 <HStack spacing='0px'>
                 <VerticalBar/>
-                <Card maxWidth='523' bg='#02161F'>
+                <Card maxWidth={['400', '523']} bg='#02161F'>
                 <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
                    Origem Humilde
                 </CardHeader>
