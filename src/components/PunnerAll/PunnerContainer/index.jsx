@@ -4,17 +4,20 @@ import PunnettSquare from '../PunnettSquare';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { ParentInput } from '../ParentInput';
 
-export const PunerContainer = () => {
-  const { setAmountAlelo } = useContext(CaracteristicaContext);
+export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => {
+  const { setAmountAlelo,setParentsAlelo } = useContext(CaracteristicaContext);
 
   useEffect(() =>{
     setAmountAlelo(2); 
+    if(configAlelo.length > 0) {
+      setParentsAlelo(configAlelo)
+    }
   },[setAmountAlelo]);
 
   return (
       <Container maxW="100%">
-        <Text variant="h3" align="center">Quadro de Punner </Text>
-        <ParentInput />
+        {title &&<Text variant="h3" align="center">{title}</Text>}
+        {inputTrue && <ParentInput /> }
         <PunnettSquare />
       </Container>
   );
