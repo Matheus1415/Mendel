@@ -6,10 +6,10 @@ export function Biography() {
   return (
   <Flex aling="Center" direction="column" bg='#02161F' w='100%' height='100%'>
 
-    <Flex aling="center" direction={["column-reverse", "row"]} justify={['start', 'space-between']} padding="24px 24px" marginTop={['10px', '20px']} margin='0 auto'>
+    <Flex aling="center" direction={["column-reverse", "column-reverse", "column-reverse", "column-reverse", "row" ]} justify={'space-between'} padding="24px 24px" marginTop={['10px', '20px']} margin='0 auto'>
       <Box as="div">
         <Heading top='111px' left='178px'  fontWeight='275' lineHeight='60px' w='216px' h='60px'>
-          <Text fontSize={{base:'30px', md:'40px', lg:'40px'}} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
+          <Text fontSize={{base:'30px', sm:'40px', md:'40px', lg:'40px'}} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
             BIOGRAFIA
           </Text> 
         </Heading>
@@ -49,26 +49,26 @@ export function Biography() {
         <Box 
         marginLeft='5%'
         position='relative'
-        sx={{}}
+        maxW='646px'
         >
           <Image
             src={GregorMendelImage}
             alt='Imagem do Mendel'
-            maxW={[246, 546]}
-            h={[346, 826]}
+            w={[246, 546]}
+            h={[346, 346, 646, 826]}
             borderRadius='15px'
             cursor='pointer'
             alignSelf='center'
             justifySelf='center'
             position='absolute'
-            sx={{transition: ' opacity 1s ease'}}
+            sx={{transition: ' opacity 0.8s ease'}}
             _hover={{opacity: 0}}/>  
 
           <Image
             src={GregorMendelAnotacoes}
             alt='Anotações do Mendel'
-            maxW={[246, 546]}
-            h={[346, 826]}
+            w={[246, 546]}
+            h={[346, 346, 646, 826]}
             borderRadius='15px'
             cursor='pointer'
             alignSelf='center'
