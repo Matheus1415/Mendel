@@ -1,41 +1,5 @@
 [
     {
-        "question": "multiplos itens?",
-        "questionType": "MultipleItems",
-        "options": [
-            {
-                "content": "Sim",
-                "isCorrect": true
-            },
-            {
-                "content": "Claro",
-                "isCorrect": false
-            },
-            {
-                "content": "Com certeza",
-                "isCorrect": true
-            }
-        ]
-    },
-    {
-        "question": "Html é uma linguagem de programação?",
-        "questionType": "UniqueItem",
-        "options": [
-            {
-                "content": "Sim",
-                "isCorrect": true
-            },
-            {
-                "content": "Claro",
-                "isCorrect": false
-            },
-            {
-                "content": "Com certeza",
-                "isCorrect": false
-            }
-        ]
-    },
-    {
         "question": "No heredograma, os símbolos preenchidos representam pessoas portadoras de um tipo raro de doença genética. Os homens são representados pelos quadrados e as mulheres, pelos círculos. Qual é o padrão de herança observado para essa doença?",
         "image": "/assets/image-25.webp",
         "questionType": "UniqueItem",
@@ -86,7 +50,7 @@
         ]
     },
     {
-        "question": "multiplos itens?",
+        "question": "ultima questão?",
         "questionType": "MultipleItems",
         "options": [
             {
