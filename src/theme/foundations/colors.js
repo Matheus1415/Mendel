@@ -5,5 +5,6 @@ export const colors = {
     'Quarter': "#101618",
     'Fifth': "#02242E",
     'Sixth': "#02161F",
-    'Gradiente':'linear-gradient(to top, #19BFCD 0%, #0D6067 100%)'
+    'Gradiente':'linear-gradient(to right, #19BFCD 10%, #0D6067 80%)',
+    "Dark": 'linear-gradient(to right, #02242E 0%, #01414C 100%)'
 }
