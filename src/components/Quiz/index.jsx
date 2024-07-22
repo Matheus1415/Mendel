@@ -17,7 +17,6 @@ import {
  } from '@chakra-ui/react'
  import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { submitForm } from '../../config/submitForm.js'
 
 /**
  * 
