@@ -5,6 +5,9 @@ import { sizes } from './foundations/Sizes.js';
 import { globalStyles } from './globalStyles.js';
 import { Text } from './components/TextStyle.js';
 import Radio from './components/Radio.js';
+import Checkbox from './components/Checkbox.js';
+import { Button } from './components/Button.js';
+import { Heading } from './components/Heading.js';
 
 const theme = extendTheme({
   // Configurações globais do tema
@@ -20,7 +23,10 @@ const theme = extendTheme({
   //configuração dos componentes
   components: {
     Text,
-    Radio
+    Radio,
+    Checkbox,
+    Button,
+    Heading
   }
 });
 
