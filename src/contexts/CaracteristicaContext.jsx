@@ -11,7 +11,7 @@ export const CaracteristicaProvider = ({ children }) => {
     const [backgroundColorRecessive, setBackgroundColorRecessive] = useState('#81ff8b');
     const [backgroundColorDominant, setBackgroundColorDominant] = useState('#ff7171');
     const [parentsAlelo, setParentsAlelo] = useState([[], []]); 
-
+    //Adicionar um comparador de alelos
 
 
     return (

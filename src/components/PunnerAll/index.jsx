@@ -4,6 +4,7 @@ import { PunerContainer } from './PunnerContainer';
 
 export const PunerAll = ({title,configAlelo,inputTrue}) => {
 
+
   return (
     <CaracteristicaProvider>
       <PunerContainer title={title} configAlelo={configAlelo} inputTrue={inputTrue}/>
