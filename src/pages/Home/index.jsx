@@ -1,7 +1,12 @@
-import { Flex, Box, Text, useBreakpointValue, Button } from "@chakra-ui/react";
+import { Flex, Box, Text, useBreakpointValue, Button, Image } from "@chakra-ui/react";
 import { MenuMendel } from "../../components/Menu";
 import contentHome from "../../data/contentHome.json";
 import VLibras from "@djpfs/react-vlibras";
+import { IoBookOutline } from 'react-icons/io5';
+import { GoDatabase } from 'react-icons/go';
+import { PiMicroscope } from 'react-icons/pi';
+import { MdOutlineSlowMotionVideo } from 'react-icons/md';
+import FormHome from "../../components/FormHome";
 
 export const Home = () => {
     const flexDirection = useBreakpointValue({ sm: "column", md: "row" });
@@ -13,10 +18,16 @@ export const Home = () => {
     const bemVindofontSize = useBreakpointValue({ base: "25px", md: "50px" });
     const mendelfontSize = useBreakpointValue({ base: "60px", md: "150px" });
     const maxHBox = useBreakpointValue({ mb: "100%", lg: "1000px" });
+    const WFlexServico = useBreakpointValue({ mb: "100%", lg: "250px" });
+    const HServico = useBreakpointValue({ md: "100%", lg: "300px" });
+    const HContato = useBreakpointValue({ sm: "100%", mb: "900px" });
+    const HContatoContainer = useBreakpointValue({ sm: "900px", mb: "600px" });
+    const WContato = useBreakpointValue({ sm: "100%", mb: "50%" });
+
 
     return (
         <>
-            <Flex w="100%" bg="#02161F">
+            <Flex w="100%" bg="#02161F">    
                 <VLibras />
                 <Flex direction="column" w="100%">
                     <MenuMendel />
@@ -97,7 +108,7 @@ export const Home = () => {
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                                 </Text>
                                 <Button
-                                    bg="Gradiente" 
+                                    bg="Dark" 
                                     color="white"
                                     marginTop={10}
                                     w={160}
@@ -137,7 +148,7 @@ export const Home = () => {
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                                 </Text>
                                 <Button
-                                    bg="Gradiente" 
+                                    bg="Dark" 
                                     color="white"
                                     marginTop={10}
                                     w={160}
@@ -152,33 +163,136 @@ export const Home = () => {
                                 </Button>
                             </Box>
 
-                            <Flex p={10} w="100%" maxW={WintroducaoBox} wrap="wrap" align="center" direction={flexDirection} align="center">
+                            <Flex p={10} w="100%" maxW={WintroducaoBox} wrap="wrap" align="center" direction={flexDirection}>
                                 <Flex direction="row" wrap="wrap" justify={flexDirection} align="center" justifyContent="center">
-                                    <Box maxW="50%" maxW="300px">
-                                        <img src="/public/pgHome/img50.png" alt="" />
-                                    </Box>
-                                    <Box maxW="25%" maxW="128px">
-                                        <img src="/public/pgHome/img25.png" alt="" />
-                                    </Box>
-                                    <Box maxW="25%" maxW="150px">
-                                        <img src="/public/pgHome/img25_1.png" alt="" />
-                                    </Box>
+                                    <Image w="50%" maxW="250px" src='/public/pgHome/img50.png' alt='Fundo azul brilhante' />
+                                    <Image w="25%" maxW="118px" src='/public/pgHome/img25.png' alt='Olho azul' />
+                                    <Image w="25%" maxW="160px" src='/public/pgHome/img25_1.png' alt='fundo azul com genese' />
                                 </Flex>
 
                                 <Flex direction="row" wrap="wrap" justify={flexDirection} align="center" justifyContent="center">
-                                    <Box maxW="25%" maxW="128px">
-                                        <img src="/public/pgHome/img25_222.png" alt="" />
-                                    </Box>
-                                    <Box maxW="25%" maxW="150px">
-                                        <img src="/public/pgHome/img25_2.png" alt="" />
-                                    </Box>
-                                    <Box maxW="50%" maxW="300px">
-                                        <img src="/public/pgHome/img50_2.png" alt="" />
-                                    </Box>
+                                    <Image w="25%" maxW="118px" src='/public/pgHome/img25_222.png' alt='Fundo azul brilhante' />
+                                    <Image w="25%" maxW="178px" src='/public/pgHome/img25_2.png' alt='Olho azul' />
+                                    <Image w="50%" maxW="250px" src='/public/pgHome/img50_2.png' alt='fundo azul com genese' />
                                 </Flex>
                             </Flex>
                         </Flex>
                     </Box>
+
+                    <Box
+                        bgImage="url('/pgHome/Background_s/4_Servicos.png')" 
+                        w="100%" 
+                        bgPosition="left center"
+                        bgRepeat="no-repeat"
+                        bgSize="cover"
+                        p={10}
+                        h={HServico}
+                    >
+                        <Flex w="100%" direction={flexDirection} gap={5} color="white" align="center" justifyContent="space-between">
+                            <Flex w="100%" maxW={WFlexServico} h={200} p={10} borderRadius={20} bg="#06384485" justifyContent="center" align="center" direction="column" textAlign="center">
+                                <IoBookOutline fontSize={60}/>
+                                <Text fontSize={16}>MATERIAIS DE ALTA QUALIDADE</Text>
+                            </Flex>
+                            <Flex w="100%" maxW={WFlexServico} h={200} p={10} borderRadius={20} bg="#06384485" justifyContent="center" align="center" direction="column">
+                                <GoDatabase fontSize={60}/>
+                                <Text fontSize={16}>BANCO DE DADOS DE QUESTÕES</Text>
+                            </Flex>
+                            <Flex w="100%" maxW={WFlexServico} h={200} p={10} borderRadius={20} bg="#06384485" justifyContent="center" align="center" direction="column">
+                                <PiMicroscope fontSize={60}/>
+                                <Text fontSize={16}>FERRAMENTAS INTERATIVAS</Text>
+                            </Flex>
+                            <Flex w="100%" maxW={WFlexServico} h={200} p={10} borderRadius={20} bg="#06384485" justifyContent="center" align="center" direction="column">
+                                <MdOutlineSlowMotionVideo fontSize={60}/>
+                                <Text fontSize={16}>TUTORIAIS E GUIAS DE ESTUDO</Text>
+                            </Flex>
+                        </Flex>
+                    </Box>
+
+                    <Flex 
+                        p={30}
+                        color="white"
+                        textAlign="center"
+                        direction="column"
+                        align="center"
+                        justifyContent="center"
+                        gap={6}
+                    >
+                        <Text
+                            fontSize={40}
+                        >DOMINE A GENÉTICA NA <br /> PRÁTICA E  NA TEORIA</Text>
+                        <Text
+                            maxW={800}
+                            fontSize={16}
+                        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus similique sed eos fugit nostrum ducimus iure eveniet animi, vero corporis laboriosam dolore, aliquam nam voluptatem assumenda necessitatibus, sunt expedita atque.</Text>
+                        <Flex wrap="wrap" direction={flexDirection} align="center" justifyContent="center" gap={10}>
+                            <Box w="50%" maxW="500">
+                                <img src="/pgHome/5_Atividades.png" alt="" />
+                            </Box>
+                            <Box w="50%" maxW="500">
+                                <img src="/pgHome/6_Atividade.png" alt="" />
+                            </Box>
+                        </Flex>
+                        <Button
+                            bg="Dark" 
+                            color="white"
+                            marginTop={10}
+                            w={260}
+                            fontWeight={300}
+                            _hover={{
+                                bg: "#0D6067", 
+                                transform: "scale(1.05)",
+                                boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" 
+                            }}
+                        >
+                            PRATIQUE
+                        </Button>
+                    </Flex>
+
+                    <Flex
+                        bgImage="url('/pgHome/Background_s/6_Contato.png')" 
+                        w="100%" 
+                        bgPosition="left center"
+                        bgRepeat="no-repeat"
+                        bgSize="cover"
+                        p={10}
+                        h={HContato}
+                        maxH={1000}
+                        align="center"
+                        justify="center"
+                    >
+                        <Flex
+                            bg="MediumGradiente"
+                            p={10}
+                            width="100%"
+                            maxW={2000}
+                            h={HContatoContainer}
+                            borderRadius={20}
+                            gap={10}
+                            direction={flexDirection}
+                            maxH={700}
+                        >
+                            <Box w="100%" maxW={WContato} >
+                                <FormHome /> 
+                            </Box>
+                            <Flex 
+                                bgImage="url('/pgHome/6_Contato.png')" 
+                                w="100%" 
+                                maxW={WContato}
+                                bgPosition="left center"
+                                bgRepeat="no-repeat"
+                                bgSize="cover"
+                                p={10}
+                                color="white"
+                                fontSize={18}
+                                align="flex-end"
+                                borderRadius={10}
+                                maxH={620}
+                            >
+                                <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus ex asperiores alias officia excepturi distinctio adipisci quis repellat. Explicabo voluptatibus rerum et a. Nemo neque voluptas similique beatae dolore?</Text>
+                            </Flex>
+                        </Flex>
+                    </Flex>
+
                 </Flex>
             </Flex>
         </>
