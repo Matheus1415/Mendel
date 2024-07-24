@@ -1,19 +1,19 @@
 import { Box, Flex, Heading, Highlight, Image, Text  } from "@chakra-ui/react";
-import GregorMendelImage from '../../images/Gregor_Mendel.jpg'
 import GregorMendelAnotacoes from '../../images/Anotacoes_Mendel.jpg'
+import {MainImage} from '../../components/MendelPage/MainImage'
 
 export function Biography() {
   return (
   <Flex aling="Center" direction="column" bg='#02161F' w='100%' height='100%'>
 
-    <Flex aling="center" direction={["column-reverse", "column-reverse", "column-reverse", "column-reverse", "row" ]} justify={'space-between'} padding="24px 24px" marginTop={['10px', '20px']} margin='0 auto'>
+    <Flex aling="center" direction={["column-reverse", "column-reverse", "column-reverse", "column-reverse", "row" ]} padding="24px 24px" margin='0 auto'>
       <Box as="div">
-        <Heading top='111px' left='178px'  fontWeight='275' lineHeight='60px' w='216px' h='60px'>
-          <Text fontSize={{base:'30px', sm:'40px', md:'40px', lg:'40px'}} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
+        <Heading top='111px' left='178px' fontWeight='275' lineHeight='60px' w='216px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
+          <Text fontSize='40px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
             BIOGRAFIA
           </Text> 
         </Heading>
-        <Text fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        <Text fontSize={{base:'13px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginTop='20px' marginBottom='10px'>
           <Highlight query={'professor, botânico e prelado agostiniano'} styles={{bgGradient: 'linear(to-r, #0D606780, #19BFCD80)', bgClip: 'text'}}>
               Nascido no Império Austro-Húngaro (hoje República Tcheca), foi um
               professor, botânico e prelado agostiniano, primeiro cientista a
@@ -22,7 +22,7 @@ export function Biography() {
             </Highlight>
         </Text>
 
-        <Text  fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        <Text  fontSize={{base:'13px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
           Nascido e criado em ambiente rural, teve sua
           capacidade acadêmica reconhecida pelo padre local, o que levou seus
           pais a o colocarem no colégio aos 11 anos. Seus estudos de Gymnasium
@@ -32,48 +32,41 @@ export function Biography() {
           matemática, concluindo seus estudos em 1843.
         </Text>
 
-        <Text  fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        <Text  fontSize={{base:'13px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veniam facere at, atque velit tempore neque qui iste eveniet reiciendis repudiandae maiores id nobis culpa. Voluptas, ab. Odit, obcaecati reprehenderit!
         </Text>
 
-        <Text fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]}textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        <Text fontSize={{base:'13px', md:'17px', lg:'17px'}} w = {[300, 600]}textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </Text>
 
-        <Text  fontSize={{base:'12px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur praesentium ratione voluptatum accusamus animi et. Consequatur quaerat eius commodi error mollitia illum reprehenderit maiores possimus sunt, omnis eos, exercitationem quidem.
+        <Text  fontSize={{base:'13px', md:'17px', lg:'17px'}} w = {[300, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur praesentium ratione voluptatum accusamus animi et. Consequatur quaerat eius commodi error mollitia.
         </Text>
       </Box>
 
 {/* Page's image */}
         <Box 
+        as="section"
         marginLeft='5%'
         position='relative'
-        maxW='646px'
+        display='flex'
+        justifyContent='center'
+        alignItems='center'
+        marginTop={['35px', '0px']}
         >
-          <Image
-            src={GregorMendelImage}
-            alt='Imagem do Mendel'
-            w={[246, 546]}
-            h={[346, 346, 646, 826]}
-            borderRadius='15px'
-            cursor='pointer'
-            alignSelf='center'
-            justifySelf='center'
-            position='absolute'
-            sx={{transition: ' opacity 0.8s ease'}}
-            _hover={{opacity: 0}}/>  
+        
+          
+        <MainImage />
 
           <Image
             src={GregorMendelAnotacoes}
             alt='Anotações do Mendel'
-            w={[246, 546]}
-            h={[346, 346, 646, 826]}
+            w={[246, 246, 510, 500, 552]}
+            h={[346, 346, 590, 646, 780]}
+            marginTop='20px'
             borderRadius='15px'
-            cursor='pointer'
-            alignSelf='center'
-            justifySelf='center'
-            position='asolute' />
+            cursor='pointer' />
         </Box>
     </Flex>
   </Flex>

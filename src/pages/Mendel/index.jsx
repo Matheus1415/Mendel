@@ -1,11 +1,10 @@
+import { Box } from '@chakra-ui/react'
 import { Biography } from "../../components/MendelPage/Biography";
-import { Curiosities } from "../../components/MendelPage/Curiosities"
 
 export function Mendel(){
     return(
-        <div className="mendel">
-            <Biography/>
-            <Curiosities />
-        </div>
+            <Box bg='#02161F'>
+                <Biography />
+            </Box>
     )
 }
