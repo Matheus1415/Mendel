@@ -1,13 +1,13 @@
-import { Box, Flex, Heading, Highlight, Image, Text  } from "@chakra-ui/react";
-import GregorMendelAnotacoes from '../../images/Anotacoes_Mendel.jpg'
+import { Box, Flex, Heading, Highlight, Text, useBreakpointValue } from "@chakra-ui/react";
 import {MainImage} from '../../components/MendelPage/MainImage'
 
 export function Biography() {
+  const flexDirection = useBreakpointValue({base: 'column-reverse', sm: 'column-reverse', md: 'column-reverse', lg: 'column-reverse', xl: 'row', '2xl':'row'})
   return (
   <Flex aling="Center" direction="column" bg='#02161F' w='100%' height='100%'>
 
-    <Flex aling="center" direction={["column-reverse", "column-reverse", "column-reverse", "column-reverse", "row" ]} padding="24px 24px" margin='0 auto'>
-      <Box as="div">
+    <Flex aling="center" direction={flexDirection} padding="24px 24px" margin='0 auto'>
+      <Box >
         <Heading top='111px' left='178px' fontWeight='275' lineHeight='60px' w='216px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
           <Text fontSize='40px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
             BIOGRAFIA
@@ -47,26 +47,15 @@ export function Biography() {
 
 {/* Page's image */}
         <Box 
-        as="section"
-        marginLeft='5%'
-        position='relative'
+        w={[240, 240, 510, 500, 552]}
+        h={[346, 346, 590, 646, 800]}
         display='flex'
-        justifyContent='center'
-        alignItems='center'
-        marginTop={['35px', '0px']}
-        >
-        
-          
+        alignSelf='center'
+        justifySelf='center'
+        marginLeft='5%'
+        marginBottom='50px'
+        >  
         <MainImage />
-
-          <Image
-            src={GregorMendelAnotacoes}
-            alt='Anotações do Mendel'
-            w={[246, 246, 510, 500, 552]}
-            h={[346, 346, 590, 646, 780]}
-            marginTop='20px'
-            borderRadius='15px'
-            cursor='pointer' />
         </Box>
     </Flex>
   </Flex>
