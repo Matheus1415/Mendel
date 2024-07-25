@@ -11,13 +11,6 @@ export const MenuMendel = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    /*
-        Base: Até 768px
-        Sm: 768px a 992px
-        Md: 992px a 1280px
-        Lg: 1280px a 1536px
-        Xl: 1536px e acima
-    */
 
     return (
         <>

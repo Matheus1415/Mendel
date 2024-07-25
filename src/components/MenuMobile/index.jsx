@@ -18,6 +18,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
             top={0}
             left={0}
             zIndex={10}
+            borderRadius={15}
         >
             <IconButton 
                 icon={<FaBars />} 

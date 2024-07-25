@@ -7,6 +7,9 @@ import { GoDatabase } from 'react-icons/go';
 import { PiMicroscope } from 'react-icons/pi';
 import { MdOutlineSlowMotionVideo } from 'react-icons/md';
 import FormHome from "../../components/FormHome";
+import { Link } from "react-router-dom";
+import SlideShow from "../../components/SlideShow";
+import menbros from '../../data/menbros.json';
 
 export const Home = () => {
     const flexDirection = useBreakpointValue({ sm: "column", md: "row" });
@@ -261,7 +264,7 @@ export const Home = () => {
                         justify="center"
                     >
                         <Flex
-                            bg="MediumGradiente"
+                            bg="#00000034"
                             p={10}
                             width="100%"
                             maxW={2000}
@@ -286,11 +289,31 @@ export const Home = () => {
                                 fontSize={18}
                                 align="flex-end"
                                 borderRadius={10}
-                                maxH={620}
+                                maxH={520}
                             >
                                 <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus ex asperiores alias officia excepturi distinctio adipisci quis repellat. Explicabo voluptatibus rerum et a. Nemo neque voluptas similique beatae dolore?</Text>
                             </Flex>
                         </Flex>
+                    </Flex>
+
+                    <SlideShow members={menbros}/>
+
+                    <Flex direction="column" align="center" justifyContent="center" w="100%" minH="20px" p={10} color="white" gap={5}>
+                        <Text fontSize={50}>LOGO</Text>
+                        <Flex gap={10} direction={flexDirection}>
+                            <Link to="/">Home</Link>
+                            <Link>Atividade</Link>
+                            <Link to="/manutencao">Conteúdo</Link>
+                            <Link to="/manutencao">Duvidade</Link>
+                            <Link to="/manutencao">Informação</Link>
+                        </Flex>
+                    </Flex>
+                    <Flex direction="column" w="100%"color="white" padding={20}>
+                        <Box borderTop="2px solid white" width="100%" marginBottom={4}></Box>
+                        <Flex justifyContent="space-between"direction={flexDirection} gap={5}>
+                        <Text fontSize={17}>email_exemplo@gmail.com</Text>
+                        <Text fontSize={17}>© Mendel – Todos os direitos reservados</Text>     
+                        </Flex> 
                     </Flex>
 
                 </Flex>
