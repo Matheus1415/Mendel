@@ -2,22 +2,14 @@ import { Flex, Text, Container, Box, Image } from "@chakra-ui/react"
 export const FatorRh = () => {
     return(
         <Flex>
-           <Container maxWidth='4x1'>
-                <Box as="section" mb='20px'>
-                    <Text variant='h2' textAlign='center'>Fator Rh</Text>
-                    <Text variant='p' textAlign='justify'>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo magni natus, repudiandae reprehenderit hic quibusdam, eum inventore iusto assumenda minus odio accusantium ratione. Cum tempore iste sapiente reprehenderit nisi officiis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, earum alias! Sapiente pariatur vitae ratione consequuntur debitis, rerum fugiat quisquam molestiae reprehenderit harum itaque alias, impedit quos vel enim assumenda.
-                    </Text>
+           <Container maxWidth='4x1' >
+                <Box as="section" h='150px'>
+                    <Text variant='h1' textAlign='center' color='Terciario'>Fator RH</Text>
                 </Box>
-                <Text variant='h2' textAlign='center' mb='10px'>Video sobre Fator Rh</Text>
-                <Flex justify='space-between'>
-                    <Box id="video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DhndJ4R5GwA?si=0XeurXPyU1ppsV0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </Box>
-                    <Box id="image">
-                        <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-                    </Box>
-                </Flex>
+                <Box as="section">
+                    <Text variant='h3' textAlign='right' color='Terciario'>O que é fator Rh?</Text>
+                    <Text variant='p' textAlign='justify' marginRight='0' marginLeft='auto'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas nihil consectetur fugit sequi quam doloribus, velit facere quo ratione culpa esse ea odio minima architecto pariatur fugiat asperiores odit neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit saepe repellendus quam amet adipisci magnam autem alias! Natus, quam at molestias rerum amet deserunt mollitia distinctio deleniti? Adipisci, reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati accusantium, laborum harum enim sapiente et unde iure est ullam deleniti quisquam impedit ducimus nesciunt, accusamus id veniam a dolore?</Text>
+                </Box>
            </Container>
         </Flex>
     )
