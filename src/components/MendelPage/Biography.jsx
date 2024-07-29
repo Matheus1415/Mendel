@@ -5,8 +5,7 @@ export function Biography() {
 
   const flexDirection = useBreakpointValue({base: 'column-reverse', sm: 'column-reverse', md: 'column-reverse', lg: 'column-reverse', xl: 'row', '2xl':'row'})
   const marginTitle = useBreakpointValue({sm: '0px', md:'0px', lg:'20px'})
-  const titleSize = useBreakpointValue({base: '40px', sm: '40px', md: '40px', lg: '40px'})
-  const textSize = useBreakpointValue({base:'13px', md:'17px', lg:'17px'})  
+  const textSize = useBreakpointValue({base:'13px', sm:'17px', md:'17px', lg:'17px'}) 
 
   return (
   <Flex aling="Center" direction="column" bg='#02161F' w='100%' height='100%'>
@@ -15,7 +14,7 @@ export function Biography() {
       <Box marginTop={marginTitle}>
         
         <Heading top='111px' left='178px' fontWeight='275' lineHeight='60px' w='216px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
-          <Text fontSize={titleSize} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
+          <Text fontSize='40px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
             BIOGRAFIA
           </Text> 
         </Heading>
@@ -54,7 +53,7 @@ export function Biography() {
 
 {/* Page's image */}
         <Box 
-        w={[240, 240, 510, 500, 552]}
+        w={[240, 240, 500, 500, 552]}
         h={[346, 346, 590, 646, 800]}
         display='flex'
         alignSelf='center'
