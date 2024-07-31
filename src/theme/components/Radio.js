@@ -6,6 +6,9 @@ const { definePartsStyle, defineMultiStyleConfig } =
 // see in documentation about anatomy
 const baseStyle = definePartsStyle({
   // define the part you're going to style
+  control: {
+    borderColor: 'Terciario'
+  },
   label: {
       textAlign: 'left', // from the anatomy of the Radio component, I style your label
       w: 'full'
