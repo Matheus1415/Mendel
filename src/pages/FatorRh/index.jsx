@@ -5,7 +5,7 @@ export const FatorRh = () => {
         <Container maxWidth="4x1">
             <Rhesus />
         </Container>
-        
+       
     );
 }
 
