@@ -6,17 +6,14 @@ import {
     Text,
     Badge,
     Image,
-    FormControl,
-    FormLabel,
-    Input,
-    Checkbox,
-    Radio,
-    RadioGroup,
-    CheckboxGroup,
-    Flex
- } from '@chakra-ui/react'
+    Flex,
+    useDisclosure
+} from '@chakra-ui/react'
  import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { submitForm } from '../../config/submitForm.js'
+import { Options } from './Options.jsx';
+import { ResultsModal } from './ResultsModal.jsx';
 
 /**
  * 
@@ -31,17 +28,19 @@ export function Quiz({questions}){
     const [winningHistory, setWinningHistory] = useState([])
     const [showResults, setShowResults] = useState(false)
     const [zoomedImage, setZoomedImage] = useState(false)
+    
+    const {isOpen, onOpen, onClose} = useDisclosure()
 
     const zoomVariants = {
         //aqui vão as estilizações que devem ser feitas com base no state zoomedImage
         image: {
             initial: {scale: 1.0},
-            zoomed: {transform: 'scale(1.2;1.2)', position:'fixed' , top:'50%',left:'50%',transform: 'translate(-50%,-50%)', zIndex: '10000'}
+            zoomed: { position:'fixed' , top:'50%',left:'50%',transform: 'translate(-50%,-50%)', zIndex: '10000'}
         },
         div: {
             initial: {opacity: 0, display: 'none'},
             zoomed: {
-                //alou
+                //estilos de quando a imagem fica em zoom;
             }
         }
     }    
@@ -65,7 +64,7 @@ export function Quiz({questions}){
     //enviar essa função para o config
     function submitQuestion(e){
         e.preventDefault()
-    
+
         const data = new FormData(e.currentTarget)
         console.log("---Valores do Form Data---");
         for (const [name,value] of data) {
@@ -73,6 +72,9 @@ export function Quiz({questions}){
         }
         console.log( questions[currentQuestion - 1]);
         console.log("---/Valores do Form Data---");
+
+        
+        let isUserCorrect = false;
     
     
         switch (questions[currentQuestion - 1].questionType) {
@@ -84,17 +86,18 @@ export function Quiz({questions}){
     
                 if(selectedOptionForUser.isCorrect === true){
                     console.log('unique certo');
-                    setWinningHistory( [...winningHistory, {
-                        Question: currentQuestion,
-                        answeredCorrectly: true
-                    }] )
+                    isUserCorrect = true;
                 }else{
                     console.log('unique errado');
-                    setWinningHistory( [...winningHistory, {
-                        Question: currentQuestion,
-                        answeredCorrectly: false
-                    }] )
+                    isUserCorrect = false;
                 }
+                
+                setWinningHistory( [...winningHistory, {
+                    question: currentQuestion,
+                    explanation: questions[ currentQuestion - 1 ].explanation,
+                    answeredCorrectly: isUserCorrect
+                }] );
+
                 showNextQuestion()
                 break;
     
@@ -117,16 +120,17 @@ export function Quiz({questions}){
                 } )
     
                 if( (isAllOptionsSelectedAreCorrect) && (selectedOptions.length === correctQuestionOptions.length) ){
-                    setWinningHistory([...winningHistory, {
-                        Question: currentQuestion,
-                        answeredCorrectly: true
-                    }])
+                    isUserCorrect = true;
                 }else{
-                    setWinningHistory([...winningHistory, {
-                        Question: currentQuestion,
-                        answeredCorrectly: false
-                    }])
+                    isUserCorrect = false;
                 }
+
+                setWinningHistory( [...winningHistory, {
+                    question: currentQuestion,
+                    explanation: questions[ currentQuestion - 1 ].explanation,
+                    answeredCorrectly: isUserCorrect
+                }] );
+
                 showNextQuestion()
                 break;
     
@@ -149,17 +153,18 @@ export function Quiz({questions}){
                 console.log('lista de valores booleanificados: ',listOfCertainMarkedValues);
                 if(userEnteredAllValuesCorrectly){
                     console.log('input certo');
-                    setWinningHistory( [...winningHistory, {
-                        Question: currentQuestion,
-                        answeredCorrectly: true
-                    }] )
+                    isUserCorrect = true;
                 }else{
                     console.log('input errado');
-                    setWinningHistory( [...winningHistory, {
-                        Question: currentQuestion,
-                        answeredCorrectly: false
-                    }] )
+                    isUserCorrect = false;
                 }
+
+                setWinningHistory( [...winningHistory, {
+                    question: currentQuestion,
+                    explanation: questions[ currentQuestion - 1 ].explanation,
+                    answeredCorrectly: isUserCorrect
+                }] );
+
                 showNextQuestion()
                 break;
         
@@ -181,64 +186,17 @@ export function Quiz({questions}){
         setShowResults(false)
     }
 
-    function renderOptionsFromQuestionType(questionType, options) {
-        
-        switch (questionType) {
-            case "UniqueItem":
-                const radiosJsx = options.map( (option, index) => {
-                        return(
-                            <Radio w='full' key={index} value={option.content} name='options'>{option.content}</Radio>
-                        )
-                } )
-                //key para o radio group
-                // required
-                return (
-                    <RadioGroup name='options' display='flex' flexDirection='column' gap='24px' alignItems='flex-start' w='full'>
-                        {radiosJsx}
-                    </RadioGroup>
-                )
-
-            case "MultipleItems":
-                // chackra injeta value nos checkboxes por default
-                const checkboxesJsx = options.map( (option, index) => {
-                    return <Checkbox w='full' key={index} name={option.content} >{option.content}</Checkbox>
-                } )
-
-                return (
-                    <CheckboxGroup p='0.25rem' spacing='2px' w='full' alignItems='center'>
-                        {checkboxesJsx}
-                    </CheckboxGroup>
-                )
-
-                case "InputQuestion":
-                    
-                    return options.map( (option, index) => {
-                        return(
-                            <FormControl key={index} isRequired display='flex' alignItems='center' justifyContent='space-between'>
-                                <FormLabel m='0' p='0.75rem' w='fit-content'>{option.InputField}:</FormLabel>
-                                <Input type='text' required name={option.InputField} flexGrow='1' maxLength={option.isCorrectValue.length}/>
-                            </FormControl>
-                        )
-                    } )
-        
-            default:
-                return console.warn('Nâo foi possivel renderizar as Opções')
-        }
-    }
-
     
     let amountOfWins = winningHistory.filter( issueHistory => issueHistory.answeredCorrectly ).length
     let hitPercentage = ((amountOfWins / questions.length).toFixed(2)) * 100
 
-
-    //erro na hora de passar a questão era imprimido dois tipos sendo um da questão anterior e outro da atual
     return(
-        <Box mx='auto' backgroundColor='lightgray' minW='50%' maxW='80%' w='fit-content' borderRadius='xl' overflow='hidden'>
+        <Box mx='auto' backgroundColor='Fifth' minW={["90%","70%",'50%']} w='fit-content' borderRadius='xl' overflow='hidden' color='Primary'>
             {
                 !showResults ? (
-                    <form onSubmit={submitQuestion} style={{ padding: '2.5rem', position:'relative', margin: 0, backgroundColor:'transparent', borderRadius:0 }} >
-                        <Badge position="absolute" top="1rem" right="1rem" py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
-                        <Heading size='md' mb='1.5rem'>{questions[currentQuestion - 1].question}</Heading>
+                    <Box as='form' p={['5', '10']}  onSubmit={submitQuestion} style={{position:'relative', margin: 0, backgroundColor:'transparent', borderRadius:0 }} >
+                        <Badge position="absolute" top={['0.5rem',"1rem"]} right={['0.5rem',"1rem"]} py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
+                        <Heading size='md' mb='1.5rem' textAlign='center'>{questions[currentQuestion - 1].question}</Heading>
                         
                         {questions[currentQuestion - 1].image && (
                             <>
@@ -256,7 +214,6 @@ export function Quiz({questions}){
                                             opacity='0.8'
                                             backgroundColor='red'
                                             zIndex='10000'
-                                            //position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.4, backgroundColor: 'red'
                                         >
                                         </Box>
                                         <Image 
@@ -281,22 +238,32 @@ export function Quiz({questions}){
                             </>
                         ) }
                         
-                            <VStack spacing='24px' alignItems='flex-start'>
+                            <VStack spacing='24px' alignItems='flex-start' my='2'>
+                                
                                 {
-                                    renderOptionsFromQuestionType(questions[currentQuestion - 1].questionType, questions[currentQuestion - 1].options)
+                                    <Options 
+                                        questionType={questions[currentQuestion - 1].questionType} 
+                                        questionOptions={questions[currentQuestion - 1].options}
+                                    />
                                 }
                             </VStack>
-                            <Button type='submit' position='block' display='flex' alignItems='center' gap='0.5rem' w='full' color='white' bg='teal.500' _hover={{bg: 'teal.600'}} >Enviar Respostas</Button>
-                    </form>
+                            <Button type='submit' position='block' display='flex' alignItems='center' gap='0.5rem' w='full' color='white' bgColor='Terciario' _hover={{opacity: 0.9}} >Enviar Respostas</Button>
+                    </Box>
                 ) : (
-                    <Box p='10' display='flex' flexDirection='column' alignItems='center' gap='0.75rem'>
+                    <Box p={['5', '10']} display='flex' flexDirection='column' alignItems='center' gap='0.75rem'>
                         <Heading textColor={hitPercentage < 40 ? 'red' : 'green'}>Pontuação: {amountOfWins} | ({hitPercentage})%</Heading>
                         <Text>Você acertou {amountOfWins} de {questions.length} questões.</Text>
                         <Flex direction='row' gap='0.25rem'>
-                            <Button onClick={resetQuiz}>Reiniciar Questionario</Button>
-                            <Button onClick={()=> console.log(winningHistory)}>Imprimir O history</Button>
+                            <Button onClick={resetQuiz}>Reiniciar Quiz</Button>
+                            <Button onClick={()=> {console.log(winningHistory); onOpen()}}>Ver resultados</Button>
                         </Flex>
+                        <ResultsModal 
+                            isModalOpenned={isOpen}
+                            closeModalFunction={onClose}
+                            winningHistory={winningHistory}
+                        />
                     </Box>
+                    
                 )
             }
             
