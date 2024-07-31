@@ -50,7 +50,6 @@
         "question": "Teste?",
         "questionType": "InputQuestion",
         "image": "/assets/exampleImg.png",
-        "explanation": "Primeira lei de mendel",
         "options": [
             {
                 "InputField": "f1",
