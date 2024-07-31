@@ -7,7 +7,8 @@ import { CardSection } from "../../components/MendelPage/CardSection"
 export function Mendel(){
     return(
             <Box>
-                <CardSection />
+                <Biography />
+                <Curiosities />
             </Box>
     )
 }

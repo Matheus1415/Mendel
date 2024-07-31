@@ -12,10 +12,10 @@ return (
             <HStack>
             <VerticalBar/>
                 <Card maxWidth={['400', '523']} bg='#02161F'>
-                <CardHeader color='#EBEBEB' fontWeight='275' fontSize='25px'>
+                <CardHeader color='#EBEBEB' fontWeight='275' fontSize={['20px','25px']}>
                     Abade do Mosteiro
                 </CardHeader>
-                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                     
                     <Text>
                     
@@ -31,10 +31,10 @@ return (
                 <HStack spacing='0px'>
                 <VerticalBar/>
                 <Card maxWidth={['400', '523']} bg='#02161F'>
-                <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
+                <CardHeader color='#EBEBEB' fontWeight='273' fontSize={['20px','25px']}>
                     Apicultor
                 </CardHeader>
-                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                     <Text>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
@@ -47,10 +47,10 @@ return (
                 <HStack spacing='0px'>
                 <VerticalBar/>
                 <Card maxWidth={['400', '523']} bg='#02161F'>
-                <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
+                <CardHeader color='#EBEBEB' fontWeight='273' fontSize={['20px','25px']}>
                     Jardim do Mosteiro
                 </CardHeader>
-                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                     <Text>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
@@ -63,10 +63,10 @@ return (
                 <HStack spacing='0px'>
                 <VerticalBar/>
                 <Card maxWidth={['400', '523']} bg='#02161F'>
-                <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
+                <CardHeader color='#EBEBEB' fontWeight='273' fontSize={['20px','25px']}>
                     Monge Agostiniano
                 </CardHeader>
-                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                     <Text>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
@@ -79,10 +79,10 @@ return (
                 <HStack spacing='0px'>
                 <VerticalBar/>
                 <Card maxWidth={['400', '523']} bg='#02161F' >
-                <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
+                <CardHeader color='#EBEBEB' fontWeight='273' fontSize={['20px','25px']}>
                         Problemas de Saúde
                 </CardHeader>
-                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                     <Text>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
@@ -95,10 +95,10 @@ return (
                 <HStack spacing='0px'>
                 <VerticalBar/>
                 <Card maxWidth={['400', '523']} bg='#02161F'>
-                <CardHeader color='#EBEBEB' fontWeight='273' fontSize='25px'>
+                <CardHeader color='#EBEBEB' fontWeight='273' fontSize={['20px','25px']}>
                    Origem Humilde
                 </CardHeader>
-                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth='493px' lineHeight='29.75px'>
+                <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                     <Text>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </Text>
