@@ -1,6 +1,3 @@
-import { textDecoration } from "@chakra-ui/react";
-import { FontSize } from "../foundations/FontSize";
-
 export const Text = {
     baseStyle: {
         fontSize:'xs'
