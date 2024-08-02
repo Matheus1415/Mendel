@@ -1,0 +1,73 @@
+[
+    {
+        "question": "ultima questão?",
+        "questionType": "MultipleItems",
+        "explanation": "O item A e C são os corretos", 
+        "options": [
+            {
+                "content": "Sim",
+                "isCorrect": true
+            },
+            {
+                "content": "Claro",
+                "isCorrect": false
+            },
+            {
+                "content": "Com certeza",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "No heredograma, os símbolos preenchidos representam pessoas portadoras de um tipo raro de doença genética. Os homens são representados pelos quadrados e as mulheres, pelos círculos. Qual é o padrão de herança observado para essa doença?",
+        "image": "/assets/image-25.webp",
+        "questionType": "UniqueItem",
+        "explanation": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illum vitae officiis quod iste sit minus. Iusto quasi veniam odit itaque? Aperiam illum libero sit nisi iusto. Culpa, pariatur ipsam!, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolores, ex, non illum autem perspiciatis quod voluptatem laudantium ut voluptatum recusandae soluta itaque dolorum explicabo eum quaerat libero praesentium natus.",
+        "options": [
+            {
+                "content": "Dominante autossômico, pois a doença aparece em ambos os sexos.",
+                "isCorrect": true
+            },
+            {
+                "content": "Recessivo ligado ao sexo, pois não ocorre a transmissão do pai para os filhos.",
+                "isCorrect": false
+            },
+            {
+                "content": "Recessivo ligado ao Y, pois a doença é transmitida dos pais heterozigotos para os filhos.",
+                "isCorrect": false
+            },
+            {
+                "content": "Dominante ligado ao sexo, pois todas as filhas de homens afetados também apresentam a doença.",
+                "isCorrect": false
+            },
+            {
+                "content": "Codominante autossômico, pois a doença é herdada pelos filhos de ambos os sexos, tanto do pai quanto da mãe.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Teste?",
+        "questionType": "InputQuestion",
+        "image": "/assets/exampleImg.png",
+        "options": [
+            {
+                "InputField": "f1",
+                "isCorrectValue": "AA"
+            },
+            {
+                "InputField": "f2",
+                "isCorrectValue": "Aa"
+            },
+            {
+                "InputField": "f3",
+                "isCorrectValue": "Aa"
+            },
+            {
+                "InputField": "f4",
+                "isCorrectValue": "aa"
+            }
+        ]
+    }
+
+]
