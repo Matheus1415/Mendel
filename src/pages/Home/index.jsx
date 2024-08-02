@@ -296,7 +296,7 @@ export const Home = () => {
                         </Flex>
                     </Flex>
 
-                    <SlideShow members={menbros}/>
+                    
 
                     <Flex direction="column" align="center" justifyContent="center" w="100%" minH="20px" p={10} color="white" gap={5}>
                         <Text fontSize={50}>LOGO</Text>
