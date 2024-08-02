@@ -1,10 +1,11 @@
 import { Container, Text, Box, Heading} from '@chakra-ui/react';
+import image from '../../img/background1.png';
 export const Rhesus = () => {
 
     return(
        <Container maxWidth="4x1" m="0px" p="0px">
-            <Box height="200px" bg="#02161F">
-                <Text variant="h1" textAlign="center" color="Terciario" fontWeight="ExtraLight" fontSize="40px" bgImage="url(./img/background1.png) ">Fator Rh</Text>
+            <Box bgImage={`url(${image} )`} bgSize="cover" bgPosition="center" bgRepeat="no-repeat" w="100%" height="250px"  >
+                <Text variant="h1" textAlign="center" fontWeight="ExtraLight" fontSize="40px" color="Terciario">Fator Rh</Text>
             </Box>
             <Box>
                 <Heading as="h2" color="Terciario" fontWeight="ExtraLight"  fontSize="30px">O que é Fator Rh?</Heading>
