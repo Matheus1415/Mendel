@@ -296,7 +296,7 @@ export const Home = () => {
                         </Flex>
                     </Flex>
 
-                    <SlideShow members={menbros}/>
+                    {/* <SlideShow members={menbros}/> */}
 
                     <Flex direction="column" align="center" justifyContent="center" w="100%" minH="20px" p={10} color="white" gap={5}>
                         <Text fontSize={50}>LOGO</Text>
@@ -308,6 +308,7 @@ export const Home = () => {
                             <Link to="/manutencao">Informação</Link>
                         </Flex>
                     </Flex>
+
                     <Flex direction="column" w="100%"color="white" padding={20}>
                         <Box borderTop="2px solid white" width="100%" marginBottom={4}></Box>
                         <Flex justifyContent="space-between"direction={flexDirection} gap={5}>
@@ -315,7 +316,6 @@ export const Home = () => {
                         <Text fontSize={17}>© Mendel – Todos os direitos reservados</Text>     
                         </Flex> 
                     </Flex>
-
                 </Flex>
             </Flex>
         </>
