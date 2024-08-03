@@ -10,7 +10,6 @@ const PunnettTable = ({
 
     const [parent1Group1, parent1Group2] = parentsAlelo;
     
-    // Unir todos os alelos em grupos para a tabela 4x4
     const allAlleles1 = [...parent1Group1, ...parent1Group2];
     const allAlleles2 = [...parent1Group2, ...parent1Group1];
     //Rever logia do quadro 4x4

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext'; // Importe o contexto necessário
+import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext'; 
 
 // Registrar os componentes necessários do Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -14,9 +14,8 @@ const AlleleTable = ({ isTable = false }) => {
      caracteristica,
      backgroundColorDominant,
      backgroundColorRecessive,
-   } = useContext(CaracteristicaContext); // Use o useContext para acessar o contexto
+   } = useContext(CaracteristicaContext); 
 
-  // Convert alleleCounts to data array for PieChart
   const data = {
     labels: [`Dominante | ${caracteristica[0]}`, `Recessivo | ${caracteristica[1]}`],
     datasets: [

@@ -66,7 +66,6 @@ const PunnettSquare = () => {
     ) : null;
   }
 
-
   return (
     <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">

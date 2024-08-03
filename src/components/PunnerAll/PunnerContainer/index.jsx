@@ -3,6 +3,7 @@ import { Container, Text } from '@chakra-ui/react';
 import PunnettSquare from '../PunnettSquare';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { ParentInput } from '../ParentInput';
+import PunnettSquareDraggable from '../PunerDraggable';
 
 export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => {
   const { setAmountAlelo,setParentsAlelo } = useContext(CaracteristicaContext);
@@ -19,6 +20,7 @@ export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => 
         {title &&<Text variant="h3" align="center">{title}</Text>}
         {inputTrue && <ParentInput /> }
         <PunnettSquare />
+        {/* <PunnettSquareDraggable maxAlelo={2}/> */}
       </Container>
   );
 };

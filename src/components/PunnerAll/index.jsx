@@ -4,6 +4,7 @@ import { PunerContainer } from './PunnerContainer';
 
 export const PunerAll = ({title,configAlelo,inputTrue}) => {
 
+  // let configExampleAllelo = [['a','a'],['a','A']];
 
   return (
     <CaracteristicaProvider>
