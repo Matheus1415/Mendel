@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import { Home } from '../pages/Home';
+import { Mendel } from '../pages/Mendel';
 import { Alelos } from '../pages/Alelos';
 import { FatorRH } from '../pages/FatorRH';
 import PunerAll from '../components/PunnerAll';
