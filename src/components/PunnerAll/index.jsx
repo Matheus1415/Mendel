@@ -3,7 +3,8 @@ import { CaracteristicaProvider } from '../../contexts/CaracteristicaContext';
 import { PunerContainer } from './PunnerContainer';
 
 export const PunerAll = ({title,configAlelo,inputTrue}) => {
-
+title="Mendel";
+inputTrue=true;
   // let configExampleAllelo = [['a','a'],['a','A']];
 
   return (

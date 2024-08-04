@@ -9,7 +9,7 @@ export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => 
   const { setAmountAlelo,setParentsAlelo } = useContext(CaracteristicaContext);
 
   useEffect(() =>{
-    setAmountAlelo(2); 
+    setAmountAlelo(4); 
     if(configAlelo.length > 0) {
       setParentsAlelo(configAlelo)
     }
