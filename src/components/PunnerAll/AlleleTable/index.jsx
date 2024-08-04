@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
+import { Flex, Table, Thead, Tbody, Tr, Th, Td, Text } from '@chakra-ui/react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext'; 
@@ -32,29 +32,29 @@ const AlleleTable = ({ isTable = false }) => {
     <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
       {isTable ? (
         <>
-          <h3>Allele Frequencies</h3>
-          <Table variant="simple" colorScheme="teal" mb="6">
-            <Thead bg="Primary">
+          <Text variant="p" align="center" >Frequencia de Alelos</Text>
+          <Table mb="6">
+            <Thead bg="Dark">
               <Tr>
-                <Th>Allele Type</Th>
-                <Th>Count</Th>
+                <Th color="white">Allele Type</Th>
+                <Th color="white">Count</Th>
               </Tr>
             </Thead>
-            <Tbody>
+            <Tbody bg="Terciario">
               <Tr>
-                <Td>Dominant</Td>
-                <Td>{countDominant}</Td>
+                <Td color="white">Dominant</Td>
+                <Td color="white">{countDominant}</Td>
               </Tr>
               <Tr>
-                <Td>Recessive</Td>
-                <Td>{countRecessive}</Td>
+                <Td color="white">Recessive</Td>
+                <Td color="white">{countRecessive}</Td>
               </Tr>
             </Tbody>
           </Table>
         </>
       ) : (
         <>
-          <h3>Allele Distribution</h3>
+          <Text variant="p" align="center" >Frequencia de Alelos</Text>
           <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             <Pie data={data} />
           </div>

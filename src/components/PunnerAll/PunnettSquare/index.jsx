@@ -67,7 +67,7 @@ const PunnettSquare = () => {
   }
 
   return (
-    <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
+    <Flex direction="row" align="flex-start" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">
         <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
         <PunnettTable
