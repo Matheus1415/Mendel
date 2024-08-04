@@ -14,7 +14,12 @@ const AlleleTable = ({ isTable = false }) => {
      caracteristica,
      backgroundColorDominant,
      backgroundColorRecessive,
-   } = useContext(CaracteristicaContext); 
+   } = useContext(CaracteristicaContext);
+
+  // Verifique se caracteristica está definido
+  if (!caracteristica || caracteristica.length < 2) {
+    return <Text>Dados indisponíveis</Text>;
+  }
 
   const data = {
     labels: [`Dominante | ${caracteristica[0]}`, `Recessivo | ${caracteristica[1]}`],
@@ -22,45 +27,44 @@ const AlleleTable = ({ isTable = false }) => {
       {
         label: 'Frequência de Alelo',
         data: [countDominant, countRecessive],
-        backgroundColor: [backgroundColorDominant,backgroundColorRecessive],
-        hoverBackgroundColor: [backgroundColorDominant,backgroundColorRecessive]
+        backgroundColor: [backgroundColorDominant, backgroundColorRecessive],
+        hoverBackgroundColor: [backgroundColorDominant, backgroundColorRecessive]
       }
     ]
   };
 
   return (
-    <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
+    <Flex direction="column" align="center" justify="center" m="4">
       {isTable ? (
-        <>
-          <Text variant="p" align="center" >Frequencia de Alelos</Text>
+        <Flex direction="column" align="center" justify="center" m="4">
+          <Text variant="p" align="center">Frequência de Alelos</Text>
           <Table mb="6">
             <Thead bg="Dark">
               <Tr>
-                <Th color="white">Allele Type</Th>
-                <Th color="white">Count</Th>
+                <Th color="white">Tipo de Alelo</Th>
+                <Th color="white">Contagem</Th>
               </Tr>
             </Thead>
             <Tbody bg="Terciario">
               <Tr>
-                <Td color="white">Dominant</Td>
+                <Td color="white">Dominante</Td>
                 <Td color="white">{countDominant}</Td>
               </Tr>
               <Tr>
-                <Td color="white">Recessive</Td>
+                <Td color="white">Recessivo</Td>
                 <Td color="white">{countRecessive}</Td>
               </Tr>
             </Tbody>
           </Table>
-        </>
+        </Flex>
       ) : (
-        <>
-          <Text variant="p" align="center" >Frequencia de Alelos</Text>
+        <Flex direction="column" align="center" justify="center" m="4">
+          <Text variant="p" align="center">Frequência de Alelos</Text>
           <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             <Pie data={data} />
           </div>
-        </>
+        </Flex>
       )}
-
     </Flex>
   );
 };

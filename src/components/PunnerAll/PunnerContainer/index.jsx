@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Container, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import PunnettSquare from '../PunnettSquare';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { ParentInput } from '../ParentInput';
@@ -16,12 +16,14 @@ export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => 
   },[setAmountAlelo]);
 
   return (
-      <Container maxW="100%">
+      <>
         {title &&<Text variant="h3" align="center">{title}</Text>}
-        {inputTrue && <ParentInput /> }
-        <PunnettSquare />
-        {/* <PunnettSquareDraggable maxAlelo={2}/> */}
-      </Container>
+        <Flex maxW="100%" direction="row" align="flex-start" justify="center">
+          {inputTrue && <ParentInput /> }
+          <PunnettSquare />
+          {/* <PunnettSquareDraggable maxAlelo={2}/> */}
+        </Flex>
+      </>
   );
 };
 

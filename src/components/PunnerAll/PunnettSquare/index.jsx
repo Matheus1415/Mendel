@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'; 
-import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box, Button } from '@chakra-ui/react';
 import AlleleTable from '../AlleleTable';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { CheckAlleleEntry } from '../../../config/checkAlleleEntry';
@@ -67,7 +67,7 @@ const PunnettSquare = () => {
   }
 
   return (
-    <Flex direction="row" align="flex-start" justify="center" wrap="wrap" m="4">
+    <Flex direction="column-reverse" align="center" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">
         <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
         <PunnettTable
@@ -78,8 +78,10 @@ const PunnettSquare = () => {
         />
       </Box>
       <AlleleTable 
-        isTable={false}
+        isTable={true}
       />
+      {/* <Button>Mude</Button> */}
+
     </Flex>
   );
 };

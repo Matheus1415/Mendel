@@ -5,7 +5,9 @@ import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 export const ParentInput = () => {
     const [parent1, setParent1] = useState('');
     const [parent2, setParent2] = useState('');
-    const { setParentsAlelo } = useContext(CaracteristicaContext);
+    const [caracteristica1, setCaracteristica1] = useState('');
+    const [caracteristica2, setCaracteristica2] = useState('');
+    const { setParentsAlelo, setCaracteristica } = useContext(CaracteristicaContext);
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
@@ -13,9 +15,11 @@ export const ParentInput = () => {
         // Verifica se parent1 e parent2 são strings válidas antes de dividir
         if (typeof parent1 === 'string' && typeof parent2 === 'string') {
             setParentsAlelo([parent1.split(''), parent2.split('')]); 
-        } else {
-            console.error('Parent alleles must be strings.');
-        }
+        } 
+
+        if (typeof caracteristica1 === 'string' && typeof caracteristica2 === 'string') {
+            setCaracteristica([caracteristica1, caracteristica2]); 
+        } 
     };
 
     return (
@@ -23,22 +27,41 @@ export const ParentInput = () => {
             <Flex direction="column" justify="center" align="center" maxW="100%" color="Second" justifyContent="center">
                 <Flex justify="center" align="center">
                     <Box padding="10px" maxW="500px">
-                        <Text variant="p">Parent 1 Alleles:</Text>
+                        <Text variant="p">Alelo da Mãe</Text>
                         <Input
-                            placeholder='Enter alleles for parent 1'
+                            placeholder='Coloque o alelo da mãe'
                             value={parent1}
                             onChange={(e) => setParent1(e.target.value)}
                         />
                     </Box>
                     <Box padding="10px" maxW="500px">
-                        <Text variant="p">Parent 2 Alleles:</Text>
+                        <Text variant="p">Alelo do Pai</Text>
                         <Input
-                            placeholder='Enter alleles for parent 2'
+                            placeholder='Coloque o alelo do pai'
                             value={parent2}
                             onChange={(e) => setParent2(e.target.value)}
                         />
                     </Box>
                 </Flex>
+                <Flex justify="center" align="center">
+                    <Box padding="10px" maxW="500px">
+                        <Text variant="p">Caracteristica da Mãe</Text>
+                        <Input
+                            placeholder='Caracteristica da Mãe'
+                            value={caracteristica1}
+                            onChange={(e) => setCaracteristica1(e.target.value)}
+                        />
+                    </Box>
+                    <Box padding="10px" maxW="500px">
+                        <Text variant="p">Caracteristica do Pai</Text>
+                        <Input
+                            placeholder='Caracteristica do pai'
+                            value={caracteristica2}
+                            onChange={(e) => setCaracteristica2(e.target.value)}
+                        />
+                    </Box>
+                </Flex>
+
                 <Button 
                 _hover={{
                     bg: 'Quarter'
