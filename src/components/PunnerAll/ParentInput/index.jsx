@@ -1,16 +1,18 @@
 import { Box, Input, Text, Button, Flex } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 
-const ParentInput = ({ setParents }) => {
+export const ParentInput = () => {
     const [parent1, setParent1] = useState('');
     const [parent2, setParent2] = useState('');
+    const { setParentsAlelo } = useContext(CaracteristicaContext);
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Previne o comportamento padrão de submit do formulário
+        e.preventDefault(); 
         
         // Verifica se parent1 e parent2 são strings válidas antes de dividir
         if (typeof parent1 === 'string' && typeof parent2 === 'string') {
-            setParents([parent1.split(''), parent2.split('')]); // Chama a função setParents do componente pai com os valores de parent1 e parent2
+            setParentsAlelo([parent1.split(''), parent2.split('')]); 
         } else {
             console.error('Parent alleles must be strings.');
         }
@@ -55,4 +57,3 @@ const ParentInput = ({ setParents }) => {
     );
 };
 
-export default ParentInput;
