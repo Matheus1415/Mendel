@@ -1,5 +1,5 @@
 import { Container, Box, Text, Flex } from '@chakra-ui/react';
-import image2 from '../../img/background2.png'
+import background6 from '../../img/background6.png'
 const Titulo = () => {
     return(
         <Flex>
@@ -9,15 +9,22 @@ const Titulo = () => {
             p="0px"
             >
                 <Box 
-                bgImage={`url(${image2} )`}
+                backgroundColor="#02161F"
+                bgImage={`url(${background6} )`}
                 bgSize="cover" 
-                bgPosition="center center" bgRepeat="no-repeat"
+                bgPosition="center center"
+                bgRepeat="no-repeat"
+                bgAttachment="fixed"
                 height="500px"
+                textAlign="center" 
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
                 >
                     <Text 
-                    textAlign="center" 
                     variant="h1"  
-                    fontWeight="ExtraLight" fontSize="40px" 
+                    fontWeight="ExtraLight"
+                    fontSize="60px" 
                     color="#01414C"
                     >
                         Fator Rhesus
