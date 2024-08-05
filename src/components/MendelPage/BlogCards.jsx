@@ -4,7 +4,7 @@ export function BlogCards({title, description, link, index}) {
   return(
     <Box>
         <Card w='523px' h='127px' backgroundColor='#0D6067' borderRadius='15px' 
-        transform={`translateX(-${index * 49.06}%) `} transition='transform 0.5s ease-in-out'>
+        transform={`translateX(-${index * 52}%) `} transition='transform 0.5s ease-in-out'>
 
             <CardHeader display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>           
                 <Text fontSize='18px' fontWeight='300' color='#EBEBEB' lineHeight='27px'>
