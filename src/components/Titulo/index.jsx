@@ -20,6 +20,7 @@ const Titulo = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                w="100vw"
                 >
                     <Text 
                     variant="h1"  

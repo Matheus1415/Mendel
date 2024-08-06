@@ -3,7 +3,8 @@ import Titulo from '../Titulo';
 export const Rhesus = () => {
 
     return(
-       <Flex>
+       <Flex
+       >
         <Container 
         maxWidth="4x1" 
         m="0px" 
@@ -16,9 +17,9 @@ export const Rhesus = () => {
                 bgSize="cover" 
                 bgPosition="center rigth" 
                 bgRepeat="no-repeat"
-                height="1000px"
-                wrap="wrap"
-                flexDirection="row-reverse"
+                w="100vw" 
+                height="80%"
+               
                 >
                     <Heading
                     as="h2"
@@ -28,6 +29,7 @@ export const Rhesus = () => {
                     mt="0px"
                     mb="20px"
                     p="10px"
+                    maxWidth='100%'
                     >
                         O que é Fator Rh?
                     </Heading>
@@ -38,7 +40,7 @@ export const Rhesus = () => {
                     color="#ebebeb"
                     mb="20px"
                     p="10px"
-                    w="600px"
+                    maxWidth={['80%', '70%', '50%']} 
                     textIndent="30px"
                     lineHeight="30px"
                     >
@@ -52,6 +54,7 @@ export const Rhesus = () => {
                     fontSize="30px"
                     mb="20px"
                     p="10px"
+                    maxWidth='100%'
                     >
                         Qual a sua importância na tipagem sanguínea?
                     </Heading>
@@ -62,7 +65,7 @@ export const Rhesus = () => {
                     color="#ebebeb"
                     mb="20px"
                     p="10px"
-                    w="600px"
+                    maxWidth={['80%', '70%', '50%']} 
                     textIndent="30px"
                     lineHeight="30px"
                     >
@@ -74,8 +77,10 @@ export const Rhesus = () => {
                     color="Terciario"
                     fontWeight="ExtraLight"
                     fontSize="30px"
+                    w="650px"
                     mb="20px"
                     p="10px"
+                    maxWidth={['100%']}
                     >
                         Como ele pode influenciar transfusões de sangue e a saúde durante a gravidez?
                     </Heading>
@@ -86,7 +91,7 @@ export const Rhesus = () => {
                     color="#ebebeb"
                     mb="20px"
                     p="10px"
-                    w="600px"
+                    maxWidth={['80%', '70%', '50%']} 
                     textIndent="30px"
                     lineHeight="30px"
                     >
