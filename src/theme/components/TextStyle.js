@@ -1,7 +1,6 @@
-import { textDecoration } from "@chakra-ui/react";
-import { FontSize } from "../foundations/FontSize";
+import { defineStyle } from "@chakra-ui/react";
 
-export const Text = {
+export const Text = defineStyle({
     baseStyle: {
         fontSize:'xs'
     },
@@ -31,6 +30,8 @@ export const Text = {
         'p':{
             fontSize:'lg',
             fontWeight: "light",
+            textAlign: "justify"
         },
     }
 }
+)
