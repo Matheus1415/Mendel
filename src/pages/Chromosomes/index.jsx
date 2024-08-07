@@ -44,11 +44,11 @@ export function Chromosomes(){
 
                 <Button variant='readMore'>Saiba Mais</Button>
 
-                <Heading variant='PrimaryTitle' bg='linear-gradient(to right, #19BFCD 0%, #0D6067 100%)' bgClip='text'>Cromossomos</Heading>
-                <Text align='left' variant='p' color='Primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
+                <Heading variant='PrimaryTitle'>Cromossomos</Heading>
+                <Text variant='p' color='Primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
 
-                <Heading variant='PrimaryTitle' bg='linear-gradient(to right, #19BFCD 0%, #0D6067 100%)' bgClip='text' >Celulas haploides e diploides</Heading>
-                <Text textAlign='left' variant='p' color='Primary' >Loressm ipsum dolor sit amet consectetur, adipisicing elit. Est temporibus autem non tempore amet vero quasi soluta! Dolor sapiente enim, dolore officiis natus alias saepe modi debitis necessitatibus quidem doloremque.</Text>
+                <Heading variant='PrimaryTitle'>Celulas haploides e diploides</Heading>
+                <Text variant='p' color='Primary' >Loressm ipsum dolor sit amet consectetur, adipisicing elit. Est temporibus autem non tempore amet vero quasi soluta! Dolor sapiente enim, dolore officiis natus alias saepe modi debitis necessitatibus quidem doloremque.</Text>
                 <Flex gap='20px' p='0.75rem' direction={['column', 'column', 'row']}>
                     <Card boxShadow='lg'>
                         <CardBody>
@@ -77,11 +77,11 @@ export function Chromosomes(){
                     </Card>
                 </Flex>
 
-                <Heading variant='PrimaryTitle' mb='1rem' mt='2rem' color='white'>Cromossomos</Heading>
+                <Heading variant='PrimaryTitle' mb='1rem' mt='2rem' >Cromossomos</Heading>
                 <Flex direction={['column', 'column', 'row']} justify='space-between' gap='0.5rem' align='center' mb='0.5rem'>
                     <Box flexGrow='1' >
-                        <Text textAlign='left' variant='p' color='Primary' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex harum amet totam ducimus explicabo maxime officia reiciendis, vero aliquam maiores aut, vel doloremque veritatis quibusdam libero id nemo non dicta!</Text>
-                        <Text textAlign='left' variant='p' color='Primary' fontWeight='thin' >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id iusto sapiente quasi? Corrupti, sequi ipsum? Est architecto consequuntur tempore accusamus? Iusto sunt odit, ut tempora similique impedit sequi corporis error!</Text>
+                        <Text variant='p' color='Primary' fontWeight='thin' >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id iusto sapiente quasi? Corrupti, sequi ipsum? Est architecto consequuntur tempore accusamus? Iusto sunt odit, ut tempora similique impedit sequi corporis error!</Text>
+                        <Text variant='p' color='Primary' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex harum amet totam ducimus explicabo maxime officia reiciendis, vero aliquam maiores aut, vel doloremque veritatis quibusdam libero id nemo non dicta!</Text>
                     </Box>
                     {/* width deve ser mudado */}
                     <Image src='assets/Diagrama_cromossomo.jpg' width={['75%', '50%', '35%']} borderRadius='lg' alt='bom dia'></Image>
@@ -93,7 +93,7 @@ export function Chromosomes(){
                     <ListItem textAlign='left' color='Primary' >DNA: O DNA é uma molécula longa e helicoidal que carrega a informação genética de um organismo. É composto por uma sequência de nucleotídeos (adenina, timina, citosina e guanina) que formam os genes responsáveis por características hereditárias.</ListItem>
                 </UnorderedList>
 
-                <Heading variant='PrimaryTitle' size='lg' mb='0.75rem' mt='1.75rem' color='white'>Funções dos Cromossomos:</Heading>
+                <Heading variant='PrimaryTitle' size='lg' mb='0.75rem' mt='1.75rem'>Funções dos Cromossomos:</Heading>
                 <UnorderedList mt='0.5rem' spacing='0.5rem'>
                     <ListItem textAlign='left' color='Primary' >Transmissão de Informação Genética: Os cromossomos são responsáveis por transportar os genes que contêm as informações para a síntese de proteínas e para determinar as características hereditárias de um organismo.</ListItem>
                     <ListItem textAlign='left' color='Primary' >Transmissão de Informação Genética: Os cromossomos são responsáveis por transportar os genes que contêm as informações para a síntese de proteínas e para determinar as características hereditárias de um organismo.</ListItem>
@@ -101,16 +101,16 @@ export function Chromosomes(){
                 </UnorderedList>
 
 
-                <Heading variant='PrimaryTitle' mb='1rem' mt='2rem' color='white'>Cromossomos Homologos</Heading>
-                <Text textAlign='left' my='0.5rem' variant='p' color='Primary' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorem dolorum perspiciatis nam itaque, at ex. Quod repellendus porro, possimus eius repudiandae, deserunt dicta repellat commodi ea sequi, ullam dignissimos.</Text>
-                <Text textAlign='left' my='0.5rem' variant='p' color='Primary' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cupiditate nobis alias at. Libero accusantium corporis totam quia voluptates quisquam modi alias distinctio sed enim? Autem quaerat mollitia dolorem repudiandae!</Text>
+                <Heading variant='PrimaryTitle' mb='1rem' mt='2rem'>Cromossomos Homologos</Heading>
+                <Text my='0.5rem' variant='p' color='Primary' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorem dolorum perspiciatis nam itaque, at ex. Quod repellendus porro, possimus eius repudiandae, deserunt dicta repellat commodi ea sequi, ullam dignissimos.</Text>
+                <Text my='0.5rem' variant='p' color='Primary' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cupiditate nobis alias at. Libero accusantium corporis totam quia voluptates quisquam modi alias distinctio sed enim? Autem quaerat mollitia dolorem repudiandae!</Text>
                 <Image src='https://th.bing.com/th/id/OIP.q87ZeFEaViiD8K6MVsx1twAAAA?rs=1&pid=ImgDetMain' alt='Foto do Mendel' height='300px' width='300px' mx='auto' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}></Image>
                 {
                     //https://th.bing.com/th/id/OIP.q87ZeFEaViiD8K6MVsx1twAAAA?rs=1&pid=ImgDetMain
                     //https://i.pinimg.com/originals/96/7d/19/967d19fc5d4caaa1f4aef5ee703ddb90.gif
                 }
-                <Heading variant='PrimaryTitle' mb='1rem' mt='2rem' color='white'>Atividade</Heading>
-                <Text textAlign='left' variant='p' color='Primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eum sapiente, eos quam debitis perspiciatis omnis reiciendis provident placeat vitae laboriosam nobis quisquam quas modi deserunt labore cum, similique repellat.</Text>
+                <Heading variant='PrimaryTitle' mb='1rem' mt='2rem'>Atividade</Heading>
+                <Text variant='p' color='Primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eum sapiente, eos quam debitis perspiciatis omnis reiciendis provident placeat vitae laboriosam nobis quisquam quas modi deserunt labore cum, similique repellat.</Text>
 
                 <Quiz questions={questionMock}/>
 
