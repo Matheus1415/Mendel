@@ -23,7 +23,6 @@ export const Rhesus = () => {
                             color="Terciario"
                             fontWeight="ExtraLight"
                             fontSize="30px"
-                            mt="0px"
                             mb="20px"
                             p="10px"
                             maxWidth='100%'
@@ -45,12 +44,18 @@ export const Rhesus = () => {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis sit tenetur, cumque distinctio beatae vero ipsum sed laboriosam non eum accusantium excepturi alias velit aut eos et modi dolor. Praesentium.
                         </Text>
                     </Box>
+
+                    <Box position="relative" w="200px" h="200px">
                         <Image
                         src="/img/celula.png"
                         w="200px"
-                        h="200px"
+                        h="200px" 
+                        position="absolute"
+                        top="0" 
+                        left={['-30%', '-50%', '-70%']}
                         borderRadius="full"
                         />
+                    </Box>
                 </Flex>
 
 
@@ -82,26 +87,30 @@ export const Rhesus = () => {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis sit tenetur, cumque distinctio beatae vero ipsum sed laboriosam non eum accusantium excepturi alias velit aut eos et modi dolor. Praesentium.
                         </Text>
                     </Box>
+                    <Box position="relative" w="200px" h="200px">
                         <Image
                         src="/img/celula.png"
                         w="200px"
-                        h="200px"
+                        h="200px" 
+                        position="absolute"
+                        top="0" 
+                        left={['-30%', '-50%', '-70%']}
                         borderRadius="full"
                         />
+                    </Box>
                 </Flex>
 
 
-                <Flex justifyContent="space-between" justifyItems="center">
+                <Flex justifyContent="space-between" alignItems="center">
                     <Box flex="1">
                         <Heading
                         as="h2"
                         color="Terciario"
                         fontWeight="ExtraLight"
                         fontSize="30px"
-                        w="650px"
                         mb="20px"
                         p="10px"
-                        maxWidth={['90%']}
+                        maxWidth={['80%']}
                         >
                             Como ele pode influenciar transfusões de sangue e a saúde durante a gravidez?
                         </Heading>
@@ -120,17 +129,19 @@ export const Rhesus = () => {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis sit tenetur, cumque distinctio beatae vero ipsum sed laboriosam non eum accusantium excepturi alias velit aut eos et modi dolor. Praesentium.
                         </Text>
                     </Box>
+                    <Box position="relative" w="200px" h="200px">
                         <Image
                         src="/img/celula.png"
                         w="200px"
-                        h="200px"
+                        h="200px" 
+                        position="absolute"
+                        top="0" 
+                        left={['-30%', '-50%', '-70%']}
                         borderRadius="full"
                         />
+                    </Box>
                 </Flex>
             </Box>
-
-                
-
         </Container>
        
     )
