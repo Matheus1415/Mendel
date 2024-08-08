@@ -14,7 +14,7 @@ export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => 
       setParentsAlelo(configAlelo)
     }
   },[setAmountAlelo]);
-
+  
   return (
       <>
         {title &&<Text variant="h3" align="center">{title}</Text>}

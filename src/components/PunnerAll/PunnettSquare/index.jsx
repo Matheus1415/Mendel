@@ -2,29 +2,29 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td, Alert, AlertIcon, Flex, Text, Box, Button } from '@chakra-ui/react';
 import AlleleTable from '../AlleleTable';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
-import { CheckAlleleEntry } from '../../../config/checkAlleleEntry';
+import { checkAlleleEntry } from '../../../config/checkAlleleEntry';
 import { CountAlleles } from '../../../config/countAlleles';
 import PunnettTable from '../PunnerTable';
+import Notification from '../Notification';
 
 const PunnettSquare = () => {
   const {
-    countDominant,
     setCountDominant,
-    countRecessive,
     setCountRecessive,
     backgroundColorDominant,
     backgroundColorRecessive,
     parentsAlelo,
-    amountAlelo
+    amountAlelo,
+    caracteristica
   } = useContext(CaracteristicaContext);
 
   const [isVisibleAlert, setIsVisibleAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const [alertStatus, setAlertStatus] = useState('error');
+  const [alertStatus, setAlertStatus] = useState('');
   const [parentsValid, setParentsValid] = useState(false);
 
   useEffect(() => {
-    CheckAlleleEntry(
+    checkAlleleEntry(
       parentsAlelo,
       amountAlelo,
       setParentsValid,
@@ -32,6 +32,7 @@ const PunnettSquare = () => {
       setAlertMessage,
       setAlertStatus,
       setIsVisibleAlert,
+      caracteristica
     );
   }, [parentsAlelo, amountAlelo]);
 
@@ -46,23 +47,12 @@ const PunnettSquare = () => {
 
   if (!parentsValid) {
     return isVisibleAlert ? (
-      <Alert
-        maxW="400px"
-        position="fixed"
-        top="10px"
-        right="10px"
-        bg="red.500"
-        color="white"
-        padding="20px"
-        borderRadius="md"
-        boxShadow="lg"
-        zIndex="1000"
+      <Notification
+        isVisible={isVisibleAlert}
+        setIsVisible={setIsVisibleAlert}
         status={alertStatus}
-        variant='left-accent'
-      >
-        <AlertIcon />
-        {alertMessage}
-      </Alert>
+        message={alertMessage}
+      ></Notification>
     ) : null;
   }
 
@@ -78,9 +68,11 @@ const PunnettSquare = () => {
         />
       </Box>
       <AlleleTable 
-        isTable={true}
+        isTable={false}
       />
       {/* <Button>Mude</Button> */}
+      {/* datalist */}
+
 
     </Flex>
   );

@@ -5,6 +5,7 @@ import { Alelos } from '../pages/Alelos';
 import { FatorRH } from '../pages/FatorRH';
 import PunerAll from '../components/PunnerAll';
 
+
 export const RouterAsRouter = () => {
   return (
     <BrowserRouter>
@@ -14,7 +15,6 @@ export const RouterAsRouter = () => {
         <Route path="/alelos" element={<Alelos />} />
         <Route path="/puner" element={<PunerAll/>} />
         <Route path="/fatorrh" element={<FatorRH />} />
-        <Route path="/manutencao" element={<h1>Rota de manutenção</h1> }/>
       </Routes>
     </BrowserRouter>
   );
