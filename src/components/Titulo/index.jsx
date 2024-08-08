@@ -1,5 +1,5 @@
 import { Container, Box, Text, Flex } from '@chakra-ui/react';
-import background6 from '../../img/background6.png'
+import background6 from '../../../public/img/background6.png';
 const Titulo = () => {
     return(
         <Flex>
