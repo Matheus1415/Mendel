@@ -30,8 +30,13 @@ export const Text = defineStyle({
         'p':{
             fontSize:'lg',
             fontWeight: "light",
-            textAlign: "justify"
         },
+        'forContentsPage': {
+            fontSize:'lg',
+            fontWeight: "thin",
+            textAlign: 'justify',
+            color: 'Primary',
+            mb: '0.25rem'
+        }
     }
-}
-)
+})
