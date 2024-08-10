@@ -1,10 +1,18 @@
-// src/components/MenuMobile.jsx
 import { useState } from 'react';
 import { Flex, Box, IconButton } from "@chakra-ui/react";
 import { FaBars, FaHome, FaTasks, FaBook, FaQuestion, FaInfoCircle } from 'react-icons/fa';
 import MenuItem from '../MenuItem';
 
 const MenuMobile = ({ isOpen, toggleMenu }) => {
+    const subMenuHome = [
+        { label: "Subitem 1", router: "/subitem1" },
+        { label: "Subitem 2", router: "/subitem2" }
+    ];
+    const subMenuAtividades = [
+        { label: "Atividade 1", router: "/atividade1" },
+        { label: "Atividade 2", router: "/atividade2" }
+    ];
+
     return (
         <Box 
             h="100vh"
@@ -30,8 +38,8 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
                 bg="transparent"
             />
             <Flex direction="column" align="flex-start" w="100%" gap={4} display={isOpen ? "flex" : "none"}>
-                <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" />
-                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/manutencao" />
+                <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" subMenu={subMenuHome} />
+                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/manutencao" subMenu={subMenuAtividades} />
                 <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/manutencao" />
                 <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/manutencao" />
                 <MenuItem icon={<FaInfoCircle />} label="Informação" isOpen={isOpen} router="/manutencao" />
