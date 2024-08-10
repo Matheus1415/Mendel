@@ -12,6 +12,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "Sistema Sanguíneo", router: "/manutencao" },
     ];
 
+
     return (
         <Box 
             h="100vh"
