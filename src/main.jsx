@@ -7,6 +7,7 @@ import { RouterAsRouter } from "./router/Router";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
+
   <ChakraProvider theme={theme}>
     <RouterAsRouter />
   </ChakraProvider>
