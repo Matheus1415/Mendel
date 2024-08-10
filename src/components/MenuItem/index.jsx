@@ -34,7 +34,7 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
         fontSize="16px"
         cursor={subMenu.length === 0 ? "pointer" : "default"}
         color={isActive ? "#1ee9ff" : "inherit"}
-        _hover={subMenu.length === 0 ? { color: "blue.500" } : {}}
+        _hover={subMenu.length === 0 ? { color: "#19c1d3" } : {}}
       >
         <Flex
           align="center"
@@ -45,7 +45,6 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
           _hover={subMenu.length === 0 ? { transform: "scale(1.1)" } : {}}
           transition="transform 0.2s"
         >
-          {/* Renderiza o ícone e Link apenas se não houver subMenu */}
           {subMenu.length === 0 ? (
             <Link to={router}>
               {icon}
@@ -54,7 +53,6 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
             <Box>{icon}</Box>
           )}
         </Flex>
-        {/* Renderiza o Label como Link apenas se não houver subMenu */}
         {subMenu.length === 0 ? (
           <Link to={router}>
             <Text ml={2} fontSize="16px">
@@ -72,20 +70,24 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
         <Flex 
           direction="column" 
           borderLeft={isSubMenuOpen ? "2px solid #007987" : "none"}
-          ml={4} // Indenta os subitens
+          ml={4} 
+          gap={2}
         >
-          {subMenu.map((subItem, index) => (
-            <Link to={subItem.router} key={index}>
-              <Text
-                ml={2}
-                fontSize="14px"
-                color="gray.300"
-                _hover={{ color: "blue.300" }}
-              >
-                {subItem.label}
-              </Text>
-            </Link>
-          ))}
+          {subMenu.map((subItem, index) => {
+            const isSubItemActive = location.pathname === subItem.router;
+            return (
+              <Link to={subItem.router} key={index}>
+                <Text
+                  ml={2}
+                  fontSize="14px"
+                  color={isSubItemActive ? "#1ee9ff" : "gray.300"}
+                  _hover={{ color: "#19c1d3" }}
+                >
+                  {subItem.label}
+                </Text>
+              </Link>
+            );
+          })}
         </Flex>
       </Collapse>
     </Flex>
