@@ -7,7 +7,7 @@ export const PunerAll = ({title,configAlelo,inputTrue}) => {
 title="Mendel";
 inputTrue=true;
 // let configExampleAllelo = [['a','a'],['a','A']];
-  const { combinationsAlelo} = usePunnettSquare(['a','A'],['a','a']);
+  const { combinationsAlelo} = usePunnettSquare(['a','A','b','b'],['a','a','b','b']);
   console.log(combinationsAlelo)
   return (
     <CaracteristicaProvider>
