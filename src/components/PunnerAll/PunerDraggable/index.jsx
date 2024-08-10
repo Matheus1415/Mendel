@@ -12,7 +12,7 @@ const optionsExample = [
         }
 ]
 
-const PunnettSquareDraggable = ({ maxAlelo, alelosDoPai = ['A', 'a'], alelosDaMae = ['a', 'a'],  options = optionsExample}) => {
+const PunnettSquareDraggable = ({ alelosDoPai = ['A', 'a'], alelosDaMae = ['a', 'a'],  options = optionsExample}) => {
     const quantidadeDeAlelos = alelosDoPai.length
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [draggedImgSrc, setDraggedImgSrc] = useState('');
