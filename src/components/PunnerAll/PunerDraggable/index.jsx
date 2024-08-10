@@ -20,7 +20,6 @@ const PunnettSquareDraggable = ({ maxAlelo }) => {
         e.preventDefault();
     };
 
-    console.log(grid);
 
     return (
         <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">

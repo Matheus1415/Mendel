@@ -7,8 +7,6 @@ export function ResultsRow({ questionHistory, isPopoverOpenned, onClose, openPop
         md: "bottom",
         lg: "right-start"
     })
-    console.log(isPopoverOpenned);
-
     return(
         <Flex align='center' justify='space-around' my='1.25rem'>
             <Text>Questão {question}:</Text>

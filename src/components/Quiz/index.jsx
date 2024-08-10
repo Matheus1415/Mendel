@@ -48,47 +48,29 @@ export function Quiz({questions}){
     function showNextQuestion(){
         if (currentQuestion >= questions.length) {
             setShowResults(true)
-            console.log('chegou no final', winningHistory);
             return;
         }
-        console.log(`da questão ${currentQuestion} -> ${currentQuestion + 1} | \n Resultado:`,winningHistory);
-
         setTimeout( ()=> setCurrentQuestion(currentQuestion + 1), 150)
     }
 
     function toggleZoomImage(){
         setZoomedImage(!zoomedImage)
-        console.log(`zoom ${zoomedImage} -> ${!zoomedImage}`);
     }
 
     //enviar essa função para o config
     function submitQuestion(e){
         e.preventDefault()
-
-        const data = new FormData(e.currentTarget)
-        console.log("---Valores do Form Data---");
-        for (const [name,value] of data) {
-            console.log(name, ":", value)
-        }
-        console.log( questions[currentQuestion - 1]);
-        console.log("---/Valores do Form Data---");
-
-        
+        const data = new FormData(e.currentTarget) 
         let isUserCorrect = false;
-    
-    
         switch (questions[currentQuestion - 1].questionType) {
             case 'UniqueItem':    
-                console.log('submit questão de item unico');
                 let selectedOptionForUser = questions[currentQuestion - 1].options.find( option => {
                     return data.get('options') === option.content
                 } )
     
                 if(selectedOptionForUser.isCorrect === true){
-                    console.log('unique certo');
                     isUserCorrect = true;
                 }else{
-                    console.log('unique errado');
                     isUserCorrect = false;
                 }
                 
@@ -101,9 +83,7 @@ export function Quiz({questions}){
                 showNextQuestion()
                 break;
     
-            case 'MultipleItems':
-                    
-                console.log('submit questão de item Multiplos');
+            case 'MultipleItems':                   
                 let selectedOptions = []
     
                 for( let key of data.keys() ){
@@ -135,7 +115,6 @@ export function Quiz({questions}){
                 break;
     
             case 'InputQuestion':
-                console.log('submit questão de input');
                 //lista booleanificada de valores que o usuario digitou correto
                 const listOfCertainMarkedValues = [];
     
@@ -148,14 +127,9 @@ export function Quiz({questions}){
                 }
     
                 const userEnteredAllValuesCorrectly = listOfCertainMarkedValues.every( value => value === true )
-                console.log('Usuario digitou todos valores corretamente: ',userEnteredAllValuesCorrectly);
-    
-                console.log('lista de valores booleanificados: ',listOfCertainMarkedValues);
                 if(userEnteredAllValuesCorrectly){
-                    console.log('input certo');
                     isUserCorrect = true;
                 }else{
-                    console.log('input errado');
                     isUserCorrect = false;
                 }
 
@@ -169,15 +143,9 @@ export function Quiz({questions}){
                 break;
         
             default:
-    
-                console.log('submit invalido');
                 break;
             
         }
-        
-    
-        //e.currentTarget.reset()
-        // o formulario se alimpa
     }
 
     function resetQuiz(){
@@ -255,7 +223,7 @@ export function Quiz({questions}){
                         <Text>Você acertou {amountOfWins} de {questions.length} questões.</Text>
                         <Flex direction='row' gap='0.25rem'>
                             <Button onClick={resetQuiz}>Reiniciar Quiz</Button>
-                            <Button onClick={()=> {console.log(winningHistory); onOpen()}}>Ver resultados</Button>
+                            <Button onClick={()=> {onOpen()}}>Ver resultados</Button>
                         </Flex>
                         <ResultsModal 
                             isModalOpenned={isOpen}
