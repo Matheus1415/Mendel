@@ -20,9 +20,9 @@ export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => 
       <>
         {title &&<Text variant="h3" align="center">{title}</Text>}
         <Flex maxW="100%" direction={flexDirection} align="flex-start" justify="center" p={10}>
-          {inputTrue && <ParentInput /> }
-          <PunnettSquare />
-          {/* <PunnettSquareDraggable maxAlelo={2}/> */}
+          {/* {inputTrue && <ParentInput /> }
+          <PunnettSquare /> */}
+          <PunnettSquareDraggable maxAlelo={2}/>
         </Flex>
       </>
   );

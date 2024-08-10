@@ -42,7 +42,6 @@ export function Chromosomes(){
 
                 <VLibras forceOnload/>
 
-                <Button variant='readMore'>Saiba Mais</Button>
 
                 <Heading variant='PrimaryTitle'>Cromossomos</Heading>
                 <Text variant='forContentsPage'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
