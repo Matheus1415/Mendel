@@ -4,11 +4,6 @@ export const LayoutBaseModify = ({children, titleSyleOverrides = {}, title = '',
     const flexDirection = useBreakpointValue({ base: "column", sm: "column", md: isRowReverse?'row-reverse':'row'});
     const contentWidth = useBreakpointValue({  base: "100%",  sm: "100%", md: '50%'});
     const felxAlignContent = useBreakpointValue({  base: "center",  sm: "center", md: ''});
-    
-    const newC =  children.props.children[0]
-    let bg ='blue'
-    const newC2 =  {...children.props, bg}
-    console.log(newC2);
 
     return(
         <Box 
@@ -28,7 +23,7 @@ export const LayoutBaseModify = ({children, titleSyleOverrides = {}, title = '',
                         variant={titleVariant}
                         sx={titleSyleOverrides}                            
                     >{title}</Heading>
-                    {children.props.children[0]}
+                    {children}
                 </Flex>
 
                 {isImage && <Image w="lg" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Estatua de Mendel" />
