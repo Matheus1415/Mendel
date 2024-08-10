@@ -1,30 +1,26 @@
-import { Button, Heading, Text } from '@chakra-ui/react';
-import { LayoutS } from '../../layout/LayoutS';
+import { Box, Flex } from '@chakra-ui/react';
+import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
+import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 export const TesteLayout = () =>{
     return(
-        <LayoutS
+        <>
+        <LayoutIntroduction query="GENÉTICA">INTRODUÇÃO SOBRE GENÉTICA</LayoutIntroduction>
+        <LayoutBaseModify
             title='Biografia'
             titleStyle='SecondTitle'
             isRowReverse
             isImage
             isImageSrc="assets/estatuaMendel.png"
         >
-           <Text variant="Paragraph" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem corporis ipsa eveniet maxime inventore voluptates deserunt distinctio tempore, veritatis et aspernatur architecto porro. Aspernatur totam corporis eveniet esse in.
-           </Text>
-
-           <Heading variant="PrimaryTitle">Ola mundo</Heading>
-
-           <Text variant="Paragraph" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem corporis ipsa eveniet maxime inventore voluptates deserunt distinctio tempore, veritatis et aspernatur architecto porro. Aspernatur totam corporis eveniet esse in.
-           </Text>
-           <Text variant="Paragraph" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem corporis ipsa eveniet maxime inventore voluptates deserunt distinctio tempore, veritatis et aspernatur architecto porro. Aspernatur totam corporis eveniet esse in.
-           </Text>
-           <Text variant="Paragraph" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quidem corporis ipsa eveniet maxime inventore voluptates deserunt distinctio tempore, veritatis et aspernatur architecto porro. Aspernatur totam corporis eveniet esse in.
-           </Text>
-           <Button variant="readMore">Saiba mais..</Button>
-        </LayoutS>
+           <Flex direction="column" color="red.500">
+                <Box color="red.500" > 
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tenetur modi magni ex sunt ducimus reprehenderit error atque veritatis dolor, quas ea. Nesciunt a at porro architecto nemo repellendus sapiente!
+                </Box>
+                <Box color="red.500">
+                    nada
+                </Box>
+           </Flex>
+        </LayoutBaseModify>
+        </>
     )
 }
