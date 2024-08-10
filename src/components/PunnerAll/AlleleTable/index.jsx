@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { Flex, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
+import { Flex, Table, Thead, Tbody, Tr, Th, Td, Text } from '@chakra-ui/react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext'; // Importe o contexto necessário
+import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext'; 
 
 // Registrar os componentes necessários do Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -14,54 +14,57 @@ const AlleleTable = ({ isTable = false }) => {
      caracteristica,
      backgroundColorDominant,
      backgroundColorRecessive,
-   } = useContext(CaracteristicaContext); // Use o useContext para acessar o contexto
+   } = useContext(CaracteristicaContext);
 
-  // Convert alleleCounts to data array for PieChart
+  // Verifique se caracteristica está definido
+  if (!caracteristica || caracteristica.length < 2) {
+    return <Text>Dados indisponíveis</Text>;
+  }
+
   const data = {
     labels: [`Dominante | ${caracteristica[0]}`, `Recessivo | ${caracteristica[1]}`],
     datasets: [
       {
         label: 'Frequência de Alelo',
         data: [countDominant, countRecessive],
-        backgroundColor: [backgroundColorDominant,backgroundColorRecessive],
-        hoverBackgroundColor: [backgroundColorDominant,backgroundColorRecessive]
+        backgroundColor: [backgroundColorDominant, backgroundColorRecessive],
+        hoverBackgroundColor: [backgroundColorDominant, backgroundColorRecessive]
       }
     ]
   };
 
   return (
-    <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
+    <Flex direction="column" align="center" justify="center" m="4">
       {isTable ? (
-        <>
-          <h3>Allele Frequencies</h3>
-          <Table variant="simple" colorScheme="teal" mb="6">
-            <Thead bg="Primary">
+        <Flex direction="column" align="center" justify="center" m="4">
+          <Text variant="p" align="center">Frequência de Alelos</Text>
+          <Table mb="6">
+            <Thead bg="Dark">
               <Tr>
-                <Th>Allele Type</Th>
-                <Th>Count</Th>
+                <Th color="white">Tipo de Alelo</Th>
+                <Th color="white">Contagem</Th>
               </Tr>
             </Thead>
-            <Tbody>
+            <Tbody bg="Terciario">
               <Tr>
-                <Td>Dominant</Td>
-                <Td>{countDominant}</Td>
+                <Td color="white">Dominante</Td>
+                <Td color="white">{countDominant}</Td>
               </Tr>
               <Tr>
-                <Td>Recessive</Td>
-                <Td>{countRecessive}</Td>
+                <Td color="white">Recessivo</Td>
+                <Td color="white">{countRecessive}</Td>
               </Tr>
             </Tbody>
           </Table>
-        </>
+        </Flex>
       ) : (
-        <>
-          <h3>Allele Distribution</h3>
+        <Flex direction="column" align="center" justify="center" m="4">
+          <Text variant="p" align="center">Frequência de Alelos</Text>
           <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             <Pie data={data} />
           </div>
-        </>
+        </Flex>
       )}
-
     </Flex>
   );
 };
