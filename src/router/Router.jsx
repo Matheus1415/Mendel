@@ -6,18 +6,19 @@ import { FatorRH } from '../pages/FatorRH';
 import PunerAll from '../components/PunnerAll';
 import { Chromosomes } from '../pages/Chromosomes';
 import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
+import { MenuMendel } from '../components/Menu';
 
 export const RouterAsRouter = () => {
   return (
     <BrowserRouter>
-      {/*Colocar Menu lateral*/}
+      <MenuMendel />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/alelos" element={<Alelos />} />
         <Route path="/puner" element={<PunerAll/>} />
         <Route path="/fatorrh" element={<FatorRH />} />
         <Route path="/manutencao" element={<h1>Rota de manutenção</h1> }/>
-        <Route path='/Chromosomes' element={<Chromosomes />}/>
+        <Route path='/cromossomo' element={<Chromosomes />}/>
         <Route path='/layout' element={<TesteLayout />}/>
       </Routes>
     </BrowserRouter>

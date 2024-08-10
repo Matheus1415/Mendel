@@ -1,5 +1,4 @@
 import { Flex, Box, Text, useBreakpointValue, Button, Image } from "@chakra-ui/react";
-import { MenuMendel } from "../../components/Menu";
 import contentHome from "../../data/contentHome.json";
 import VLibras from "@djpfs/react-vlibras";
 import { IoBookOutline } from 'react-icons/io5';
@@ -33,7 +32,7 @@ export const Home = () => {
             <Flex w="100%" bg="#02161F">    
                 <VLibras />
                 <Flex direction="column" w="100%">
-                    <MenuMendel />
+                    
                     <Box
                         bgImage="url('/pgHome/Background_s/1_Banner.jpg')" 
                         bgPosition="left center"
