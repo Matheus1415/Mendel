@@ -9,7 +9,7 @@ Este projeto de genética interativa foi desenvolvido para proporcionar uma expe
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
 - [Uso](#uso)
-- [Contribuição](#contribuição)
+- [Contribuição](#Autores)
 - [Licença](#licença)
 - [Contato](#contato)
 
