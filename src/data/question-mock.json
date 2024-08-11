@@ -15,6 +15,30 @@
             {
                 "content": "Com certeza",
                 "isCorrect": true
+            },
+            {
+                "content": "testendo json",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Primeiro quadro de punnhett draggable",
+        "questionType": "PunnettSquareDraggable",
+        "fatherAlleles": ["X","x"],
+        "montherAlleles": ["X","x"],
+        "template": [
+            ["ACF", "ACF"],
+            ["ACF", "ASF"]
+        ],
+        "options": [
+            {
+                "name": "ACF",
+                "src": "https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
+            },
+            {
+                "name": "ASF",
+                "src": "https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg"
             }
         ]
     },
@@ -69,5 +93,4 @@
             }
         ]
     }
-
 ]
