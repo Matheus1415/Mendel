@@ -1,24 +1,33 @@
-import React, { useState, useContext } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Text } from '@chakra-ui/react';
+import React, { useState, useContext, useEffect } from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Text, Button } from '@chakra-ui/react';
 
 const optionsExample = [
         {
-            nome: "arvoreSemFolha",
+            name: "arvoreSemFolha",
             src: "https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg"
         },
         {
-            nome: "arvoreComFolha",
+            name: "arvoreComFolha",
             src: "https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
         }
 ]
 
-const PunnettSquareDraggable = ({ alelosDoPai = ['A', 'a'], alelosDaMae = ['a', 'a'],  options = optionsExample}) => {
+const PunnettSquareDraggable = ({ 
+    alelosDoPai = ['A', 'a'], 
+    alelosDaMae = ['a', 'a'],  
+    options = optionsExample, 
+    onChangeCallback= ()=>{console.log('callback');}
+}) => {
     const quantidadeDeAlelos = alelosDoPai.length
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [draggedImgSrc, setDraggedImgSrc] = useState('');
     const [draggedNome, setDraggedNome] = useState('')
     const [matriz, setMatriz] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
-    console.log(matriz);
+    
+
+    useEffect(()=>{
+        onChangeCallback(matriz)
+    }, [matriz]);
 
     const handleDragStart = (e, src, nome) => {
         setDraggedImgSrc(src);
@@ -86,7 +95,7 @@ const PunnettSquareDraggable = ({ alelosDoPai = ['A', 'a'], alelosDaMae = ['a', 
                         className="cell"
                         src={option.src}
                         draggable="true"
-                        onDragStart={(e) => handleDragStart(e, option.src, option.nome)}
+                        onDragStart={(e) => handleDragStart(e, option.src, option.name)}
                     />
                 ))}
             </Box>
