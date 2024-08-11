@@ -1,26 +1,56 @@
-import React, { useState, useContext } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Text } from '@chakra-ui/react';
+import React, { useState, useContext, useEffect } from 'react';
+import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Text, Button } from '@chakra-ui/react';
 
-const PunnettSquareDraggable = ({ maxAlelo }) => {
-    const [grid, setGrid] = useState(Array(maxAlelo).fill(Array(maxAlelo).fill(null)));
+const optionsExample = [
+        {
+            nome: "arvoreSemFolha",
+            src: "https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg"
+        },
+        {
+            nome: "arvoreComFolha",
+            src: "https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
+        }
+]
+
+const PunnettSquareDraggable = ({ 
+    alelosDoPai = ['A', 'a'], 
+    alelosDaMae = ['a', 'a'],  
+    options = optionsExample, 
+    onChangeCallback= ()=>{console.log('callback');}
+}) => {
+    const quantidadeDeAlelos = alelosDoPai.length
+    const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [draggedImgSrc, setDraggedImgSrc] = useState('');
+    const [draggedNome, setDraggedNome] = useState('')
+    const [matriz, setMatriz] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
+    
 
-    const handleDragStart = (e, src) => {
+    useEffect(()=>{
+        onChangeCallback(matriz)
+    }, [matriz]);
+
+    const handleDragStart = (e, src, nome) => {
         setDraggedImgSrc(src);
+        setDraggedNome(nome)
     };
 
     const handleDrop = (rowIndex, colIndex) => {
         const newGrid = grid.map((row, rIdx) =>
-            row.map((cell, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? draggedImgSrc : cell))
+            row.map((src, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? draggedImgSrc : src))
+        );
+        const newMatriz = matriz.map((row, rIdx) =>
+            row.map((nome, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? draggedNome : nome))
         );
         setGrid(newGrid);
+        setMatriz(newMatriz);
     };
 
     const handleDragOver = (e) => {
         e.preventDefault();
     };
 
-    console.log(grid);
+    console.log(grid); 
+    console.log(draggedImgSrc); 
 
     return (
         <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
@@ -29,16 +59,16 @@ const PunnettSquareDraggable = ({ maxAlelo }) => {
                 <Thead>
                     <Tr>
                         <Th border="2px" borderColor="gray.300" bg="gray.400" sx={{ textTransform: 'none' }}></Th>
-                        {Array(maxAlelo).fill().map((_, idx) => (
-                            <Th key={idx} border="2px" borderColor="gray.300" sx={{ textTransform: 'none' }}>B{idx + 1}</Th>
+                        {alelosDoPai.map((alelo, idx) => (
+                            <Th key={idx} border="2px" borderColor="gray.300" sx={{ textTransform: 'none' }}>{alelo}</Th>
                         ))}
                     </Tr>
                 </Thead>
                 <Tbody>
                     {grid.map((row, rowIndex) => (
                         <Tr key={rowIndex}>
-                            <Th border="2px" borderColor="gray.300">A{rowIndex + 1}</Th>
-                            {row.map((cell, colIndex) => (
+                            <Th border="2px" borderColor="gray.300">{alelosDaMae[rowIndex]}</Th>
+                            {row.map((src, colIndex) => (
                                 <Td
                                     key={colIndex}
                                     border="2px"
@@ -46,8 +76,8 @@ const PunnettSquareDraggable = ({ maxAlelo }) => {
                                     onDrop={() => handleDrop(rowIndex, colIndex)}
                                     onDragOver={handleDragOver}
                                 >
-                                    {cell ? (
-                                        <img style={{'maxWidth': '100px'}} src={cell} alt={`cell-${rowIndex}-${colIndex}`} draggable="false" />
+                                    {src ? (
+                                        <img style={{'maxWidth': '100px'}} src={src} alt={`cell-${rowIndex}-${colIndex}`} draggable="false" />
                                     ) : (
                                         <Box w="50px" h="50px" border="1px" borderColor="gray.300" />
                                     )}
@@ -58,20 +88,16 @@ const PunnettSquareDraggable = ({ maxAlelo }) => {
                 </Tbody>
             </Table>
             <Box>
-                <img
-                    style={{'maxWidth': '200px'}}
-                    className="cell"
-                    src="https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg"
-                    draggable="true"
-                    onDragStart={(e) => handleDragStart(e, "https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg")}
-                />
-                <img
-                    style={{'maxWidth': '200px'}}
-                    className="cell"
-                    src="https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
-                    draggable="true"
-                    onDragStart={(e) => handleDragStart(e, "https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg")}
-                />
+                {options.map((option, index) => (
+                    <img
+                        key={index}
+                        style={{'maxWidth': '200px'}}
+                        className="cell"
+                        src={option.src}
+                        draggable="true"
+                        onDragStart={(e) => handleDragStart(e, option.src, option.name)}
+                    />
+                ))}
             </Box>
         </Flex>
     );
