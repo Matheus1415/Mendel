@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Text, Button } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Text, Button, Heading } from '@chakra-ui/react';
 
 const optionsExample = [
         {
@@ -16,7 +16,7 @@ const PunnettSquareDraggable = ({
     alelosDoPai = ['A', 'a'], 
     alelosDaMae = ['a', 'a'],  
     options = optionsExample, 
-    onChangeCallback= ()=>{console.log('callback');}
+    onChangeCallback= ()=>{}
 }) => {
     const quantidadeDeAlelos = alelosDoPai.length
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
@@ -49,56 +49,54 @@ const PunnettSquareDraggable = ({
         e.preventDefault();
     };
 
-    console.log(grid); 
-    console.log(draggedImgSrc); 
 
     return (
-        <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
-            <Text variant="h3" align="center">Quadro de Punnett Draggable</Text>
-            <Table border="2px" borderColor="gray.300" mb="4">
-                <Thead>
-                    <Tr>
-                        <Th border="2px" borderColor="gray.300" bg="gray.400" sx={{ textTransform: 'none' }}></Th>
-                        {alelosDoPai.map((alelo, idx) => (
-                            <Th key={idx} border="2px" borderColor="gray.300" sx={{ textTransform: 'none' }}>{alelo}</Th>
-                        ))}
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    {grid.map((row, rowIndex) => (
-                        <Tr key={rowIndex}>
-                            <Th border="2px" borderColor="gray.300">{alelosDaMae[rowIndex]}</Th>
-                            {row.map((src, colIndex) => (
-                                <Td
-                                    key={colIndex}
-                                    border="2px"
-                                    borderColor="gray.300"
-                                    onDrop={() => handleDrop(rowIndex, colIndex)}
-                                    onDragOver={handleDragOver}
-                                >
-                                    {src ? (
-                                        <img style={{'maxWidth': '100px'}} src={src} alt={`cell-${rowIndex}-${colIndex}`} draggable="false" />
-                                    ) : (
-                                        <Box w="50px" h="50px" border="1px" borderColor="gray.300" />
-                                    )}
-                                </Td>
+        <Flex direction="column" w="100%" >
+            <Heading variant="PrimaryTitle" align="center">Quadro de Punnett Draggable</Heading>
+            <Flex direction="row" align="center" justify="center" wrap="wrap"  w="100%" gap={10}>
+                <Table border="2px" borderColor="white" mb="4" maxW="50%">
+                    <Thead borderColor="white">
+                        <Tr borderColor="white">
+                        <Th border="2px" borderColor="white" bg="Dark" color="white"></Th>
+                            {alelosDoPai.map((alelo, idx) => (
+                                <Th fontSize={25} textAlign="center" key={idx} border="2px" borderColor="white" color="white" sx={{ textTransform: 'none' }}>{alelo}</Th>
                             ))}
                         </Tr>
+                    </Thead>
+                    <Tbody borderColor="white">
+                        {grid.map((row, rowIndex) => (
+                            <Tr borderColor="white" key={rowIndex} >
+                                <Th fontSize={25} textAlign="center" border="2px" borderColor="white" color="white" sx={{ textTransform: 'none' }} >{alelosDaMae[rowIndex]}</Th>
+                                {row.map((src, colIndex) => (
+                                    <Td
+                                        key={colIndex}
+                                        border="2px"
+                                        borderColor="white"
+                                        onDrop={() => handleDrop(rowIndex, colIndex)}
+                                        onDragOver={handleDragOver}
+                                        bg={src? '': 'red.800'}
+                                        p={src?5:10}
+                                    >
+                                        {src && <img style={{'maxWidth': '100px'}} src={src} alt={`cell-${rowIndex}-${colIndex}`} draggable="false" />}
+                                    </Td>
+                                ))}
+                            </Tr>
+                        ))}
+                    </Tbody>
+                </Table>
+                <Box maxW="50%">
+                    {options.map((option, index) => (
+                        <img
+                            key={index}
+                            style={{'maxWidth': '200px'}}
+                            className="cell"
+                            src={option.src}
+                            draggable="true"
+                            onDragStart={(e) => handleDragStart(e, option.src, option.name)}
+                        />
                     ))}
-                </Tbody>
-            </Table>
-            <Box>
-                {options.map((option, index) => (
-                    <img
-                        key={index}
-                        style={{'maxWidth': '200px'}}
-                        className="cell"
-                        src={option.src}
-                        draggable="true"
-                        onDragStart={(e) => handleDragStart(e, option.src, option.name)}
-                    />
-                ))}
-            </Box>
+                </Box>
+            </Flex>
         </Flex>
     );
 };

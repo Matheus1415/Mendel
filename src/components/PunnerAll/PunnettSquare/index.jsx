@@ -72,8 +72,6 @@ const PunnettSquare = () => {
       />
       {/* <Button>Mude</Button> */}
       {/* datalist */}
-
-
     </Flex>
   );
 };

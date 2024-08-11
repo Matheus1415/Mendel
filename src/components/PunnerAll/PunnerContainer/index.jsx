@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Flex, Text, useBreakpointValue} from '@chakra-ui/react';
+import { Flex, Heading, useBreakpointValue} from '@chakra-ui/react';
 import PunnettSquare from '../PunnettSquare';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { ParentInput } from '../ParentInput';
@@ -18,7 +18,7 @@ export const PunerContainer = ({configAlelo = [], title, inputTrue = false}) => 
   
   return (
       <>
-        {title &&<Text variant="h3" align="center">{title}</Text>}
+        {title &&<Heading variant="PrimaryTitle" align="center">{title}</Heading>}
         <Flex maxW="100%" direction={flexDirection} align="flex-start" justify="center" p={10}>
           {/* {inputTrue && <ParentInput /> }
           <PunnettSquare /> */}
