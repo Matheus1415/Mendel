@@ -64,4 +64,45 @@ Para rodar este projeto localmente, siga os passos abaixo:
 5. Acesse a aplicação em http://localhost:3000.
 
 
+# Autores
+
+- **Matheus Pereira** ([GitHub](https://www.github.com/Matheus1415))  
+  Líder, Gestor de Projeto e Desenvolvedor  
+  Responsável pela coordenação geral do projeto e desenvolvimento do sistema, além de intermediar entre os diferentes responsáveis pelo projeto.
+
+- **Alessandro Silva** ([GitHub](https://www.github.com/AlessandroSilvaS))  
+  Desenvolvedor  
+  Contribuiu com a implementação de páginas de conteúdo e criação de componentes específicos do sistema.
+
+- **Daniel de Sousa** ([GitHub](https://www.github.com/DanielDeSousaDEV))  
+  Redator e Desenvolvedor  
+  Redator técnico e desenvolvedor de componentes interativos, estruturando níveis complexos e intermediários.
+
+- **Moises Lima** ([GitHub](https://www.github.com/dev-moises-lima))  
+  Desenvolvedor  
+  Focado no desenvolvimento de demandas variadas, manutenção de código e suporte à criação do algoritmo do quadro de Punnett.
+
+- **Ermeson Ramos** ([GitHub](https://www.github.com/ErmesonRamos))  
+  Orientador de Desenvolvimento e Desenvolvedor  
+  Coordenou os desenvolvimentos iniciais e contribuiu com a arquitetura do projeto.
+
+- **Gabriel Sousa** ([GitHub](https://www.github.com/Gabriel-Sousa-Dev))  
+  Gestor de Projeto e Desenvolvedor  
+  Gestão de tarefas e desenvolvimento de funcionalidades chave, além de contribuir para a estrutura e escopo do projeto, liderando o desenvolvimento.
+
+- **Vinicius Gykatah** ([GitHub](https://www.github.com/Gykatah))  
+  Desenvolvedor e Suporte  
+  Desenvolvedor responsável pelo suporte técnico e solução de problemas.
+
+- **Jeferson Bryan** ([GitHub](https://www.github.com/JefersonBryan))  
+  Desenvolvedor  
+  Contribuiu com a implementação de páginas de conteúdo e interações.
+
+- **José Venâncio** ([GitHub](https://www.github.com/JoseVenancioDev))  
+  Desenvolvedor  
+  Contribuiu com a implementação de páginas de conteúdo e criação de páginas interativas.
+
+- **Thiago Haner** ([GitHub](https://www.github.com/ThiagoHaner))  
+  Desenvolvedor  
+  Contribuiu com a implementação de páginas de conteúdo e desenvolvimento de lógicas de backend.
 
