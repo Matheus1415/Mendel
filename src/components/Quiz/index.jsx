@@ -7,13 +7,16 @@ import {
     Badge,
     Image,
     Flex,
-    useDisclosure
+    useDisclosure,
+    Input
 } from '@chakra-ui/react'
  import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { submitForm } from '../../config/submitForm.js'
 import { Options } from './Options.jsx';
 import { ResultsModal } from './ResultsModal.jsx';
+import PunnettSquareDraggable from '../PunnerAll/PunerDraggable/index.jsx';
+import { areMatricesEquals } from '../../config/areMatricesEqual.js';
 
 /**
  * 
@@ -28,8 +31,12 @@ export function Quiz({questions}){
     const [winningHistory, setWinningHistory] = useState([])
     const [showResults, setShowResults] = useState(false)
     const [zoomedImage, setZoomedImage] = useState(false)
+
+    const [answersMatrixInPunnhettDraggable, setAnswersMatrixInPunnhettDraggable] = useState([]);
     
     const {isOpen, onOpen, onClose} = useDisclosure()
+
+    const questionTypesThatShouldHaveOptions = ["UniqueItem", "MultipleItems", "InputQuestion"];
 
     const zoomVariants = {
         //aqui vão as estilizações que devem ser feitas com base no state zoomedImage
@@ -48,17 +55,14 @@ export function Quiz({questions}){
     function showNextQuestion(){
         if (currentQuestion >= questions.length) {
             setShowResults(true)
-            console.log('chegou no final', winningHistory);
             return;
         }
-        console.log(`da questão ${currentQuestion} -> ${currentQuestion + 1} | \n Resultado:`,winningHistory);
 
         setTimeout( ()=> setCurrentQuestion(currentQuestion + 1), 150)
     }
 
     function toggleZoomImage(){
         setZoomedImage(!zoomedImage)
-        console.log(`zoom ${zoomedImage} -> ${!zoomedImage}`);
     }
 
     //enviar essa função para o config
@@ -78,17 +82,14 @@ export function Quiz({questions}){
     
     
         switch (questions[currentQuestion - 1].questionType) {
-            case 'UniqueItem':    
-                console.log('submit questão de item unico');
+            case 'UniqueItem':
                 let selectedOptionForUser = questions[currentQuestion - 1].options.find( option => {
                     return data.get('options') === option.content
                 } )
     
                 if(selectedOptionForUser.isCorrect === true){
-                    console.log('unique certo');
                     isUserCorrect = true;
                 }else{
-                    console.log('unique errado');
                     isUserCorrect = false;
                 }
                 
@@ -102,8 +103,6 @@ export function Quiz({questions}){
                 break;
     
             case 'MultipleItems':
-                    
-                console.log('submit questão de item Multiplos');
                 let selectedOptions = []
     
                 for( let key of data.keys() ){
@@ -135,7 +134,6 @@ export function Quiz({questions}){
                 break;
     
             case 'InputQuestion':
-                console.log('submit questão de input');
                 //lista booleanificada de valores que o usuario digitou correto
                 const listOfCertainMarkedValues = [];
     
@@ -147,15 +145,11 @@ export function Quiz({questions}){
                     listOfCertainMarkedValues.push(userEnteredCorrectValue)
                 }
     
-                const userEnteredAllValuesCorrectly = listOfCertainMarkedValues.every( value => value === true )
-                console.log('Usuario digitou todos valores corretamente: ',userEnteredAllValuesCorrectly);
+                const userEnteredAllValuesCorrectly = listOfCertainMarkedValues.every( value => value === true );
     
-                console.log('lista de valores booleanificados: ',listOfCertainMarkedValues);
                 if(userEnteredAllValuesCorrectly){
-                    console.log('input certo');
                     isUserCorrect = true;
                 }else{
-                    console.log('input errado');
                     isUserCorrect = false;
                 }
 
@@ -165,19 +159,31 @@ export function Quiz({questions}){
                     answeredCorrectly: isUserCorrect
                 }] );
 
-                showNextQuestion()
+                showNextQuestion();
+                break;
+
+            case 'PunnettSquareDraggable':
+                const userAnswersForMatriz  = JSON.parse(data.get("answersForMatrix"));
+                const templateForCurrentQuestion = questions[currentQuestion - 1].template;
+
+                isUserCorrect = areMatricesEquals(userAnswersForMatriz, templateForCurrentQuestion);
+
+                setWinningHistory( [...winningHistory, {
+                    question: currentQuestion,
+                    explanation: questions[ currentQuestion - 1 ].explanation,
+                    answeredCorrectly: isUserCorrect
+                }] );
+
+                showNextQuestion();
                 break;
         
             default:
     
-                console.log('submit invalido');
+                console.warn('submit invalido');
                 break;
             
         }
         
-    
-        //e.currentTarget.reset()
-        // o formulario se alimpa
     }
 
     function resetQuiz(){
@@ -238,15 +244,29 @@ export function Quiz({questions}){
                             </>
                         ) }
                         
-                            <VStack spacing='24px' alignItems='flex-start' my='2'>
-                                
-                                {
-                                    <Options 
-                                        questionType={questions[currentQuestion - 1].questionType} 
-                                        questionOptions={questions[currentQuestion - 1].options}
-                                    />
-                                }
-                            </VStack>
+                            {
+                                questionTypesThatShouldHaveOptions.includes(questions[currentQuestion - 1].questionType) ? (
+                                    <VStack spacing='24px' alignItems='flex-start' my='2'>
+                                        {
+                                            <Options 
+                                                questionType={questions[currentQuestion - 1].questionType} 
+                                                questionOptions={questions[currentQuestion - 1].options}
+                                            />
+                                        }
+                                    </VStack>
+                                ) : (
+                                    <>
+                                        <PunnettSquareDraggable
+                                            alelosDaMae={questions[currentQuestion - 1].montherAlleles}
+                                            alelosDoPai={questions[currentQuestion - 1].fatherAlleles}
+                                            options={questions[currentQuestion - 1].options}
+                                            onChangeCallback={setAnswersMatrixInPunnhettDraggable}
+                                        />
+                                        <Input type='text' name='answersForMatrix' value={JSON.stringify(answersMatrixInPunnhettDraggable)} />
+                                    </>
+                                    
+                                )
+                            }
                             <Button type='submit' position='block' display='flex' alignItems='center' gap='0.5rem' w='full' color='white' bgColor='Terciario' _hover={{opacity: 0.9}} >Enviar Respostas</Button>
                     </Box>
                 ) : (
@@ -255,7 +275,7 @@ export function Quiz({questions}){
                         <Text>Você acertou {amountOfWins} de {questions.length} questões.</Text>
                         <Flex direction='row' gap='0.25rem'>
                             <Button onClick={resetQuiz}>Reiniciar Quiz</Button>
-                            <Button onClick={()=> {console.log(winningHistory); onOpen()}}>Ver resultados</Button>
+                            <Button onClick={()=> {onOpen()}}>Ver resultados</Button>
                         </Flex>
                         <ResultsModal 
                             isModalOpenned={isOpen}
