@@ -7,8 +7,7 @@ import { Text } from '@chakra-ui/react'
 import './App.css';
 
 const App = () => {
-    const [parents, setParents] = useState([]);
-
+  const [parents, setParents] = useState([]);
     return (
         <div className="App" >
             <Text fontSize='7xl' height='h19'>Meu Quadro</Text>
