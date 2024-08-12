@@ -6,13 +6,11 @@ import { useState } from 'react';
 export const Puner = () => {
     const [parents, setParents] = useState([]);
 
-    console.log('Parents state:', parents); // Adicione um log para depurar o estado de parents
-
     return (
-        <Container>
-            <Text variant="h3">Quadro de Punner</Text>
+        <Container maxW="100%">
+            <Text variant="h3" align="center">Quadro de Punner</Text>
             <ParentInput setParents={setParents} />
-            <PunnettSquare parents={parents} />
+            <PunnettSquare parents={parents} maxAlelo={2} />
         </Container>
     );
 };
