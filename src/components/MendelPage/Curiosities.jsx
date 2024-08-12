@@ -1,7 +1,9 @@
 import {Card, CardBody, CardHeader, Flex, Grid, Heading, HStack, Stack, Text} from '@chakra-ui/react'
 import { VerticalBar } from './VerticalBar'
+import { LayoutBaseModify } from '../../layout/LayoutBaseModify'
 export function Curiosities () {
 return ( 
+    
     <Flex aling="Center" direction="column" bg='#02161F'>
        <Heading textAlign='center' fontSize={[25, 25, 40, 40, 40]} fontWeight='275' margin='10px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
             CURIOSIDADES SOBRE MENDEL

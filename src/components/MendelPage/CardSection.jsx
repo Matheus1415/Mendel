@@ -14,7 +14,6 @@ function showCards(){
     ))
 }
 
-
 function moveToLeft(){
     setIndex((prevIndex) => prevIndex == 0?cardsContents.length :prevIndex -1)
 }
