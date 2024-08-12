@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { CaracteristicaProvider } from '../../contexts/CaracteristicaContext';
 import { PunerContainer } from './PunnerContainer';
-import { usePunnettSquare } from '../../hook/usePunnettSquare';
 
 export const PunerAll = ({title,configAlelo,inputTrue}) => {
 title="Mendel";
