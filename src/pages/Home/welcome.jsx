@@ -1,4 +1,7 @@
 import { Flex, Box, Text, useBreakpointValue } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
 
 export const Welcome = () => {
     const HboxIntro = useBreakpointValue({ sm: "800px", md: "1000px" });
@@ -8,7 +11,8 @@ export const Welcome = () => {
     return(
         <Box
             bgImage="url('/pgHome/Background_s/1_Banner.jpg')" 
-            bgPosition="left center"
+            bgPosition="center center"
+            bgAttachment="fixed"
             bgRepeat="no-repeat"
             bgSize="cover"
             h={HboxIntro}
@@ -24,7 +28,11 @@ export const Welcome = () => {
                     p={12}
                     w="80%"
                 >
-                    <Box>
+                    <MotionBox
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }} 
+                    >
                         <Text 
                             fontWeight="200"
                             fontSize={bemVindofontSize}
@@ -45,7 +53,7 @@ export const Welcome = () => {
                         >
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, eius magni ipsum dolor enim in eos officia explicabo nulla nisi. Reprehenderit quas eveniet, iure quaerat officia quasi cum perferendis harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione iusto animi fugiat, atque, aspernatur suscipit itaque rerum repellat illum, voluptatibus minima fugit aut tempore mollitia quae id quisquam accusantium asperiores.
                         </Text>
-                    </Box>
+                    </MotionBox>
                 </Flex>
             </Flex>
         </Box>

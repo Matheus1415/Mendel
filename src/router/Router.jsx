@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from '../pages/Home';
 import { Mendel } from '../pages/Mendel';
 import PunerAll from '../components/PunnerAll';
 import { Chromosomes } from '../pages/Chromosomes';
@@ -11,6 +10,8 @@ import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
 import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
+import { Home } from '../pages/Home';
+
 
 export const RouterAsRouter = () => {
   return (
@@ -19,7 +20,7 @@ export const RouterAsRouter = () => {
       <MenuMendel />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/puner" element={<PunerAll/>} />
         <Route path="/cromossomo" element={<Chromosomes/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
