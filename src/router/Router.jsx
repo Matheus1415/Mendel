@@ -11,6 +11,7 @@ import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
 import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
+import { Fundamentos } from '../pages/Fundamentos';
 
 export const RouterAsRouter = () => {
   return (
@@ -27,6 +28,8 @@ export const RouterAsRouter = () => {
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/layout" element={<TesteLayout/>} />
+        <Route path="/fundamentos" element={<Fundamentos/>} />
+
       </Routes>
       <Footer/> 
     </BrowserRouter>
