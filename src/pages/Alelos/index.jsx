@@ -1,69 +1,95 @@
-import React from "react";
-import { Flex, Heading, Text, Image, Card, CardBody, UnorderedList, ListItem } from "@chakra-ui/react";
-import { Highlight } from "@chakra-ui/react";
+import { Text, Heading, Card, CardBody, UnorderedList, Stack, ListItem, SimpleGrid } from "@chakra-ui/react";
+import { LayoutIntroduction } from "../../layout/LayoutIntroduction";
+import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
 
 export const Alelos = () => {
-  return (
-    <>
-      <Flex h="100vh" w="full" direction="column" justify="center" align="center" backgroundImage="url(assets/banner.jpg)" backgroundRepeat="no-repeat" backgroundSize="cover">
-      <Heading bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Alelos</Heading>
-      </Flex>
-
-      <Flex direction="column" p={[3, 4, 8]} maxW="100%" mx="auto" alignItems="flex-start" bgColor="#0f1417">
-
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Genes</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Alelos</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-        
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Alelos Múltiplos</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Alelo Letal</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-
-        <Flex gap="20px" p="0.75rem" direction={["column", "column", "row"]}>
-
-          <Card boxShadow="lg">
-            <CardBody>
-              <Image mx="auto" src="https://placehold.co/300x200" alt="Imagem de células haploides" />
-              <Heading as="h3" my="0.5rem">Genes Dominantes</Heading>
-              <UnorderedList textAlign="left" spacing="0.5rem">
-                <ListItem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus maxime tempora iste deleniti! Quod, dolores tempora. Facere temporibus aperiam vel qui, quibusdam, nulla sit in ipsa, ducimus harum iste doloremque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam, blanditiis accusamus molestiae quibusdam inventore amet quia atque velit perspiciatis non ratione dolorum repellat voluptates ipsum officiis labore necessitatibus eius.</ListItem>
-                <ListItem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus maxime tempora iste deleniti! Quod, dolores tempora. Facere temporibus aperiam vel qui, quibusdam, nulla sit in ipsa, ducimus harum iste doloremque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam, blanditiis accusamus molestiae quibusdam inventore amet quia atque velit perspiciatis non ratione dolorum repellat voluptates ipsum officiis labore necessitatibus eius.</ListItem>
-                <ListItem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus maxime tempora iste deleniti! Quod, dolores tempora. Facere temporibus aperiam vel qui, quibusdam, nulla sit in ipsa, ducimus harum iste doloremque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam, blanditiis accusamus molestiae quibusdam inventore amet quia atque velit perspiciatis non ratione dolorum repellat voluptates ipsum officiis labore necessitatibus eius.</ListItem> 
-              </UnorderedList>
-            </CardBody>
-          </Card>
-
-          <Card boxShadow="lg">
-            <CardBody>
-              <Image mx="auto" src="https://placehold.co/300x200" alt="Imagem de células diploides" />
-              <Heading as="h3" my="0.5rem">Genes</Heading>
-              <UnorderedList textAlign="left" spacing="0.5rem">
-                <ListItem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus maxime tempora iste deleniti! Quod, dolores tempora. Facere temporibus aperiam vel qui, quibusdam, nulla sit in ipsa, ducimus harum iste doloremque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam, blanditiis accusamus molestiae quibusdam inventore amet quia atque velit perspiciatis non ratione dolorum repellat voluptates ipsum officiis labore necessitatibus eius.</ListItem>
-                <ListItem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus maxime tempora iste deleniti! Quod, dolores tempora. Facere temporibus aperiam vel qui, quibusdam, nulla sit in ipsa, ducimus harum iste doloremque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam, blanditiis accusamus molestiae quibusdam inventore amet quia atque velit perspiciatis non ratione dolorum repellat voluptates ipsum officiis labore necessitatibus eius.</ListItem>
-                <ListItem>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus maxime tempora iste deleniti! Quod, dolores tempora. Facere temporibus aperiam vel qui, quibusdam, nulla sit in ipsa, ducimus harum iste doloremque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam, blanditiis accusamus molestiae quibusdam inventore amet quia atque velit perspiciatis non ratione dolorum repellat voluptates ipsum officiis labore necessitatibus eius.</ListItem> 
-              </UnorderedList>
-            </CardBody>
-          </Card>
-          
-        </Flex>
-
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Fenótipo</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-        
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Genótipo</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Alelo Codominante</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-
-        <Heading as="h2" bgGradient="linear(to-r, #19BFCD, #0D6067)" bgClip="text" variant="PrimaryTitle">Alelo de Dominação Completa</Heading>
-        <Text align="left" color="Primary" variant="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora eaque tempore vitae, dicta iusto, minus iste assumenda officia voluptatibus suscipit. Tempore vel, dolores distinctio asperiores molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab aspernatur, obcaecati consequuntur iste dolores excepturi eveniet repellendus maxime nihil eligendi dignissimos possimus. Repellat, soluta ducimus!</Text>
-
-      </Flex>
-    </>
-  );
-};
+    return(
+        <>
+        <LayoutIntroduction query="genética">
+            Introdução a genética
+        </LayoutIntroduction>
+        <LayoutBaseModify>
+            <Heading variant='PrimaryTitle'>Genes</Heading>
+            <Text variant="Paragraph">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda illum, facere similique enim animi a quas, obcaecati tempore molestias aut omnis reprehenderit! Cumque quae rem non ducimus vitae! Laboriosam, nulla!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam sapiente ex recusandae dolorum nihil quos nisi beatae dolor quo architecto a, accusamus ipsum, fuga aspernatur consequuntur rem, incidunt harum repellat!
+            </Text>
+            <SimpleGrid columns={[1, 2]} spacing={4}>
+                <Card boxShadow='lg' bgColor="">
+                    <CardBody>
+                        <Stack>
+                            <Heading variant="SecondTitle" my='0.5rem'>Alelos</Heading>
+                            <UnorderedList spacing='0.5rem' color="white">
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem> 
+                            </UnorderedList>
+                        </Stack>
+                    </CardBody>
+                </Card>
+                <Card boxShadow='lg' bgColor="">
+                    <CardBody>
+                        <Stack>
+                            <Heading variant="SecondTitle" my='0.5rem'>Alelos Multiplos</Heading>
+                            <UnorderedList spacing='0.5rem' color="white">
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                
+                            </UnorderedList>
+                        </Stack>
+                    </CardBody>
+                </Card>
+            </SimpleGrid>
+            <Heading variant='PrimaryTitle'>Alelo Letal</Heading>
+            <Text variant="Paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commodi id assumenda labore. Blanditiis voluptatum error repellendus provident modi.
+            </Text>
+            <SimpleGrid columns={[1, 2]} spacing={4}>
+                <Card boxShadow='lg' bgColor="">
+                    <CardBody>
+                        <Stack>
+                            <Heading variant="SecondTitle" my='0.5rem'>Genes dominante</Heading>
+                            <UnorderedList spacing='0.5rem' color="white">
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                
+                            </UnorderedList>
+                        </Stack>
+                    </CardBody>
+                </Card>
+                <Card boxShadow='lg' bgColor="">
+                    <CardBody>
+                        <Stack>
+                            <Heading variant="SecondTitle" my='0.5rem'>Genes recessivo</Heading>
+                            <UnorderedList spacing='0.5rem' color="white">
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                <ListItem variant="Paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam amet quis hic nemo delectus, et exercitationem, sapiente, aliquam labore suscipit laboriosam. Deleniti quisquam voluptatum voluptatem, neque ab incidunt hic?</ListItem>
+                                
+                            </UnorderedList>
+                        </Stack>
+                    </CardBody>
+                </Card>
+            </SimpleGrid>
+            <Heading variant='PrimaryTitle'>Fenótipo e Genótipo</Heading>
+            <Text variant="Paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commod
+            </Text>
+            <Heading variant='PrimaryTitle'>Alelo Codominante</Heading>
+            <Text variant="Paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commod
+            </Text>
+            <Heading variant='PrimaryTitle'>Alelo de dominação completa</Heading>
+            <Text variant="Paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commod
+            </Text>
+        </LayoutBaseModify>
+        </>
+    );
+}
