@@ -1,5 +1,7 @@
 import { Flex, Box, Text, useBreakpointValue, Button} from "@chakra-ui/react";
 import FormHome from "../../components/FormHome";
+import { FormProvider } from "../../contexts/formContext";
+import FormHomeComponent from "../../components/FormHome";
 
 export const Form = () => {
     const flexDirection = useBreakpointValue({ sm: "column", md: "row" });
@@ -33,7 +35,9 @@ export const Form = () => {
                 maxH={700}
             >
                 <Box w="100%" maxW={WContato} >
-                    <FormHome /> 
+                    <FormProvider>
+                        <FormHomeComponent /> 
+                    </FormProvider>
                 </Box>
                 <Flex 
                     bgImage="url('/pgHome/6_Contato.png')" 
