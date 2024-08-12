@@ -31,6 +31,7 @@ export const ParentInput = () => {
                         <Input
                             placeholder='Coloque o alelo da mãe'
                             value={parent1}
+                             color="white"
                             onChange={(e) => setParent1(e.target.value)}
                         />
                     </Box>
@@ -39,6 +40,7 @@ export const ParentInput = () => {
                         <Input
                             placeholder='Coloque o alelo do pai'
                             value={parent2}
+                             color="white"
                             onChange={(e) => setParent2(e.target.value)}
                         />
                     </Box>
@@ -49,6 +51,7 @@ export const ParentInput = () => {
                         <Input
                             placeholder='Caracteristica da Mãe'
                             value={caracteristica1}
+                             color="white"
                             onChange={(e) => setCaracteristica1(e.target.value)}
                         />
                     </Box>
@@ -57,6 +60,7 @@ export const ParentInput = () => {
                         <Input
                             placeholder='Caracteristica do pai'
                             value={caracteristica2}
+                             color="white"
                             onChange={(e) => setCaracteristica2(e.target.value)}
                         />
                     </Box>
