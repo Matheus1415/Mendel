@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from "@chakra-ui/react"
-import { VideoCard } from "./VideoCard"
+import { VideoCard } from './VideoCard'
 import VideoCards from '../../data/VideoCards.json'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
 import { useState } from 'react'
