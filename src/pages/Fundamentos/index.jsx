@@ -58,7 +58,7 @@ export const Fundamentos = () =>{
             <Heading variant={"PrimaryTitle"} textAlign={"center"} mt={"6.75rem"} mb={"4rem"}>CROMOSSOMOS</Heading>
                 <Flex alignItems='center' justifyContent='space-around'>
                     <Box maxWidth='25rem'>
-                        <Text variant={"Paragraph"} maxWidth={""}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </Text>
+                        <Text variant={"Paragraph"}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </Text>
                         <Text variant={"Paragraph"}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </Text>
                         <Text variant={"Paragraph"}>CROMOSSOMOS HOMÓLOGOS: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years</Text>
                         <Text variant={"Paragraph"}>t has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</Text>
