@@ -10,6 +10,7 @@ import { Footer } from '../components/Footer/footer';
 import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
+import { Alelos } from '../pages/Alelos';
 
 export const RouterAsRouter = () => {
   return (
@@ -25,6 +26,8 @@ export const RouterAsRouter = () => {
         <Route path="*" element={<Page404/>}/>
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
+        <Route path="/Alelos" element={<Alelos/>} />
+
       </Routes>
       <Footer/> 
     </BrowserRouter>
