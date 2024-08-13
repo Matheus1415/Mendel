@@ -6,6 +6,8 @@ import { useState } from 'react'
 
 export function VideoCardSection(){
 
+    console.log(VideoCards.length)
+
     const [index, setIndex] = useState(0)
 
     function showVideoCardsArray(){
@@ -13,8 +15,12 @@ export function VideoCardSection(){
             <VideoCard key={card.link} imageTumb={card.imagemUrl} titleVideo={card.title} link={card.link} descriptionVideo={card.description} index={index}/>
         ))}
 
+    // function showVideoCardsArray(){
+    //     return VideoCards.reduce()
+    // }
+
     function moveToLeft(){
-        return setIndex((indexArray) => (indexArray === 0 ? VideoCards.length : indexArray - 1))
+        return setIndex((indexArray) => (indexArray === 0 ? VideoCards.length -1: indexArray - 1))
     }
 
     function moveToRight(){

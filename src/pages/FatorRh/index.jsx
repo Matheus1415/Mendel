@@ -1,8 +1,8 @@
 import {Divider, Text, Heading} from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
-import { CardImageSection } from '../../components/ContentSection/CardImageSection'
-import { VideoCardSection } from '../../components/ContentSection/VideoCardSection';
+import { CardImageSection } from '../../components/FatorRContentSection/CardImageSection'
+import { VideoCardSection } from '../../components/FatorRContentSection/VideoCardSection';
 
 export const FatorRh = () => {
     return(
@@ -20,10 +20,11 @@ export const FatorRh = () => {
                 <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
                 <Heading variant="PrimaryTitle">Como ele pode influenciar transfusões de samgu e a saúde durante a gravidez? </Heading>
                 <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur autem obcaecati assumenda. A libero vitae ullam corporis? Incidunt nam ea suscipit facere enim quaerat nesciunt sint. Nisi similique hic aliquid.</Text>
-                <CardImageSection/>
-                <Divider width='90%' h='2px' color='#fff' marginTop='30px' marginLeft='5%'/>
-                <VideoCardSection/>
             </LayoutBaseModify>
+
+                <CardImageSection/>
+                <Divider position='relative' width='90%' h='2px' color='#fff' marginTop='30px' marginLeft='5%'/>
+                <VideoCardSection/>
         </>
        
     );
