@@ -28,7 +28,7 @@ export function VideoCardSection(){
     }
 
     return(
-        <Flex justifyContent='center' alignItems='center' gap='20px' marginTop='20px'>
+        <Flex justifyContent='center' alignItems='center' gap='20px' marginTop='20px' marginBottom='20px'>
             <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronLeft size={37} color="#fff"/>
             </Button>
