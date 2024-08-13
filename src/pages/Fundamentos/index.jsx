@@ -72,6 +72,7 @@ export const Fundamentos = () =>{
             <Image src='public/assets/cromossome-image.png' h='100%' w={"100%"} />
             <Box bg='red.500' opacity='0.4' h='200px' w='200px' position='absolute' top='0'></Box>
             </Box> */}
+            {/*test*/}
         </>
     )
 }
