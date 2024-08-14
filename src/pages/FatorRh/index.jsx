@@ -1,9 +1,9 @@
-import {Text, Heading, Divider, Box} from '@chakra-ui/react';
+import {Text, Heading, Divider} from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import {VideoCardSection} from '../../components/FatorRContentSection/VideoCardSection'
 import { CardImageSection } from '../../components/FatorRContentSection/CardImageSection';
-import BiographyKarlWiener from '../../components/MendelPage/BiographyKarlWiener';
+import { BiographyFatorRh } from '../../components/MendelPage/BiographyFatorRh';
 
 
 export const FatorRh = () => {
@@ -24,7 +24,7 @@ export const FatorRh = () => {
             <CardImageSection />
             <Divider width='90%' height='2px' borderRadius='35px' margin='0 auto' marginTop='20px' backgroundColor='#fff'/>
             <VideoCardSection />
-            <BiographyKarlWiener />
+            <BiographyFatorRh />
         </>
        
     );
