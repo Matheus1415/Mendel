@@ -1,38 +1,41 @@
 import { Box, Button, Flex } from "@chakra-ui/react"
-import { VideoCard } from "./VideoCard"
+import { VideoCard } from './VideoCard'
 import VideoCards from '../../data/VideoCards.json'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
 import { useState } from 'react'
 
 export function VideoCardSection(){
 
-    console.log(VideoCards.length)
-
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(3)
 
     function showVideoCardsArray(){
-        return VideoCards.map((card) => (
-            <VideoCard key={card.link} imageTumb={card.imagemUrl} titleVideo={card.title} link={card.link} descriptionVideo={card.description} index={index}/>
-        ))}
-
-    // function showVideoCardsArray(){
-    //     return VideoCards.reduce()
-    // }
+        const arrayCards = []
+        
+        for(let i= 0; i < 3 ; i++){
+            if (VideoCards[i]){
+                arrayCards.push(<VideoCard key={VideoCards[i].link} imageTumb={VideoCards[i].imagemUrl} titleVideo={VideoCards[i].title} link={VideoCards[i].link} descriptionVideo={VideoCards[i].description}/>)
+            }
+        }
+        return arrayCards
+    }
 
     function moveToLeft(){
         return setIndex((indexArray) => (indexArray === 0 ? VideoCards.length -1: indexArray - 1))
     }
 
     function moveToRight(){
-        return setIndex((indexArray) => (indexArray === VideoCards.length ? 0 : indexArray + 1))
+        
+        VideoCards.shift()
+        setIndex((indexArray) => (indexArray === VideoCards.length ? 3 : indexArray + 3))
+        return setIndex
     }
 
     return(
-        <Flex justifyContent='center' alignItems='center' gap='20px' marginTop='20px'>
-            <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>
+        <Flex justifyContent='center' alignItems='center' gap='20px' marginTop='20px' marginBottom='20px'>
+            <Button bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronLeft size={37} color="#fff"/>
             </Button>
-            <Box display='flex' width='940px' overflowX='hidden' gap='20px'>
+            <Box display='flex' width='940px' overflow='hidden' gap='20px'>
                 {showVideoCardsArray()}
             </Box>
             <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}}>
