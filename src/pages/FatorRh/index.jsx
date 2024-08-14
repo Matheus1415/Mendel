@@ -1,4 +1,4 @@
-import {Text, Heading, Divider} from '@chakra-ui/react';
+import {Text, Heading, Divider, Box} from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import {VideoCardSection} from '../../components/FatorRContentSection/VideoCardSection'
