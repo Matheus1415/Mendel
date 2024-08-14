@@ -5,8 +5,8 @@ import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
 export const Alelos = () => {
     return (
         <>
-            <LayoutIntroduction query="genética">
-                Introdução à genética
+            <LayoutIntroduction query="alelos">
+                Classificação dos alelos
             </LayoutIntroduction>
             <LayoutBaseModify>
                 <Box as='section' w='100%' h="64rem">
@@ -33,13 +33,13 @@ export const Alelos = () => {
                             </UnorderedList>
                         </Box>
                         <Box
-                            margin={"10px"}
+                            margin={"0"}
                             marginBottom={"0"}
                             display={"flex"}
                             flexDirection={"column"}
                             alignItems={"center"}
                             gap={"2.25rem"}
-                            maxWidth={"25.5rem"}
+                            maxWidth={"27.5rem"}
                         >
                             <Heading color="Primary" variant={"PrimaryTitle"} textAlign={"center"}>
                                 Alelos Múltiplos
