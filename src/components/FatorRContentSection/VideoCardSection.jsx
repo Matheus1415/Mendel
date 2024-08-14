@@ -20,12 +20,15 @@ export function VideoCardSection(){
     }
 
     function moveToLeft(){
+        let lastChildren = VideoCards.pop()
+        VideoCards.unshift(lastChildren)
         return setIndex((indexArray) => (indexArray === 0 ? VideoCards.length -1: indexArray - 1))
     }
 
     function moveToRight(){
         
-        VideoCards.shift()
+        let firstChildren = VideoCards.shift()
+        VideoCards.push(firstChildren)
         setIndex((indexArray) => (indexArray === VideoCards.length ? 3 : indexArray + 3))
         return setIndex
     }
