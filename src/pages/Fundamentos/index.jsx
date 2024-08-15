@@ -1,31 +1,26 @@
-import React, { useState } from 'react'; // Importa o React e o hook useState para gerenciamento de estado
-import { Box, Flex, Heading, Image, Text, UnorderedList, ListItem } from '@chakra-ui/react'; // Importa os componentes do Chakra UI
-import { LayoutIntroduction } from '../../layout/LayoutIntroduction'; // Importa o layout de introdução
+import { Box, Flex, Heading, Image, Text, UnorderedList, ListItem } from '@chakra-ui/react';
+import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
+import React from 'react';
 
 export const Fundamentos = () => {
-    // Estado para controlar o efeito de hover
-    const [mouseOver, setMouseOver] = useState(false);
-
-    // Função para ser chamada quando o mouse passar sobre o elemento
+    // Function to handle hover events
     const telomenoOver = () => {
-        setMouseOver(true);
-        console.log("Mouse Over Telomeno"); // Log no console quando o mouse passa sobre o elemento
-    }
+        console.log("Mouse Over Telômero"); // Log to console on hover
+    };
 
     return (
         <>
-            {/* Componente de introdução com uma consulta específica */}
             <LayoutIntroduction query="FUNDAMENTOS">
                 FUNDAMENTOS DA GENÉTICA
             </LayoutIntroduction>
-            
-            {/* Seção para exibir categorias das células */}
+
+            {/* Section for Cell Categories */}
             <Box as='section' w='100%' h="64rem">
                 <Heading variant="PrimaryTitle" textAlign="center" mt="6.75rem" mb="4rem">
                     CATEGORIAS DA CÉLULAS
                 </Heading>
                 <Flex justifyContent="space-around">
-                    {/* Caixa para Célula Diploide */}
+                    {/* Box for Diploid Cell */}
                     <Box
                         display="flex"
                         flexDirection="column"
@@ -38,15 +33,14 @@ export const Fundamentos = () => {
                         </Heading>
                         <Image src='/assets/diploid-cell.png' alt="Célula Diploide" />
                         <UnorderedList textAlign="justify" color="Primary" fontSize="17px" fontWeight="275">
-                            <ListItem>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</ListItem>
-                            <ListItem>It has survived not only five centuries, but also the leap into electronic typesetting.</ListItem>
-                            <ListItem>Popularised in the 1960s with the release of Letraset sheets.</ListItem>
+                            <ListItem>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</ListItem>
+                            <ListItem>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</ListItem>
+                            <ListItem>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ListItem>
                         </UnorderedList>
                     </Box>
 
-                    {/* Caixa para Célula Haploide */}
+                    {/* Box for Haploid Cell */}
                     <Box
-                        position="relative"
                         display="flex"
                         flexDirection="column"
                         alignItems="center"
@@ -58,40 +52,29 @@ export const Fundamentos = () => {
                         </Heading>
                         <Image src='/assets/haploid-cell.png' alt="Célula Haploide" />
                         <UnorderedList textAlign="justify" color="Primary" fontSize="17px" fontWeight="275">
-                            <ListItem>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</ListItem>
-                            <ListItem>It has survived not only five centuries, but also the leap into electronic typesetting.</ListItem>
-                            <ListItem>Popularised in the 1960s with the release of Letraset sheets.</ListItem>
+                            <ListItem>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</ListItem>
+                            <ListItem>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</ListItem>
+                            <ListItem>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ListItem>
                         </UnorderedList>
                     </Box>
                 </Flex>
             </Box>
 
-            {/* Seção para exibir cromossomos */}
+            {/* Section for Chromosomes */}
             <Box as='section' w='100%' h="64rem">
                 <Heading variant="PrimaryTitle" textAlign="center" mt="6.75rem" mb="4rem">
                     CROMOSSOMOS
                 </Heading>
                 <Flex textAlign='center' alignItems='center' justifyContent='space-around'>
                     <Box maxWidth='25rem'>
-                        {/* Textos explicativos sobre cromossomos */}
-                        <Text variant="Paragraph">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s.
-                        </Text>
-                        <Text variant="Paragraph">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting.
-                        </Text>
-                        <Text variant="Paragraph">
-                            CROMOSSOMOS HOMÓLOGOS: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC.
-                        </Text>
-                        <Text variant="Paragraph">
-                            It has survived not only five centuries, but also the leap into electronic typesetting.
-                        </Text>
+                        <Text variant="Paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
+                        <Text variant="Paragraph">CROMOSSOMOS HOMÓLOGOS: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years.</Text>
+                        <Text variant="Paragraph">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</Text>
                     </Box>
 
-                    {/* Caixa para imagem de cromossomos com áreas destacadas */}
+                    {/* Box for Chromosome Image with Highlighted Areas */}
                     <Box maxHeight='30rem' maxWidth='31rem' position='relative'>
                         <Image src='/assets/cromossome-image.png' alt="Cromossomos" />
-                        {/* Áreas destacadas no cromossomo */}
                         <Box
                             bg='red.500'
                             opacity='0.4'
@@ -101,8 +84,8 @@ export const Fundamentos = () => {
                             position='absolute'
                             top='2%'
                             left='0.5%'
-                            onMouseOver={telomenoOver} // Define o evento de hover
-                        ></Box> {/* Telômetro superior esquerdo */}
+                            onMouseOver={telomenoOver}
+                        ></Box>
                         <Box
                             bg='red.500'
                             opacity='0.4'
@@ -112,8 +95,8 @@ export const Fundamentos = () => {
                             position='absolute'
                             top='3%'
                             left='41%'
-                            onMouseOver={telomenoOver} // Define o evento de hover
-                        ></Box> {/* Telômetro superior direito */}
+                            onMouseOver={telomenoOver}
+                        ></Box>
                         <Box
                             bg='red.500'
                             opacity='0.4'
@@ -123,8 +106,8 @@ export const Fundamentos = () => {
                             position='absolute'
                             top='82.5%'
                             left='1.5%'
-                            onMouseOver={telomenoOver} // Define o evento de hover
-                        ></Box> {/* Telômetro inferior esquerdo */}
+                            onMouseOver={telomenoOver}
+                        ></Box>
                         <Box
                             bg='red.500'
                             opacity='0.4'
@@ -134,8 +117,8 @@ export const Fundamentos = () => {
                             position='absolute'
                             top='83%'
                             left='39.3%'
-                            onMouseOver={telomenoOver} // Define o evento de hover
-                        ></Box> {/* Telômetro inferior direito */}
+                            onMouseOver={telomenoOver}
+                        ></Box>
                     </Box>
                 </Flex>
             </Box>
