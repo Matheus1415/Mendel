@@ -3,7 +3,7 @@ import {Box, Card, CardHeader, CardBody, CardFooter, Image, Button, Text, Link} 
 export function VideoCard({imageTumb='', titleVideo='Your Title here', link='#', descriptionVideo='Your description here', index}) {
     return(
         <Box>
-            <Card w='300px' h='470px' bg='#0D6067' transform={`translateX(-${index * 54}%)`} transition='transform 0.5s'>
+            <Card w='300px' h='470px' bg='#0D6067' transform={`translateX(-${index}px)`} transition='transform 0.5s'>
                 <CardHeader w='100%' h='70%' marginBottom='10px'>
                     <Image src={imageTumb} w='100%' h='100%' borderRadius='15px'/>
                 </CardHeader>
