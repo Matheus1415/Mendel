@@ -23,7 +23,7 @@ export const FatorRh = () => {
                 <Heading variant="PrimaryTitle">Como ele pode influenciar transfusões de sangue é a saúde durante a gravidez? </Heading>
                 <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur autem obcaecati assumenda. A libero vitae ullam corporis? Incidunt nam ea suscipit facere enim quaerat nesciunt sint. Nisi similique hic aliquid.</Text>
             </LayoutBaseModify>
-            <BiographyFatorRh Teste="Ermeson"/>
+            <BiographyFatorRh />
                 <CardImageSection/>
                 <Divider width='90%'height='2px' backgroundColor='#fff' margin='0 auto' marginTop='20px'/>
                 <VideoCardSection/>
