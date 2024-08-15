@@ -1,10 +1,14 @@
 import { Box, Button, Flex } from "@chakra-ui/react"
 import { VideoCard } from './VideoCard'
 import VideoCards from '../../data/VideoCards.json'
+import { useBreakpointValue } from "@chakra-ui/react"
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
 import { useState } from 'react'
 
 export function VideoCardSection(){
+            
+    const sizeOfSectionCards = useBreakpointValue({base: '300px', sm:'300px', md:'620px', lg:'940px', xl:'940px'})
+
     let endOfArray = (VideoCards.length * 320) - 960
     const [index, setIndex] = useState(0)
 
@@ -25,7 +29,7 @@ export function VideoCardSection(){
             <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronLeft size={37} color="#fff"/>
             </Button>
-            <Box display='flex' width='940px' overflow='hidden' gap='20px'>
+            <Box display='flex' width={sizeOfSectionCards} overflow='hidden' gap='20px'>
                  {showVideoCardsArray()} 
             </Box>
             <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}}>
