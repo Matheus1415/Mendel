@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Highlight, Text, useBreakpointValue } from "@chakra-ui/react";
-import {MainImage} from '../../components/MendelPage/MainImage'
+import {MainImage} from './MainImage'
 import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
 
 export function Biography() {
