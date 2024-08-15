@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Image, Text, UnorderedList, ListItem } from '@chakra-ui/react';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import React from 'react';
+import { LayoutBaseModify } from '../../layout/LayoutBaseModify'
 
 export const Fundamentos = () => {
     // Function to handle hover events
@@ -10,16 +11,16 @@ export const Fundamentos = () => {
 
     return (
         <>
-            <LayoutIntroduction query="FUNDAMENTOS">
+            <LayoutIntroduction query="FUNDAMENTOS" >
                 FUNDAMENTOS DA GENÉTICA
             </LayoutIntroduction>
 
             {/* Section for Cell Categories */}
-            <Box as='section' w='100%' h="64rem">
+            <Box as='section'>
                 <Heading variant="PrimaryTitle" textAlign="center" mt="6.75rem" mb="4rem">
                     CATEGORIAS DA CÉLULAS
                 </Heading>
-                <Flex justifyContent="space-around">
+                <Flex justifyContent="space-around" direction={{base:'column', lg:'row'}} alignItems={{base:'center'}}>
                     {/* Box for Diploid Cell */}
                     <Box
                         display="flex"
@@ -65,8 +66,8 @@ export const Fundamentos = () => {
                 <Heading variant="PrimaryTitle" textAlign="center" mt="6.75rem" mb="4rem">
                     CROMOSSOMOS
                 </Heading>
-                <Flex textAlign='center' alignItems='center' justifyContent='space-around'>
-                    <Box maxWidth='25rem'>
+                <Flex textAlign='center' alignItems='center' justifyContent='space-around' direction={{base:'column-reverse', lg:'row'}}>
+                    <Box maxWidth={{base:'55rem', lg:'25rem'}} marginTop='2rem'>
                         <Text variant="Paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
                         <Text variant="Paragraph">CROMOSSOMOS HOMÓLOGOS: Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC, making it over 2000 years.</Text>
                         <Text variant="Paragraph">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</Text>
@@ -122,6 +123,25 @@ export const Fundamentos = () => {
                     </Box>
                 </Flex>
             </Box>
+
+            <LayoutBaseModify
+            isRowReverse
+            >
+                <Box></Box>
+                <Heading variant='PrimaryTitle' marginLeft={'auto'}>Dna</Heading>
+            <Text variant="Paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti? Eius in quod nostrum quibusdam illo rerum sapiente dicta quisquam eligendi, iure quasi ducimus quia non, fugiat assumenda accusantium aliquid.</Text>
+            <Text variant="Paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years</Text> 
+                <Heading variant='PrimaryTitle' marginLeft={'auto'}>RNA</Heading>
+            <Text variant="Paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti? Eius in quod nostrum quibusdam illo rerum sapiente dicta quisquam eligendi, iure quasi ducimus quia non, fugiat assumenda accusantium aliquid.</Text>
+            <Text variant="Paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years</Text> 
+                <Heading variant='PrimaryTitle' marginLeft={'auto'}>GENE</Heading>
+            <Text variant="Paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti? Eius in quod nostrum quibusdam illo rerum sapiente dicta quisquam eligendi, iure quasi ducimus quia non, fugiat assumenda accusantium aliquid.</Text>
+            <Text variant="Paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years</Text> 
+                 
+
+
+
+            </LayoutBaseModify>
         </>
     );
 };
