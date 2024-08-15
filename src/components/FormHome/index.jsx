@@ -46,7 +46,7 @@ const FormHomeComponent = () => {
     };
 
     try {
-      const response = await fetch('https://api.sheetmonkey.io/form/wsp38piVzJYAq43fWgfa4M', {
+      const response = await fetch('https://api.sheetmonkey.io/form/z4HmbPWt7Rr2WuYi9NMma', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,18 +70,16 @@ const FormHomeComponent = () => {
   };
 
   return (
-    <Box maxW="500px" maxH={800} mx="auto" p={5} borderWidth={1} borderRadius={8} boxShadow="lg" color="white">
-      <Text fontSize={24}>VAMOS SE CONECTAR</Text>
-      <Text fontSize={14} marginTop={5} marginBottom={5}> Entre em contato conosco e dê o seu feedback de como foi a sua experiência com Mendel!</Text>
+    <Box maxW="500px" mx="auto" p={5} borderWidth={1} borderRadius={8} boxShadow="lg" color="white">
+      <Text fontSize={{ base: "20px", md: "24px" }} fontWeight="bold">VAMOS SE CONECTAR</Text>
+      <Text fontSize={{ base: "12px", md: "14px" }} mt={2} mb={5}>Entre em contato conosco e dê o seu feedback de como foi a sua experiência com Mendel!</Text>
 
       {alert.message && (
         <Alert 
           status={alert.type} 
           mb={4}
           maxW="400px"
-          position="fixed"
-          top="10px"
-          right="10px"
+          position="relative"
           color="black"
           padding="20px"
           borderRadius="md"
@@ -106,8 +104,8 @@ const FormHomeComponent = () => {
 
       <form onSubmit={handleSubmit}>
         <VStack spacing={4}>
-          <Flex gap={5}>
-            <FormControl id="first-name" w="100%" maxW="50%" isInvalid={errors.nome}>
+          <Flex gap={5} direction={{ base: "column", md: "row" }} w="100%">
+            <FormControl id="first-name" w="100%" isInvalid={errors.nome}>
               <FormLabel>Nome</FormLabel>
               <Input
                 type="text"
@@ -122,7 +120,7 @@ const FormHomeComponent = () => {
               />
             </FormControl>
 
-            <FormControl id="last-name" w="100%" maxW="50%" isInvalid={errors.sobrenome}>
+            <FormControl id="last-name" w="100%" isInvalid={errors.sobrenome}>
               <FormLabel>Sobrenome</FormLabel>
               <Input
                 type="text"
