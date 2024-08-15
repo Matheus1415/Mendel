@@ -3,7 +3,6 @@ import { VideoCard } from './VideoCard'
 import VideoCards from '../../data/VideoCards.json'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
 import { useState } from 'react'
-import { CarrosselEfect } from "../../contexts/CarrosselEfect"
 
 export function VideoCardSection(){
     let endOfArray = (VideoCards.length * 320) - 960
@@ -21,15 +20,13 @@ export function VideoCardSection(){
     function moveToRight(){
         return setIndex((indexArray) => (indexArray === endOfArray ? 0 : indexArray + 320))
     }
-    console.log(index)
     return(
         <Flex justifyContent='center' alignItems='center' gap='20px' marginTop='20px' marginBottom='20px'>
             <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronLeft size={37} color="#fff"/>
             </Button>
             <Box display='flex' width='940px' overflow='hidden' gap='20px'>
-                {/* {showVideoCardsArray()} */}
-                <CarrosselEfect objectJson={VideoCards} CardComponent={<VideoCard/>} functionToShowCards={showVideoCardsArray()} cardDimensions={320} userIndex={index} widthForYourSection="940px"/>
+                 {showVideoCardsArray()} 
             </Box>
             <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronRight size={37} color="#fff"/>
