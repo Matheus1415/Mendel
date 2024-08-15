@@ -3,43 +3,33 @@ import { VideoCard } from './VideoCard'
 import VideoCards from '../../data/VideoCards.json'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
 import { useState } from 'react'
+import { CarrosselEfect } from "../../contexts/CarrosselEfect"
 
 export function VideoCardSection(){
-
-    const [index, setIndex] = useState(3)
+    let endOfArray = (VideoCards.length * 320) - 960
+    const [index, setIndex] = useState(0)
 
     function showVideoCardsArray(){
-        const arrayCards = []
-        
-        for(let i= 0; i < 3 ; i++){
-            if (VideoCards[i]){
-                arrayCards.push(<VideoCard key={VideoCards[i].link} imageTumb={VideoCards[i].imagemUrl} titleVideo={VideoCards[i].title} link={VideoCards[i].link} descriptionVideo={VideoCards[i].description}/>)
-            }
-        }
-        return arrayCards
+    return VideoCards.map((element) => (
+        <VideoCard key={element.link} imageTumb={element.imagemUrl} titleVideo={element.title} link={element.link} descriptionVideo={element.description} index={index}/>))
     }
 
     function moveToLeft(){
-        let lastChildren = VideoCards.pop()
-        VideoCards.unshift(lastChildren)
-        return setIndex((indexArray) => (indexArray === 0 ? VideoCards.length -1: indexArray - 1))
+        return setIndex((indexArray) => (indexArray === 0 ? endOfArray : indexArray - 320))
     }
 
     function moveToRight(){
-        
-        let firstChildren = VideoCards.shift()
-        VideoCards.push(firstChildren)
-        setIndex((indexArray) => (indexArray === VideoCards.length ? 3 : indexArray + 3))
-        return setIndex
+        return setIndex((indexArray) => (indexArray === endOfArray ? 0 : indexArray + 320))
     }
-
+    console.log(index)
     return(
         <Flex justifyContent='center' alignItems='center' gap='20px' marginTop='20px' marginBottom='20px'>
-            <Button bg='transparent' _hover={{}} _active={{}}>
+            <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronLeft size={37} color="#fff"/>
             </Button>
             <Box display='flex' width='940px' overflow='hidden' gap='20px'>
-                {showVideoCardsArray()}
+                {/* {showVideoCardsArray()} */}
+                <CarrosselEfect objectJson={VideoCards} CardComponent={<VideoCard/>} functionToShowCards={showVideoCardsArray()} cardDimensions={320} userIndex={index} widthForYourSection="940px"/>
             </Box>
             <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}}>
                 <HiChevronRight size={37} color="#fff"/>
