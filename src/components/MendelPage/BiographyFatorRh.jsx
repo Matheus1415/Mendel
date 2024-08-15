@@ -1,15 +1,12 @@
-import { Container, Box, Text } from "@chakra-ui/react";
+import {Text, Container, Box} from '@chakra-ui/react';
+import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 
 
 const BiographyFatorRh = () => {
     return(
-        <Container>
-            <Box>
-                <Text>
-                    Olá, Mundo
-                </Text>
-            </Box>
-        </Container>
+        < LayoutBaseModify>
+                    
+        </LayoutBaseModify>
     )
 }
 
