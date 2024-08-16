@@ -1,22 +1,20 @@
 import {Flex, Button, Box} from '@chakra-ui/react'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
-import {BlogCards} from './BlogCards'
+import {BlogCards} from '../../pages/Mendel/BlogCards'
 import { useState } from 'react'
 
 export function CardSection({objectJson}){
     
-const cardsContents = objectJson
 const [index, setIndex] = useState(0)
 
-const endOfTheArray = (cardsContents.length * 543) - 1086
+const endOfTheArray = (objectJson.length * 543) - 1086
 
 function showCards(){
 
-    return cardsContents.map((value) => (
-        <BlogCards key={value.title} title={value.title} description={value.description} link={value.link} index={index}/>
+    return objectJson.map((value) => (
+        <BlogCards key={value.title} title={value.title} description={value.description} link={value.link} indexTransition={index}/>
     ))
 }
-
 
 function moveToLeft(){
     setIndex((prevIndex) => prevIndex === 0? endOfTheArray :prevIndex -543)

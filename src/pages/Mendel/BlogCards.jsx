@@ -1,10 +1,10 @@
 import { Box, Button, Card, CardHeader, CardBody, Divider, Text, Link} from "@chakra-ui/react"
-export function BlogCards({title, description, link, index}) {
+export function BlogCards({title, description, link, indexTransition}) {
 
   return(
     <Box>
         <Card w='523px' h='127px' backgroundColor='#0D6067' borderRadius='15px' 
-        transform={`translateX(-${index}px) `} transition='transform 0.5s ease-in-out'>
+        transform={`translateX(-${indexTransition}px) `} transition='transform 0.8s ease-in-out'>
 
             <CardHeader display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>           
                 <Text fontSize='18px' fontWeight='300' color='#EBEBEB' lineHeight='27px'>
