@@ -1,9 +1,8 @@
-import {Text, Heading, Divider} from '@chakra-ui/react';
+import {Text, Heading} from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
-import { CardImageSection } from '../../components/FatorRContentSection/CardImageSection';
-import { VideoCardSection } from '../../components/FatorRContentSection/VideoCardSection';
 import BiographyFatorRh  from './BiographyFatorRh';
+import { TableSection } from './TableSection';
 
 
 export const FatorRh = () => {
@@ -25,10 +24,7 @@ export const FatorRh = () => {
             </LayoutBaseModify>
             <BiographyFatorRh Url="../public/img/KarlLandsteiner.jpg" PosicaoDoLado={true}/>
             <BiographyFatorRh Url="../public/img/KarlLandsteiner.jpg" PosicaoDoLado={false}/>
-            
-                <CardImageSection/>
-                <Divider width='90%'height='2px' backgroundColor='#fff' margin='0 auto' marginTop='20px'/>
-                <VideoCardSection/>
+            <TableSection/>
                 
             
         </>
