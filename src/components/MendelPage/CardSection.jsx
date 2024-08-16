@@ -8,7 +8,7 @@ export function CardSection({objectJson}){
 const cardsContents = objectJson
 const [index, setIndex] = useState(0)
 
-const endOfArray = (cardsContents.length * 543) - 1086
+const endOfTheArray = (cardsContents.length * 543) - 1086
 
 function showCards(){
 
@@ -19,11 +19,11 @@ function showCards(){
 
 
 function moveToLeft(){
-    setIndex((prevIndex) => prevIndex === 0? endOfArray :prevIndex -543)
+    setIndex((prevIndex) => prevIndex === 0? endOfTheArray :prevIndex -543)
 }
 
 function moveToRight(){
-    setIndex((prevIndex) => prevIndex === endOfArray ? 0 : prevIndex +543)
+    setIndex((prevIndex) => prevIndex === endOfTheArray ? 0 : prevIndex +543)
 }
 
 return(
