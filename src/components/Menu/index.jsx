@@ -11,7 +11,7 @@ export const MenuMendel = () => {
 
     return (
         <>
-            <MenuMobile isOpen={isOpen} toggleMenu={toggleMenu} />
+            <MenuMobile isOpen={isOpen} toggleMenu={toggleMenu} setIsOpen={setIsOpen} />
         </>
     );
 };
