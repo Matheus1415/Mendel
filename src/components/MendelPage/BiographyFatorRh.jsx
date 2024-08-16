@@ -1,4 +1,4 @@
-import {Heading, Text, Image} from '@chakra-ui/react';
+import {Heading, Text, Image, Flex, Box} from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 
 
@@ -6,17 +6,22 @@ const BiographyFatorRh = () => {
    
 
     return(
-        < LayoutBaseModify
+        <LayoutBaseModify
+        isRowReverse={false}
+        isImage={true}
+        isImageSrc="../public/img/KarlLandsteiner.jpg"
         >
-                <Flex>
-                    <Box>
-                        <Heading variant="PrimaryTitle"> Karl Landsteiner </Heading>
-                        <Text variant="Paragraph"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa eos optio fugit maiores repudiandae perspiciatis veritatis, nisi soluta. Possimus iure sapiente architecto praesentium veniam quia, delectus laboriosam ut officiis optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam corrupti placeat quibusdam nisi voluptatem quo esse, dolores, ea dolore reiciendis eveniet dolorum maiores animi hic, amet accusamus? Magni, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere vero blanditiis consectetur modi inventore laboriosam aut excepturi molestiae. Dolore placeat nam tenetur porro ullam eum, sunt quisquam commodi vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo at expedita exercitationem architecto nulla fugit consequuntur numquam ipsa omnis? Dolor vel dicta dolorem voluptatum, iure officiis saepe fugit recusandae.  </Text>
-                        <Image src="../public/img/KarlLandsteiner.jpg"></Image>
+                <Flex direction="row" align="center" justify="space-between" gap={6}>
+                    <Box flex="1" mr="5">
+                        <Heading variant="PrimaryTitle">Karl Landsteiner </Heading>
+                        <Text variant="Paragraph">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eum delectus fugiat quia porro rerum ut quas dolores esse necessitatibus sunt accusantium quisquam repellendus sit velit assumenda, blanditiis quo ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fuga totam tenetur dolorem explicabo nemo, iusto earum odit aperiam dolorum aut praesentium accusantium deleniti temporibus eaque quo, similique rerum atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id ut aspernatur doloremque aperiam iure excepturi quo sit repudiandae commodi pariatur ab, illum est tenetur fugit reiciendis ratione eligendi repellat. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid est, suscipit quod, corporis a praesentium, sed mollitia id corrupti hic quam. Labore nihil accusamus nulla provident atque iusto eius facere? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, minus error. Praesentium tenetur ut, saepe esse eos ipsa labore, ipsum explicabo quae soluta amet cumque aperiam suscipit optio perferendis corporis.
+                        </Text>
+                        <Image
+                        
+                        ></Image>
                     </Box>
                 </Flex>
-                    <Heading variant="PrimaryTitle"> Alexander S. Wiener </Heading>
-                    <Text variant="Paragraph"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa eos optio fugit maiores repudiandae perspiciatis veritatis, nisi soluta. Possimus iure sapiente architecto praesentium veniam quia, delectus laboriosam ut officiis optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam corrupti placeat quibusdam nisi voluptatem quo esse, dolores, ea dolore reiciendis eveniet dolorum maiores animi hic, amet accusamus? Magni, necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facere vero blanditiis consectetur modi inventore laboriosam aut excepturi molestiae. Dolore placeat nam tenetur porro ullam eum, sunt quisquam commodi vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quo at expedita exercitationem architecto nulla fugit consequuntur numquam ipsa omnis? Dolor vel dicta dolorem voluptatum, iure officiis saepe fugit recusandae.  </Text>
         </LayoutBaseModify>
     )
 }
