@@ -8,19 +8,22 @@ export function CardSection({objectJson}){
 const cardsContents = objectJson
 const [index, setIndex] = useState(0)
 
+const endOfArray = (cardsContents.length * 543) - 1086
+
 function showCards(){
+
     return cardsContents.map((value) => (
-        <BlogCards title={value.title} description={value.description} link={value.link} index={index}/>
+        <BlogCards key={value.title} title={value.title} description={value.description} link={value.link} index={index}/>
     ))
 }
 
 
 function moveToLeft(){
-    setIndex((prevIndex) => prevIndex == 0?cardsContents.length :prevIndex -1)
+    setIndex((prevIndex) => prevIndex === 0? endOfArray :prevIndex -543)
 }
 
 function moveToRight(){
-    setIndex((prevIndex) => prevIndex <= cardsContents.length?prevIndex +1:0)
+    setIndex((prevIndex) => prevIndex === endOfArray ? 0 : prevIndex +543)
 }
 
 return(
