@@ -3,7 +3,7 @@ import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import { CardImageSection } from '../../components/FatorRContentSection/CardImageSection';
 import { VideoCardSection } from '../../components/FatorRContentSection/VideoCardSection';
-import BiographyFatorRh  from '../../components/MendelPage/BiographyFatorRh';
+import BiographyFatorRh  from './BiographyFatorRh';
 
 
 export const FatorRh = () => {
