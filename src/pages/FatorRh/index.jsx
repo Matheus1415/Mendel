@@ -2,6 +2,7 @@ import {Text, Heading } from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import BiographyFatorRh  from './BiographyFatorRh';
+import { TableSection } from './DiferenceRh'
 
 
 export const FatorRh = () => {
@@ -23,8 +24,7 @@ export const FatorRh = () => {
             </LayoutBaseModify>
             <BiographyFatorRh Name="Karl Landsteiner" Url="../public/img/KarlLandsteiner.jpg" PosicaoDoLado={true}/>
             <BiographyFatorRh Name="Alexander S. Wiener" Url="../public/img/Wiener.png" PosicaoDoLado={false}/>
-            <VideoCardSection/>
-            
+            <TableSection/>
         </>
        
     );
