@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, useBreakpointValue, Button } from '@chakra-ui/react';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import { AlelosCard } from '../../components/AlelosCard';
 
@@ -64,6 +64,15 @@ export const Alelos = () => {
                         ]}
                     />
                 </SimpleGrid>
+                <Box textAlign="right">
+                    <Button bg="transparent"
+                    margin="5rem"
+                    padding="1.5rem"
+                    color="#FFFFFF"
+                    border=" 1px"
+                    borderRadius="1rem"
+                    >Ir para a próxima página</Button>
+                </Box>
             </Box>
         </>
     );

@@ -27,7 +27,7 @@ export const AlelosCard = ({ title, subTitle, imageSrc, imageAlt, listItems, hea
             )}
             </Stack>
             <Image src={imageSrc} alt={imageAlt} />
-            <UnorderedList textAlign={"justify"} color={"Primary"} fontSize={textFontSize} fontWeight={"normal"}>
+            <UnorderedList textAlign={"justify"} color={"Primary"} fontSize={"1.5rem"} fontWeight={"normal"}>
                 {listItems.map((item, index) => (
                     <ListItem key={index}>{item}</ListItem>
                 ))}
