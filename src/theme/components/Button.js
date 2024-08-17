@@ -22,6 +22,3 @@ export const Button = defineStyle({
     }
 })
 
-{/* <Button variant="readMore" _hover={{background:'linear-gradient(to left, #007A87 0%, #01414C) 100%'}} color="Primary" lineHeight={7} fontSize={20} px={9} py={0.5} sx={{ background:'linear-gradient(to right, #007A87 0%, #01414C) 100%'}}>
-                            Conheça as leis de mendel
-                        </Button> */}
