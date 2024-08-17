@@ -2,7 +2,7 @@ import {Text, Heading } from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import BiographyFatorRh  from './BiographyFatorRh';
-import { TableSection } from './DiferenceRh'
+import { TableSection } from './TableSection'
 
 
 export const FatorRh = () => {
