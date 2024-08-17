@@ -1,5 +1,5 @@
 import {Flex, Image} from '@chakra-ui/react'
-import {GlassEfect} from '../../components/MendelPage/GlassEfect'
+import {GlassEfect} from './GlassEfect'
 
 export function MainImage(){
 return(

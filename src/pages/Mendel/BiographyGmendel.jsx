@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Highlight, Text, useBreakpointValue } from "@chakra-ui/react";
 import {MainImage} from './MainImage'
 
-export function Biography() {
+export function BiographyGmendel() {
 
   const flexDirection = useBreakpointValue({base: 'column-reverse', sm: 'column-reverse', md: 'column-reverse', lg: 'column-reverse', xl: 'row', '2xl':'row'})
   const marginTitle = useBreakpointValue({sm: '0px', md:'0px', lg:'20px'})

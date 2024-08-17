@@ -2,7 +2,7 @@ import {Card, CardBody, CardHeader, Flex, Grid, Heading, HStack, Stack, Text} fr
 import { VerticalBar } from './VerticalBar'
 export function Curiosities () {
 return ( 
-    <Flex aling="Center" direction="column" bg='#02161F'>
+    <Flex aling="Center" direction="column" bg='#02161F' marginTop='40px'>
        <Heading textAlign='center' fontSize={[25, 25, 40, 40, 40]} fontWeight='275' margin='10px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
             CURIOSIDADES SOBRE MENDEL
        </Heading>

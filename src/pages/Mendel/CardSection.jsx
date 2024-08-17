@@ -1,6 +1,6 @@
 import {Flex, Button, Box} from '@chakra-ui/react'
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
-import {BlogCards} from '../../pages/Mendel/BlogCards'
+import {BlogCards} from './BlogCards'
 import { useState } from 'react'
 
 export function CardSection({objectJson}){
