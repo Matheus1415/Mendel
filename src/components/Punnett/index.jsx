@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CaracteristicaProvider } from '../../contexts/CaracteristicaContext';
-import { PunerContainer } from './PunnerContainer';
+import { PunnettContainer } from './PunnettContainer';
 
 export const Punnett = ({title = "Mendel",configAlelo,inputTrue = true}) => {
 let configExampleAllelo = [['a','a'],['a','A']];
@@ -8,9 +8,9 @@ let configExampleAllelo = [['a','a'],['a','A']];
   // console.log(combinationsAlelo)
   return (
     <CaracteristicaProvider>
-      <PunnettContainer title={title} configAlelo={configAlelo} inputTrue={inputTrue}/>
+      <PunnettContainer title={title} configAlelo={configAlelo} inputTrue={inputTrue} requireFourCharacteristics/>
     </CaracteristicaProvider>
   );
 };
 
-export default punnett;
+export default Punnett;

@@ -47,30 +47,36 @@ export const checkAlleleEntry = (
     return;
   }
 
-  // Validação das características
-  if (!Array.isArray(caracteristicas) || caracteristicas.length !== 2) {
-    showAlert('Certifique-se de que há duas características.', 'error');
-    return;
-  }
+  // Verifica se há 4 alelos para ambos os pais
+  const isFourAlleles = parent1.length === 4 && parent2.length === 4;
 
-  const [caracteristica1, caracteristica2] = caracteristicas;
+  if (isFourAlleles) {
+    // Verifica se há 4 características
+    if (!Array.isArray(caracteristicas) || caracteristicas.length !== 4) {
+      showAlert('Certifique-se de que há quatro características.', 'error');
+      return;
+    }
 
-  if (caracteristica1 === '' || caracteristica2 === '') {
-    showAlert('Certifique-se de que ambas as características estão preenchidas.', 'error');
-    return;
-  }
+    const allCaracteristicasValid = caracteristicas.every(caractere => caractere.length > 0 && /^[a-zA-Z ]+$/.test(caractere));
+    
+    if (!allCaracteristicasValid) {
+      showAlert('Certifique-se de que todas as quatro características estão preenchidas e são válidas.', 'error');
+      return;
+    }
 
-  if (caracteristica1.length < 4 || caracteristica2.length < 4) {
-    showAlert('Cada característica deve ter pelo menos 4 caracteres.', 'warning');
-    return;
-  }
+  } else {
+    // Verifica se há 2 características
+    if (!Array.isArray(caracteristicas) || caracteristicas.length !== 2) {
+      showAlert('Certifique-se de que há duas características.', 'error');
+      return;
+    }
 
-  const areAllCaracteristicaValid = (caractere) => /^[a-zA-Z]+$/.test(caractere);
-  const allValidCaracteristica = areAllCaracteristicaValid(caracteristica1) && areAllCaracteristicaValid(caracteristica2);
-
-  if (!allValidCaracteristica) {
-    showAlert('Ops! Todas as características devem ser letras maiúsculas ou minúsculas.', 'warning');
-    return;
+    const allCaracteristicasValid = caracteristicas.every(caractere => caractere.length > 0 && /^[a-zA-Z ]+$/.test(caractere));
+    
+    if (!allCaracteristicasValid) {
+      showAlert('Certifique-se de que ambas as características estão preenchidas e são válidas.', 'error');
+      return;
+    }
   }
 
   // Se todas as validações passaram

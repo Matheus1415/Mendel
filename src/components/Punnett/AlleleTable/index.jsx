@@ -27,8 +27,8 @@ const AlleleTable = ({ isTable = false }) => {
       {
         label: 'Frequência de Alelo',
         data: [countDominant, countRecessive],
-        backgroundColor: [backgroundColorDominant, backgroundColorRecessive],
-        hoverBackgroundColor: [backgroundColorDominant, backgroundColorRecessive]
+        backgroundColor: [backgroundColorDominant[0], backgroundColorRecessive[0]],
+        hoverBackgroundColor: [backgroundColorDominant[0], backgroundColorRecessive[0]]
       }
     ]
   };
