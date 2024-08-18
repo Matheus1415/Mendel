@@ -19,6 +19,7 @@ export const AleloCards = ({
             gap="2rem"
             opacity="0.8"
             width={width}
+            margin="5rem"
         >
             <Stack spacing={2}>
                 <Heading color="Primary" variant="PrimaryTitle" fontSize={headingFontSize}>
