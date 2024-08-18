@@ -4,7 +4,7 @@ import AlleleTable from '../AlleleTable';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { checkAlleleEntry } from '../../../config/checkAlleleEntry';
 import { CountAlleles } from '../../../config/countAlleles';
-import PunnettTable from '../PunnerTable';
+import PunnettTable from '../PunnettTable';
 import Notification from '../Notification';
 
 const PunnettSquare = () => {
@@ -52,12 +52,12 @@ const PunnettSquare = () => {
         setIsVisible={setIsVisibleAlert}
         status={alertStatus}
         message={alertMessage}
-      ></Notification>
+      ></Notification>  
     ) : null;
   }
 
   return (
-    <Flex direction="column-reverse" align="center" justify="center" wrap="wrap" m="4">
+    <Flex direction="row-reverse" align="center" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">
         <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
         <PunnettTable

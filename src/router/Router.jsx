@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Mendel } from '../pages/Mendel';
-import PunerAll from '../components/PunnerAll';
+import Punnett from '../components/Punnett';
 import { Chromosomes } from '../pages/Chromosomes';
 import { MenuMendel } from '../components/Menu';
 import VLibras from "@djpfs/react-vlibras";
@@ -21,7 +21,7 @@ export const RouterAsRouter = () => {
 
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/puner" element={<PunerAll/>} />
+        <Route path="/puner" element={<Punnett/>} />
         <Route path="/cromossomo" element={<Chromosomes/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
         <Route path="*" element={<Page404/>}/>
