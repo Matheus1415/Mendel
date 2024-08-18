@@ -4,7 +4,7 @@ import AlleleTable from '../AlleleTable';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
 import { checkAlleleEntry } from '../../../config/checkAlleleEntry';
 import { CountAlleles } from '../../../config/countAlleles';
-import PunnettTable from '../PunnettTable';
+import PunnettTable from '../PunnerTable';
 import Notification from '../Notification';
 
 const PunnettSquare = () => {
@@ -13,6 +13,10 @@ const PunnettSquare = () => {
     setCountRecessive,
     backgroundColorDominant,
     backgroundColorRecessive,
+    setCountDominant2,
+    setCountDominant3,
+    backgroundColorDominant2,
+    backgroundColorDominant3,
     parentsAlelo,
     amountAlelo,
     caracteristica
@@ -28,7 +32,7 @@ const PunnettSquare = () => {
       parentsAlelo,
       amountAlelo,
       setParentsValid,
-      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive, amountAlelo),
+      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive,setCountDominant2, setCountDominant3, amountAlelo),
       setAlertMessage,
       setAlertStatus,
       setIsVisibleAlert,
@@ -52,12 +56,12 @@ const PunnettSquare = () => {
         setIsVisible={setIsVisibleAlert}
         status={alertStatus}
         message={alertMessage}
-      ></Notification>  
+      ></Notification>
     ) : null;
   }
 
   return (
-    <Flex direction="row-reverse" align="center" justify="center" wrap="wrap" m="4">
+    <Flex direction="column-reverse" align="center" justify="center" wrap="wrap" m="4">
       <Box maxW="600px" mb="6">
         <Text variant="p" align="center" mb="4">Quadro de Punnett</Text>
         <PunnettTable
@@ -65,6 +69,8 @@ const PunnettSquare = () => {
           parentsAlelo={parentsAlelo}
           backgroundColorDominant={backgroundColorDominant}
           backgroundColorRecessive={backgroundColorRecessive}
+          backgroundColorDominant2={backgroundColorDominant2}
+          backgroundColorDominant3={backgroundColorDominant3}
         />
       </Box>
       <AlleleTable 
