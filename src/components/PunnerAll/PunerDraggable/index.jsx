@@ -20,9 +20,10 @@ const PunnettSquareDraggable = ({
 }) => {
     const quantidadeDeAlelos = alelosDoPai.length
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
-    const [draggedImgSrc, setDraggedImgSrc] = useState('');
-    const [draggedNome, setDraggedNome] = useState('')
     const [matriz, setMatriz] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
+    const [draggedImgSrc, setDraggedImgSrc] = useState('');
+    const [draggedNome, setDraggedNome] = useState('');
+    console.log(matriz);
     
 
     useEffect(()=>{
@@ -49,6 +50,12 @@ const PunnettSquareDraggable = ({
         e.preventDefault();
     };
 
+    const reset = () => {
+        const newMatriz = Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null));
+        setMatriz(newMatriz)
+        const newGrid = Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null));
+        setGrid(newGrid)
+    }
 
     return (
         <Flex direction="column" w="100%" >
@@ -84,19 +91,34 @@ const PunnettSquareDraggable = ({
                         ))}
                     </Tbody>
                 </Table>
-                <Box maxW="50%">
-                    {options.map((option, index) => (
+            </Flex>
+            <Flex justifyContent={'center'} gap={2} bgColor='white' marginX='auto' p={4}>
+                {options.map((option, index) => (
+                    <Box 
+                        maxW="50%" 
+                        border='4px'
+                        borderColor='blue' 
+                        key={index} 
+                        p={4}
+                        borderRadius="20px"
+                    >
                         <img
-                            key={index}
-                            style={{'maxWidth': '200px'}}
+                            style={{'maxWidth': '100px', bac: 'none'}}
                             className="cell"
                             src={option.src}
                             draggable="true"
                             onDragStart={(e) => handleDragStart(e, option.src, option.name)}
                         />
-                    ))}
-                </Box>
+                    </Box>
+                ))}
             </Flex>
+            <Button
+                marginTop={3}
+                marginX='auto'
+                onClick={reset}
+            >
+                Resetar
+            </Button>
         </Flex>
     );
 };
