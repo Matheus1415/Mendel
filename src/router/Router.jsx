@@ -25,7 +25,7 @@ export const RouterAsRouter = () => {
 
         <Route path="/alelos" element={<Alelos />} />
         <Route path="/puner" element={<PunerAll />} />
-        <Route path="/FatorRh" element={<FatorRh />} />
+        <Route path="/fator-rh" element={<FatorRh />} />
 
         <Route path="/puner" element={<PunerAll/>} />
         <Route path="/cromossomo" element={<Chromosomes/>} />
