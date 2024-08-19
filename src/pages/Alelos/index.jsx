@@ -62,21 +62,27 @@ export const Alelos = () => {
                 >
                     CATEGORIAS DE ALELOS
                 </Heading>
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+                <SimpleGrid
+                    columns={{ base: 1, md: 2 }}
+                    spacing={10}
+                    justifyContent="center" // Center the grid items horizontally
+                    alignItems="center"    // Center the grid items vertically
+                >
                     {alelosCardProps.map((props, index) => (
                         <AleloCards key={index} {...props} />
                     ))}
                 </SimpleGrid>
-                <Box textAlign="right">
+                <Box textAlign="center" mt="4rem">
                     <Button
                         bg="transparent"
-                        margin="5rem"
                         padding="1.5rem"
                         color="white"
                         border="1px"
                         variant="readMore"
+                        mx="auto" // Center the button horizontally
+                        display="block" // Ensure the button is block-level to center it
                     >
-                        <Text variant="Paragraph" textAlign="center" margin="1rem">
+                        <Text variant="Paragraph" textAlign="center">
                             Ir para a próxima página
                         </Text>
                     </Button>

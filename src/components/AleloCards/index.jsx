@@ -9,19 +9,18 @@ export const AleloCards = ({
     listItems,
     headingFontSize,
     textFontSize,
-    width
 }) => {
     return (
         <Box
             display="flex"
             flexDirection="column"
             alignItems="center"
-            gap="2rem"
-            opacity="0.8"
-            width={width}
-            margin="5rem"
-        >
-            <Stack spacing={2}>
+            gap="1.5rem"
+            opacity="0.9"
+            width={{ base: "full", sm: "80%", md: "60%", lg: "40%" }} // Responsive width
+            mx="auto" // Center the box horizontally
+            >
+            <Stack spacing={2} textAlign="center">
                 <Heading color="Primary" variant="PrimaryTitle" fontSize={headingFontSize}>
                     {title}
                 </Heading>
@@ -36,11 +35,13 @@ export const AleloCards = ({
                 )}
             </Stack>
             {imageSrc && (
-                <Image src={imageSrc} alt={imageAlt} />
+                <Image src={imageSrc} alt={imageAlt} borderRadius="md" /> // Optional: Rounded corners for the image
             )}
-            <UnorderedList textAlign="justify" color="Primary" fontSize="1.5rem" fontWeight="normal">
+            <UnorderedList textAlign="left" color="Primary" fontSize="1.2rem" fontWeight="normal">
                 {listItems.map((item, index) => (
-                    <ListItem key={index}>{item}</ListItem>
+                    <ListItem key={index} mb="0.5rem"> {/* Add bottom margin for spacing between list items */}
+                        {item}
+                    </ListItem>
                 ))}
             </UnorderedList>
         </Box>
