@@ -2,7 +2,6 @@ import {Heading, Text, Flex, Box} from '@chakra-ui/react';
 import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 
 const BiographyFatorRh = ({title, isImageSrc, isRowReverse}) => {
-   
 
     return(
         <LayoutBaseModify

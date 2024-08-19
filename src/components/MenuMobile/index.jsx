@@ -14,7 +14,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "Fundamentos", router: "/manutencao" },
         { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Sistema Sanguíneo", router: "/manutencao" },
-        { label: "FatorRh", router: "/FatorRh"}
+        { label: "FatorRh", router: "/fator-rh"}
     ];
 
     return (
