@@ -6,14 +6,16 @@ import { ExamFactorRh } from './ExamFactorRh';
 
 
 export const FatorRh = ({
-    isRowReverse = true,
-    isImage = true, 
-    isImageSrc
+    isRowReverse = false, 
+    isImage = true,
+    isImageSrc = '../public/img/DNA.png',
+    backgroundImage = '../public/img/Background4.png'
 }) => {
 
     const flexDirection = useBreakpointValue({ base: "column", sm: "column", md: isRowReverse?'row-reverse':'row' });
     const contentWidth = useBreakpointValue({  base: "100%",  sm: "100%", md: '50%'});
-    const felxAlignContent = useBreakpointValue({  base: "center",  sm: "center", md: ''});
+    const flexAlignContent = useBreakpointValue({  base: "center",  sm: "center", md: ''});
+    
     const styleText = {
         fontSize: '17px',
         fontWeight: '275',
@@ -34,37 +36,44 @@ export const FatorRh = ({
     return(
         <>
             <LayoutIntroduction query="Fator Rh">Fator Rh</LayoutIntroduction>
-            <Flex 
-            mx="auto" 
-            maxW="1300px" 
-            p={8} 
-            gap={6} 
-            direction={flexDirection} 
-            justifyContent="space-between"
+            <Box
+            bg="#02161F"
+            backgroundRepeat="repeat"
+            backgroundSize="cover" 
+            backgroundPosition="center" 
+            backgroundImage={`url(${backgroundImage})`}>
             >
                 <Flex 
-                direction="column" 
-                justifyContent="flex-start" 
-                h="100%" w="100%" 
-                maxW={contentWidth} 
-                alignItems={felxAlignContent} 
+                mx="auto" 
+                maxW="1300px" 
+                p={8} 
+                gap={6} 
+                direction={flexDirection} 
+                justifyContent="space-between"
+                alignItems="center"
                 >
-                    <Box
-                    bg="#02161F"
+                     {isImage && <Image w="lg" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Estatua de Mendel" />
+                        }
+                    <Flex 
+                    direction="column" 
+                    justifyContent="flex-start" 
+                    h="100%" w="100%" 
+                    maxW={contentWidth} 
+                    alignItems={flexAlignContent} 
                     >
-                        <Heading variant="PrimaryTitle" sx={styleHeadinf}>O que é</Heading>
-                        <Text variant="Paragraph" sx={styleText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
-                    
+                        <Box>
+                            <Heading variant="PrimaryTitle" sx={styleHeadinf}>O que é</Heading>
+                            <Text variant="Paragraph" sx={styleText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
                         
-                        <Heading variant="PrimaryTitle" sx={styleHeadinf}>Importância</Heading>
-                        <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
-                    
-                        <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur autem obcaecati assumenda. A libero vitae ullam corporis? Incidunt nam ea suscipit facere enim quaerat nesciunt sint. Nisi similique hic aliquid.</Text>
-                        {isImage && <Image w="lg" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Estatua de Mendel" />
-                }
-                    </Box>
+                            
+                            <Heading variant="PrimaryTitle" sx={styleHeadinf}>Importância</Heading>
+                            <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
+                        
+                            <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur autem obcaecati assumenda. A libero vitae ullam corporis? Incidunt nam ea suscipit facere enim quaerat nesciunt sint. Nisi similique hic aliquid.</Text>
+                        </Box>
+                    </Flex>
                 </Flex>
-            </Flex>
+            </Box>
             <BiographyFatorRh title="Karl Landsteiner" isImageSrc="../public/img/KarlLandsteiner.jpg" isRowReverse={false}/>
             <BiographyFatorRh title="Alexander Solomon Wiener" isImageSrc="../public/img/Wiener.png" isRowReverse={false}/>
             <TableSection/>
