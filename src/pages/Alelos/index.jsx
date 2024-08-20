@@ -95,6 +95,7 @@ export const Alelos = () => {
                             height="auto"
                             fontSize={{ base: "sm", md: "md", lg: "lg" }}
                             mr={{ base: "1rem", md: "3rem", lg: "6rem", xl: "12rem" }}
+                            textTransform="none"
                         >
                             <Text variant="Paragraph" textAlign="center" m="0">
                                 Ir para a próxima página
