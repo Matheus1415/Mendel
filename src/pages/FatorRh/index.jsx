@@ -51,12 +51,24 @@ export const FatorRh = ({
                 justifyContent="space-between"
                 alignItems="center"
                 >
-                     {isImage && <Image w="600px" height="877.46px" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Estatua de Mendel" />
-                        }
+                    <Box
+                    >
+                        {isImage && (
+                            <Image
+                                w="600px"
+                                height="877.46px"
+                                borderRadius="2xl"
+                                objectFit="cover"
+                                src={isImageSrc}
+                                alt="Estatua de Mendel"
+                            />
+                        )}
+                    </Box>
                     <Flex 
                     direction="column" 
                     justifyContent="flex-start" 
-                    h="100%" w="100%" 
+                    h="100%"
+                    w="100%" 
                     maxW={contentWidth} 
                     alignItems={flexAlignContent} 
                     >
