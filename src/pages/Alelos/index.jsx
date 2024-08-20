@@ -12,9 +12,9 @@ export const Alelos = () => {
             imageSrc: "/assets/alelos1.png",
             imageAlt: "Alelo Múltiplos",
             listItems: [
-                "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de textos...",
-                "Quando um impressor desconhecido pegou um galley de tipos e embaralhou tudo...",
-                "Foi popularizado na década de 1960 com o lançamento das folhas de Letraset..."
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             ]
         },
         {
@@ -22,9 +22,9 @@ export const Alelos = () => {
             imageSrc: "/assets/alelos2.png",
             imageAlt: "Alelo Letal",
             listItems: [
-                "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de textos...",
-                "Quando um impressor desconhecido pegou um galley de tipos e embaralhou tudo...",
-                "Foi popularizado na década de 1960 com o lançamento das folhas de Letraset..."
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             ]
         },
         {
@@ -32,27 +32,30 @@ export const Alelos = () => {
             imageSrc: "/assets/alelos1.png",
             imageAlt: "Alelo Codominante",
             listItems: [
-                "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de textos...",
-                "Quando um impressor desconhecido pegou um galley de tipos e embaralhou tudo...",
-                "Foi popularizado na década de 1960 com o lançamento das folhas de Letraset..."
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             ]
         },
         {
             title: "Dominação",
+            subTitle: "(completa e incompleta)",
             imageSrc: "/assets/alelos2.png",
             imageAlt: "Alelo de Dominação (Completa e incompleta)",
             listItems: [
-                "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de textos...",
-                "Quando um impressor desconhecido pegou um galley de tipos e embaralhou tudo...",
-                "Foi popularizado na década de 1960 com o lançamento das folhas de Letraset..."
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             ]
         }
     ];
 
     return (
         <>
-            <LayoutIntroduction query="VARIAÇÕES">VARIAÇÕES DO MODELO MENDERIANO</LayoutIntroduction>
-            <Box as='section' w='100%' minHeight="64rem" p={4} position="relative">
+            <LayoutIntroduction query="VARIAÇÕES">
+                VARIAÇÕES DO MODELO MENDERIANO
+            </LayoutIntroduction>
+            <Box as="section" w="100%" minHeight="64rem" p={4}>
                 <Heading
                     variant="PrimaryTitle"
                     textAlign="center"
@@ -62,30 +65,42 @@ export const Alelos = () => {
                 >
                     CATEGORIAS DE ALELOS
                 </Heading>
-                <SimpleGrid
-                    columns={{ base: 1, md: 2 }}
-                    spacing={10}
-                    justifyContent="center" // Center the grid items horizontally
-                    alignItems="center"    // Center the grid items vertically
+                <Box
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="stretch"
                 >
-                    {alelosCardProps.map((props, index) => (
-                        <AleloCards key={index} {...props} />
-                    ))}
-                </SimpleGrid>
-                <Box textAlign="center" mt="4rem">
-                    <Button
-                        bg="transparent"
-                        padding="1.5rem"
-                        color="white"
-                        border="1px"
-                        variant="readMore"
-                        mx="auto" // Center the button horizontally
-                        display="block" // Ensure the button is block-level to center it
+                    <SimpleGrid
+                        columns={{ base: 1, md: 2 }}
+                        spacing={10}
+                        mb="4rem"
+                        justifyContent="center"
+                        alignItems="center"
                     >
-                        <Text variant="Paragraph" textAlign="center">
-                            Ir para a próxima página
-                        </Text>
-                    </Button>
+                        {alelosCardProps.map((props, index) => (
+                            <AleloCards key={index} {...props} />
+                        ))}
+                    </SimpleGrid>
+                    <Box display="flex" justifyContent="flex-end">
+                        <Button
+                            bg="transparent"
+                            p={{ base: "0.5rem", md: "1rem" }}
+                            color="white"
+                            border="1px"
+                            borderColor="currentColor"
+                            borderRadius="10rem"
+                            variant="readMore"
+                            display="inline-block"
+                            lineHeight="1.5rem"
+                            height="auto"
+                            fontSize={{ base: "sm", md: "md", lg: "lg" }}
+                            mr={{ base: "1rem", md: "3rem", lg: "6rem", xl: "12rem" }}
+                        >
+                            <Text variant="Paragraph" textAlign="center" m="0">
+                                Ir para a próxima página
+                            </Text>
+                        </Button>
+                    </Box>
                 </Box>
             </Box>
         </>

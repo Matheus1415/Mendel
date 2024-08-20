@@ -16,17 +16,23 @@ export const AleloCards = ({
             flexDirection="column"
             alignItems="center"
             gap="1.5rem"
+            width="70%"
             opacity="0.9"
-            width={{ base: "full", sm: "80%", md: "60%", lg: "40%" }} // Responsive width
-            mx="auto" // Center the box horizontally
-            >
-            <Stack spacing={2} textAlign="center">
-                <Heading color="Primary" variant="PrimaryTitle" fontSize={headingFontSize}>
+            mx="auto"
+        >
+            <Stack spacing={0} textAlign="center">
+                <Heading
+                    color="Primary"
+                    variant="PrimaryTitle"
+                    fontSize={headingFontSize}
+                    mb="0.25rem"
+                >
                     {title}
                 </Heading>
                 {subTitle && (
-                    <Text 
+                    <Text
                         fontSize={textFontSize}
+                        margin="0"
                         color="Primary"
                         textAlign="center"
                     >
@@ -35,11 +41,23 @@ export const AleloCards = ({
                 )}
             </Stack>
             {imageSrc && (
-                <Image src={imageSrc} alt={imageAlt} borderRadius="md" /> // Optional: Rounded corners for the image
+                <Image
+                    src={imageSrc}
+                    alt={imageAlt}
+                    borderRadius="md"
+                />
             )}
-            <UnorderedList textAlign="left" color="Primary" fontSize="1.2rem" fontWeight="normal">
+            <UnorderedList
+                textAlign="left"
+                color="Primary"
+                fontSize="1.2rem"
+                fontWeight="normal"
+            >
                 {listItems.map((item, index) => (
-                    <ListItem key={index} mb="0.5rem"> {/* Add bottom margin for spacing between list items */}
+                    <ListItem
+                        key={index}
+                        mb="0.5rem"
+                    >
                         {item}
                     </ListItem>
                 ))}
