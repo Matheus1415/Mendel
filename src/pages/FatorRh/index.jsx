@@ -9,7 +9,7 @@ export const FatorRh = ({
     isRowReverse = false, 
     isImage = true,
     isImageSrc = '../public/img/DNA.png',
-    backgroundImage = '../public/img/Background4.png'
+    backgroundImage = '../public/img/background4.png'
 }) => {
 
     const flexDirection = useBreakpointValue({ base: "column", sm: "column", md: isRowReverse?'row-reverse':'row' });
@@ -22,7 +22,7 @@ export const FatorRh = ({
         lineHeight: '25.5px',
         alignItems: 'justify-content'
     }
-    const styleHeadinf = {
+    const styleHeading = {
         fontSize: '40px',
         textAlign: 'right',
         fontWeight: '275',
@@ -37,11 +37,10 @@ export const FatorRh = ({
         <>
             <LayoutIntroduction query="Fator Rh">Fator Rh</LayoutIntroduction>
             <Box
-            bg="#02161F"
             backgroundRepeat="repeat"
             backgroundSize="cover" 
             backgroundPosition="center" 
-            backgroundImage={`url(${backgroundImage})`}>
+            backgroundImage={`url(${backgroundImage})`}
             >
                 <Flex 
                 mx="auto" 
@@ -52,7 +51,7 @@ export const FatorRh = ({
                 justifyContent="space-between"
                 alignItems="center"
                 >
-                     {isImage && <Image w="lg" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Estatua de Mendel" />
+                     {isImage && <Image w="600px" height="877.46px" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Estatua de Mendel" />
                         }
                     <Flex 
                     direction="column" 
@@ -62,11 +61,11 @@ export const FatorRh = ({
                     alignItems={flexAlignContent} 
                     >
                         <Box>
-                            <Heading variant="PrimaryTitle" sx={styleHeadinf}>O que é</Heading>
+                            <Heading variant="PrimaryTitle" sx={styleHeading}>O que é</Heading>
                             <Text variant="Paragraph" sx={styleText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
                         
                             
-                            <Heading variant="PrimaryTitle" sx={styleHeadinf}>Importância</Heading>
+                            <Heading variant="PrimaryTitle" sx={styleHeading}>Importância</Heading>
                             <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vel distinctio saepe a earum, magnam qui perspiciatis eveniet velit molestias, nemo quam odio animi quasi atque! Illum sed aliquid facere.</Text>
                         
                             <Text variant="Paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quidem, debitis quos impedit reprehenderit nam quod distinctio rerum veniam quam alias repellendus ut vero quo. Odit neque saepe libero a. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores animi sit, repellendus aliquam ipsum rem veritatis voluptas deleniti, unde aspernatur sequi asperiores numquam et ab recusandae voluptatum porro ea hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur autem obcaecati assumenda. A libero vitae ullam corporis? Incidunt nam ea suscipit facere enim quaerat nesciunt sint. Nisi similique hic aliquid.</Text>
