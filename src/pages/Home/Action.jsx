@@ -25,7 +25,7 @@ export const Action = () => {
             </Text>
 
             <Text maxW={800} fontSize={{ base: 14, md: 16 }}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus similique sed eos fugit nostrum ducimus iure eveniet animi, vero corporis laboriosam dolore, aliquam nam voluptatem assumenda necessitatibus, sunt expedita atque.
+                Descubra como a genética pode transformar sua compreensão sobre biologia. Nossa abordagem prática e teórica oferece uma experiência de aprendizado imersiva, combinando teoria sólida com exercícios aplicados. Explore atividades interativas e material de estudo cuidadosamente elaborado para aprofundar seus conhecimentos e habilidades na área da genética.
             </Text>
 
             <Flex wrap="wrap" direction={flexDirection} align="center" justifyContent="center" gap={10}>
