@@ -2,10 +2,9 @@ import {Heading, Text, Flex, Box, useBreakpointValue, Image} from '@chakra-ui/re
 
 const BiographyFatorRh = ({
     title,
-    isRowReverse = false, 
+    isRowReverse,
     isImage = true,
     isImageSrc = '../public/img/DNA.png',
-    backgroundImage = '../public/img/background4.png'
 }) => {
 
     const flexDirection = useBreakpointValue({ base: "column", sm: "column", md: isRowReverse?'row-reverse':'row' });
@@ -14,27 +13,19 @@ const BiographyFatorRh = ({
     
     const styleText = {
         fontSize: '17px',
-        fontWeight: '275',
+        fontWeight: 275,
         lineHeight: '25.5px',
-        alignItems: 'justify-content'
+        textAlign: 'justify'
     }
     const styleHeading = {
         fontSize: '40px',
-        textAlign: 'right',
-        fontWeight: '275',
-        alignItems: 'justify-content',
-        bgGradient: 'linear(to-r, #0D066780, #19BFCD80)',
-        bgClip: 'text'
+        textAlign: 'left',
+        fontWeight: 275,
     }
 
     return(
 
-        <Box
-        backgroundRepeat="repeat"
-        backgroundSize="cover" 
-        backgroundPosition="center" 
-        backgroundImage={`url(${backgroundImage})`}
-        >
+        <Box>
             <Flex
             mx="auto" 
             maxW="1300px" 
@@ -54,17 +45,31 @@ const BiographyFatorRh = ({
                 alignItems={flexAlignContent}
                 >
                     <Box>
-                        <Heading variant="SecondTitle"> {title} </Heading>
-                        <Text variant="Paragraph">
+                        <Heading
+                        variant="SecondTitle"
+                        sx={styleHeading}> {title} </Heading>
+                        <Text
+                        variant="Paragraph"
+                        sx={styleText}
+                        >
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum aut hic libero quasi expedita animi temporibus consequuntur! Ducimus libero a provident aperiam, excepturi voluptate, est ad molestias, velit obcaecati facere.
                         </Text>
-                        <Text variant="Paragraph">
+                        <Text
+                        variant="Paragraph"
+                        sx={styleText}
+                        >
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum aut hic libero quasi expedita animi temporibus consequuntur! Ducimus libero a provident aperiam, excepturi voluptate, est ad molestias, velit obcaecati facere.
                         </Text>
-                        <Text variant="Paragraph">
+                        <Text 
+                        variant="Paragraph"
+                        sx={styleText}
+                        >
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum aut hic libero quasi expedita animi temporibus consequuntur! Ducimus libero a provident aperiam, excepturi voluptate, est ad molestias, velit obcaecati facere.
                         </Text>
-                        <Text variant="Paragraph">
+                        <Text 
+                        variant="Paragraph"
+                        sx={styleText}
+                        >
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum aut hic libero quasi expedita animi temporibus consequuntur! Ducimus libero a provident aperiam, excepturi voluptate, est ad molestias, velit obcaecati facere.
                         </Text>
                     </Box>    
