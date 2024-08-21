@@ -1,4 +1,4 @@
-import {Box, Grid, GridItem, Heading, Text} from '@chakra-ui/react'
+import {Box, Flex, Grid, GridItem, Heading, Text} from '@chakra-ui/react'
 import ExamRh from '../../data/ExamRh.json'
 export function ExamFactorRh(){
 
@@ -14,9 +14,9 @@ export function ExamFactorRh(){
     
     return ExamRh.map((Value, index) => (
         <Box marginBottom='100px' key={Value.title} textAlign='center' >
-            <Heading color='#fff' fontSize='30px' fontWeight='275' maxW='400px' marginBottom='40px' textAlign={styleTexts(index, 'left', 'right') }>{Value.title}</Heading>
-            <Text fontSize='17px' fontWeight='275' color='#FFFFFF' maxW='350px' textAlign='justify' marginBottom='40px'>{Value.firstParagraphy}</Text>
-            <Text fontSize='17px' fontWeight='275' color='#FFFFFF' maxW='350px' textAlign='justify'>{Value.secondParagrapy}</Text>
+            <Heading color='#fff' fontSize='30px' fontWeight='275'  marginBottom='40px' textAlign={styleTexts(index, 'left', 'right') }>{Value.title}</Heading>
+            <Text fontSize='17px' fontWeight='275' color='#FFFFFF'  textAlign='justify' marginBottom='40px'>{Value.firstParagraphy}</Text>
+            <Text fontSize='17px' fontWeight='275' color='#FFFFFF'  textAlign='justify'>{Value.secondParagrapy}</Text>
         </Box>
     ))
  }
@@ -24,16 +24,16 @@ export function ExamFactorRh(){
     return(
         <Box>
             <Heading color='white' fontSize={40} textAlign='center' fontWeight={275} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' marginTop='70px' marginBottom='100px'>EXAME DO FATOR RH</Heading>
-            <Grid templateColumns={'repeat(2, 400px)'}  margin='0 auto' width='1110px' gap='345px' >
-                <GridItem>
+            <Flex  margin='0 auto' width='1110px' justifyContent='space-between'>
+                <Box>
                 {showContentBoxes()[0]}
                 {showContentBoxes()[2]}
-                </GridItem>
-                <GridItem>
+                </Box>
+                <Box>
                 {showContentBoxes()[1]}
                 {showContentBoxes()[3]}
-                </GridItem>
-            </Grid>
+                </Box>
+            </Flex>
         </Box>
     )
 }
