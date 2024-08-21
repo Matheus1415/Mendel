@@ -107,17 +107,18 @@ export const FatorRh = ({
                 textAlign="center"
                 variant="PrimaryTitle"
                 fontWeight= '275'
-                alignItems= 'justify-content'
                 bgGradient= 'linear(to-r, #0D066780, #19BFCD80)'
+                alignItems= 'justify-content'
                 bgClip= 'text'
                 
                 >Criadores</Heading>
                 <BiographyFatorRh title="Karl Landsteiner" isImageSrc="../public/img/KarlLandsteiner.jpg" isRowReverse={true}/>
                 <br />
                 <BiographyFatorRh title="Alexander S. Wiener" isImageSrc="../public/img/Wiener.png" isRowReverse={true}/>
+                <TableSection/>
+                <ExamFactorRh/>
             </Box>
-            <TableSection/>
-            <ExamFactorRh/>
+            
             
         </>
        
