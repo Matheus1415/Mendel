@@ -10,28 +10,47 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const AlleleTable = ({ isTable = false }) => {
   const {
      countDominant, 
+     parentsAlelo, 
      countRecessive, 
      caracteristica,
      backgroundColorDominant,
      backgroundColorRecessive,
+     countDominant2, 
+     countDominant3, 
+     backgroundColorDominant2,
+     backgroundColorDominant3,
    } = useContext(CaracteristicaContext);
 
   // Verifique se caracteristica está definido
   if (!caracteristica || caracteristica.length < 2) {
     return <Text>Dados indisponíveis</Text>;
   }
-
-  const data = {
-    labels: [`Dominante | ${caracteristica[0]}`, `Recessivo | ${caracteristica[1]}`],
+  var data={};
+  if(parentsAlelo[0].length==4){
+  data = {
+    labels: [`Dominante | ${caracteristica[0]} ${caracteristica[2]}`, `Recessivo | ${caracteristica[1]} ${caracteristica[3]}`, `Dominante | ${caracteristica[0]} ${caracteristica[2]}`, `Recessivo | ${caracteristica[1]} ${caracteristica[3]}`],
     datasets: [
       {
         label: 'Frequência de Alelo',
-        data: [countDominant, countRecessive],
-        backgroundColor: [backgroundColorDominant, backgroundColorRecessive],
-        hoverBackgroundColor: [backgroundColorDominant, backgroundColorRecessive]
+        data: [countDominant, countRecessive,countDominant2,countDominant3],
+        backgroundColor: [backgroundColorDominant, backgroundColorRecessive,backgroundColorDominant2,backgroundColorDominant3],
+        hoverBackgroundColor: [backgroundColorDominant, backgroundColorRecessive,backgroundColorDominant2,backgroundColorDominant3]
       }
     ]
-  };
+  }
+  }else{
+    data = {
+      labels: [`Dominante | ${caracteristica[0]}`, `Recessivo | ${caracteristica[1]}`],
+      datasets: [
+        {
+          label: 'Frequência de Alelo',
+          data: [countDominant, countRecessive],
+          backgroundColor: [backgroundColorDominant, backgroundColorRecessive],
+          hoverBackgroundColor: [backgroundColorDominant, backgroundColorRecessive]
+        }
+      ]
+    }
+  }
 
   return (
     <Flex direction="column" align="center" justify="center" m="4">
@@ -53,6 +72,14 @@ const AlleleTable = ({ isTable = false }) => {
               <Tr>
                 <Td color="white">Recessivo</Td>
                 <Td color="white">{countRecessive}</Td>
+              </Tr>
+              <Tr>
+                <Td color="white">Dominante2</Td>
+                <Td color="white">{countDominant2}</Td>
+              </Tr>
+              <Tr>
+                <Td color="white">Dominante3</Td>
+                <Td color="white">{countDominant3}</Td>
               </Tr>
             </Tbody>
           </Table>

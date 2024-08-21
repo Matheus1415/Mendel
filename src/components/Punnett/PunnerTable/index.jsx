@@ -9,6 +9,8 @@ const PunnettTable = ({
     amountAlelo,
     parentsAlelo,
     backgroundColorDominant, 
+    backgroundColorDominant2, 
+    backgroundColorDominant3, 
     backgroundColorRecessive 
 }) => {
     const [parent1Group1, parent1Group2] = parentsAlelo;
@@ -57,7 +59,7 @@ const PunnettTable = ({
                                         borderColor="white"
                                         color="white"
                                         key={`${idx1}-${idx2}`}
-                                        bg={/[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]} ${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`) ? backgroundColorDominant : backgroundColorRecessive}
+                                        bg={/[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) && /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`) ? backgroundColorDominant : /[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`)? backgroundColorDominant2 : /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`)?backgroundColorDominant3:backgroundColorRecessive}
                                     >
                                         {`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`}
                                     </Td>
