@@ -11,8 +11,19 @@ const PrimaryTitle = defineStyle({
     bgClip: 'text'
 })
 
+const SecondTitle = defineStyle({
+    mt: 7,
+    mb: 3,
+    fontSize: 40,
+    fontWeight: 275,
+    fontWeight: 'light',
+    textTransform: 'uppercase',
+    color: 'white'
+})
+
 export const Heading = defineStyleConfig({
     variants: {
-        PrimaryTitle
+        PrimaryTitle,
+        SecondTitle
     }
 })
