@@ -99,14 +99,22 @@ export const FatorRh = ({
                         </Text>
                     </Flex>
                     {
-                    isImage && <Image w="lg" borderRadius="2xl" objectFit="cover" src={isImageSrc} alt="Imagem de fundo sobre DNA" />
+                    isImage && 
+                    <Image 
+                    w="lg"
+                    ml={{ base: '0', md: '-100px' }}
+                    borderRadius="2xl"
+                    objectFit="cover"
+                    src={isImageSrc}
+                    alt="Imagem de fundo sobre DNA" 
+                    />
                     }
                 </Flex>
                 <Heading
                 p="50px"
                 textAlign="center"
                 variant="PrimaryTitle"
-                fontWeight= '275'
+                fontWeight= {275}
                 bgGradient= 'linear(to-r, #0D066780, #19BFCD80)'
                 alignItems= 'justify-content'
                 bgClip= 'text'
