@@ -38,10 +38,10 @@ export const Alelos = () => {
             ]
         },
         {
-            title: "Dominação",
+            title: "Dominância",
             subTitle: "(completa e incompleta)",
             imageSrc: "/assets/alelos2.png",
-            imageAlt: "Alelo de Dominação (Completa e incompleta)",
+            imageAlt: "Alelo de Dominância (Completa e incompleta)",
             listItems: [
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
                 "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
@@ -81,27 +81,6 @@ export const Alelos = () => {
                             <AleloCards key={index} {...props} />
                         ))}
                     </SimpleGrid>
-                    <Box display="flex" justifyContent="flex-end">
-                        <Button
-                            bg="transparent"
-                            p={{ base: "0.5rem", md: "1rem" }}
-                            color="white"
-                            border="1px"
-                            borderColor="currentColor"
-                            borderRadius="10rem"
-                            variant="readMore"
-                            display="inline-block"
-                            lineHeight="1.5rem"
-                            height="auto"
-                            fontSize={{ base: "sm", md: "md", lg: "lg" }}
-                            mr={{ base: "1rem", md: "3rem", lg: "6rem", xl: "12rem" }}
-                            textTransform="none"
-                        >
-                            <Text variant="Paragraph" textAlign="center" m="0">
-                                Ir para a próxima página
-                            </Text>
-                        </Button>
-                    </Box>
                 </Box>
             </Box>
         </>
