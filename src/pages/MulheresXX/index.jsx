@@ -1,50 +1,36 @@
-import { Heading, Highlight } from "@chakra-ui/react";
-import { Flex, Text } from "@chakra-ui/react";
 import { Heading, Highlight, Flex, Text, Box } from "@chakra-ui/react";
 import VLibras from "@djpfs/react-vlibras";
 
 export function MulheresXX() {
   return (
-    <Flex
-      h="100vh"
-      w="full"
-      direction="column"
-      justify="center"
-      align="center"
-      bg="url(assets/banner.jpg)"
-      bgRepeat="no-repeat"
-      bgSize="cover"
-    >
-      <Heading
-        variant="PrimaryTitle"
-        color="Primary"
-        textAlign="center"
-        fontSize={[25, 25, 40]}
+    <>
+      <Flex
+        h="100vh"
+        w="full"
+        direction="column"
+        justify="center"
+        align="center"
+        bg="url(assets/banner.jpg)"
         bgRepeat="no-repeat"
         bgSize="cover"
       >
-        <Highlight
-          query="Genes XX"
-          styles={{ fontSize: "3.5em", color: "Primary", display: "block" }}
         <Heading
           variant="PrimaryTitle"
           color="Primary"
           textAlign="center"
           fontSize={[25, 25, 40]}
         >
-          Introdução sobre ao Genes XX
-        </Highlight>
-      </Heading>
-      <VLibras forceOnload />
           <Highlight
-            query="Mulheres"
+            query="Genes XX"
             styles={{ fontSize: "3.5em", color: "Primary", display: "block" }}
           >
+            Introdução sobre os Genes XX
+          </Highlight>
+        </Heading>
         <VLibras forceOnload />
       </Flex>
 
       <Flex
-        direction="column"
         direction={{ base: "column", md: "row" }}
         p={[3, 4, 8]}
         maxW="1300px"
@@ -53,35 +39,20 @@ export function MulheresXX() {
         gap={6}
         justify="center"
         position="relative"
+        overflow="hidden"
       >
-        <Heading variant="PrimaryTitle">Mulheres Na Ciencia</Heading>
-        <Text variant="forContentsPage">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora
-          eaque tempore vitae, dicta iusto, minus iste assumenda officia
-          voluptatibus suscipit. Tempore vel, dolores distinctio asperiores
-          molestias nemo iure deleniti. Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Earum consectetur iusto blanditiis necessitatibus ab
-          aspernatur, obcaecati consequuntur iste dolores excepturi eveniet
-          repellendus maxime nihil eligendi dignissimos possimus. Repellat,
-          soluta ducimus!
-        </Text>
-          overflow="hidden"
-        >
-          <Box
-            position="absolute"
-            right="800"
-            top="0"
-            h="100%"
-            w="60%"
-            backgroundImage="url('/assets/DNA.png')"
-            // backgroundSize="cover"
-            backgroundPosition="left"
-            backgroundRepeat="no-repeat"
-            opacity="0.7"
-          />
-        </Box>
+        <Box
+          position="absolute"
+          right="800"
+          top="0"
+          h="100%"
+          w="60%"
+          backgroundImage="url('/assets/DNA.png')"
+          backgroundPosition="left"
+          backgroundRepeat="no-repeat"
+          opacity="0.7"
+        />
 
-        {/* Caixa para o texto */}
         <Box
           flex="1"
           display="flex"
@@ -150,7 +121,6 @@ export function MulheresXX() {
           </Text>
         </Box>
       </Flex>
-    </Flex>
     </>
   );
 }
