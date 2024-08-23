@@ -3,6 +3,7 @@ import ExamRh from '../../data/ExamRh.json'
 export function ExamFactorRh(){
 
     const displayForContentBox = useBreakpointValue({base: 'column', sm: 'column', md: 'flex', lg:'flex', xl:'flex'})
+    const widthOfBoxeContent = useBreakpointValue({base: 300, sm: 370, md: 1110, lg: 1110, xl:1110})
 
     function styleTexts(indexOfArray, valueReturnTrue, valueReturnFalse){
         if(indexOfArray%2 === 0){
@@ -27,8 +28,8 @@ export function ExamFactorRh(){
     return(
         <Box>
             <Heading color='white' fontSize={40} textAlign='center' fontWeight={275} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' marginTop='70px' marginBottom='100px'>EXAME DO FATOR RH</Heading>
-            <Box display={displayForContentBox} margin='0 auto' width='1110px' justifyContent='space-between'>
-                <Box textAlign='center'>
+            <Box display={displayForContentBox} margin='0 auto' width={widthOfBoxeContent} justifyContent='space-between'>
+                <Box >
                 {showContentBoxes()[0]}
                 {showContentBoxes()[2]}
                 </Box>
