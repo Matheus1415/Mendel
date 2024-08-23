@@ -52,6 +52,7 @@ export const RouterAsRouter = () => {
         <Route path="/aula" element={<AulaQuadro />} />
         <Route path="/layout" element={<TesteLayout />} />
         <Route path="/Mulheresxx" element={<MulheresXX />} />
+        <Route path="/MulheresXX" element={<MulheresXX />} />
       </Routes>
       <Footer/> 
       <Footer />
