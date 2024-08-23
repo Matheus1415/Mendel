@@ -1,7 +1,7 @@
 import { Flex ,Text, Heading, Box, useBreakpointValue, Image } from '@chakra-ui/react';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import BiographyFatorRh  from './BiographyFatorRh';
-import { TableSection } from './TableSection'
+import { TableSection } from './TableSection';
 import { ExamFactorRh } from './ExamFactorRh';
 
 
@@ -111,7 +111,8 @@ export const FatorRh = ({
                     }
                 </Flex>
                 <Heading
-                p="50px"
+                fontSize="40px"
+                lineHeight="60px"
                 textAlign="center"
                 variant="PrimaryTitle"
                 fontWeight= {275}
