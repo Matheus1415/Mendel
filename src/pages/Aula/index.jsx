@@ -25,11 +25,11 @@ const AulaQuadro = () => {
         };
 
     return (
-        <Flex w="100%" h={1200} direction="row" p={20} gap={10}>
+        <Flex w="100%" h={1200} direction="row" p={20} gap={10} bg="white">
             <Box w="100%" maxW="60%" h={800}>
                 <Excalidraw
                     key={key}
-                    theme='dark'
+                    theme='light'
                     langCode='pt-BR'
                     initialData={isQuadro2x2 ? quadro2x2 : quadro4x4}
                 />
