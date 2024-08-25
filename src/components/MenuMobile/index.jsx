@@ -14,6 +14,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "Fundamentos", router: "/manutencao" },
         { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Sistema Sanguíneo", router: "/manutencao" },
+        {label: "Variações do modelo Menderiano", router: "/Alelos" }
     ];
 
     return (
