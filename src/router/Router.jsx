@@ -12,7 +12,7 @@ import AulaQuadro from '../pages/Aula';
 import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
 import { Home } from '../pages/Home';
 import { PunnettSquareDraggablePage } from '../pages/PunnettSquareDraggable';
-
+import { Alelos } from '../pages/Alelos';
 
 export const RouterAsRouter = () => {
   return (
@@ -27,6 +27,7 @@ export const RouterAsRouter = () => {
         <Route path="*" element={<Page404/>}/>
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
+        <Route path="/alelos" element={<Alelos/>} />
         <Route path="/layout" element={<TesteLayout/>} />
         <Route path="/punner-arastavel" element={<PunnettSquareDraggablePage/>} />
       </Routes>
