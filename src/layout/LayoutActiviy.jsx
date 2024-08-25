@@ -8,7 +8,7 @@ export const LayoutActiviy = ({children}) => {
             bg="red"
             w="100vw"
             maxW="100%"
-            minH="900px"
+            minH="1000px"
             backgroundRepeat="repeat" 
             backgroundSize="cover" 
             backgroundPosition="center" 
@@ -19,14 +19,14 @@ export const LayoutActiviy = ({children}) => {
                 width="100%"
                 top={0}
                 left={0}
-                minH="900px"
+                minH="1000px"
                 bg="#02161fc3"
                 justify='center' 
                 align='center'     
            >
                 <Box
                     width="90%"
-                    minH="700px"
+                    minH="800px"
                     bg="#0638443e" 
                     backdropFilter="blur(23px)" 
                     borderRadius="15px" 

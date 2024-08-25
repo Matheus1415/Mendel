@@ -18,10 +18,22 @@ export const Button = defineStyle({
                 transform: 'scale(1.05)'
             }
 
+        },
+        nextPage:{
+            border:'1px solid' ,
+            borderColor:'#EBEBEB',
+            colorScheme:'#000100', 
+            color:'white',
+            borderRadius:'50px', 
+            fontWeight:'275px', 
+            _hover:{
+                shadow: 'md',
+                bgColor:"#EBEBEB",
+                color:'#000100',
+                transform: 'translateY(-5px)',
+                transitionDuration: '0.2s',
+                transitionTimingFunction: "ease-in-out",
+            }
         }
     }
 })
-
-{/* <Button variant="readMore" _hover={{background:'linear-gradient(to left, #007A87 0%, #01414C) 100%'}} color="Primary" lineHeight={7} fontSize={20} px={9} py={0.5} sx={{ background:'linear-gradient(to right, #007A87 0%, #01414C) 100%'}}>
-                            Conheça as leis de mendel
-                        </Button> */}
