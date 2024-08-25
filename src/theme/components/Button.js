@@ -18,6 +18,22 @@ export const Button = defineStyle({
                 transform: 'scale(1.05)'
             }
 
+        },
+        nextPage:{
+            border:'1px solid' ,
+            borderColor:'#EBEBEB',
+            colorScheme:'#000100', 
+            color:'white',
+            borderRadius:'50px', 
+            fontWeight:'275px', 
+            _hover:{
+                shadow: 'md',
+                bgColor:"#EBEBEB",
+                color:'#000100',
+                transform: 'translateY(-5px)',
+                transitionDuration: '0.2s',
+                transitionTimingFunction: "ease-in-out",
+            }
         }
     }
 })

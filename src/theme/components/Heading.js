@@ -21,9 +21,19 @@ const SecondTitle = defineStyle({
     color: 'white'
 })
 
+const QuestionTile = defineStyle({
+    fontSize: 20,
+    fontWeight: 275,
+    fontWeight: 'light',
+    textTransform: 'uppercase',
+    color: 'white',
+    textAlign:"justify"
+})
+
 export const Heading = defineStyleConfig({
     variants: {
         PrimaryTitle,
-        SecondTitle
+        SecondTitle,
+        QuestionTile
     }
 })
