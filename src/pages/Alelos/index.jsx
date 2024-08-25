@@ -1,74 +1,88 @@
-import { Text, Heading, Image, Box, Flex, UnorderedList, ListItem } from "@chakra-ui/react";
-import { LayoutIntroduction } from "../../layout/LayoutIntroduction";
-import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
+import React from 'react';
+import { Box, Heading, SimpleGrid, useBreakpointValue, Button, Text } from '@chakra-ui/react';
+import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
+import { AleloCards } from '../../components/AleloCards';
 
 export const Alelos = () => {
+    const headingFontSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
+
+    const alelosCardProps = [
+        {
+            title: "Múltiplos",
+            imageSrc: "/assets/alelos1.png",
+            imageAlt: "",
+            listItems: [
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            ]
+        },
+        {
+            title: "Letal",
+            imageSrc: "/assets/alelos2.png",
+            imageAlt: "Alelo Letal",
+            listItems: [
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            ]
+        },
+        {
+            title: "Codominante",
+            imageSrc: "/assets/alelos1.png",
+            imageAlt: "Alelo Codominante",
+            listItems: [
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            ]
+        },
+        {
+            title: "Dominância",
+            subTitle: "(completa e incompleta)",
+            imageSrc: "/assets/alelos2.png",
+            imageAlt: "Alelo de Dominância (Completa e incompleta)",
+            listItems: [
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            ]
+        }
+    ];
+
     return (
         <>
-            <LayoutIntroduction query="genética">
-                Introdução à genética
+            <LayoutIntroduction query="VARIAÇÕES">
+                VARIAÇÕES DO MODELO MENDERIANO
             </LayoutIntroduction>
-            <LayoutBaseModify>
-                <Box as='section' w='100%' h="64rem">
-                    <Heading variant={"PrimaryTitle"} textAlign={"center"} mt={"6.75rem"} mb={"4rem"}>
-                        Alelos X Alelos Múltiplos
-                    </Heading>
-                    <Flex justifyContent={"space-around"} alignItems="flex-start">
-                        <Box
-                            margin={"10px"}
-                            marginBottom={"0"}
-                            display={"flex"}
-                            flexDirection={"column"}
-                            alignItems={"center"}
-                            gap={"2.25rem"}
-                            maxWidth={"25.5rem"}
-                        >
-                            <Heading color="Primary" variant={"PrimaryTitle"}>
-                                Alelos
-                            </Heading>
-                            <Image src='/assets/diploid-cell.png' alt='Alelos'/>
-                            <UnorderedList textAlign={"justify"} color={"Primary"} fontSize={"17px"} fontWeight={"275"}>
-                                <ListItem>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</ListItem>
-                                <ListItem>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</ListItem>
-                            </UnorderedList>
-                        </Box>
-                        <Box
-                            margin={"10px"}
-                            marginBottom={"0"}
-                            display={"flex"}
-                            flexDirection={"column"}
-                            alignItems={"center"}
-                            gap={"2.25rem"}
-                            maxWidth={"25.5rem"}
-                        >
-                            <Heading color="Primary" variant={"PrimaryTitle"} textAlign={"center"}>
-                                Alelos Múltiplos
-                            </Heading>
-                            <Image src='/assets/haploid-cell.png' alt='Alelos Múltiplos' />
-                            <UnorderedList textAlign={"justify"} color={"Primary"} fontSize={"17px"} fontWeight={"275"}>
-                                <ListItem>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</ListItem>
-                                <ListItem>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</ListItem>
-                                <ListItem>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ListItem>
-                            </UnorderedList>
-                        </Box>
-                    </Flex>
+            <Box as="section" w="100%" minHeight="64rem" p={4}>
+                <Heading
+                    variant="PrimaryTitle"
+                    textAlign="center"
+                    mt="6.75rem"
+                    mb="4rem"
+                    fontSize={headingFontSize}
+                >
+                    CATEGORIAS DE ALELOS
+                </Heading>
+                <Box
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="stretch"
+                >
+                    <SimpleGrid
+                        columns={{ base: 1, md: 2 }}
+                        spacing={10}
+                        mb="4rem"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        {alelosCardProps.map((props, index) => (
+                            <AleloCards key={index} {...props} />
+                        ))}
+                    </SimpleGrid>
                 </Box>
-                    
-                <Heading variant='PrimaryTitle'>Alelo Letal</Heading>
-                <Text variant="Paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commodi id assumenda labore. Blanditiis voluptatum error repellendus provident modi.
-                </Text>
-
-                <Heading variant='PrimaryTitle'>Alelo Codominante</Heading>
-                <Text variant="Paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commod.
-                </Text>
-
-                <Heading variant='PrimaryTitle'>Alelo de Dominação Completa</Heading>
-                <Text variant="Paragraph">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, expedita. Quia, ut, quo quisquam nisi, quidem illum voluptatum deleniti repudiandae, veniam, voluptas commodi laboriosam! Magnam, autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, pariatur deserunt? Error necessitatibus deserunt quis corporis, veritatis consequuntur consequatur fuga commod.
-                </Text>
-            </LayoutBaseModify>
+            </Box>
         </>
     );
 };
