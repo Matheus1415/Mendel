@@ -11,6 +11,7 @@ import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
 import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
 import { Home } from '../pages/Home';
+import { PunnettSquareDraggablePage } from '../pages/PunnettSquareDraggable';
 
 
 export const RouterAsRouter = () => {
@@ -18,7 +19,6 @@ export const RouterAsRouter = () => {
     <BrowserRouter>
       <VLibras />
       <MenuMendel />
-
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/puner" element={<PunerAll/>} />
@@ -28,6 +28,7 @@ export const RouterAsRouter = () => {
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/layout" element={<TesteLayout/>} />
+        <Route path="/punner-arastavel" element={<PunnettSquareDraggablePage/>} />
       </Routes>
       <Footer/> 
     </BrowserRouter>
