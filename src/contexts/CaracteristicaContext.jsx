@@ -8,8 +8,12 @@ export const CaracteristicaProvider = ({ children }) => {
     const [amountAlelo, setAmountAlelo] = useState(0);
     const [countDominant, setCountDominant] = useState(0);
     const [countRecessive, setCountRecessive] = useState(0);
-    const [backgroundColorRecessive, setBackgroundColorRecessive] = useState('#81ff8b');
-    const [backgroundColorDominant, setBackgroundColorDominant] = useState('#ff7171');
+    const [countDominant2, setCountDominant2] = useState(0);
+    const [countDominant3, setCountDominant3] = useState(0);
+    const [backgroundColorRecessive, setBackgroundColorRecessive] = useState('#007A87');
+    const [backgroundColorDominant, setBackgroundColorDominant] = useState('#02242E');
+    const [backgroundColorDominant2, setBackgroundColorDominant2] = useState('#0000ff');
+    const [backgroundColorDominant3, setBackgroundColorDominant3] = useState('#000007');
     const [parentsAlelo, setParentsAlelo] = useState([[], []]); 
     
     return (
@@ -28,6 +32,14 @@ export const CaracteristicaProvider = ({ children }) => {
             setBackgroundColorRecessive,
             backgroundColorDominant,
             setBackgroundColorDominant,
+            countDominant2,
+            setCountDominant2,
+            countDominant3,
+            setCountDominant3,
+            backgroundColorDominant3,
+            setBackgroundColorDominant3,
+            backgroundColorDominant2,
+            setBackgroundColorDominant2,
         }}>
             {children}
         </CaracteristicaContext.Provider>
