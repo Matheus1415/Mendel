@@ -1,5 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react"
-import PunnettSquareDraggable from "../../components/PunnerAll/PunerDraggable"
+import PunnettSquareDraggable from "../../components/Punnett/PunerDraggable"
 
 export const PunnettSquareDraggablePage = () => {
     return(
