@@ -11,6 +11,7 @@ import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
 import { Alelos } from '../pages/Alelos';
+import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
 
 export const RouterAsRouter = () => {
   return (
@@ -27,6 +28,7 @@ export const RouterAsRouter = () => {
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/Alelos" element={<Alelos/>} />
+        <Route path="/atividade" element={<TesteLayout/>} />
 
       </Routes>
       <Footer/> 
