@@ -4,6 +4,7 @@ import { Mendel } from '../pages/Mendel';
 import Punnett from '../components/Punnett';
 import { Chromosomes } from '../pages/Chromosomes';
 import { MenuMendel } from '../components/Menu';
+import { Atividades } from '../pages/Atividades/';
 import VLibras from "@djpfs/react-vlibras";
 import { Footer } from '../components/Footer/footer';
 import { Page404 } from '../pages/Page404';
@@ -21,6 +22,7 @@ export const RouterAsRouter = () => {
 
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path='/atividades' element={<Atividades/>} />
         <Route path="/puner" element={<Punnett/>} />
         <Route path="/cromossomo" element={<Chromosomes/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
