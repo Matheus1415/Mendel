@@ -1,5 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react"
 import PunnettSquareDraggable from "../../components/Punnett/PunerDraggable"
+import data  from "../../data/PunnerSquareDraggable.json"
+
 
 export const PunnettSquareDraggablePage = () => {
     return(
@@ -37,7 +39,7 @@ export const PunnettSquareDraggablePage = () => {
                     justify='center' 
                     align='center'         
                 >
-                    <PunnettSquareDraggable/>
+                    <PunnettSquareDraggable data={data}/>
                 </Flex>
            </Flex>
         </Flex>

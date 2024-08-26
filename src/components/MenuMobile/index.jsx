@@ -16,6 +16,9 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "Sistema Sanguíneo", router: "/manutencao" },
         {label: "Variações do modelo Menderiano", router: "/Alelos" }
     ];
+    const subMenuAtividade = [
+        { label: "quadro teste", router: "/punner-arastavel" },
+    ];
 
     return (
         <MotionBox
@@ -53,8 +56,8 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
                 transition={{ duration: 0.3 }}
             >
                 <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" />
-                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/manutencao" />
-                <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/manutencao" subMenu={subMenuConteudo} />
+                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/" subMenu={subMenuAtividade}/>
+                <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/" subMenu={subMenuConteudo} />
                 <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/manutencao" />
                 <MenuItem icon={<FaInfoCircle />} label="Informação" isOpen={isOpen} router="/manutencao" />
             </MotionFlex>

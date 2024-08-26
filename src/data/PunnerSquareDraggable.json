@@ -1,0 +1,33 @@
+{
+    "alelos": {
+      "pai": ["A", "a"],
+      "mae": ["a", "a"]
+    },
+    "options": [
+      {
+        "id": 1,
+        "name": "arvoreSemFolha",
+        "src": "https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg",
+        "alelo": "aa"
+      },
+      {
+        "id": 2,
+        "name": "arvoreComFolha",
+        "src": "https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg",
+        "alelo": "Aa"
+      },
+      {
+        "id": 3,
+        "name": "arvoreComFolha2",
+        "src": "https://static.vecteezy.com/ti/vetor-gratis/p3/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg",
+        "alelo": "Aa"
+      },
+      {
+        "id": 4,
+        "name": "arvoreComFolha3",
+        "src": "https://static.vecteezy.com/ti/vetor-gratis/p2/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg",
+        "alelo": "aa"
+      }
+    ]
+  }
+  

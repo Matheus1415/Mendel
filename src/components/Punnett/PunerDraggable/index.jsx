@@ -1,42 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center } from '@chakra-ui/react';
-
-const optionsExample = [
-    {
-        id: 1,
-        name: "arvoreSemFolha",
-        src: "https://static.vecteezy.com/ti/vetor-gratis/p3/29202543-silhueta-do-uma-arvore-sem-folhas-icone-ou-pictograma-ilustracao-ilustracao-vetor.jpg"
-    },
-    {
-        id: 2,
-        name: "arvoreComFolha",
-        src: "https://static.vecteezy.com/ti/vetor-gratis/p1/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
-    },
-    {
-        id: 3,
-        name: "arvoreComFolha2",
-        src: "https://static.vecteezy.com/ti/vetor-gratis/p3/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
-    },
-    {
-        id: 4,
-        name: "arvoreComFolha3",
-        src: "https://static.vecteezy.com/ti/vetor-gratis/p2/15223714-icone-da-arvore-estilo-cartoon-vetor.jpg"
-    }
-];
-
+import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center, Text } from '@chakra-ui/react';
+import ModalFeedback from '../../ModalFeedback';
 
 const PunnettSquareDraggable = ({ 
-    alelosDoPai = ['A', 'a'], 
-    alelosDaMae = ['a', 'a'],  
-    options = optionsExample, 
-    onChangeCallback = () => {}
+    data = { 
+        alelos: { pai: [], mae: [] }, 
+        options: [] 
+    }, 
+    onChangeCallback = () => {},
+    onHomeCallback = () => {}
 }) => {
+    const alelosDoPai = data.alelos.pai;
+    const alelosDaMae = data.alelos.mae;
+    const options = data.options;
+
     const quantidadeDeAlelos = alelosDoPai.length;
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [matriz, setMatriz] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [availableOptions, setAvailableOptions] = useState(options);
     const [draggedImgSrc, setDraggedImgSrc] = useState('');
     const [draggedNome, setDraggedNome] = useState('');
+    const [correctAnswers, setCorrectAnswers] = useState(0);
+    const [totalAnswers, setTotalAnswers] = useState(quantidadeDeAlelos * quantidadeDeAlelos);
+    const [checked, setChecked] = useState(false);
+    const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
     useEffect(() => {
         onChangeCallback(matriz);
@@ -56,7 +43,7 @@ const PunnettSquareDraggable = ({
         );
         setGrid(newGrid);
         setMatriz(newMatriz);
-        
+
         setAvailableOptions(availableOptions.filter(option => option.src !== draggedImgSrc));
     };
 
@@ -70,6 +57,42 @@ const PunnettSquareDraggable = ({
         const newGrid = Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null));
         setGrid(newGrid);
         setAvailableOptions(options); 
+        setCorrectAnswers(0);
+        setChecked(false);
+    };
+
+    const checkAnswers = () => {
+        let correct = 0;
+
+        matriz.forEach((row, rIdx) => {
+            row.forEach((nome, cIdx) => {
+                const aleloPai = alelosDoPai[cIdx];
+                const aleloMae = alelosDaMae[rIdx];
+                const combinedAlelo = aleloPai + aleloMae;
+
+                const matchingOption = options.find(option => option.name === nome && option.alelo === combinedAlelo);
+                if (matchingOption) {
+                    correct++;
+                }
+            });
+        });
+
+        setCorrectAnswers(correct);
+        setChecked(true);
+    };
+
+    const getEncouragementMessage = () => {
+        const percentage = (correctAnswers / totalAnswers) * 100;
+
+        if (percentage === 100) {
+            return "Parabéns! Você acertou todas as combinações!";
+        } else if (percentage === 0) {
+            return "Não desanime! Tente novamente!";
+        } else if (percentage >= 50) {
+            return "Bom trabalho! Você acertou mais da metade!";
+        } else {
+            return "Continue tentando, você está quase lá!";
+        }
     };
 
     return (
@@ -93,7 +116,7 @@ const PunnettSquareDraggable = ({
                     ))}
                 </Flex>
                 
-                <Center height='800px'>
+                <Center height={checked?"":"800px"}>
                     <Divider orientation='vertical' />
                 </Center>
 
@@ -178,7 +201,7 @@ const PunnettSquareDraggable = ({
                                                 w={250} 
                                                 h={180}
                                                 borderRadius={10}
-                                                border="1px solid #ffff"
+                                                border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && option.alelo === alelosDoPai[colIndex] + alelosDaMae[rowIndex]) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
                                             >
                                                 {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} draggable="false" />}     
                                             </Flex>                                            
@@ -188,18 +211,58 @@ const PunnettSquareDraggable = ({
                             ))}
                         </Tbody>
                     </Table>
-                    <Button
-                        variant="nextPage"
-                        w={300}
-                        borderRadius={8}
-                        onClick={reset}
-                    >
-                        Resetar
-                    </Button>
+                    <Flex gap={4}>
+                        <Button
+                            variant="nextPage"
+                            w={300}
+                            borderRadius={8}
+                            onClick={reset}
+                            display={checked?"none":"block"}
+                        >
+                            Resetar
+                        </Button>
+                        <Button
+                            variant="nextPage"
+                            w={300}
+                            borderRadius={8}
+                            onClick={checkAnswers}
+                            display={checked?"none":"block"}
+                        >
+                            Verificar Respostas
+                        </Button>
+                    </Flex>
                 </Flex>
-                
-                
+                {checked && (
+                    <Flex direction="column" align="start" justify="start" gap={4} mt={4}>
+                        <Text fontSize={30} color="white">
+                            Você acertou {correctAnswers}/{totalAnswers}
+                        </Text>
+                        <Text fontSize={24} color="white">
+                            {getEncouragementMessage()}
+                        </Text>
+                        <Flex direction="row" gap={4}>
+                            <Button
+                                variant="nextPage"
+                                w={160}
+                                borderRadius={8}
+                                onClick={() => setIsFeedbackOpen(true)} 
+                            >
+                                Feedback
+                            </Button>
+                            <Button
+                                variant="nextPage"
+                                w={160}
+                                borderRadius={8}
+                                onClick={reset}
+                            >
+                                Resetar
+                            </Button>
+                        </Flex>
+                    </Flex>
+                )}
             </Flex>
+
+            <ModalFeedback isOpen={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
         </>
     );
 };
