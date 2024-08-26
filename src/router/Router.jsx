@@ -30,7 +30,7 @@ export const RouterAsRouter = () => {
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/alelos" element={<Alelos/>} />
-        <Route path="/layout" element={<TesteLayout/>} />
+        {/* <Route path="/layout" element={<TesteLayout/>} /> */}
         <Route path="/punner-arastavel" element={<PunnettSquareDraggablePage/>} />
       </Routes>
       <Footer/> 
