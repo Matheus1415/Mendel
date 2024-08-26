@@ -1,8 +1,10 @@
 [
     {
-        "question": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni rem consequuntur quos impedit. Cupiditate iste consequatur non distinctio, iure voluptatum sit unde eaque dolores, molestias saepe! Minus id laboriosam commodi.",
+        "question": "ultima questão?",
         "questionType": "MultipleItems",
-        "explanation": "O item A e C são os corretos", 
+        "explanation": "O item A e C são os corretos",
+        "image": "/assets/exampleImg.png",
+        "imageSize": 500, 
         "options": [
             {
                 "content": "Sim",
@@ -21,7 +23,7 @@
     {
         "question": "No heredograma, os símbolos preenchidos representam pessoas portadoras de um tipo raro de doença genética. Os homens são representados pelos quadrados e as mulheres, pelos círculos. Qual é o padrão de herança observado para essa doença?",
         "image": "/assets/image-25.webp",
-        "imageSize":"500",
+
         "questionType": "UniqueItem",
         "explanation": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illum vitae officiis quod iste sit minus. Iusto quasi veniam odit itaque? Aperiam illum libero sit nisi iusto. Culpa, pariatur ipsam!, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolores, ex, non illum autem perspiciatis quod voluptatem laudantium ut voluptatum recusandae soluta itaque dolorum explicabo eum quaerat libero praesentium natus.",
         "options": [
@@ -51,7 +53,7 @@
         "question": "Teste?",
         "questionType": "InputQuestion",
         "image": "/assets/exampleImg.png",
-        "imageSize":"400",
+        "imageSize": 400,
         "options": [
             {
                 "InputField": "f1",
