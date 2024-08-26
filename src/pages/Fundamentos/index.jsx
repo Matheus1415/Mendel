@@ -11,6 +11,7 @@ export const Fundamentos = () => {
         console.log("Mouse Over Telômero"); // Log to console on hover
     };
     return (
+        // teste
         <>
         {/* Seção de introdução */}
         <LayoutIntroduction query="FUNDAMENTOS" w='100%' >
