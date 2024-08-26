@@ -68,7 +68,7 @@ export function AtividadesConteiner(){
                 (
                     function (){
                         switch (state.stage){
-                            case 'end':
+                            case 'playing':
                                 return(
                                     <ViewQuestion
                                         currentQuestionData={state.currentQuestion}
@@ -79,7 +79,7 @@ export function AtividadesConteiner(){
                                     />
                                 )
 
-                            case 'playing':
+                            case 'end':
                                 return(
                                     <ResultsScene
                                         resultState={state}
