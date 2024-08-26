@@ -18,6 +18,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
     ];
     const subMenuAtividade = [
         { label: "quadro teste", router: "/punner-arastavel" },
+        { label: "Atividade", router: "/atividades" },
     ];
 
     return (
