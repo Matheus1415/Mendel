@@ -34,6 +34,7 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
                 correctQuestionOptions,
                 questionStatment: currentQuestion.question,
                 isCorrect: isUserCorrect,
+                questionType
             };
 
         case 'UniqueItem':
@@ -55,7 +56,8 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
                 markedItem: data.get('options'),
                 correctItem: correctOptionInThisQuestion,
                 questionStatment: currentQuestion.question,
-                isCorrect: isUserCorrect
+                isCorrect: isUserCorrect,
+                questionType
             };
 
         case 'InputQuestion':
@@ -86,7 +88,8 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
             return {
                 results: resultsForThisQuestion,
                 questionStatment: currentQuestion.question,
-                userEnteredAllValuesCorrectly
+                userEnteredAllValuesCorrectly,
+                questionType
             };
 
         case 'PunnettSquareDraggable':
@@ -101,6 +104,7 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
                 userAnswersForMatriz,
                 questionStatment: currentQuestion.question,
                 isCorrect: isUserCorrect,
+                questionType
             };
     
         default:
