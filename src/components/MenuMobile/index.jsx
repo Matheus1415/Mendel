@@ -7,7 +7,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
     const subMenuConteudo = [
         { label: "Cromossomo", router: "/cromossomo" },
         { label: "Gregorio", router: "/manutencao" },
-        { label: "Fundamentos", router: "/manutencao" },
+        { label: "Fundamentos", router: "/fundamentos" },
         { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Sistema Sanguíneo", router: "/manutencao" },
     ];
