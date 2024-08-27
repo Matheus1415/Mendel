@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Heading, SimpleGrid, useBreakpointValue, Button, Text } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import { AleloCards } from '../../components/AleloCards';
+import { Quiz } from '../../components/Quiz';
+import questionMock from '../../data/question-mock-alelos.json'
 
 export const Alelos = () => {
     const headingFontSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
@@ -10,11 +12,9 @@ export const Alelos = () => {
         {
             title: "Múltiplos",
             imageSrc: "/assets/alelos1.png",
-            imageAlt: "",
+            imageAlt: "Alelo Múltiplo",
             listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                "Embora cada característica hereditária em um indivíduo seja determinada por apenas dois alelos (um de cada progenitor), uma população pode ter múltiplos alelos para um mesmo gene. Isso significa que, além dos dois alelos presentes em um indivíduo, a população como um todo pode possuir várias variantes genéticas diferentes para esse gene. Esse fenômeno, conhecido como polimorfismo alélico, contribui para a variabilidade genética e a diversidade dentro da população. Por exemplo, o sistema de grupos sanguíneos ABO em humanos é um exemplo de polimorfismo alélico, onde três alelos (A, B e O) determinam os diferentes grupos sanguíneos."
             ]
         },
         {
@@ -22,9 +22,7 @@ export const Alelos = () => {
             imageSrc: "/assets/alelos2.png",
             imageAlt: "Alelo Letal",
             listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                "Alelodetermina a morte do indivíduo quando presente em homozigose, geralmente durante as fases iniciais do desenvolvimento. Esses alelos podem levar a doenças graves que frequentemente resultam na morte antes da reprodução, reduzindo a frequência desses alelos na população. Exemplos de alelos letais incluem aqueles associados à fibrose cística e à distrofia muscular de Duchenne, que são causadas por alelos recessivos letais."
             ]
         },
         {
@@ -32,9 +30,7 @@ export const Alelos = () => {
             imageSrc: "/assets/alelos1.png",
             imageAlt: "Alelo Codominante",
             listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                "Os alelos codominantes são aqueles que, quando presentes em um indivíduo, ambos se manifestam igualmente no fenótipo. Um exemplo clássico é o sistema de grupos sanguíneos AB, onde os alelos A e B são codominantes, resultando na expressão de ambos os tipos de antígenos na superfície das células vermelhas do sangue. Isso contrasta com os alelos dominantes, onde apenas um alelo é expresso no fenótipo."
             ]
         },
         {
@@ -43,9 +39,7 @@ export const Alelos = () => {
             imageSrc: "/assets/alelos2.png",
             imageAlt: "Alelo de Dominância (Completa e incompleta)",
             listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                "A dominância completa ocorre quando um alelo dominante mascara completamente a expressão do alelo recessivo. Em contraste, a dominância incompleta é quando o fenótipo de um heterozigoto é intermediário entre os fenótipos dos dois homozigotos. Por exemplo, nas flores de snapdragon, uma planta heterozigota exibe uma cor de flor rosa intermediária entre as flores vermelhas (homozigoto dominante) e brancas (homozigoto recessivo)."
             ]
         }
     ];
@@ -53,7 +47,7 @@ export const Alelos = () => {
     return (
         <>
             <LayoutIntroduction query="VARIAÇÕES">
-                VARIAÇÕES DO MODELO MENDERIANO
+                VARIAÇÕES DO MODELO MENDELiano
             </LayoutIntroduction>
             <Box as="section" w="100%" minHeight="64rem" p={4}>
                 <Heading
@@ -81,6 +75,9 @@ export const Alelos = () => {
                             <AleloCards key={index} {...props} />
                         ))}
                     </SimpleGrid>
+                </Box>
+                <Box textAlign="center">
+                    <Quiz questions={questionMock}/>
                 </Box>
             </Box>
         </>
