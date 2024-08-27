@@ -1,0 +1,278 @@
+[
+    {
+        "question": "O que caracteriza um sistema de alelos múltiplos?",
+        "questionType": "UniqueItem",
+        "explanation": "Alelos múltiplos referem-se à presença de mais de dois alelos possíveis para um único gene em uma população. Um exemplo clássico é o sistema de grupos sanguíneos ABO em humanos.",
+        "options": [
+            {
+                "content": "A presença de mais de dois alelos possíveis para um gene em uma população.",
+                "isCorrect": true
+            },
+            {
+                "content": "A presença de apenas dois alelos dominantes para um gene.",
+                "isCorrect": false
+            },
+            {
+                "content": "A expressão de um alelo recessivo em um fenótipo dominante.",
+                "isCorrect": false
+            },
+            {
+                "content": "A presença de apenas um alelo dominante em um indivíduo.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é o exemplo clássico de um sistema de alelos múltiplos?",
+        "questionType": "UniqueItem",
+        "explanation": "O sistema de grupos sanguíneos ABO é um exemplo clássico de alelos múltiplos, onde três alelos (A, B e O) determinam os diferentes tipos de sangue.",
+        "options": [
+            {
+                "content": "Sistema de grupos sanguíneos ABO.",
+                "isCorrect": true
+            },
+            {
+                "content": "Cor das flores de snapdragon.",
+                "isCorrect": false
+            },
+            {
+                "content": "Padrão de herança recessivo ligado ao X.",
+                "isCorrect": false
+            },
+            {
+                "content": "Distúrbio de fibrose cística.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é a principal consequência da presença de um alelo letal em homozigose?",
+        "questionType": "UniqueItem",
+        "explanation": "Os alelos letais causam a morte do indivíduo quando presentes em homozigose, geralmente durante as fases iniciais do desenvolvimento.",
+        "options": [
+            {
+                "content": "Morte do indivíduo durante o desenvolvimento.",
+                "isCorrect": true
+            },
+            {
+                "content": "Expressão completa do fenótipo dominante.",
+                "isCorrect": false
+            },
+            {
+                "content": "Expressão intermediária entre dois fenótipos.",
+                "isCorrect": false
+            },
+            {
+                "content": "Redução na variabilidade genética.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é um exemplo de uma condição causada por um alelo letal recessivo?",
+        "questionType": "UniqueItem",
+        "explanation": "A fibrose cística é um exemplo de uma condição causada por um alelo letal recessivo, que resulta na morte do indivíduo em homozigose.",
+        "options": [
+            {
+                "content": "Fibrose cística.",
+                "isCorrect": true
+            },
+            {
+                "content": "Sistema de grupos sanguíneos ABO.",
+                "isCorrect": false
+            },
+            {
+                "content": "Padrão de herança dominante ligado ao X.",
+                "isCorrect": false
+            },
+            {
+                "content": "Cor das flores de snapdragon.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "O que define um alelo codominante?",
+        "questionType": "UniqueItem",
+        "explanation": "Alelos codominantes são aqueles em que ambos os alelos são igualmente expressos no fenótipo do indivíduo heterozigoto, como no sistema de grupos sanguíneos AB.",
+        "options": [
+            {
+                "content": "Ambos os alelos são igualmente expressos no fenótipo.",
+                "isCorrect": true
+            },
+            {
+                "content": "Apenas um alelo é expresso no fenótipo.",
+                "isCorrect": false
+            },
+            {
+                "content": "O fenótipo é uma mistura intermediária dos alelos.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo recessivo mascara o fenótipo do alelo dominante.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é a diferença entre dominância completa e dominância incompleta?",
+        "questionType": "UniqueItem",
+        "explanation": "A dominância completa ocorre quando um alelo dominante mascara completamente o alelo recessivo, enquanto na dominância incompleta, o fenótipo do heterozigoto é intermediário entre os fenótipos dos dois homozigotos.",
+        "options": [
+            {
+                "content": "Na dominância completa, o alelo dominante mascara o recessivo. Na dominância incompleta, o fenótipo é intermediário.",
+                "isCorrect": true
+            },
+            {
+                "content": "Ambos os tipos de dominância resultam em fenótipo intermediário.",
+                "isCorrect": false
+            },
+            {
+                "content": "Na dominância completa, o fenótipo é intermediário entre dois fenótipos dominantes.",
+                "isCorrect": false
+            },
+            {
+                "content": "Na dominância incompleta, o alelo dominante mascara o recessivo.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é um exemplo de dominância incompleta em plantas?",
+        "questionType": "UniqueItem",
+        "explanation": "As flores de snapdragon são um exemplo de dominância incompleta, onde plantas heterozigotas têm flores rosa, intermediárias entre vermelho (dominante) e branco (recessivo).",
+        "options": [
+            {
+                "content": "Flores de snapdragon.",
+                "isCorrect": true
+            },
+            {
+                "content": "Sistema de grupos sanguíneos ABO.",
+                "isCorrect": false
+            },
+            {
+                "content": "Padrão de herança recessivo ligado ao X.",
+                "isCorrect": false
+            },
+            {
+                "content": "Fibrose cística.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é a característica distintiva dos alelos em um sistema codominante, como o grupo sanguíneo AB?",
+        "questionType": "UniqueItem",
+        "explanation": "Em um sistema codominante, ambos os alelos são igualmente expressos no fenótipo. No grupo sanguíneo AB, ambos os antígenos A e B são expressos nas células vermelhas do sangue.",
+        "options": [
+            {
+                "content": "Ambos os alelos são igualmente expressos no fenótipo.",
+                "isCorrect": true
+            },
+            {
+                "content": "Apenas um alelo é expresso no fenótipo.",
+                "isCorrect": false
+            },
+            {
+                "content": "O fenótipo é uma mistura intermediária dos alelos.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo recessivo mascara o fenótipo do alelo dominante.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Quais dos seguintes exemplos ilustram alelos múltiplos?",
+        "questionType": "MultipleItems",
+        "explanation": "O sistema ABO e a série de alelos de pelagem em alguns animais são exemplos de alelos múltiplos, onde mais de dois alelos estão presentes na população para um único gene.",
+        "options": [
+            {
+                "content": "Sistema de grupos sanguíneos ABO.",
+                "isCorrect": true
+            },
+            {
+                "content": "Série de alelos de pelagem em cães.",
+                "isCorrect": true
+            },
+            {
+                "content": "Cor dos olhos em humanos.",
+                "isCorrect": false
+            },
+            {
+                "content": "Tipo de cabelo em roedores.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Quais são os efeitos típicos dos alelos letais em uma população?",
+        "questionType": "MultipleItems",
+        "explanation": "A presença de alelos letais geralmente resulta em uma redução na frequência desses alelos na população devido à mortalidade antes da reprodução.",
+        "options": [
+            {
+                "content": "Reduzem a frequência dos alelos na população.",
+                "isCorrect": true
+            },
+            {
+                "content": "Podem causar morte antes da reprodução.",
+                "isCorrect": true
+            },
+            {
+                "content": "Aumentam a diversidade genética.",
+                "isCorrect": false
+            },
+            {
+                "content": "Não têm impacto na frequência dos alelos.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Como os alelos múltiplos contribuem para a diversidade genética em uma população?",
+        "questionType": "UniqueItem",
+        "explanation": "Alelos múltiplos aumentam a variabilidade genética dentro de uma população ao fornecer várias variantes genéticas para um único gene, resultando em diferentes fenótipos.",
+        "options": [
+            {
+                "content": "Eles aumentam a variabilidade genética ao fornecer várias variantes para um gene.",
+                "isCorrect": true
+            },
+            {
+                "content": "Eles reduzem a variabilidade genética ao resultar em um fenótipo uniforme.",
+                "isCorrect": false
+            },
+            {
+                "content": "Eles causam a morte de indivíduos que são homozigotos para o alelo.",
+                "isCorrect": false
+            },
+            {
+                "content": "Eles resultam em uma expressão intermediária dos alelos.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Qual é a principal consequência para a população de alelos letais que causam a morte antes da reprodução?",
+        "questionType": "UniqueItem",
+        "explanation": "Os alelos letais que causam a morte antes da reprodução reduzem a frequência desses alelos na população, pois os indivíduos afetados não transmitem esses alelos para a próxima geração.",
+        "options": [
+            {
+                "content": "Redução da frequência desses alelos na população.",
+                "isCorrect": true
+            },
+            {
+                "content": "Aumento da variabilidade genética na população.",
+                "isCorrect": false
+            },
+            {
+                "content": "Expressão de um fenótipo intermediário.",
+                "isCorrect": false
+            },
+            {
+                "content": "Aumento na frequência do alelo dominante.",
+                "isCorrect": false
+            }
+        ]
+    }
+]

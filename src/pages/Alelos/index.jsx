@@ -1,54 +1,13 @@
 import React from 'react';
-import { Box, Heading, SimpleGrid, useBreakpointValue, Button, Text } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, useBreakpointValue } from '@chakra-ui/react';
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import { AleloCards } from '../../components/AleloCards';
+import conteudoAlelos from '../../data/conteudoAlelos.json';
+import { Quiz } from '../../components/Quiz';
+import questionMock from '../../data/question-mock-alelos.json';
 
 export const Alelos = () => {
     const headingFontSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
-
-    const alelosCardProps = [
-        {
-            title: "Múltiplos",
-            imageSrc: "/assets/alelos1.png",
-            imageAlt: "",
-            listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            ]
-        },
-        {
-            title: "Letal",
-            imageSrc: "/assets/alelos2.png",
-            imageAlt: "Alelo Letal",
-            listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            ]
-        },
-        {
-            title: "Codominante",
-            imageSrc: "/assets/alelos1.png",
-            imageAlt: "Alelo Codominante",
-            listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            ]
-        },
-        {
-            title: "Dominância",
-            subTitle: "(completa e incompleta)",
-            imageSrc: "/assets/alelos2.png",
-            imageAlt: "Alelo de Dominância (Completa e incompleta)",
-            listItems: [
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-                "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            ]
-        }
-    ];
 
     return (
         <>
@@ -77,10 +36,14 @@ export const Alelos = () => {
                         justifyContent="center"
                         alignItems="center"
                     >
-                        {alelosCardProps.map((props, index) => (
+                        {conteudoAlelos.map((props, index) => (
                             <AleloCards key={index} {...props} />
                         ))}
                     </SimpleGrid>
+                </Box>
+                <Box
+                    textAlign="center">
+                    <Quiz questions={questionMock} />
                 </Box>
             </Box>
         </>
