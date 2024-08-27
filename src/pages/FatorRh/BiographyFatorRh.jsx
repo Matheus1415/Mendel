@@ -8,78 +8,79 @@ const BiographyFatorRh = () => {
     return(
         
         <Box>
-            <Flex
-                mb="100px"
-                mx="auto"
-                maxW="1300px"
-                p={8}
-                gap={6}
-                direction={ flexDirection }
-                justifyContent="space-between"
+            <Heading 
+                variant="PrimaryTitle" 
+                textAlign="center"
+                mt="60px"
+                mb="80px"
             >
+                Criadores
+            </Heading>
+            <Box>
                 <Flex
-                    direction="column"
-                    justifyContent="flex-start"
-                    maxW={ contentWidth }
-                    h="100%"
-                    w="100%"
-                    alignItems={ flexAlignContent }
+                    mb="100px"
+                    mx="auto"
+                    maxW="1300px"
+                    p={8}
+                    gap={6}
+                    direction={ flexDirection }
+                    justifyContent="space-between"
                 >
-                    <Box>
-                        <Heading  variant="SecondTitle">Karl Landsteiner</Heading>
-                        <Text variant="Paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
-                        </Text>
-
-                        <Text variant="Paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
-                        </Text>
-
-                        <Text variant="Paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
-                        </Text>
-                    </Box>
+                    <Flex
+                        direction="column"
+                        justifyContent="flex-start"
+                        maxW={ contentWidth }
+                        h="100%"
+                        w="100%"
+                        alignItems={ flexAlignContent }
+                    >
+                        <Box>
+                            <Heading  variant="SecondTitle">Karl Landsteiner</Heading>
+                            <Text variant="Paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
+                            </Text>
+                            <Text variant="Paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
+                            </Text>
+                            <Text variant="Paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
+                            </Text>
+                        </Box>
+                    </Flex>
+                        <Image w="lg" borderRadius="2xl" objectFit="cover" src="./public/img/KarlLandsteiner.jpg" alt="KarlLandsteiner" />
                 </Flex>
-                    <Image w="lg" borderRadius="2xl" objectFit="cover" src="./public/img/KarlLandsteiner.jpg" alt="KarlLandsteiner" />
-            </Flex>
-    
-            <Flex
-                mx="auto"
-                maxW="1300px"
-                p={8}
-                gap={6}
-                direction={ flexDirection }
-                justifyContent="space-between"
-            >
                 <Flex
-                    direction="column"
-                    justifyContent="flex-start"
-                    maxW={ contentWidth }
-                    h="100%"
-                    w="100%"
-                    alignItems={ flexAlignContent }
+                    mx="auto"
+                    maxW="1300px"
+                    p={8}
+                    gap={6}
+                    direction={ flexDirection }
+                    justifyContent="space-between"
                 >
-                    <Box>
-                        <Heading  variant="SecondTitle"> Alexander Solomon Wiener</Heading>
-                        <Text variant="Paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
-                        </Text>
-
-                        <Text variant="Paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
-                        </Text>
-
-                        <Text variant="Paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
-                        </Text>
-                    </Box>
+                    <Flex
+                        direction="column"
+                        justifyContent="flex-start"
+                        maxW={ contentWidth }
+                        h="100%"
+                        w="100%"
+                        alignItems={ flexAlignContent }
+                    >
+                        <Box>
+                            <Heading  variant="SecondTitle"> Alexander Solomon Wiener</Heading>
+                            <Text variant="Paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
+                            </Text>
+                            <Text variant="Paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
+                            </Text>
+                            <Text variant="Paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum facere, nobis sit libero ea voluptatem ducimus cupiditate quas vel nihil voluptatum ad, aliquid ipsa. Laborum sunt unde eius et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium sit. Ratione, quisquam? Quo asperiores beatae voluptatum? Deserunt, aliquid debitis voluptatem, quam sunt minima ipsa aperiam perspiciatis voluptas, molestias reprehenderit.
+                            </Text>
+                        </Box>
+                    </Flex>
+                        <Image w="lg" borderRadius="2xl" objectFit="cover" src="./public/img/Wiener.png" alt="Wiener" />
                 </Flex>
-                    <Image w="lg" borderRadius="2xl" objectFit="cover" src="./public/img/Wiener.png" alt="Wiener" />
-            </Flex>
-
-
-
-
+            </Box>
         </Box>
              
        
