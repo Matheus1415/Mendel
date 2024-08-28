@@ -1,4 +1,13 @@
 import { Heading, Highlight, Flex, Text, Box, Image } from "@chakra-ui/react";
+import {
+  Heading,
+  Highlight,
+  Flex,
+  Text,
+  Box,
+  Image,
+  SimpleGridi,
+} from "@chakra-ui/react";
 import VLibras from "@djpfs/react-vlibras";
 
 export function MulheresXX() {
@@ -45,6 +54,7 @@ export function MulheresXX() {
         <Box>
          <Image src ="../../../public/assets/DNA.png"
          />
+          <Image src="../../../public/assets/DNA.png" width="600px" />
         </Box>
         
 
@@ -80,8 +90,65 @@ Essas contribuições demonstram não apenas investigações pioneiras, mas tamb
 
 
 
+            A ciência genética é crucial para entender a hereditariedade e os
+            mecanismos moleculares da vida. As mulheres desempenharam papéis
+            fundamentais nesse campo, contribuindo significativamente para suas
+            descobertas e avanços. Desde o início da genética, elas foram
+            pioneiras em desafios ao conhecimento estabelecido e na expansão da
+            biologia.
+            <br />
+            Rosalind Franklin, com suas imagens de raios X do DNA, revelou a
+            estrutura em dupla hélice da molécula, transformando a compreensão
+            da hereditariedade e confirmando teorias existentes. Recentemente,
+            Jennifer Doudna e Emmanuelle Charpentier avançaram com a tecnologia
+            de edição genética CRISPR-Cas9, permitindo manipulação precisa do
+            DNA. Essa inovação tem vastas implicações para tratar doenças
+            genéticas e melhorar saúde e agricultura.
+            <br />
+            Essas contribuições demonstram não apenas investigações pioneiras,
+            mas também habilidades analíticas e criativas essenciais para o
+            desenvolvimento da genética. Reconhecer o impacto das mulheres na
+            genética é vital, pois seu trabalho é crucial para o progresso da
+            ciência e da prática médica moderna. O legado feminino na genética
+            reflete a importância de sua presença e impacto na ciência
+            contemporânea.
           </Text>
         </Box>
+      </Flex>
+      <Flex>
+        <Heading
+          variant="PrimaryTitle"
+          mb={4}
+          textAlign="center"
+          fontSize={{ base: "2xl", md: "3xl" }}
+          alignItems="end"
+        >
+          Importância das mulheres
+        </Heading>
+        <Text>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          omnis ducimus dolores vero quo consectetur sapiente mollitia deserunt,
+          modi eligendi temporibus harum eaque? Quibusdam similique nostrum ipsa
+          repellendus pariatur minima.
+        </Text>
+        const images = [ 'url-da-imagem1.jpg', 'url-da-imagem2.jpg',
+        'url-da-imagem3.jpg', 'url-da-imagem4.jpg', 'url-da-imagem5.jpg',
+        'url-da-imagem6.jpg', ];
+        <Box p={4}>
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={4}>
+            {images.map((src, index) => (
+              <Image
+                key={index}
+                src={src}
+                alt={`Imagem ${index + 1}`}
+                borderRadius="md"
+                boxSize="100%"
+                objectFit="cover"
+              />
+            ))}
+          </SimpleGrid>
+        </Box>
+        export default ImageGrid;
       </Flex>
     </>
   );
