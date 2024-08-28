@@ -36,6 +36,7 @@ export const Alelos = () => {
                         justifyContent="center"
                         alignItems="center"
                     >
+
                         {conteudoAlelos.map((props, index) => (
                             <AleloCards key={index} {...props} />
                         ))}
