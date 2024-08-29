@@ -48,7 +48,11 @@ export const checkAlleleEntry = (
   }
 
   // Validação das características
+<<<<<<< HEAD
   if (!Array.isArray(caracteristicas) || caracteristicas.length !== 2) {
+=======
+  if (!Array.isArray(caracteristicas) || (caracteristicas.length !== 2 && caracteristicas.length !== 4)) {
+>>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
     showAlert('Certifique-se de que há duas características.', 'error');
     return;
   }

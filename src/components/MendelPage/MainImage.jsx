@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import GregorMendelImage from '../../images/Gregor_Mendel.jpg'
 import GregorMendelAnotacoes from '../../images/Anotacoes_Mendel.jpg'
+=======
+>>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
 import {Flex, Image} from '@chakra-ui/react'
 import {GlassEfect} from './GlassEfect'
 
@@ -28,7 +31,11 @@ return(
         zIndex={1}>
 
             <Image
+<<<<<<< HEAD
                 src={GregorMendelImage}
+=======
+                src={'./Gregor_Mendel.jpg'}
+>>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
                 alt='Imagem do Mendel'
                 w={[240, 240, 510, 500, 552]}
                 h={[346, 346, 646, 646, 780]}
@@ -40,7 +47,11 @@ return(
                 _hover={{opacity: 0}}/>
 
             <Image
+<<<<<<< HEAD
                 src={GregorMendelAnotacoes}
+=======
+                src={'./Anotacoes_Mendel.jpg'}
+>>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
                 alt='Anotações do Mendel'
                 boxSize='100%'
                 w={[240, 240, 510, 500, 552]}

@@ -13,6 +13,10 @@ const PunnettSquare = () => {
     setCountRecessive,
     backgroundColorDominant,
     backgroundColorRecessive,
+    setCountDominant2,
+    setCountDominant3,
+    backgroundColorDominant2,
+    backgroundColorDominant3,
     parentsAlelo,
     amountAlelo,
     caracteristica
@@ -28,7 +32,7 @@ const PunnettSquare = () => {
       parentsAlelo,
       amountAlelo,
       setParentsValid,
-      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive, amountAlelo),
+      () => CountAlleles(parentsAlelo, setCountDominant, setCountRecessive,setCountDominant2, setCountDominant3, amountAlelo),
       setAlertMessage,
       setAlertStatus,
       setIsVisibleAlert,
@@ -65,6 +69,8 @@ const PunnettSquare = () => {
           parentsAlelo={parentsAlelo}
           backgroundColorDominant={backgroundColorDominant}
           backgroundColorRecessive={backgroundColorRecessive}
+          backgroundColorDominant2={backgroundColorDominant2}
+          backgroundColorDominant3={backgroundColorDominant3}
         />
       </Box>
       <AlleleTable 
@@ -72,8 +78,11 @@ const PunnettSquare = () => {
       />
       {/* <Button>Mude</Button> */}
       {/* datalist */}
+<<<<<<< HEAD:src/components/PunnerAll/PunnettSquare/index.jsx
 
 
+=======
+>>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16:src/components/Punnett/PunnettSquare/index.jsx
     </Flex>
   );
 };
