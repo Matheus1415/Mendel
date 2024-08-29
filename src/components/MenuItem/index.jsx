@@ -2,11 +2,7 @@ import { Flex, Text, Collapse, Box } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
-<<<<<<< HEAD
 const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
-=======
-const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
->>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
   const location = useLocation();
   const isActive = location.pathname === router;
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
@@ -23,13 +19,6 @@ const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
     }
   };
 
-<<<<<<< HEAD
-=======
-  const handleClick = () => {
-    setIsOpen(false); // Fecha o menu ao clicar
-  };
-
->>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
   return (
     <Flex
       direction="column"
@@ -57,11 +46,7 @@ const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
           transition="transform 0.2s"
         >
           {subMenu.length === 0 ? (
-<<<<<<< HEAD
             <Link to={router}>
-=======
-            <Link to={router} onClick={handleClick}>
->>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
               {icon}
             </Link>
           ) : (
@@ -69,11 +54,7 @@ const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
           )}
         </Flex>
         {subMenu.length === 0 ? (
-<<<<<<< HEAD
           <Link to={router}>
-=======
-          <Link to={router} onClick={handleClick}>
->>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
             <Text ml={2} fontSize="16px">
               {label}
             </Text>
@@ -95,11 +76,7 @@ const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
           {subMenu.map((subItem, index) => {
             const isSubItemActive = location.pathname === subItem.router;
             return (
-<<<<<<< HEAD
               <Link to={subItem.router} key={index}>
-=======
-              <Link to={subItem.router} key={index} onClick={handleClick}>
->>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16
                 <Text
                   ml={2}
                   fontSize="14px"

@@ -78,11 +78,8 @@ const PunnettSquare = () => {
       />
       {/* <Button>Mude</Button> */}
       {/* datalist */}
-<<<<<<< HEAD:src/components/PunnerAll/PunnettSquare/index.jsx
 
 
-=======
->>>>>>> 18f5178787c898b27ba7bcc263f7d07be3779c16:src/components/Punnett/PunnettSquare/index.jsx
     </Flex>
   );
 };
