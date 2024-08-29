@@ -6,7 +6,7 @@ import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
 export const Cells = () => {
     return (
 
-    <Box as='section' marginBottom='10rem'>
+    <Box as='section' bgImage="/assets/bgFundamentos/bgCells.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
     
     <Heading 
       variant="PrimaryTitle"

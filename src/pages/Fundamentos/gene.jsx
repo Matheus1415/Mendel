@@ -5,10 +5,10 @@ export const Gene = () => {
     return (
 <LayoutBaseModify
  isRowReverse
+ backgroundImage="assets/bgFundamentos/bgGene.jpg"
 >
   <Box 
     maxWidth='25rem' 
-    marginLeft='auto'
     mb='10rem'
   >
     <Heading variant='PrimaryTitle' textAlign='right'>DNA</Heading>

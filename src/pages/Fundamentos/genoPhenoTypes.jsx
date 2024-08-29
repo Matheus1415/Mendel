@@ -2,13 +2,14 @@ import { Box, Flex, Heading, Text, Button} from '@chakra-ui/react';
 
 export const GenoPhenoTypes = () => {
     return (
-  <Box as='section'>
+  <Box as='section' bgImage="/assets/bgFundamentos/bgGenoPheno.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
     
 
     <Heading // BOX DE FENOTIPO E GENOTIPO
       variant="PrimaryTitle"
       textAlign="center"
-      mt="6.75rem"
+      pt="6.75rem"
+      mt="0"
       mb="4rem"
     >
     FENÓTIPO E GENÓTIPO
@@ -17,6 +18,7 @@ export const GenoPhenoTypes = () => {
       justifyContent="space-around" 
       direction={{base:'column', lg:'row'}} 
       alignItems={{base:'center'}}
+      pb='2rem'
     >
 
         <Box // BOX DO FENOTIPO
@@ -26,7 +28,6 @@ export const GenoPhenoTypes = () => {
           gap="2.25rem"
           maxWidth="25.5rem"
           p={{base:"1rem"}}
-
         >
           <Heading color="Primary" variant="SecondTitle">
           FENÓTIPO
@@ -55,9 +56,9 @@ export const GenoPhenoTypes = () => {
           borderColor='#EBEBEB'
           colorScheme='#000100' 
           borderRadius='50px' 
-          fontWeight='275px' 
-          marginTop='3rem' 
-          marginLeft={{base:"41%", lg:"73%"}} 
+          fontWeight='275' 
+          top='-1rem' 
+          left={{base:"46%", lg:"73%"}} 
           _hover={{
           shadow: 'md',
           bgColor:"#EBEBEB",

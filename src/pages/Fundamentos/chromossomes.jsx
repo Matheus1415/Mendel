@@ -3,8 +3,8 @@ import { Box, Flex, Heading, Image, Text, Tooltip} from '@chakra-ui/react';
 export const Chromossomes = () => {
     return (
 
-<Box as='section' mb='10rem'>
-  <Heading variant="PrimaryTitle" textAlign="center" mb="5rem">
+<Box as='section' mb='10rem' bgImage="/assets/bgFundamentos/bgChromo.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
+  <Heading variant="PrimaryTitle" textAlign="center" mb="5rem" mt={{base:"2rem", lg:"0"}} pt="10rem">
   CROMOSSOMOS
   </Heading>
   <Flex
