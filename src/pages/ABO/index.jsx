@@ -1,6 +1,7 @@
 import React from "react";
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import { Box, Image, Text, Heading, useBreakpointValue } from "@chakra-ui/react";
+import ABOCards, { AleloCards } from "../../components/AleloCards";
 
 export const ABO = () => {
     const imageWidth = useBreakpointValue({ base: "20rem", sm: "25rem", md: "30rem", lg: "40rem" });
@@ -31,7 +32,7 @@ export const ABO = () => {
                     mb={{ base: "2rem", md: "0" }}
                 >
                     <Image 
-                        src="../../assets/hexagono.svg" 
+                        src="/assets/hexagono.svg" 
                         alt="Hexágono" 
                         width={imageWidth}
                         maxHeight={imageMaxHeight}
@@ -49,7 +50,40 @@ export const ABO = () => {
                     <Text variant="Paragraph" mb="1rem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
                     <Text variant="Paragraph">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years.</Text>
                 </Box>
-            </Box>        
+            </Box>
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                border="1px solid"
+                borderRadius="10px"
+                padding="1rem"
+                borderColor="gray.200"
+                width="100%"
+                maxWidth="50rem"
+                mx="auto"
+                my="2rem"
+            >
+                <Box 
+                    display="flex"
+                    flexDirection="row"  // Alterado para 'row'
+                    alignItems="center"
+                    gap="2rem"  // Ajuste o valor conforme necessário
+                >
+                    <AleloCards
+                        title="AGLUTINOGÊNEO"
+                        imageSrc="/assets/aglutinogenio.svg"
+                        imageAlt="Aglutinogênio"
+                        listItems={["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."]}
+                    />
+                    <AleloCards
+                        title="AGLUTININA"
+                        imageSrc="/assets/aglutinina.svg"
+                        imageAlt="Aglutinina"
+                        listItems={["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."]}
+                    />
+                </Box>
+            </Box>
         </>
     );
 }
