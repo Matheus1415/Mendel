@@ -7,6 +7,7 @@ import {
   Box,
   Image,
   SimpleGridi,
+  Grid,
 } from "@chakra-ui/react";
 import VLibras from "@djpfs/react-vlibras";
 
@@ -116,6 +117,13 @@ Essas contribuições demonstram não apenas investigações pioneiras, mas tamb
         </Box>
       </Flex>
       <Flex>
+      <Flex
+        direction="column"
+        alignItems="center"
+        p={4}
+        mx="auto"
+        maxWidth="80%"
+      >
         <Heading
           variant="PrimaryTitle"
           mb={4}
@@ -126,6 +134,7 @@ Essas contribuições demonstram não apenas investigações pioneiras, mas tamb
           Importância das mulheres
         </Heading>
         <Text>
+        <Text variant="Paragraph" fontSize={{ base: "md", md: "lg" }}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           omnis ducimus dolores vero quo consectetur sapiente mollitia deserunt,
           modi eligendi temporibus harum eaque? Quibusdam similique nostrum ipsa
@@ -150,6 +159,68 @@ Essas contribuições demonstram não apenas investigações pioneiras, mas tamb
         </Box>
         export default ImageGrid;
       </Flex>
+
+      <Box p={[4, 6, 8]} mx="auto" width="60%">
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+          gap={4}
+        >
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+            <Image
+              src="../../../public/assets/Rectangle16-3.png"
+              alt="Imagem 1"
+              objectFit="cover"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+            <Image
+              src="../../../public/assets/Rectangle16-1.png"
+              alt="Imagem 2"
+              objectFit="cover"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+            <Image
+              src="../../../public/assets/Rectangle16-2.png"
+              alt="Imagem 3"
+              objectFit="cover"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+            <Image
+              src="../../../public/assets/Rectangle16-4.png"
+              alt="Imagem 4"
+              objectFit="cover"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+            <Image
+              src="../../../public/assets/Rectangle16.png"
+              alt="Imagem 5"
+              objectFit="cover"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+            <Image
+              src="../../../public/assets/Rectangle16-5.png"
+              alt="Imagem 6"
+              objectFit="cover"
+              width="100%"
+              height="auto"
+            />
+          </Box>
+        </Grid>
+      </Box>
     </>
   );
 }
