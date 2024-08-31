@@ -6,7 +6,7 @@ import conteudoAlelos from '../../data/conteudoAlelos.json';
 import { Quiz } from '../../components/Quiz';
 import questionMock from '../../data/question-mock-alelos.json';
 
-export const Alelos = () => {
+export const Variations = () => {
     const headingFontSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
 
     return (
