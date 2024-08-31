@@ -9,9 +9,8 @@ const MotionFlex = motion(Flex);
 
 const MenuMobile = ({ isOpen, toggleMenu }) => {
     const subMenuConteudo = [
-        { label: "Cromossomo", router: "/cromossomo" },
         { label: "Gregorio", router: "/mendel" },
-        { label: "Fundamentos", router: "/manutencao" },
+        { label: "Fundamentos", router: "/fundamentos" },
         { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Sistema Sanguíneo", router: "/manutencao" },
         {label: "Variações do modelo Menderiano", router: "/Alelos" }

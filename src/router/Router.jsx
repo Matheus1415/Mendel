@@ -24,7 +24,6 @@ export const RouterAsRouter = () => {
         <Route path="/" element={<Home/>} />
         <Route path='/atividades' element={<Atividades/>} />
         <Route path="/punntt" element={<PunntteUnlimited/>} />
-        <Route path="/cromossomo" element={<Chromosomes/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
         <Route path="*" element={<Page404/>}/>
         <Route path="/mendel" element={<Mendel />} />
