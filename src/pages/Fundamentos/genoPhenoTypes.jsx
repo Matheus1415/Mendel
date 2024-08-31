@@ -1,74 +1,61 @@
-import { Box, Flex, Heading, Text, Button} from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 
 export const GenoPhenoTypes = () => {
     return (
-  <Box as='section' bgImage="/assets/bgFundamentos/bgGenoPheno.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
-    
-
-    <Heading // BOX DE FENOTIPO E GENOTIPO
-      variant="PrimaryTitle"
-      textAlign="center"
-      pt="6.75rem"
-      mt="0"
-      mb="4rem"
-    >
-    FENÓTIPO E GENÓTIPO
-    </Heading>
-    <Flex 
-      justifyContent="space-around" 
-      direction={{base:'column', lg:'row'}} 
-      alignItems={{base:'center'}}
-      pb='2rem'
-    >
-
-        <Box // BOX DO FENOTIPO
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          gap="2.25rem"
-          maxWidth="25.5rem"
-          p={{base:"1rem"}}
+        <Box 
+            as='section' 
+            bgImage="/assets/bgFundamentos/bgGenoPheno.jpg" 
+            bgRepeat='no-repeat' 
+            bgPosition="center" 
+            bgSize="cover"
         >
-          <Heading color="Primary" variant="SecondTitle">
-          FENÓTIPO
-          </Heading>
-          <Text variant='Paragraph'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text> 
-        </Box>
+            <Heading // TÍTULO DA SEÇÃO
+                variant="PrimaryTitle"
+                textAlign="center"
+                pt="6.75rem"
+                mt="0"
+                mb="4rem"
+            >
+                FENÓTIPO E GENÓTIPO
+            </Heading>
+            <Flex 
+                justifyContent="space-around" 
+                direction={{base:'column', lg:'row'}} 
+                alignItems={{base:'center'}}
+                pb='2rem'
+            >
+                <Box // BOX DO FENÓTIPO
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    gap="2.25rem"
+                    maxWidth="25.5rem"
+                    p={{base:"1rem"}}
+                >
+                    <Heading color="Primary" variant="SecondTitle">
+                        FENÓTIPO
+                    </Heading>
+                    <Text variant='Paragraph' textAlign='justify'>
+                        O fenótipo refere-se às características observáveis de um organismo, como altura, cor dos olhos, e tipo sanguíneo. Essas características resultam da interação entre o genótipo, que é a constituição genética do organismo, e fatores ambientais. O fenótipo pode ser influenciado por mutações nos genes, interações genéticas, e condições externas.
+                    </Text>
+                </Box>
 
-        {/* Box for Haploid Cell */}
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          gap="2.25rem"
-          maxWidth="25.5rem"
-          p={{base:"1rem"}}
-        >
-          <Heading color="Primary" variant="SecondTitle">
-          GENÓTIPO
-          </Heading>
-          <Text variant='Paragraph'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+                <Box // BOX DO GENÓTIPO
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    gap="2.25rem"
+                    maxWidth="25.5rem"
+                    p={{base:"1rem"}}
+                >
+                    <Heading color="Primary" variant="SecondTitle">
+                        GENÓTIPO
+                    </Heading>
+                    <Text variant='Paragraph' textAlign='justify'>
+                        O genótipo é o conjunto de genes que um organismo carrega. Ele determina o potencial genético do organismo e, em conjunto com o ambiente, influencia o fenótipo. Enquanto o fenótipo pode variar ao longo do tempo devido a fatores externos, o genótipo permanece constante ao longo da vida do organismo, a menos que ocorram mutações.
+                    </Text>
+                </Box>
+            </Flex>    
         </Box>
-    </Flex>
-
-        <Button 
-          border='1px solid' 
-          borderColor='#EBEBEB'
-          colorScheme='#000100' 
-          borderRadius='50px' 
-          fontWeight='275' 
-          top='-1rem' 
-          left={{base:"46%", lg:"73%"}} 
-          _hover={{
-          shadow: 'md',
-          bgColor:"#EBEBEB",
-          color:'#000100',
-          transform: 'translateX(10px)',
-          transitionDuration: '0.2s',
-          transitionTimingFunction: "ease-in-out"
-          }}
-        >Ir para a próxima página</Button>
-    
-</Box>
     )
 }
