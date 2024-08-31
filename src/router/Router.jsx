@@ -10,7 +10,7 @@ import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
 import { Alelos } from '../pages/Alelos';
-import { ABO } from '../pages/ABO';
+import { SistemaAbo } from '../pages/SistemaAbo';
 import Punnett from '../components/Punnett';
 import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
 
@@ -26,7 +26,7 @@ export const RouterAsRouter = () => {
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro />} />
         <Route path="/alelos" element={<Alelos />} />
-        <Route path="/abo" element={<ABO />} />
+        <Route path="/sistema-abo" element={<SistemaAbo />} />
         <Route path="/layout" element={<TesteLayout />} />
         <Route path="*" element={<Page404 />} />
       </Routes>

@@ -4,7 +4,7 @@ import { Box, Image, Text, Heading, useBreakpointValue } from "@chakra-ui/react"
 import AleloCards from "../../components/AleloCards";
 import transSangueAbo from '../../data/transSangueAbo.json';
 
-export const ABO = () => {
+export const SistemaAbo = () => {
     const imageWidth = useBreakpointValue({ base: "15rem", sm: "20rem", md: "25rem", lg: "30rem" });
     const imageMaxHeight = useBreakpointValue({ base: "20rem", sm: "25rem", md: "30rem", lg: "40rem" });
     const textPadding = useBreakpointValue({ base: "1rem", sm: "1.5rem", md: "2rem", lg: "4rem" });
@@ -50,23 +50,16 @@ export const ABO = () => {
                 >
                     <Heading variant="PrimaryTitle" mb="1rem">SURGIMENTO</Heading>
                     <Text variant="Paragraph" mb="1rem">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        O sistema ABO foi descoberto pelo cientista Karl Landsteiner em 1901, ao estudar as reações de aglutinação entre o sangue de diferentes pessoas. Ele identificou três tipos principais de sangue: A, B e O, que posteriormente foram complementados pelo tipo AB. Esse sistema é crucial para a realização de transfusões de sangue seguras.
                     </Text>
                     <Text variant="Paragraph" mb="1rem">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        A classificação ABO baseia-se na presença ou ausência de dois antígenos, A e B, na superfície dos glóbulos vermelhos. As pessoas com sangue tipo A têm antígenos A, as com sangue tipo B têm antígenos B, as com sangue AB têm ambos os antígenos, e as com sangue tipo O não possuem nenhum dos dois.
                     </Text>
                     <Text variant="Paragraph" mb="1rem">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Além dos antígenos, o plasma sanguíneo pode conter anticorpos contra os antígenos que não estão presentes nos glóbulos vermelhos. Por exemplo, uma pessoa com sangue tipo A tem anticorpos anti-B, que reagem contra o sangue tipo B.
                     </Text>
                     <Text variant="Paragraph">
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
-                        in a piece of classical Latin literature from 45 BC, making it over 2000 years.
+                        A descoberta do sistema ABO tornou possível a prática de transfusões de sangue seguras e efetivas, evitando reações adversas potencialmente fatais.
                     </Text>
                 </Box>
             </Box>
@@ -94,13 +87,13 @@ export const ABO = () => {
                         title="AGLUTINOGÊNEO"
                         imageSrc="/assets/aglutinogenio.svg"
                         imageAlt="Aglutinogênio"
-                        listItems={["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."]}
+                        listItems={["Aglutinogênios são antígenos presentes na superfície dos glóbulos vermelhos que determinam o tipo sanguíneo ABO de uma pessoa."]}
                     />
                     <AleloCards
                         title="AGLUTININA"
                         imageSrc="/assets/aglutinina.svg"
                         imageAlt="Aglutinina"
-                        listItems={["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."]}
+                        listItems={["Aglutininas são anticorpos encontrados no plasma sanguíneo, que reagem contra os antígenos que não estão presentes no próprio sangue."]}
                     />
                 </Box>
             </Box>
@@ -152,7 +145,7 @@ export const ABO = () => {
                 >
                     <Image
                         src="/assets/resumoAbo.svg" 
-                        alt="Resumindo tipos sanguíneos" 
+                        alt="Resumo dos tipos sanguíneos" 
                     />
                 </Box>
             </Box>
