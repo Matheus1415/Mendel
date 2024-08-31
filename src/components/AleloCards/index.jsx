@@ -65,3 +65,4 @@ export const AleloCards = ({
         </Box>
     );
 };
+export default AleloCards;
