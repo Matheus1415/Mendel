@@ -15,6 +15,7 @@ import { PunnettSquareDraggablePage } from '../pages/PunnettSquareDraggable';
 import { Alelos } from '../pages/Alelos';
 import { PunntteUnlimited } from '../pages/PunnttPage';
 import { Fundamentos } from '../pages/Fundamentos';
+import { SistemaAbo } from '../pages/SistemaAbo';
 
 export const RouterAsRouter = () => {
   return (
@@ -31,6 +32,7 @@ export const RouterAsRouter = () => {
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/alelos" element={<Alelos/>} />
+        <Route path="/sistema-abo" element={<SistemaAbo />} />
         {/* <Route path="/layout" element={<TesteLayout/>} /> */}
         <Route path="/punner-arastavel" element={<PunnettSquareDraggablePage/>} />
       </Routes>

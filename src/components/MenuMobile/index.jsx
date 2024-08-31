@@ -12,8 +12,8 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "Gregorio", router: "/mendel" },
         { label: "Fundamentos", router: "/fundamentos" },
         { label: "Introdução a Genética", router: "/manutencao" },
-        { label: "Sistema Sanguíneo", router: "/manutencao" },
-        {label: "Variações do modelo Menderiano", router: "/Alelos" }
+        { label: "Sistema Sanguíneo", router: "/sistema-abo" },
+        {label: "Variações do modelo Menderiano", router: "/alelos" },
     ];
     const subMenuAtividade = [
         { label: "quadro teste", router: "/punner-arastavel" },
