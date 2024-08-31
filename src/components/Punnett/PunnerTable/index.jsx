@@ -1,9 +1,17 @@
 import React from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, Box } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 function isEven(number) {
     return number % 2 === 0;
-  }
+}
+
+// Definir os componentes animados do Framer Motion
+const MotionBox = motion(Box);
+const MotionTable = motion(Table);
+const MotionTr = motion(Tr);
+const MotionTh = motion(Th);
+const MotionTd = motion(Td);
 
 const PunnettTable = ({ 
     amountAlelo,
@@ -17,91 +25,169 @@ const PunnettTable = ({
     const allAlleles1 = [...parent1Group1, ...parent1Group2];
     const allAlleles2 = [...parent1Group2, ...parent1Group1];
 
-    //Rever logia do quadro 4x4
     return (
-        <div>
-            {parentsAlelo[0].length == 4 ? (
-                <Table border="2px" borderColor="white" mb="4" bg="Dark">
-                    <Thead borderColor="white">
-                        <Tr borderColor="white">
-                            <Th border="2px" borderColor="gray
-                            .500" bg="Dark" color="white"></Th>
+        <MotionBox 
+            p="4" 
+            maxW="container.lg" 
+            mx="auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
+            {parentsAlelo[0].length === 4 ? (
+                <MotionTable 
+                    border="2px" 
+                    borderColor="blue.800" 
+                    mb="4" 
+                    bg="white"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <Thead>
+                        <MotionTr
+                            initial={{ y: -20 }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <Th border="2px" borderColor="blue.600" bg="blue.100" color="blue.800"></Th>
                             {allAlleles2.map((allele, idx) => {
-                                if(!isEven(idx)){return}
-                                let newId = idx == 0||idx == 4 ? 0:1;
-                                let SecoundAllele = idx == 0 ||  idx == 2 ?2:3;
-                                return(
-                                <Th border="2px" borderColor="white" color="white"key={idx} sx={{ textTransform: 'none' }}>
-                                    {allAlleles2[newId]}{allAlleles2[SecoundAllele]}
-                                </Th>
-                                )
-                            })}
-                        </Tr>
-                    </Thead>
-                    <Tbody borderColor="white">
-                        {allAlleles1.map((allele1, idx1) => {
-                            if(!isEven(idx1)){return}
-                            let newId = idx1==0||idx1==4?0:1;
-                            let SecoundAllele = idx1==0||idx1==2?2:3;
-
-                            return(
-                            <Tr borderColor="white" key={idx1}>
-                                <Th border="2px" borderColor="white" color="white" sx={{ textTransform: 'none' }}>
-                                    {allAlleles1[newId]}{allAlleles1[SecoundAllele]}
-                                </Th>
-                                {allAlleles2.map((allele2, idx2) => {
-                                    if(!isEven(idx2)){return}
-                                    let newId2 = idx2==0||idx2==4?0:1;
-                                    let SecoundAllele2 = idx2==0||idx2==2?2:3;
-                                    return(
-                                    <Td
-                                        border="2px"
-                                        borderColor="white"
-                                        color="white"
-                                        key={`${idx1}-${idx2}`}
-                                        bg={/[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) && /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`) ? backgroundColorDominant : /[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`)? backgroundColorDominant2 : /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`)?backgroundColorDominant3:backgroundColorRecessive}
+                                if (!isEven(idx)) return null;
+                                const newId = idx === 0 || idx === 4 ? 0 : 1;
+                                const SecoundAllele = idx === 0 || idx === 2 ? 2 : 3;
+                                return (
+                                    <MotionTh 
+                                        border="2px" 
+                                        borderColor="blue.600" 
+                                        color="blue.800" 
+                                        key={idx}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.5 }}
                                     >
-                                        {`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`}
-                                    </Td>
-                                )})}
-                            </Tr>
-                        )})}
-                    </Tbody>
-                </Table>
-            ) : (
-                <Table border="2px" borderColor="white" mb="4" bg="Dark" color="white">
-                    <Thead borderColor="white">
-                        <Tr borderColor="white">
-                            <Th border="2px" borderColor="white" bg="Second" color="white"></Th>
-                            {parentsAlelo[1].map((allele, idx) => (
-                                <Th border="2px" borderColor="white" color="white" key={idx} sx={{ textTransform: 'none' }}>
-                                    {allele}
-                                </Th>
-                            ))}
-                        </Tr>
+                                        {allAlleles2[newId]}{allAlleles2[SecoundAllele]}
+                                    </MotionTh>
+                                );
+                            })}
+                        </MotionTr>
                     </Thead>
-                    <Tbody borderColor="white">
+                    <Tbody>
+                        {allAlleles1.map((allele1, idx1) => {
+                            if (!isEven(idx1)) return null;
+                            const newId = idx1 === 0 || idx1 === 4 ? 0 : 1;
+                            const SecoundAllele = idx1 === 0 || idx1 === 2 ? 2 : 3;
+
+                            return (
+                                <MotionTr
+                                    key={idx1}
+                                    initial={{ y: 20 }}
+                                    animate={{ y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    <MotionTh 
+                                        border="2px" 
+                                        borderColor="blue.600" 
+                                        color="blue.800"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        {allAlleles1[newId]}{allAlleles1[SecoundAllele]}
+                                    </MotionTh>
+                                    {allAlleles2.map((allele2, idx2) => {
+                                        if (!isEven(idx2)) return null;
+                                        const newId2 = idx2 === 0 || idx2 === 4 ? 0 : 1;
+                                        const SecoundAllele2 = idx2 === 0 || idx2 === 2 ? 2 : 3;
+                                        return (
+                                            <MotionTd
+                                                border="2px"
+                                                borderColor="blue.600"
+                                                key={`${idx1}-${idx2}`}
+                                                bg={/[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) && /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele]}`) ? backgroundColorDominant :
+                                                /[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) ? backgroundColorDominant2 :
+                                                /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele]}`) ? backgroundColorDominant3 : backgroundColorRecessive}
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ duration: 0.5 }}
+                                            >
+                                                {`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`}
+                                            </MotionTd>
+                                        );
+                                    })}
+                                </MotionTr>
+                            );
+                        })}
+                    </Tbody>
+                </MotionTable>
+            ) : (
+                <MotionTable 
+                    border="2px" 
+                    borderColor="blue.600" 
+                    mb="4" 
+                    bg="blue.50"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <Thead>
+                        <MotionTr
+                            initial={{ y: -20 }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <Th border="2px" borderColor="blue.600" bg="blue.100" color="blue.800"></Th>
+                            {parentsAlelo[1].map((allele, idx) => (
+                                <MotionTh 
+                                    border="2px" 
+                                    borderColor="blue.600" 
+                                    color="blue.800" 
+                                    key={idx}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    {allele}
+                                </MotionTh>
+                            ))}
+                        </MotionTr>
+                    </Thead>
+                    <Tbody>
                         {parentsAlelo[0].map((allele1, idx1) => (
-                            <Tr borderColor="white" key={idx1}>
-                                <Th border="2px" borderColor="white" color="white" sx={{ textTransform: 'none' }}>
+                            <MotionTr
+                                key={idx1}
+                                initial={{ y: 20 }}
+                                animate={{ y: 0 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <MotionTh 
+                                    border="2px" 
+                                    borderColor="blue.600" 
+                                    color="blue.800"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.5 }}
+                                >
                                     {allele1}
-                                </Th>
+                                </MotionTh>
                                 {parentsAlelo[1].map((allele2, idx2) => (
-                                    <Td
+                                    <MotionTd
                                         border="2px"
-                                        borderColor="white"
+                                        borderColor="blue.600"
                                         key={`${idx1}-${idx2}`}
                                         bg={/[A-Z]/.test(`${allele1}${allele2}`) ? backgroundColorDominant : backgroundColorRecessive}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ duration: 0.5 }}
                                     >
                                         {`${allele1}${allele2}`}
-                                    </Td>
+                                    </MotionTd>
                                 ))}
-                            </Tr>
+                            </MotionTr>
                         ))}
                     </Tbody>
-                </Table>
+                </MotionTable>
             )}
-        </div>
+        </MotionBox>
     );
 };
 

@@ -23,7 +23,6 @@ export const PunnettContainer = ({ configAlelo = [], title, inputTrue = false, r
       <Flex maxW="100%" direction={flexDirection} align="center" justify="center" p={10}>
         {inputTrue && <ParentInput />}
         <PunnettSquare />
-        {/* <PunnettSquareDraggable maxAlelo={2}/> */}
       </Flex>
     </>
   );

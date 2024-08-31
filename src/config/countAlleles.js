@@ -8,10 +8,6 @@ export const CountAlleles = (
   amountAlelo,
 ) => {
   const [parent1, parent2] = parents;
-//   const parent1Group1 = parent1.slice(0, 2);
-//   const parent1Group2 = parent1.slice(2, 4);
-//   const parent2Group1 = parent2.slice(0, 2);
-//   const parent2Group2 = parent2.slice(2, 4);
 
 let combinations = [];
         for (let i = 0; i < parent1.length; i++) {
@@ -35,7 +31,6 @@ let combinations = [];
             }
             combinations.push(newArrayTemper);
         }
-console.log(combinations)
   let dominantCount = 0;
   let dominantCount2 = 0;
   let dominantCount3 = 0;

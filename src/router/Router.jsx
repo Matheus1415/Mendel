@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Mendel } from '../pages/Mendel';
-import Punnett from '../components/Punnett';
 import { Chromosomes } from '../pages/Chromosomes';
 import { MenuMendel } from '../components/Menu';
 import { Atividades } from '../pages/Atividades/';
@@ -14,6 +13,7 @@ import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
 import { Home } from '../pages/Home';
 import { PunnettSquareDraggablePage } from '../pages/PunnettSquareDraggable';
 import { Alelos } from '../pages/Alelos';
+import { PunntteUnlimited } from '../pages/PunnttPage';
 
 export const RouterAsRouter = () => {
   return (
@@ -23,7 +23,7 @@ export const RouterAsRouter = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/atividades' element={<Atividades/>} />
-        <Route path="/puner" element={<Punnett/>} />
+        <Route path="/punntt" element={<PunntteUnlimited/>} />
         <Route path="/cromossomo" element={<Chromosomes/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
         <Route path="*" element={<Page404/>}/>
