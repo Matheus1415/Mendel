@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box, Button, Flex, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Radio, RadioGroup, Stack, Text, useDisclosure, Checkbox, Icon, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import { FaEye } from "react-icons/fa";
 
-// arq do matheus recebe tudo lá ele
 
 export function ViewQuestion({ currentQuestionData, currentQuestionIndex, questionsAmount, nextButtonCallback, previousButtonCallback }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
