@@ -10,11 +10,11 @@ export function Options({questionType, questionOptions}){
                             <Radio w='full' key={index} value={option.content} name='options'>{option.content}</Radio>
                         )
                 } )
-                //key para o radio group
+                //key para o radio group 
                 // required
                 return (
                     <RadioGroup name='options' display='flex' flexDirection='column' gap='24px' alignItems='flex-start' w='full'>
-                        {radiosJsx}
+                        {radiosJsx} 
                     </RadioGroup>
                 )
 
@@ -35,8 +35,8 @@ export function Options({questionType, questionOptions}){
                     return options.map( (option, index) => {
                         return(
                             <FormControl key={index} isRequired display='flex' alignItems='center' justifyContent='space-between'>
-                                <FormLabel m='0' p='0.75rem' w='fit-content'>{option.InputField}:</FormLabel>
-                                <Input type='text' required name={option.InputField} flexGrow='1' maxLength={option.isCorrectValue.length}/>
+                                <FormLabel m='0' p='0.75rem' pl={0} w='fit-content'>{option.InputField}:</FormLabel>
+                                <Input type='text' required name={option.InputField} flexGrow='1' maxLength={option.isCorrectValue.length} border="1px #007A8780 solid" bgColor="#01414C85" _hover={{borderColor:'#01414C'}}/>
                             </FormControl>
                         )
                     } )

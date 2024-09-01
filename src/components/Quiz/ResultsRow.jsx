@@ -20,13 +20,13 @@ export function ResultsRow({ questionHistory, isPopoverOpenned, onClose, openPop
                     
                 >
                     <PopoverTrigger>
-                        <Badge onClick={openPopoverFunction} bg={answeredCorrectly ? 'teal.500' : 'red.500'} color='white' minW='100px' textAlign='center' cursor='pointer'>{answeredCorrectly ? 'Certo' : 'Errado'}</Badge>
+                        <Badge onClick={openPopoverFunction} bg={answeredCorrectly ? 'teal.500' : 'red.500'} color='white' minW='100px' borderRadius="2px" textAlign='center' cursor='pointer'>{answeredCorrectly ? 'Certo' : 'Errado'}</Badge>
                     </PopoverTrigger>
                     <PopoverContent style={{width: '300px'}}>
                         <PopoverHeader textDecoration='underline' fontWeight="medium">Explicação:</PopoverHeader>
                         <PopoverArrow />
                         <PopoverCloseButton/>
-                        <PopoverBody textDecoration={explanation || "underline"} textColor={explanation || "red.500"}>{explanation ? explanation : "Explicação não definida!" }</PopoverBody>
+                        <PopoverBody textDecoration={Boolean(explanation)} textColor={explanation || "red.600"}>{explanation ? explanation : "Explicação não definida!" }</PopoverBody>
                     </PopoverContent>
                 </Popover>
             </>

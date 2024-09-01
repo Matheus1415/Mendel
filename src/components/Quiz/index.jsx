@@ -1,3 +1,4 @@
+//fundo vermelho, tem como passar da primeira questão mas não das outras, tamanho minimo
 import { 
     Heading,
     VStack,
@@ -35,7 +36,7 @@ export function Quiz({questions}){
         //aqui vão as estilizações que devem ser feitas com base no state zoomedImage
         image: {
             initial: {scale: 1.0},
-            zoomed: { position:'fixed' , top:'50%',left:'50%',transform: 'translate(-50%,-50%)', zIndex: '10000'}
+            zoomed: { position:'fixed' , top:'50%', left:'50%',transform: 'translate(-50%,-50%)', zIndex: '10000'}
         },
         div: {
             initial: {opacity: 0, display: 'none'},
@@ -163,8 +164,8 @@ export function Quiz({questions}){
             {
                 !showResults ? (
                     <Box as='form' p={['5', '10']}  onSubmit={submitQuestion} style={{position:'relative', margin: 0, backgroundColor:'transparent', borderRadius:0 }} >
-                        <Badge position="absolute" top={['0.5rem',"1rem"]} right={['0.5rem',"1rem"]} py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
-                        <Heading size='md' mb='1.5rem' textAlign='center'>{questions[currentQuestion - 1].question}</Heading>
+                        <Badge position="absolute" fontSize="small" top={['0.5rem',"1rem"]} right={['0.5rem',"1rem"]} py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
+                        <Heading size='md' mb='1.5rem' textAlign='left' textTransform="none" >{currentQuestion}.{questions[currentQuestion - 1].question}</Heading>
                         
                         {questions[currentQuestion - 1].image && (
                             <>
@@ -179,8 +180,8 @@ export function Quiz({questions}){
                                             left='0'
                                             right='0'
                                             bottom='0'
-                                            opacity='0.8'
-                                            backgroundColor='red'
+                                            opacity='0.5'
+                                            backgroundColor='black'
                                             zIndex='10000'
                                         >
                                         </Box>
@@ -206,7 +207,7 @@ export function Quiz({questions}){
                             </>
                         ) }
                         
-                            <VStack spacing='24px' alignItems='flex-start' my='2'>
+                            <VStack gap={6} my={7} alignItems='flex-start'>
                                 
                                 {
                                     <Options 
