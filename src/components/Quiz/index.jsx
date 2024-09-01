@@ -63,10 +63,17 @@ export function Quiz({questions}){
         e.preventDefault()
         const data = new FormData(e.currentTarget) 
         let isUserCorrect = false;
+
         switch (questions[currentQuestion - 1].questionType) {
             case 'UniqueItem':    
+
+                const OptionSelectedForUser = data.get('options')
+                if (OptionSelectedForUser === null || OptionSelectedForUser === undefined) {
+                    break;
+                }
+                
                 let selectedOptionForUser = questions[currentQuestion - 1].options.find( option => {
-                    return data.get('options') === option.content
+                    return OptionSelectedForUser === option.content
                 } )
     
                 if(selectedOptionForUser.isCorrect === true){
@@ -89,6 +96,10 @@ export function Quiz({questions}){
     
                 for( let key of data.keys() ){
                     selectedOptions.push(key)
+                }
+
+                if (selectedOptions.length === 0) {
+                    break;
                 }
     
                 let correctQuestionOptions = questions[currentQuestion - 1].options.filter( option => {
