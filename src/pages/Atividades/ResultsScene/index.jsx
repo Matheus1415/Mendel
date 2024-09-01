@@ -2,23 +2,24 @@ import { Box, Button, Divider, Flex, Heading, OrderedList } from "@chakra-ui/rea
 import { QuestionHistory } from "../questionHistory";
 
 export function ResultsScene({resultState}){
-    // 675 262
+
     return (
         <Flex height='750px' w='full' justifyContent='space-around' gap='0.75rem'>
-            <Box flex='2.5' maxWidth='70%'>
-                <OrderedList>
-                {
-                    resultState.userResponses.map( response => {
-                        
-                        return (<QuestionHistory
-                            response={response}
-                            questionType={response.questionType}
-                        />)
-                        
-                    } )
-                }
+            <Box flex='2.5' maxWidth='70%' overflowY='auto'>
+                <OrderedList color='white'>
+                    {
+                        resultState.userResponses.map( response => {
+                            
+                            return (<QuestionHistory
+                                response={response}
+                                questionType={response.questionType}
+                            />)
+                            
+                        } )
+                    }
                 </OrderedList>
             </Box>
+
             <Divider orientation="vertical" colorScheme='blue' />
 
             <Box flex='1' flexShrink='0' display='flex' flexDirection='column' justifyContent='space-between'>
