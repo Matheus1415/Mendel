@@ -1,5 +1,5 @@
-import { List, ListIcon, ListItem } from "@chakra-ui/react";
-import { FaCheck } from "react-icons/fa";
+import { Flex, List, ListIcon, ListItem } from "@chakra-ui/react";
+import { FaCheck, FaInfoCircle } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
 export function QuestionHistory({response, questionType}){
@@ -56,7 +56,6 @@ export function QuestionHistory({response, questionType}){
                         </ListItem>
                     )
                 } )
-                console.log(correctMarkedsJSX);
                 
                 return (
                     <ListItem mb='1rem' color='white' isTruncated mt='1.5rem'>
@@ -67,8 +66,53 @@ export function QuestionHistory({response, questionType}){
                         </List>
                     </ListItem>
                 )
-                
+            
+            case 'InputQuestion':
+                let inputsFieldJSX = [];
 
+                for(let inputField in response.results){
+
+                    inputsFieldJSX.push(
+                        <ListItem display='flex' flexDirection="column">
+                            <Flex direction='row' align='center'>
+                                <ListIcon as={FaInfoCircle} color='Primary' />
+                                {inputField}
+                            </Flex>
+                            <List marginLeft='1rem'>
+                                {response.results[inputField].userEnteredCorrectValue ? (
+                                    <>
+                                        <ListItem display='flex' alignItems='center'>
+                                            <ListIcon as={FaCheck} color='green.500' />
+                                            {response.results[inputField].enteredValue}
+                                        </ListItem>
+                                    </>
+                                ) : (
+                                    <>
+                                        <ListItem  display='flex' alignItems='center'>
+                                            <ListIcon as={FaXmark} color='red.500' />
+                                            {response.results[inputField].enteredValue}
+                                        </ListItem>
+                                        <ListItem  display='flex' alignItems='center'>
+                                            <ListIcon as={FaCheck} color='green.500' />
+                                            {response.results[inputField].correctValue}
+                                        </ListItem>
+                                    </>
+                                ) }
+                            </List>
+                        </ListItem>
+                    )
+                    
+                }
+                
+                
+                return(
+                    <ListItem mb='1rem' color='white' isTruncated mt='1.5rem'>
+                        {response.questionStatment}
+                        <List display='flex' flexDirection='column' marginLeft='0.5rem' gap='0.25rem'>
+                            {inputsFieldJSX}
+                        </List>
+                    </ListItem>
+                )
         }
     }
 
