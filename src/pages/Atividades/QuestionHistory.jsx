@@ -40,17 +40,17 @@ export function QuestionHistory({response, questionType}){
                     return !(response.correctQuestionOptions.some( correctOption => selectedOption == correctOption.content ))
                 } );
                 
-                const wrongMarkedsJSX = wronglyMarkedOptions.map( wrongMarkedOption => {
+                const wrongMarkedsJSX = wronglyMarkedOptions.map( (wrongMarkedOption,index) => {
                     return (
-                        <ListItem display='flex' alignItems='center' isTruncated color='white'>
+                        <ListItem display='flex' alignItems='center' isTruncated color='white' key={index} >
                             <ListIcon as={FaXmark} color='red.500' />
                             {wrongMarkedOption}
                         </ListItem>
                     )
                 } )
-                const correctMarkedsJSX = response.correctQuestionOptions.map( correctMarkedOption => {
+                const correctMarkedsJSX = response.correctQuestionOptions.map( (correctMarkedOption,index) => {
                     return (
-                        <ListItem display='flex' mt='0.25rem' alignItems='center' isTruncated>
+                        <ListItem display='flex' mt='0.25rem' alignItems='center' isTruncated key={index} >
                             <ListIcon as={FaCheck} color='green.500' />
                             {correctMarkedOption.content}
                         </ListItem>
@@ -71,7 +71,7 @@ export function QuestionHistory({response, questionType}){
                 let inputsFieldJSX = [];
 
                 for(let inputField in response.results){
-
+                    
                     inputsFieldJSX.push(
                         <ListItem display='flex' flexDirection="column">
                             <Flex direction='row' align='center'>
