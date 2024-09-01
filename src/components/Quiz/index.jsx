@@ -1,4 +1,4 @@
-//fundo vermelho, tem como passar da primeira questão mas não das outras, tamanho minimo
+// tem como passar da primeira questão mas não das outras
 import { 
     Heading,
     VStack,
@@ -160,11 +160,11 @@ export function Quiz({questions}){
     let hitPercentage = ((amountOfWins / questions.length).toFixed(2)) * 100
 
     return(
-        <Box mx='auto' backgroundColor='Fifth' minW={["90%","70%",'50%']} w='fit-content' borderRadius='xl' overflow='hidden' color='Primary'>
+        <Box mx='auto' my={20} backgroundColor='Fifth' minW={["90%","70%",'50%']} w='fit-content' borderRadius='xl' overflow='hidden' color='Primary'>
             {
                 !showResults ? (
                     <Box as='form' p={['5', '10']}  onSubmit={submitQuestion} style={{position:'relative', margin: 0, backgroundColor:'transparent', borderRadius:0 }} >
-                        <Badge position="absolute" fontSize="small" top={['0.5rem',"1rem"]} right={['0.5rem',"1rem"]} py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
+                        <Badge position="absolute" fontSize={["small", "medium"]} top={['0.5rem',"1rem"]} right={['0.5rem',"1rem"]} py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
                         <Heading size='md' mb='1.5rem' textAlign='left' textTransform="none" >{currentQuestion}.{questions[currentQuestion - 1].question}</Heading>
                         
                         {questions[currentQuestion - 1].image && (
