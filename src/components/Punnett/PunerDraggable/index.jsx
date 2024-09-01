@@ -109,6 +109,7 @@ const PunnettSquareDraggable = ({
                                 style={{ 'maxWidth': '100px' }}
                                 className="cell"
                                 src={option.src}
+                                alt={option.name}
                                 draggable="true"
                                 onDragStart={(e) => handleDragStart(e, option.src, option.name)}
                             />
@@ -116,7 +117,7 @@ const PunnettSquareDraggable = ({
                     ))}
                 </Flex>
                 
-                <Center height={checked?"":"800px"}>
+                <Center height={checked ? "" : "800px"}>
                     <Divider orientation='vertical' />
                 </Center>
 
@@ -138,7 +139,6 @@ const PunnettSquareDraggable = ({
                                         borderRadius={10}
                                         border="1px solid #ffff"
                                     >
-                                            
                                     </Flex>
                                 </Th>
                                 {alelosDoPai.map((alelo, idx) => (
@@ -203,7 +203,7 @@ const PunnettSquareDraggable = ({
                                                 borderRadius={10}
                                                 border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && option.alelo === alelosDoPai[colIndex] + alelosDaMae[rowIndex]) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
                                             >
-                                                {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} draggable="false" />}     
+                                                {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
                                             </Flex>                                            
                                         </Td>
                                     ))}
@@ -217,7 +217,7 @@ const PunnettSquareDraggable = ({
                             w={300}
                             borderRadius={8}
                             onClick={reset}
-                            display={checked?"none":"block"}
+                            display={checked ? "none" : "block"}
                         >
                             Resetar
                         </Button>
@@ -226,7 +226,7 @@ const PunnettSquareDraggable = ({
                             w={300}
                             borderRadius={8}
                             onClick={checkAnswers}
-                            display={checked?"none":"block"}
+                            display={checked ? "none" : "block"}
                         >
                             Verificar Respostas
                         </Button>
