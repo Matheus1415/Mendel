@@ -4,6 +4,7 @@ import { Curiosities } from "./Curiosities"
 import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
 import { TrabsAndimportance } from "./TrabsAndimportance";
 import { Contribuitions } from "./Contribuitions";
+import { VideosAndBlogs } from "./VideosAndBlogs";
 
 export function Mendel(){
     return(
@@ -15,6 +16,7 @@ export function Mendel(){
                 <TrabsAndimportance/>
                 <Contribuitions/>
                 <Curiosities/>
+                <VideosAndBlogs />
            </>
     )
 }
