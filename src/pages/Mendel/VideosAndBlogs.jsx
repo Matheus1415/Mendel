@@ -5,6 +5,7 @@ import { VideosSection } from "./VideosSection";
 export function VideosAndBlogs () {
     const testeCarousel = []
     
+    //feito apenas para teste
     for (let i = 0; i < 10; i++) {
         testeCarousel.push({
             title: "genetica blog " + i,
