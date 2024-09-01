@@ -85,8 +85,6 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
         
             for (const [name,value] of data) {
 
-                
-
                 const currentInputField = currentQuestion.options.find( option => option.InputField === name )
 
                 const userEnteredCorrectValue = value === currentInputField.isCorrectValue;
@@ -100,12 +98,12 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
                 listOfCertainMarkedValues.push(userEnteredCorrectValue)
             }
 
-            const userEnteredAllValuesCorrectly = listOfCertainMarkedValues.every( value => value === true )
+            const isCorrect = listOfCertainMarkedValues.every( value => value === true )
 
             return {
                 results: resultsForThisQuestion,
                 questionStatment: currentQuestion.question,
-                userEnteredAllValuesCorrectly,
+                isCorrect,
                 questionType
             };
 
