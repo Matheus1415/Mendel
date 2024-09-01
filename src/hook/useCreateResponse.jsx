@@ -6,14 +6,13 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
     
     switch (questionType) {
         case 'MultipleItems':
-
+            
             let selectedOptions = []
     
             for( let key of data.keys() ){
                 selectedOptions.push(key)
             }
             
-
             let correctQuestionOptions = currentQuestion.options.filter( option => {
                 return option.isCorrect
             })
@@ -29,6 +28,10 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
                 isUserCorrect = false;
             }
 
+            if (selectedOptions.length === 0) {
+                selectedOptions.push("Nenhuma Opção selecionada")
+            }
+
             return {
                 selectedOptions,
                 correctQuestionOptions,
@@ -38,13 +41,27 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
             };
 
         case 'UniqueItem':
-            let selectedOptionForUser = currentQuestion.options.find( option => {
-                return data.get('options') === option.content;
-            } )
+            const OptionSelectedForUser = data.get('options') ?? 'Nenhuma Opção selecionada';
 
+            
             const correctOptionInThisQuestion = currentQuestion.options.find( option => {
                 return option.isCorrect;
             } )
+            
+            if(OptionSelectedForUser === 'Nenhuma Opção selecionada' ){
+                return {
+                    markedItem: OptionSelectedForUser,
+                    correctItem: correctOptionInThisQuestion,
+                    questionStatment: currentQuestion.question,
+                    isCorrect: false,
+                    questionType
+                };
+            }
+
+            let selectedOptionForUser = currentQuestion.options.find( option => {
+                return OptionSelectedForUser === option.content;
+            } )
+
 
             if(selectedOptionForUser.isCorrect === true){
                 isUserCorrect = true;
@@ -53,7 +70,7 @@ export function useCreateResponse(questionType, currentQuestion, submitFormEvent
             }
             
             return {
-                markedItem: data.get('options'),
+                markedItem: OptionSelectedForUser,
                 correctItem: correctOptionInThisQuestion,
                 questionStatment: currentQuestion.question,
                 isCorrect: isUserCorrect,
