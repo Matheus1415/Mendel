@@ -310,11 +310,21 @@ export function MulheresXX() {
       >
         <Box
           p={60}
-          bg="white"
+        
           borderRadius="md"
           boxShadow="md"
           textAlign="center"
-          maxWidth="5000px"
+          maxWidth="1500px"
+          maxHeight="900px"
+          width= "100%"
+          height= "70%"
+          background= "rgb(063844)" /* Cor de fundo semi-transparente */
+          backdrop-filter= "blur(10px)" /* Efeito de desfoque */
+          border-radius= "10px;"
+          padding="20px"
+          box-shadow= "0 4px 8px rgba(0, 0, 0, 0.9)"
+          color= "#333"
+          text-align= "center"
         >
           <Heading mb={4}>Título Centralizado</Heading>
           <Text>
