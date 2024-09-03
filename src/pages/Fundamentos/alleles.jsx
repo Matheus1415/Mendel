@@ -2,7 +2,6 @@ import { Box, Flex, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 
 export const Alleles = () => {
     const Walleles = useBreakpointValue({ base:"25rem", md:"50rem", lg:"67rem" })
-    const Halleles = useBreakpointValue({lg:"36.8rem"})
 
 return (
         

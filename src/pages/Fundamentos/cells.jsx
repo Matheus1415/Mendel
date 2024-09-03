@@ -1,12 +1,10 @@
 import React from 'react';
-import { Box, Flex, Heading, Image, Text, UnorderedList, ListItem, Button, Tooltip, useBreakpointValue } from '@chakra-ui/react';
-import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
-import { LayoutBaseModify } from '../../layout/LayoutBaseModify';
+import { Box, Flex, Heading, Image, UnorderedList, ListItem} from '@chakra-ui/react';
 
 export const Cells = () => {
     return (
 
-    <Box as='section' bgImage="/assets/bgFundamentos/bgCells.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
+    <Box as='section' pb='10rem' bgImage="/assets/bgFundamentos/bgCells.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
     
     <Heading 
       variant="PrimaryTitle"

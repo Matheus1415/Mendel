@@ -10,6 +10,7 @@ export const Gene = () => {
   <Box 
     maxWidth='25rem' 
     mb='10rem'
+    marginLeft='auto'
   >
     <Heading variant='PrimaryTitle' textAlign='right'>DNA</Heading>
     <Text variant='Paragraph'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet doloremque neque esse facere fugit eligendi eos quaerat suscipit at recusandae, pariatur enim non vero asperiores id beatae et assumenda nostrum.</Text>

@@ -1,10 +1,10 @@
 import { Box, Flex, Heading, Image, Text, Tooltip} from '@chakra-ui/react';
 
 export const Chromossomes = () => {
-    return (
+return (
 
-<Box as='section' mb='10rem' bgImage="/assets/bgFundamentos/bgChromo.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
-  <Heading variant="PrimaryTitle" textAlign="center" mb="5rem" mt={{base:"2rem", lg:"0"}} pt="10rem">
+<Box as='section' bgImage="/assets/bgFundamentos/bgChromo.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
+  <Heading variant="PrimaryTitle" textAlign="center" mb="10rem" mt={{base:"2rem", lg:"5rem"}} pt="5rem">
   CROMOSSOMOS
   </Heading>
   <Flex
@@ -15,7 +15,6 @@ export const Chromossomes = () => {
   >
     <Box
       maxWidth={{base:'55rem', lg:'25rem'}}
-      marginTop='2rem'
       p={{base:"1rem"}}
     >
       <Text variant="Paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
@@ -32,14 +31,14 @@ export const Chromossomes = () => {
     >
       <Image src='/assets/cromossome-image.png' alt="Cromossomos" />
       <Tooltip label='Esta parte denomina-se Telômeno' hasArrow placement='top' maxW='fit-content'>
-      <Box // BRAÇO ESQUERDO SUPERIOR DO CROMOSSOM
-        h='14%'
-        w='12%'
-        borderRadius='40%'
-        position='absolute'
-        top='2%'
-        left='1%'
-      ></Box>
+        <Box // BRAÇO ESQUERDO SUPERIOR DO CROMOSSOM
+          h='14%'
+          w='12%'
+          borderRadius='40%'
+          position='absolute'
+          top='2%'
+          left='1%'
+        ></Box>
       </Tooltip>
       <Tooltip label='Esta parte denomina-se Telômeno' hasArrow placement='top' maxW='fit-content' >
         <Box // BRAÇO DIREITO SUPERIOR DO CROMOSSOMO
@@ -51,7 +50,7 @@ export const Chromossomes = () => {
           left='41%'
         ></Box>
       </Tooltip>
-      <Tooltip label='Esta parteenomina-se Telômeno' hasArrow placement='bottom' maxW='fit-content'>
+      <Tooltip label='Esta parte denomina-se Telômeno' hasArrow placement='bottom' maxW='fit-content'>
         <Box // BRAÇO ESQUERDO INFERIOR DO CROMOSSOMO
           h='15.7%'
           w='15%'
@@ -72,7 +71,7 @@ export const Chromossomes = () => {
         ></Box>
       </Tooltip>
       <Tooltip label='Esta parte denomina-se Centrômeno' hasArrow placement='right' maxW='fit-content'>
-      <Box // CENTRÕMENO(O MEIO DO CROMOSSMO)
+        <Box // CENTRÕMENO(O MEIO DO CROMOSSMO)
           h='14%'
           w='17%'
           borderRadius='50%'
@@ -81,6 +80,63 @@ export const Chromossomes = () => {
           left='18.5%'
         ></Box>
       </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='left' maxW='fit-content'>
+        <Box // BRAÇO ESQUERDO SUPERIOR DO CROMOSSMO)
+          h='32%'
+          w='10.5%'
+          top='15%'
+          left='7%'
+          position='absolute'
+          transform='auto'
+          rotate='-25deg'
+          borderTopLeftRadius='15%'
+          borderBottomLeftRadius='60%'
+          borderBottomRightRadius='36%'
+        ></Box>
+        </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='right' maxW='fit-content'>
+        <Box // BRAÇO DIREITO SUPERIOR DO CROMOSSMO)
+          h='30%'
+          w='10%'
+          top='17.9%'
+          left='38%'
+          position='absolute'
+          transform='auto'
+          rotate='25deg'
+          borderTopLeftRadius='15%'
+          borderTopRightRadius='30%'
+          borderBottomLeftRadius='20%'
+          borderBottomRightRadius='60%'
+        ></Box>
+      </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='left' maxW='fit-content'>
+        <Box // BRAÇO ESQUERDO INFERIOR DO CROMOSSMO)
+          w='10.5%'
+          h='30%'
+          top='53%'
+          left='8%'
+          position='absolute'
+          transform='auto'
+          rotate='25deg'
+          borderTopLeftRadius='35%'
+          borderBottomRightRadius='25%'
+        ></Box>
+      </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='right' maxW='fit-content'>
+        <Box // BRAÇO DIREIRO INFERIOR DO CROMOSSMO)
+          w='12%'
+          h='32%'
+          top='52%'
+          left='36%'
+          position='absolute'
+          transform='auto'
+          rotate='-22deg'
+          borderTopLeftRadius='30%'
+          borderTopRightRadius='45%'
+          borderBottomLeftRadius='15%'
+        ></Box>
+      </Tooltip>
+
     </Box>
   </Flex>
 </Box>
