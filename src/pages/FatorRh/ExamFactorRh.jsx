@@ -27,8 +27,8 @@ export function ExamFactorRh(){
     return(
         <Box>
             <Heading color='white' fontSize={40} textAlign='center' fontWeight={275} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' marginTop='70px' marginBottom='100px'>EXAME DO FATOR RH</Heading>
-            <Box display={displayForContentBox} margin='0 auto' width='1110px' justifyContent='space-between'>
-                <Box textAlign='center'>
+            <Box display={displayForContentBox} margin='0 auto' width='1110px' justifyContent='space-between' >
+                <Box textAlign='center' >
                 {showContentBoxes()[0]}
                 {showContentBoxes()[2]}
                 </Box>

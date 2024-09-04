@@ -3,6 +3,7 @@ import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
 import BiographyFatorRh  from './BiographyFatorRh';
 import { TableSection } from './TableSection'
 import { ExamFactorRh } from './ExamFactorRh';
+import { VideosAndBlogs } from "./VideosAndBlogs"
 
 
 export const FatorRh = ({
@@ -125,6 +126,7 @@ export const FatorRh = ({
                 <BiographyFatorRh title="Alexander S. Wiener" isImageSrc="../public/img/Wiener.png" isRowReverse={true}/>
                 <TableSection/>
                 <ExamFactorRh/>
+                <VideosAndBlogs/>
             </Box>
             
             
