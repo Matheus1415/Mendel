@@ -1,5 +1,22 @@
 import { Box, Heading, Text, Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer } from "@chakra-ui/react"
 export function TableSection(){
+
+    const styleOfTitleTable = {
+        color: "#e2e2e2",
+        borderRight: "1px solid #fff",
+        width: 279,
+        textAlign: "center",
+        fontSize: 22
+    }
+
+    const styleOfTd = {
+        color: "#e2e2e2",
+        borderRight: "1px solid #fff",
+        width: 279,
+        textAlign: "center",
+        fontSize: 17
+    }
+
     return(
         <Box>
             <Heading color='white' fontSize={40} textAlign='center' fontWeight={275} bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' marginBottom='40px' marginTop='70px'>DIFERENÇA DE RH POSITIVO E NEGATIVO</Heading>
@@ -10,31 +27,31 @@ export function TableSection(){
             <TableContainer maxW={1110}margin='0 auto' border="1px solid #fff" borderRadius="15px">
                 <Table>
                     <Thead>
-                        <Tr>
-                            <Td color="#e2e2e2">genótipo</Td>
-                            <Td color="#e2e2e2">fenótipo</Td>
-                            <Td color="#e2e2e2">hemácias</Td>
-                            <Td color="#e2e2e2">plasma</Td>
+                        <Tr >
+                            <Td style={styleOfTitleTable} >genótipo</Td>
+                            <Td style={styleOfTitleTable}>fenótipo</Td>
+                            <Td style={styleOfTitleTable}>hemácias</Td>
+                            <Td style={styleOfTitleTable}>plasma</Td>
                         </Tr>
                     </Thead>
                     <Tbody>
                         <Tr>
-                            <Td color="#e2e2e2">RR</Td>
-                            <Td color="#e2e2e2">Rh positivo</Td>
-                            <Td color="#e2e2e2">Com antígeno Rh</Td>
-                            <Td color="#e2e2e2">-</Td>
+                            <Td style={styleOfTd}>RR</Td>
+                            <Td style={styleOfTd}>Rh positivo</Td>
+                            <Td style={styleOfTd}>Com antígeno Rh</Td>
+                            <Td style={styleOfTd}>-</Td>
                         </Tr>
                         <Tr>
-                            <Td color="#e2e2e2">Rr</Td>
-                            <Td color="#e2e2e2">Rh positivo</Td>
-                            <Td color="#e2e2e2">Com antígeno Rh</Td>
-                            <Td color="#e2e2e2">-</Td>
+                            <Td style={styleOfTd}>Rr</Td>
+                            <Td style={styleOfTd}>Rh positivo</Td>
+                            <Td style={styleOfTd}>Com antígeno Rh</Td>
+                            <Td style={styleOfTd}>-</Td>
                         </Tr>
                         <Tr>
-                            <Td color="#e2e2e2">r</Td>
-                            <Td color="#e2e2e2">Rh negativo</Td>
-                            <Td color="#e2e2e2">Sem antígeno Rh</Td>
-                            <Td color="#e2e2e2">Anticorpos anti-Rh, caso receba hemácias de sangue Rh*</Td>
+                            <Td style={styleOfTd}>rr</Td>
+                            <Td style={styleOfTd}>Rh negativo</Td>
+                            <Td style={styleOfTd}>Sem antígeno Rh</Td>
+                            <Td style={styleOfTd}></Td>
                         </Tr>
                     </Tbody>
                 </Table>
