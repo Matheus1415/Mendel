@@ -9,23 +9,20 @@ export function TrabsAndimportance () {
                         <Heading variant="PrimaryTitle">
                             Importância para biologia
                         </Heading>
-                        <Text variant="p" fontSize={16} lineHeight={8} fontWeight={300} color="Primary" textAlign="justify">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nisi ratione, ea eius, reiciendis voluptatum debitis facere asperiores excepturi fuga qui necessitatibus! Illum sed debitis exercitationem culpa blanditiis fugiat sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        <Text variant="p" fontSize={16} lineHeight={8} fontWeight={300} color="Primary" textAlign="justify">    
+                                Gregor Mendel é crucial para a biologia por ter descoberto as leis da herança, que explicam como as características são transmitidas entre gerações. Seus experimentos com ervilhas revelaram padrões de herança, estabelecendo fundamentos para a genética moderna.
                         </Text>
                     </Box>
                     
                     <Box>
                         <Heading variant="PrimaryTitle">
-                            Importância para biologia
+                            TRABALHOS CIENTÍFICOS
                         </Heading>
                         <UnorderedList spacing={4} mb={9}>
-                            <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">lorem ipsum sin dolor amet Lorem ipsum dolor sit amet consectetur adipisicing elit. In, beatae, harum at voluptate fugiat nemo alias laudantium o reiciendis voluptatum inventore numquam iusto, eum qui possimus qua</ListItem>
-                            <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">lorem ipsum sin dolor amet Lorem ipsum dolor sit amet consectetur adipisicing elit. In, beatae, harum at voluptate fugiat nemo alias laudantium o reiciendis voluptatum inventore numquam iusto, eum qui possimus qua</ListItem>
-                            <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">lorem ipsum sin dolor amet Lorem ipsum dolor sit amet consectetur adipisicing elit. In, beatae, harum at voluptate fugiat nemo alias laudantium o reiciendis voluptatum inventore numquam iusto, eum qui possimus qua</ListItem>
+                            <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">Gregor Mendel estudou a hereditariedade em ervilhas, cruzando plantas com diferentes características e observando padrões de transmissão. Seus experimentos mostraram que características seguiam padrões previsíveis, desafiando ideias anteriores sobre hereditariedade.</ListItem>
+                            <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">Mendel estabeleceu a Lei da Segregação, que afirma que alelos se separam na formação dos gametas, e a Lei da Distribuição Independente, que afirma que alelos de diferentes características são distribuídos independentemente.</ListItem>
+                            <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">As descobertas de Mendel foram redescobertas no início do século XX, impactando profundamente a biologia. Suas leis formaram a base da genética científica, influenciando a biologia molecular, a medicina e a engenharia genética.</ListItem>
                         </UnorderedList>
-                        <Button variant="readMore" _hover={{background:'linear-gradient(to left, #007A87 0%, #01414C) 100%'}} color="Primary" lineHeight={7} fontSize={20} px={9} py={0.5} sx={{ background:'linear-gradient(to right, #007A87 0%, #01414C) 100%'}}>
-                            Conheça as leis de mendel
-                        </Button>
                     </Box>
                 </Flex>
 

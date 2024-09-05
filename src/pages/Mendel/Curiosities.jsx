@@ -16,8 +16,8 @@ return (
                             Abade do Mosteiro
                         </CardHeader>
                         <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'> 
-                            <Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            <Text>                             
+                                Gregor Mendel foi abade do Mosteiro de Brünn a partir de 1851, onde supervisionou a administração e as atividades diárias enquanto continuava suas pesquisas com plantas de ervilha.
                             </Text>
                         </CardBody>
                     </Card> 
@@ -32,8 +32,8 @@ return (
                             Apicultor
                         </CardHeader>
                         <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
-                            <Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            <Text>                   
+                            Gregor Mendel era apicultor e estudou o comportamento das abelhas e a polinização no jardim do mosteiro. Seu interesse na apicultura refletia sua curiosidade científica.
                             </Text>
                         </CardBody>
                     </Card>
@@ -49,7 +49,7 @@ return (
                         </CardHeader>
                         <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                             <Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                Gregor Mendel usou o jardim do Mosteiro de Brünn para suas pesquisas, cultivando plantas como ervilhas e praticando apicultura. O espaço foi fundamental para seus experimentos sobre hereditariedade e polinização.
                             </Text>
                         </CardBody>
                     </Card>
@@ -64,8 +64,8 @@ return (
                             Monge Agostiniano
                         </CardHeader>
                         <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
-                            <Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            <Text>                          
+                                Como monge agostiniano, Gregor Mendel entrou na Ordem em 1843 e foi ordenado sacerdote em 1847. Ele supervisionou o Mosteiro de Brünn e dedicou seu tempo livre à pesquisa científica sobre hereditariedade.
                             </Text>
                         </CardBody>
                     </Card>
@@ -81,7 +81,7 @@ return (
                         </CardHeader>
                         <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
                             <Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                Gregor Mendel teve problemas de saúde, incluindo resfriados frequentes, problemas respiratórios e pressão alta, que afetaram sua capacidade de trabalho nos últimos anos de sua vida.
                             </Text>
                         </CardBody>
                     </Card>
@@ -96,8 +96,8 @@ return (
                             Origem Humilde
                         </CardHeader>
                         <CardBody  textAlign='justify' color='#EBEBEB' fontWeight='273' fontSize='17px' maxWidth={['360', '523']} lineHeight='29.75px'>
-                            <Text>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            <Text>                               
+                                Gregor Mendel nasceu em 1822 em Heinzendorf, numa família humilde de agricultores. Sua origem modesta contrastava com o impacto de suas contribuições científicas.
                             </Text>
                         </CardBody>
                     </Card>

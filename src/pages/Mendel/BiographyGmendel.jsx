@@ -19,33 +19,28 @@ export function BiographyGmendel() {
 
         <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginTop='20px' marginBottom='10px'>
           <Highlight query={'professor, botânico e prelado agostiniano'} styles={{bgGradient: 'linear(to-r, #0D606780, #19BFCD80)', bgClip: 'text'}}>
-              Nascido no Império Austro-Húngaro (hoje República Tcheca), foi um
-              professor, botânico e prelado agostiniano, primeiro cientista a
-              modelar o conceito de hereditariedade, complementando a Teoria de
-              Charles Darwin.
+          Gregor Mendel, nascido em 20 de julho de 1822 no Império Austro-Húngaro (hoje República Tcheca), foi um monge agostiniano, professor e botânico que se tornou o pioneiro da genética moderna. Desde cedo, demonstrou interesse pela ciência e, após ingressar no mosteiro de São Tomás em Brno, dedicou-se aos estudos de matemática e ciências naturais. Sua formação incluiu estudos na Universidade de Viena, onde foi influenciado por renomados cientistas, como Christian Doppler, que contribuíram para seu rigor metodológico.
             </Highlight>
         </Text>
 
         <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Nascido e criado em ambiente rural, teve sua
-          capacidade acadêmica reconhecida pelo padre local, o que levou seus
-          pais a o colocarem no colégio aos 11 anos. Seus estudos de Gymnasium
-          (escola secundária) concluídos em 1840, Mendel entrou em um programa
-          de dois anos em filosofia no Instituto Filosófico da Universidade de
-          Olmütz (Olomouc, República Tcheca), onde se destacou em física e
-          matemática, concluindo seus estudos em 1843.
+        De 1856 a 1863, Mendel realizou experimentos em um jardim do mosteiro, onde cultivava plantas de ervilha (Pisum sativum). Ele observou que certos traços eram passados de geração em geração de forma previsível, levando à formulação das Leis de Mendel da Hereditariedade.
         </Text>
 
         <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veniam facere at, atque velit tempore neque qui iste eveniet reiciendis repudiandae maiores id nobis culpa. Voluptas, ab. Odit, obcaecati reprehenderit!
+        Essas leis incluem a Lei da Segregação, que explica como os pares de genes se separam durante a formação dos gametas, e a Lei da Segregação Independente, que descreve como diferentes pares de genes são transmitidos de maneira independente.
+        
         </Text>
 
         <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          
+        Apesar da importância de suas descobertas, Mendel foi amplamente ignorado durante sua vida. Seus artigos de 1866 não receberam a atenção devida, e somente no início do século XX suas descobertas foram reconhecidas. 
+        
         </Text>
 
         <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur praesentium ratione voluptatum accusamus animi et. Consequatur quaerat eius commodi error mollitia.
+          
+        Mendel continuou suas pesquisas como abade e faleceu em 1884 sem reconhecimento científico. Hoje, é celebrado como o "pai da genética", com suas leis formando a base da genética moderna.
         </Text>
       </Box>
 

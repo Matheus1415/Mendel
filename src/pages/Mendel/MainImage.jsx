@@ -1,5 +1,6 @@
 import {Flex, Image} from '@chakra-ui/react'
 import {GlassEfect} from './GlassEfect'
+import Anotacoes_Mendel from '../../images/Anotacoes_Mendel.jpg'
 
 export function MainImage(){
 return(
@@ -37,7 +38,7 @@ return(
                 _hover={{opacity: 0}}/>
 
             <Image
-                src={'./Anotacoes_Mendel.jpg'}
+                src={Anotacoes_Mendel}
                 alt='Anotações do Mendel'
                 boxSize='100%'
                 w={[240, 240, 510, 500, 552]}

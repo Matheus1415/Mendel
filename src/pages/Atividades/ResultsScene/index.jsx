@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Flex, Heading, OrderedList } from "@chakra-ui/react";
-import { QuestionHistory } from "../questionHistory";
+import { QuestionHistory } from "../QuestionHistory";
 
 export function ResultsScene({resultState}){
     // 675 262
