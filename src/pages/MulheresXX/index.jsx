@@ -6,44 +6,64 @@ import {
   Box,
   Image,
   Grid,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import VLibras from "@djpfs/react-vlibras";
 
-
 export function MulheresXX() {
-  const ImageGrid = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const [selectedImage, setSelectedImage] = useState(null);
-  }
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedTitle, setSelectedTitle] = useState("");
+  const [selectedText, setSelectedText] = useState("");
+
+  const handleImageClick = (src, title, text) => {
+    setSelectedImage(src);
+    setSelectedTitle(title);
+    setSelectedText(text);
+    onOpen();
+  };
+
   return (
     <>
+      {/* Banner inicial */}
       <Flex
         h="100vh"
         w="full"
         direction="column"
         justify="center"
         align="center"
-        bg="url(assets/banner.jpg)"
-        bgRepeat="no-repeat"
+        bg="url('/assets/banner.jpg') no-repeat center center"
         bgSize="cover"
         mb={8}
       >
         <Heading
           variant="PrimaryTitle"
-          color="Primary"
+          color="rgb(86, 101, 115)"
           textAlign="center"
           fontSize={[25, 25, 40]}
         >
           <Highlight
             query="Mulheres"
-            styles={{ fontSize: "3.5em", color: "Primary", display: "block" }}
+            styles={{
+              fontSize: "3.5em",
+              color: "rgb(86, 101, 115)",
+              display: "block",
+            }}
           >
-            Mulheres na Genetica
+            Mulheres na Genética
           </Highlight>
         </Heading>
         <VLibras forceOnload />
       </Flex>
 
+      {/* Seção de conteúdo */}
       <Flex
         direction={{ base: "column", md: "row" }}
         p={[3, 4, 8]}
@@ -57,7 +77,7 @@ export function MulheresXX() {
         mb={40}
       >
         <Box>
-          <Image src="../../../public/assets/DNA.png" width="600px" />
+          <Image src="/assets/DNA.png" width="600px" />
         </Box>
 
         <Box
@@ -74,7 +94,7 @@ export function MulheresXX() {
           <Heading
             variant="PrimaryTitle"
             mb={4}
-            textAlign="left"
+            textAlign="right"
             fontSize={{ base: "2xl", md: "3xl" }}
           >
             Importância
@@ -117,11 +137,11 @@ export function MulheresXX() {
       >
         <Heading
           variant="PrimaryTitle"
-          mb={4}
+          mb={20}
           textAlign="center"
           fontSize={{ base: "2xl", md: "3xl" }}
         >
-          Importância das mulheres
+          PIONEIRAS HISTÓRICAS
         </Heading>
         <Text
           variant="Paragraph"
@@ -147,6 +167,7 @@ export function MulheresXX() {
           e na vida cotidiana.
         </Text>
       </Flex>
+
       <Box p={[4, 6, 8]} mx="auto" width="60%" mb={8}>
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
@@ -155,56 +176,104 @@ export function MulheresXX() {
         >
           <Box borderRadius="md" overflow="hidden">
             <Image
-              src="../../../public/assets/Rectangle16-3.png"
+              src="/assets/Rectangle16-3.png"
               alt="Imagem 1"
               objectFit="cover"
               width="100%"
               height="auto"
+              onClick={() =>
+                handleImageClick(
+                  "/assets/Rectangle16-3.png",
+                  "May-Britt Moser",
+                  "May-Britt Moser, junto com Edvard I. Moser e John O’Keefe, fez descobertas fundamentais sobre como o cérebro mapeia o espaço através das células de localização. Seu trabalho elucidou os mecanismos neurais que permitem a navegação espacial e a percepção do ambiente. Essas descobertas avançaram significativamente a compreensão das funções cognitivas e das bases genéticas do comportamento. Moser foi laureada com o Prêmio Nobel de Medicina em 2014, refletindo a importância de suas contribuições para a neurociência."
+                )
+              }
+              cursor="pointer"
             />
           </Box>
           <Box borderRadius="md" overflow="hidden">
             <Image
-              src="../../../public/assets/Rectangle16-1.png"
+              src="/assets/Rectangle16-1.png"
               alt="Imagem 2"
               objectFit="cover"
               width="100%"
               height="auto"
+              onClick={() =>
+                handleImageClick(
+                  "/assets/Rectangle16-1.png",
+                  "Jennifer Doudna",
+                  "Jennifer Doudna revolucionou a biologia molecular com o desenvolvimento da tecnologia CRISPR-Cas9, uma ferramenta precisa para a edição de DNA. Sua inovação permitiu avanços significativos na pesquisa genética e terapia, oferecendo novas possibilidades para o tratamento de doenças genéticas. O trabalho de Doudna, em colaboração com Emmanuelle Charpentier, transformou a abordagem científica à manipulação do genoma. Seu impacto na ciência é vasto, expandindo as fronteiras da genética e da medicina."
+                )
+              }
+              cursor="pointer"
             />
           </Box>
           <Box borderRadius="md" overflow="hidden">
             <Image
-              src="../../../public/assets/Rectangle16-2.png"
+              src="/assets/Rectangle16-2.png"
               alt="Imagem 3"
               objectFit="cover"
               width="100%"
               height="auto"
+              onClick={() =>
+                handleImageClick(
+                  "/assets/Rectangle16-2.png",
+                  "Emmanuelle Charpentier",
+                  "Emmanuelle Charpentier, em colaboração com Jennifer Doudna, desenvolveu a tecnologia CRISPR-Cas9, que revolucionou a edição genética. Esta ferramenta inovadora permite a manipulação precisa do DNA, abrindo novas possibilidades para a pesquisa e a terapia de doenças genéticas. Seu trabalho transformou a biologia molecular, oferecendo um poderoso recurso para a ciência e a medicina. Charpentier é amplamente reconhecida por seu impacto duradouro na área da genética."
+                )
+              }
+              cursor="pointer"
             />
           </Box>
           <Box borderRadius="md" overflow="hidden">
             <Image
-              src="../../../public/assets/Rectangle16-4.png"
+              src="/assets/Rectangle16-4.png"
               alt="Imagem 4"
               objectFit="cover"
               width="100%"
               height="auto"
+              onClick={() =>
+                handleImageClick(
+                  "/assets/Rectangle16-4.png",
+                  "Mary-Claire King",
+                  "Mary-Claire King é reconhecida por identificar o gene BRCA1, associado ao risco hereditário de câncer de mama e ovário, revolucionando o diagnóstico e a prevenção dessas doenças. Seu trabalho permitiu o desenvolvimento de testes genéticos para identificar indivíduos em risco, transformando as abordagens de triagem e tratamento. Além disso, King também pioneira na utilização de técnicas de DNA para resolver casos de desaparecimentos e direitos humanos. Suas contribuições são essenciais para a genética médica e a saúde pública."
+                )
+              }
+              cursor="pointer"
             />
           </Box>
           <Box borderRadius="md" overflow="hidden">
             <Image
-              src="../../../public/assets/Rectangle16.png"
+              src="/assets/Rectangle16.png"
               alt="Imagem 5"
               objectFit="cover"
               width="100%"
               height="auto"
+              onClick={() =>
+                handleImageClick(
+                  "/assets/Rectangle16.png",
+                  "Françoise Barré-Sinoussi",
+                  "Francoise Barré-Sinoussi, juntamente com Luc Montagnier, identificou o HIV em 1983, um avanço crucial para a compreensão da AIDS. Sua descoberta não apenas elucidou a causa da doença, mas também possibilitou o desenvolvimento de tratamentos antirretrovirais que transformaram a vida de milhões. Barré-Sinoussi recebeu o Prêmio Nobel de Medicina em 2008, reconhecendo o impacto significativo de seu trabalho na luta contra a infecção viral. Sua contribuição continua a influenciar profundamente a pesquisa e o tratamento de doenças infecciosas."
+                )
+              }
+              cursor="pointer"
             />
           </Box>
           <Box borderRadius="md" overflow="hidden">
             <Image
-              src="../../../public/assets/Rectangle16-5.png"
+              src="/assets/Rectangle16-5.png"
               alt="Imagem 6"
               objectFit="cover"
               width="100%"
               height="auto"
+              onClick={() =>
+                handleImageClick(
+                  "/assets/Rectangle16-5.png",
+                  "Martha Chase",
+                  "Martha Chase, em colaboração com Alfred Hershey, realizou o famoso experimento Hershey-Chase em 1952, que comprovou que o DNA é o material genético responsável pela herança. Esse trabalho foi crucial para consolidar a teoria de que o DNA carrega as informações genéticas, marcando um avanço fundamental na biologia molecular. Sua pesquisa ajudou a estabelecer a base para o entendimento moderno da genética e da transmissão de características hereditárias. Chase é lembrada por sua contribuição significativa para a ciência genética."
+                )
+              }
+              cursor="pointer"
             />
           </Box>
         </Grid>
@@ -222,23 +291,22 @@ export function MulheresXX() {
         <Heading
           variant="PrimaryTitle"
           mb={4}
-          textAlign="left"
+          textAlign="center"
           fontSize={{ base: "2xl", md: "3xl" }}
         >
           Desafios e Barreiras Enfrentadas
         </Heading>
-      </Flex>
-
-      <Box p={[4, 6, 8]} mx="auto" width="80%">
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-          gap={40}
+          gap={6}
+          mb={40}
         >
           <Box mb={8}>
             <Heading
               variant="PrimaryTitle"
               mb={2}
               fontSize={{ base: "xl", md: "2xl" }}
+              textAlign="right"
             >
               Título 1
             </Heading>
@@ -311,15 +379,15 @@ export function MulheresXX() {
             </Text>
           </Box>
         </Grid>
-      </Box>
+      </Flex>
+
       <Flex
         h="100vh"
         w="full"
         direction="column"
         justify="center"
         align="center"
-        bg="url(assets/Background.png)"
-        bgRepeat="no-repeat"
+        bg="url('/assets/Background.png') no-repeat center center"
         bgSize="cover"
         mb={8}
       >
@@ -332,13 +400,8 @@ export function MulheresXX() {
           maxHeight="900px"
           width="100%"
           height="70%"
-          background="rgba(06,38,44, 0.6)" /* Cor de fundo semi-transparente */
-          backdrop-filter="blur(10px)" /* Efeito de desfoque */
-          border-radius="10px;"
-          padding="20px"
-          box-shadow="0 4px 8px rgba(06, 38, 44, 50.0)"
-          color="#333"
-          text-align="center"
+          background="rgba(6, 38, 44, 0.6)" /* Cor de fundo semi-transparente */
+          backdropFilter="blur(10px)" /* Efeito de desfoque */
         >
           <Heading mb={4}>Título Centralizado</Heading>
           <Text>
@@ -347,7 +410,24 @@ export function MulheresXX() {
           </Text>
         </Box>
       </Flex>
-     
+
+      {/* Modal para exibir imagem, título e texto */}
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent bg="black" color="white">
+          <ModalHeader>{selectedTitle}</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Image
+              src={selectedImage}
+              alt="Imagem selecionada"
+              width="100%"
+              mb={4}
+            />
+            <Text>{selectedText}</Text>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </>
   );
 }
