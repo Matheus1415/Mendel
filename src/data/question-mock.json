@@ -1,25 +1,5 @@
 [
-    {
-        "question": "ultima questão?",
-        "questionType": "MultipleItems",
-        "explanation": "O item A e C são os corretos",
-        "image": "/assets/exampleImg.png",
-        "imageSize": 500, 
-        "options": [
-            {
-                "content": "Sim",
-                "isCorrect": true
-            },
-            {
-                "content": "Claro",
-                "isCorrect": false
-            },
-            {
-                "content": "Com certeza",
-                "isCorrect": true
-            }
-        ]
-    },
+    
     {
         "question": "No heredograma, os símbolos preenchidos representam pessoas portadoras de um tipo raro de doença genética. Os homens são representados pelos quadrados e as mulheres, pelos círculos. Qual é o padrão de herança observado para essa doença?",
         "image": "/assets/image-25.webp",
@@ -46,6 +26,90 @@
             {
                 "content": "Codominante autossômico, pois a doença é herdada pelos filhos de ambos os sexos, tanto do pai quanto da mãe.",
                 "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "ultima questão1?",
+        "questionType": "MultipleItems",
+        "explanation": "O item A e C são os corretos",
+        "image": "/assets/exampleImg.png",
+        "imageSize": 500, 
+        "options": [
+            {
+                "content": "Sim",
+                "isCorrect": true
+            },
+            {
+                "content": "Claro",
+                "isCorrect": false
+            },
+            {
+                "content": "Com certeza",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "ultima questão2?",
+        "questionType": "MultipleItems",
+        "explanation": "O item A e C são os corretos",
+        "image": "/assets/exampleImg.png",
+        "imageSize": 500, 
+        "options": [
+            {
+                "content": "Sim",
+                "isCorrect": true
+            },
+            {
+                "content": "Claro",
+                "isCorrect": false
+            },
+            {
+                "content": "Com certeza",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "ultima questão3?",
+        "questionType": "MultipleItems",
+        "explanation": "O item A e C são os corretos",
+        "image": "/assets/exampleImg.png",
+        "imageSize": 500, 
+        "options": [
+            {
+                "content": "Sim",
+                "isCorrect": true
+            },
+            {
+                "content": "Claro",
+                "isCorrect": false
+            },
+            {
+                "content": "Com certeza",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "ultima questão4?",
+        "questionType": "MultipleItems",
+        "explanation": "O item A e C são os corretos",
+        "image": "/assets/exampleImg.png",
+        "imageSize": 500, 
+        "options": [
+            {
+                "content": "Sim",
+                "isCorrect": true
+            },
+            {
+                "content": "Claro",
+                "isCorrect": false
+            },
+            {
+                "content": "Com certeza",
+                "isCorrect": true
             }
         ]
     },
