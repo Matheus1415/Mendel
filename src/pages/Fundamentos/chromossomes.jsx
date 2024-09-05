@@ -80,6 +80,62 @@ export const Chromossomes = () => {
                             left='18.5%'
                         ></Box>
                     </Tooltip>
+                    <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='left' maxW='fit-content'>
+        <Box // BRAÇO ESQUERDO SUPERIOR DO CROMOSSMO)
+          h='32%'
+          w='10.5%'
+          top='15%'
+          left='7%'
+          position='absolute'
+          transform='auto'
+          rotate='-25deg'
+          borderTopLeftRadius='15%'
+          borderBottomLeftRadius='60%'
+          borderBottomRightRadius='36%'
+        ></Box>
+        </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='right' maxW='fit-content'>
+        <Box // BRAÇO DIREITO SUPERIOR DO CROMOSSMO)
+          h='30%'
+          w='10%'
+          top='17.9%'
+          left='38%'
+          position='absolute'
+          transform='auto'
+          rotate='25deg'
+          borderTopLeftRadius='15%'
+          borderTopRightRadius='30%'
+          borderBottomLeftRadius='20%'
+          borderBottomRightRadius='60%'
+        ></Box>
+      </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='left' maxW='fit-content'>
+        <Box // BRAÇO ESQUERDO INFERIOR DO CROMOSSMO)
+          w='10.5%'
+          h='30%'
+          top='53%'
+          left='8%'
+          position='absolute'
+          transform='auto'
+          rotate='25deg'
+          borderTopLeftRadius='35%'
+          borderBottomRightRadius='25%'
+        ></Box>
+      </Tooltip>
+      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='right' maxW='fit-content'>
+        <Box // BRAÇO DIREIRO INFERIOR DO CROMOSSMO)
+          w='12%'
+          h='32%'
+          top='52%'
+          left='36%'
+          position='absolute'
+          transform='auto'
+          rotate='-22deg'
+          borderTopLeftRadius='30%'
+          borderTopRightRadius='45%'
+          borderBottomLeftRadius='15%'
+        ></Box>
+      </Tooltip>
                 </Box>
             </Flex>
         </Box>
