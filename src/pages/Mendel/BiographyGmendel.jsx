@@ -42,6 +42,7 @@ export function BiographyGmendel() {
           
         Mendel continuou suas pesquisas como abade e faleceu em 1884 sem reconhecimento científico. Hoje, é celebrado como o "pai da genética", com suas leis formando a base da genética moderna.
         </Text>
+
       </Box>
 
 {/* Page's image */}

@@ -1,75 +1,266 @@
 [
     {
-        "question": "ultima questão?",
-        "questionType": "MultipleItems",
-        "explanation": "O item A e C são os corretos",
-        "image": "/assets/exampleImg.png",
-        "imageSize": 500, 
-        "options": [
-            {
-                "content": "Sim",
-                "isCorrect": true
-            },
-            {
-                "content": "Claro",
-                "isCorrect": false
-            },
-            {
-                "content": "Com certeza",
-                "isCorrect": true
-            }
-        ]
-    },
-    {
-        "question": "No heredograma, os símbolos preenchidos representam pessoas portadoras de um tipo raro de doença genética. Os homens são representados pelos quadrados e as mulheres, pelos círculos. Qual é o padrão de herança observado para essa doença?",
-        "image": "/assets/image-25.webp",
-
+        "question": "A probabilidade de um casal heterozigótico para um par de alelos ter um descendente homozigoto dominante é de",
         "questionType": "UniqueItem",
-        "explanation": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illum vitae officiis quod iste sit minus. Iusto quasi veniam odit itaque? Aperiam illum libero sit nisi iusto. Culpa, pariatur ipsam!, Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolores, ex, non illum autem perspiciatis quod voluptatem laudantium ut voluptatum recusandae soluta itaque dolorum explicabo eum quaerat libero praesentium natus.",
         "options": [
             {
-                "content": "Dominante autossômico, pois a doença aparece em ambos os sexos.",
+                "content": "50%",
+                "isCorrect": false
+            },
+            {
+                "content": "100%",
+                "isCorrect": false
+            },
+            {
+                "content": "25%",
                 "isCorrect": true
             },
             {
-                "content": "Recessivo ligado ao sexo, pois não ocorre a transmissão do pai para os filhos.",
-                "isCorrect": false
-            },
-            {
-                "content": "Recessivo ligado ao Y, pois a doença é transmitida dos pais heterozigotos para os filhos.",
-                "isCorrect": false
-            },
-            {
-                "content": "Dominante ligado ao sexo, pois todas as filhas de homens afetados também apresentam a doença.",
-                "isCorrect": false
-            },
-            {
-                "content": "Codominante autossômico, pois a doença é herdada pelos filhos de ambos os sexos, tanto do pai quanto da mãe.",
+                "content": "75%",
                 "isCorrect": false
             }
         ]
     },
     {
-        "question": "Teste?",
-        "questionType": "InputQuestion",
-        "image": "/assets/exampleImg.png",
-        "imageSize": 400,
+        "question": "Na lei de Mendel, conhecida como lei da segregação independente, é postulado que",
+        "questionType": "UniqueItem",
         "options": [
             {
-                "InputField": "f1",
-                "isCorrectValue": "AA"
+                "content": "cada característica do indivíduo é determinada por dois fatores (genes), que se separam na formação dos gametas e, após a fecundação, o fator de um indivíduo se une ao de outro.",
+                "isCorrect": false
             },
             {
-                "InputField": "f2",
-                "isCorrectValue": "Aa"
+                "content": "as diferenças de uma característica do indivíduo são herdadas independentemente das diferenças em outras características.",
+                "isCorrect": false
             },
             {
-                "InputField": "f3",
-                "isCorrectValue": "Aa"
+                "content": "os fatores que determinam uma característica hereditária segregam-se durante a formação dos gametas, por isso os gametas são puros em relação a cada um dos fatores.",
+                "isCorrect": true
             },
             {
-                "InputField": "f4",
-                "isCorrectValue": "aa"
+                "content": "as ervilhas da geração F1 amarelas carregavam o fator A, que se manifestou, sendo nomeado de dominante, mas o fator b, que não se manifestou na F1, foi denominado de recessivo.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "De acordo com a 1ª Lei de Mendel, é correto afirmar que",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "cada característica é condicionada por um par de fatores que se separam na formação dos gametas, nos quais ocorrem em dose simples.",
+                "isCorrect": true
+            },
+            {
+                "content": "cada carácter é condicionado por um par de fatores que se separam na formação dos gametas, nos quais ocorrem em dose dupla.",
+                "isCorrect": false
+            },
+            {
+                "content": "os fatores para duas ou mais características segregam-se e se distribuem independentemente para os gametas, onde se combinam ao acaso.",
+                "isCorrect": false
+            },
+            {
+                "content": "os fatores para dois ou mais caracteres se distribuem independentemente para os gametas, combinando-se de forma agregada.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Considerando a Segunda Lei de Mendel, assinale a afirmação verdadeira.",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Cópias de genes diferentes segregam de maneira independente.",
+                "isCorrect": true
+            },
+            {
+                "content": "Características intermediárias manifestam-se quando dois fatores são encontrados em um indivíduo.",
+                "isCorrect": false
+            },
+            {
+                "content": "Os híbridos possuem o fator dominante, que é encoberto pelo fator recessivo.",
+                "isCorrect": false
+            },
+            {
+                "content": "Cada característica é determinada por duas cópias de um gene herdado.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "No que concerne aos genes letais, é correto dizer que",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "causam doenças, diminuição da viabilidade e estímulo da reprodução.",
+                "isCorrect": false
+            },
+            {
+                "content": "causam a morte do indivíduo portador.",
+                "isCorrect": true
+            },
+            {
+                "content": "são suscetíveis a alterações ambientais e incapazes de mutações gênicas.",
+                "isCorrect": false
+            },
+            {
+                "content": "são deletérios, pois desaparecem logo que são detectados durante a reprodução.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Relacione, corretamente, os grupos sanguíneos apresentados a seguir, com seus possíveis genótipos, numerando a Coluna II de acordo com a Coluna I.\nColuna I\n1.  A\n2.  B\n3.  AB\n4.  O\nColuna II\n(   ) IBIB ou IBi \n(   ) IAIA ou IAi\n(   ) ii \n(   ) IAIB\nA sequência correta, de cima para baixo, é:",
+        "questionType": "MultipleItems",
+        "options": [
+            {
+                "content": "IBIB ou IBi",
+                "isCorrect": false
+            },
+            {
+                "content": "IAIA ou IAi",
+                "isCorrect": false
+            },
+            {
+                "content": "ii",
+                "isCorrect": false
+            },
+            {
+                "content": "IAIB",
+                "isCorrect": false
+            }
+        ],
+        "explanation": "A sequência correta é: 4 (O), 2 (B), 1 (A), 3 (AB)."
+    },
+    {
+        "question": "Assinale a opção que corresponde a doenças humanas classificadas como hereditárias.",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Daltonismo e ascaridíase.",
+                "isCorrect": false
+            },
+            {
+                "content": "Sarampo e diabetes.",
+                "isCorrect": false
+            },
+            {
+                "content": "Hemofilia e fenilcetonúria.",
+                "isCorrect": true
+            },
+            {
+                "content": "Anemia e caxumba.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "A hemofilia é uma enfermidade recessiva ligada ao cromossomo X e a calvície é uma característica autossômica dominante no homem e recessiva na mulher. Sabendo disso, considere o cruzamento entre os seguintes fenótipos:\nCruzamento 1: XHXh x XhY\nCruzamento 2: XCXc x XCYC\nAssim, é correto afirmar que os genótipos de uma filha hemofílica do Cruzamento 1 e de um filho calvo do Cruzamento 2 são, respectivamente:",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "(XH Xh) e (XC YC ou Xc YC).",
+                "isCorrect": false
+            },
+            {
+                "content": "(XH XH) e (Xc YC ou Xc Yc).",
+                "isCorrect": false
+            },
+            {
+                "content": "(Xh Xh) e (XC YC ou Xc Yc).",
+                "isCorrect": true
+            },
+            {
+                "content": "(Xh Xh) e (XC YC ou Xc YC).",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Um dos conceitos utilizados para a compreensão de genética diz que a propriedade de um alelo de produzir o mesmo fenótipo tanto em condição homozigótica quanto em condição heterozigótica é causada por um gene",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "homozigoto.",
+                "isCorrect": false
+            },
+            {
+                "content": "dominante.",
+                "isCorrect": true
+            },
+            {
+                "content": "recessivo.",
+                "isCorrect": false
+            },
+            {
+                "content": "autossomo.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "A probabilidade de um casal ter dois filhos do sexo masculino e a probabilidade de esse mesmo casal ter dois filhos, sendo uma menina e um menino são respectivamente",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "1/4 e 1/4.",
+                "isCorrect": false
+            },
+            {
+                "content": "1/2 e 1/2.",
+                "isCorrect": false
+            },
+            {
+                "content": "1/2 e 1/4.",
+                "isCorrect": false
+            },
+            {
+                "content": "1/4 e 1/2.",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "Em heredogramas, o casamento consanguíneo é representado por",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "um traço horizontal que liga os membros do casal.",
+                "isCorrect": false
+            },
+            {
+                "content": "dois traços horizontais e paralelos que ligam os membros do casal.",
+                "isCorrect": true
+            },
+            {
+                "content": "um traço vertical que liga os membros do casal.",
+                "isCorrect": false
+            },
+            {
+                "content": "três traços horizontais e paralelos que ligam os membros do casal.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "No que diz respeito à hemofilia, escreva V ou F conforme seja verdadeiro ou falso o que se afirma nos itens abaixo.\n(   ) A incapacidade de produzir o fator VIII de coagulação sanguínea apresentada pelos hemofílicos pode levar à morte e segue a herança ligada ao sexo.\n(   ) Mulheres do genótipo XhXh e homens do genótipo XhY são hemofílicos; portanto, a hemofilia segue o padrão típico de herança ligada ao cromossomo Y.\n(   ) Os homens hemofílicos não transmitem o alelo mutante para a prole do sexo masculino.\n(   ) As filhas de uma mulher hemofílica são hemofílicas, pois herdam um alelo selvagem da mãe.\nEstá correta, de cima para baixo, a seguinte sequência:",
+        "questionType": "MultipleItems",
+        "options": [
+            {
+                "content": "V, V, V, F",
+                "isCorrect": false
+            },
+            {
+                "content": "F, V, F, V",
+                "isCorrect": false
+            },
+            {
+                "content": "V, F, V, F",
+                "isCorrect": true
+            },
+            {
+                "content": "F, F, F, V",
+                "isCorrect": false
             }
         ]
     }

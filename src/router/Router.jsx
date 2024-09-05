@@ -17,6 +17,7 @@ import { PunntteUnlimited } from '../pages/PunnttPage';
 import { Fundamentos } from '../pages/Fundamentos';
 import { SistemaAbo } from '../pages/SistemaAbo';
 import { PunnerAtv } from '../pages/PunnettAtv';
+import { Alelos } from '../pages/Alelos';
 
 export const RouterAsRouter = () => {
   return (
@@ -26,6 +27,7 @@ export const RouterAsRouter = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/atividades' element={<Atividades/>} />
+        <Route path="/alelos" element={<Alelos/>} />
         <Route path="/punntt" element={<PunntteUnlimited/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
         <Route path="/fundamentos" element={<Fundamentos/>} />
