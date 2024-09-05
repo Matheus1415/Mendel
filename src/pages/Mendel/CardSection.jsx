@@ -4,7 +4,6 @@ import {BlogCards} from './BlogCards'
 import { useState } from 'react'
 
 export function CardSection({objectJson}){
-    
 const [index, setIndex] = useState(0)
 
 const endOfTheArray = (objectJson.length * 543) - 1086
@@ -27,15 +26,13 @@ function moveToRight(){
 return(
     <Flex direction='row' justifyContent='center' alignItems='center' gap='20px'>
         <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>          
-            <HiChevronLeft 
-                size={37}/>
+            <HiChevronLeft size={37}/>
         </Button>
         <Box display='flex' flexDirection='row' w='1066px' overflow='hidden' gap='20px'>
             {showCards()}
         </Box>
         <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}}>   
-            <HiChevronRight 
-                size={37}/>
+            <HiChevronRight size={37}/>
         </Button>
     </Flex>
 )

@@ -4,7 +4,6 @@ import {GlassEfect} from './GlassEfect'
 export function MainImage(){
 return(
     <Flex
-    
         w='100%'
         h='100%'
         direction='row'

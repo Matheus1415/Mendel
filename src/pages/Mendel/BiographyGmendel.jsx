@@ -8,18 +8,16 @@ export function BiographyGmendel() {
   const textSize = useBreakpointValue({base:'13px', sm:'17px', md:'17px', lg:'17px'}) 
 
   return (
-  <Flex aling="Center" direction="column" bg='#02161F' w='100%' height='100%'>
+  <Flex aling="Center" direction="column" w='100%' height='100%'>
 
     <Flex aling="center" direction={flexDirection} padding="24px 24px" margin='0 auto'>
       <Box marginTop={marginTitle}>
         
-        <Heading top='111px' left='178px' fontWeight='275' lineHeight='60px' w='216px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
-          <Text fontSize='40px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text'>
-            BIOGRAFIA
-          </Text> 
+        <Heading fontSize='40px' fontWeight='275' lineHeight='60px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' w='216px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
+          BIOGRAFIA
         </Heading>
 
-        <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginTop='20px' marginBottom='10px'>
+        <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginTop='20px' marginBottom='10px'>
           <Highlight query={'professor, botânico e prelado agostiniano'} styles={{bgGradient: 'linear(to-r, #0D606780, #19BFCD80)', bgClip: 'text'}}>
           Gregor Mendel nasceu em uma família com recursos limitados na Silésia de língua alemã e foi criado em um ambiente rural. Suas habilidades acadêmicas foram reconhecidas pelo padre local, que persuadiu seus pais a enviá-lo para a escola aos 11 anos. Após concluir o Gymnasium em 1840, Mendel entrou no Instituto Filosófico da Universidade de Olmütz (Olomouc, República Tcheca), onde se destacou em física e matemática, concluindo seus estudos em 1843.
             </Highlight>
@@ -40,10 +38,11 @@ export function BiographyGmendel() {
         <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
         Assim como em Olmütz, Mendel dedicou seu tempo em Viena à física e à matemática, trabalhando com o físico austríaco Christian Doppler e o físico matemático Andreas von Ettinghausen. Ele também estudou a anatomia e a fisiologia das plantas e o uso do microscópio com o botânico Franz Unger, um entusiasta da teoria celular e um defensor da visão desenvolvimentista (pré-darwiniana) da célula.evolução da vida. Os escritos de Unger sobre o último fizeram dele um alvo de ataque pela imprensa católica romana de Viena pouco antes e durante o tempo de Mendel lá.
         </Text> */}
+
       </Box>
 
 {/* Page's image */}
-        <Box 
+      <Box 
         w={[240, 240, 500, 500, 552]}
         h={[346, 346, 590, 646, 800]}
         display='flex'
@@ -53,7 +52,7 @@ export function BiographyGmendel() {
         marginBottom='50px'
         >  
         <MainImage />
-        </Box>
+      </Box>
     </Flex>
   </Flex>
   )

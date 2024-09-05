@@ -9,11 +9,16 @@ const MotionFlex = motion(Flex);
 
 const MenuMobile = ({ isOpen, toggleMenu }) => {
     const subMenuConteudo = [
-        { label: "Cromossomo", router: "/cromossomo" },
-        { label: "Gregorio", router: "/manutencao" },
-        { label: "Fundamentos", router: "/manutencao" },
+        { label: "Gregorio", router: "/mendel" },
+        { label: "Fundamentos", router: "/fundamentos" },
         { label: "Introdução a Genética", router: "/manutencao" },
-        { label: "Sistema Sanguíneo", router: "/manutencao" },
+        { label: "Sistema Sanguíneo", router: "/sistema-abo" },
+        {label: "Variações do modelo Menderiano", router: "/variations" },
+    ];
+    const subMenuAtividade = [
+        { label: "quadro teste", router: "/punner-arastavel" },
+        { label: "Atividade", router: "/atividades" },
+        { label: "Punntt Alelos", router: "/punntt" },
     ];
 
     return (
@@ -52,8 +57,8 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
                 transition={{ duration: 0.3 }}
             >
                 <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" />
-                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/manutencao" />
-                <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/manutencao" subMenu={subMenuConteudo} />
+                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/" subMenu={subMenuAtividade}/>
+                <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/" subMenu={subMenuConteudo} />
                 <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/manutencao" />
                 <MenuItem icon={<FaInfoCircle />} label="Informação" isOpen={isOpen} router="/manutencao" />
             </MotionFlex>
