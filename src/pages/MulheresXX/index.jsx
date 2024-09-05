@@ -6,6 +6,7 @@ import {
   Box,
   Image,
   Grid,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import VLibras from "@djpfs/react-vlibras";
 
@@ -30,10 +31,10 @@ export function MulheresXX() {
           fontSize={[25, 25, 40]}
         >
           <Highlight
-            query="Genes XX"
+            query="Mulheres"
             styles={{ fontSize: "3.5em", color: "Primary", display: "block" }}
           >
-            Introdução sobre os Genes XX
+            Mulheres na Genetica
           </Highlight>
         </Heading>
         <VLibras forceOnload />
@@ -123,13 +124,23 @@ export function MulheresXX() {
           fontSize={{ base: "md", md: "lg" }}
           align="justify"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          omnis ducimus dolores vero quo consectetur sapiente mollitia deserunt,
-          modi eligendi temporibus harum eaque? Quibusdam similique nostrum ipsa
-          repellendus pariatur minima. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptate iusto ea dignissimos saepe pariatur,
-          mollitia consequuntur dolores repudiandae nam ab placeat odit. Nemo
-          eum similique exercitationem, harum explicabo ea voluptas!
+          Francoise Barré-Sinoussi e Luc Montagnier fizeram uma descoberta
+          crucial em 1983 ao identificar o HIV como o agente causador da AIDS, o
+          que revolucionou o entendimento da doença e possibilitou o
+          desenvolvimento de tratamentos antirretrovirais que transformaram
+          vidas. Jennifer Doudna e Emmanuelle Charpentier criaram a tecnologia
+          CRISPR-Cas9, uma ferramenta inovadora para a edição precisa do DNA com
+          vastas aplicações em pesquisa e terapia genética. May-Britt Moser,
+          junto com Edvard I. Moser e John O’Keefe, revelou como o cérebro usa
+          células de localização para mapear o espaço, aprofundando a
+          compreensão das funções cognitivas. Mary-Claire King identificou o
+          gene BRCA1, essencial para a detecção precoce do câncer de mama e
+          ovário, melhorando os métodos de diagnóstico e prevenção. Finalmente,
+          Martha Chase e Alfred Hershey confirmaram que o DNA é o material
+          genético responsável pela herança, solidificando a biologia molecular
+          como a base do estudo genético. Essas contribuições avançaram
+          significativamente a ciência e tiveram um impacto profundo na medicina
+          e na vida cotidiana.
         </Text>
       </Flex>
       <Box p={[4, 6, 8]} mx="auto" width="60%" mb={8}>
@@ -138,7 +149,7 @@ export function MulheresXX() {
           gap={6}
           mb={40}
         >
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden">
             <Image
               src="../../../public/assets/Rectangle16-3.png"
               alt="Imagem 1"
@@ -147,7 +158,7 @@ export function MulheresXX() {
               height="auto"
             />
           </Box>
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden">
             <Image
               src="../../../public/assets/Rectangle16-1.png"
               alt="Imagem 2"
@@ -156,7 +167,7 @@ export function MulheresXX() {
               height="auto"
             />
           </Box>
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden">
             <Image
               src="../../../public/assets/Rectangle16-2.png"
               alt="Imagem 3"
@@ -165,7 +176,7 @@ export function MulheresXX() {
               height="auto"
             />
           </Box>
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden">
             <Image
               src="../../../public/assets/Rectangle16-4.png"
               alt="Imagem 4"
@@ -174,7 +185,7 @@ export function MulheresXX() {
               height="auto"
             />
           </Box>
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden">
             <Image
               src="../../../public/assets/Rectangle16.png"
               alt="Imagem 5"
@@ -183,7 +194,7 @@ export function MulheresXX() {
               height="auto"
             />
           </Box>
-          <Box borderWidth="1px" borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden">
             <Image
               src="../../../public/assets/Rectangle16-5.png"
               alt="Imagem 6"
@@ -310,21 +321,20 @@ export function MulheresXX() {
       >
         <Box
           p={60}
-        
           borderRadius="md"
           boxShadow="md"
           textAlign="center"
           maxWidth="1500px"
           maxHeight="900px"
-          width= "100%"
-          height= "70%"
-          background= "rgba(06,38,44, 0.6)" /* Cor de fundo semi-transparente */
-          backdrop-filter= "blur(10px)" /* Efeito de desfoque */
-          border-radius= "10px;"
+          width="100%"
+          height="70%"
+          background="rgba(06,38,44, 0.6)" /* Cor de fundo semi-transparente */
+          backdrop-filter="blur(10px)" /* Efeito de desfoque */
+          border-radius="10px;"
           padding="20px"
-          box-shadow= "0 4px 8px rgba(06, 38, 44, 50.0)"
-          color= "#333"
-          text-align= "center"
+          box-shadow="0 4px 8px rgba(06, 38, 44, 50.0)"
+          color="#333"
+          text-align="center"
         >
           <Heading mb={4}>Título Centralizado</Heading>
           <Text>
