@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 import { BlogCardSection } from "./BlogCardSection";
 import { VideoSection } from "./VideoSection";
 import BlogsMendel from "../../data/BlogsMendel.json"
+import VideoMendel from "../../data/VideoMendel.json"
 
 export function VideosAndBlogs () {
     const testeCarousel = []
@@ -23,7 +24,7 @@ export function VideosAndBlogs () {
                         COLETÂNEA DE VIDEOAULAS E BLOGS
                     </Heading>
 
-                    <VideoSection objectJson={testeCarousel}></VideoSection>
+                    <VideoSection objectJson={VideoMendel}></VideoSection>
 
                     <BlogCardSection objectJson={BlogsMendel}></BlogCardSection>
 

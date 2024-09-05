@@ -1,0 +1,38 @@
+[
+    {
+        "image": "https://i.ytimg.com/vi/ythMvY1WKVw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBGCWgb2EEU1mP2g-rlvsItSQVtxA",
+        "tile": "Mendel",
+        "description" : "Conheça mais sobre a vida de Gregor Mendel ",
+        "link" : "https://www.youtube.com/watch?v=ythMvY1WKVw&t=109s"
+    },
+    {
+        "image": "https://i.ytimg.com/vi/4c3bEWWvA9c/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDlbhv0M3DmtJpZOIHyukPu-7beOA",
+        "tile": "Primeira lei de Mendel",
+        "description" : "Conheça a primeira lei genética proposta por Mendel",
+        "link" : "https://www.youtube.com/watch?v=4c3bEWWvA9c&t=776s"
+    },
+    {
+        "image": "https://i.ytimg.com/vi/CVqfMN0ypoQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAn7lkTCPbWzvbb-Dj5pbWPF5Hs1A",
+        "tile": "Seunda lei de Mendel",
+        "description" : "Conheça mais da segunda lei genética proposta por Mendel",
+        "link" : "https://www.youtube.com/watch?v=CVqfMN0ypoQ&t=30s"
+    },
+    {
+        "image": "https://i.ytimg.com/vi/5919r4LF5vw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPGie23A67QsvuHtvoh_TGuWO8cw",
+        "tile": "Exercicios sobre a primeira lei",
+        "description" : "Exercite seus conhecimentos da primeira lei de Mendel",
+        "link" : "https://www.youtube.com/watch?v=5919r4LF5vw&t=22s"
+    },
+    {
+        "image": "https://i.ytimg.com/vi/A2PKkt9duWQ/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_giAAtAFigIMCAAQARhlIGUoZTAP&rs=AOn4CLAdlp5B2QBrs5ZfFnqX4ANtGRl3RA",
+        "tile": "Exercicios sobre a sgunda lei",
+        "description" : "Exercite seus conhecimentos da segunda lei de Mendel",
+        "link" : "https://www.youtube.com/watch?v=A2PKkt9duWQ&t=18s"
+    },
+    {
+        "image": "https://i.ytimg.com/vi/Omkfyd0Rl7o/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBsHpWWWPK4C5smI-lfsCXXBkk26A",
+        "tile": "Experimento",
+        "description" : "Conheça um pouco mais do experimento de Mendel",
+        "link" : "https://www.youtube.com/watch?v=Omkfyd0Rl7o&t=44s"
+    }
+]

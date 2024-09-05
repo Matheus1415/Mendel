@@ -12,7 +12,7 @@ const endOfTheArray = (objectJson.length * 369) - 1107
 function showCards(){
 
     return objectJson.map((value) => (
-        <VideoCard key={value.title} title={value.title} description={value.description} link={value.link} indexTransition={index}/>
+        <VideoCard key={value.title} img={value.image} title={value.title} description={value.description} link={value.link} indexTransition={index}/>
     ))
 }
 
