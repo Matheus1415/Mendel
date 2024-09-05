@@ -6,11 +6,15 @@ import {
   Box,
   Image,
   Grid,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import VLibras from "@djpfs/react-vlibras";
 
+
 export function MulheresXX() {
+  const ImageGrid = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [selectedImage, setSelectedImage] = useState(null);
+  }
   return (
     <>
       <Flex
@@ -343,6 +347,7 @@ export function MulheresXX() {
           </Text>
         </Box>
       </Flex>
+     
     </>
   );
 }
