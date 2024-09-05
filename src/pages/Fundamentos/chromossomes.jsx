@@ -30,7 +30,7 @@ export const Chromossomes = () => {
                     position='relative'
                 >
                     <Image src='/assets/cromossome-image.png' alt="Cromossomos" />
-                    <Tooltip label='Esta parte denomina-se Telômero' hasArrow placement='top' maxW='fit-content'>
+                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='top' maxW='fit-content'>
                         <Box 
                             h='14%'
                             w='12%'
@@ -40,7 +40,7 @@ export const Chromossomes = () => {
                             left='1%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Esta parte denomina-se Telômero' hasArrow placement='top' maxW='fit-content'>
+                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='top' maxW='fit-content'>
                         <Box 
                             h='14%'
                             w='13%'
@@ -50,7 +50,7 @@ export const Chromossomes = () => {
                             left='41%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Esta parte denomina-se Telômero' hasArrow placement='bottom' maxW='fit-content'>
+                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='bottom' maxW='fit-content'>
                         <Box 
                             h='15.7%'
                             w='15%'
@@ -60,7 +60,7 @@ export const Chromossomes = () => {
                             left='1.5%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Esta parte denomina-se Telômero' hasArrow placement='bottom' maxW='fit-content'>
+                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='bottom' maxW='fit-content'>
                         <Box 
                             h='16%'
                             w='14%'
@@ -70,7 +70,7 @@ export const Chromossomes = () => {
                             left='39.3%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Esta parte denomina-se Centrômero' hasArrow placement='right' maxW='fit-content'>
+                    <Tooltip label="O centrômero do cromossomo é a região que conecta as cromátides-irmãs e é essencial para a separação adequada dos cromossomos durante a divisão celular." hasArrow placement='left' maxW='20rem'>
                         <Box 
                             h='14%'
                             w='17%'
@@ -80,7 +80,7 @@ export const Chromossomes = () => {
                             left='18.5%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='left' maxW='fit-content'>
+                    <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='left' maxW='20rem'>
         <Box // BRAÇO ESQUERDO SUPERIOR DO CROMOSSMO)
           h='32%'
           w='10.5%'
@@ -94,7 +94,7 @@ export const Chromossomes = () => {
           borderBottomRightRadius='36%'
         ></Box>
         </Tooltip>
-      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='right' maxW='fit-content'>
+      <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='right' maxW='20rem'>
         <Box // BRAÇO DIREITO SUPERIOR DO CROMOSSMO)
           h='30%'
           w='10%'
@@ -109,7 +109,7 @@ export const Chromossomes = () => {
           borderBottomRightRadius='60%'
         ></Box>
       </Tooltip>
-      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='left' maxW='fit-content'>
+      <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='left' maxW='20rem'>
         <Box // BRAÇO ESQUERDO INFERIOR DO CROMOSSMO)
           w='10.5%'
           h='30%'
@@ -122,7 +122,7 @@ export const Chromossomes = () => {
           borderBottomRightRadius='25%'
         ></Box>
       </Tooltip>
-      <Tooltip label='Esta parte denomina-se Braço' hasArrow placement='right' maxW='fit-content'>
+      <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='right' maxW='20rem'>
         <Box // BRAÇO DIREIRO INFERIOR DO CROMOSSMO)
           w='12%'
           h='32%'
