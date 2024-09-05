@@ -19,34 +19,26 @@ export function BiographyGmendel() {
 
         <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginTop='20px' marginBottom='10px'>
           <Highlight query={'professor, botânico e prelado agostiniano'} styles={{bgGradient: 'linear(to-r, #0D606780, #19BFCD80)', bgClip: 'text'}}>
-              Nascido no Império Austro-Húngaro (hoje República Tcheca), foi um
-              professor, botânico e prelado agostiniano, primeiro cientista a
-              modelar o conceito de hereditariedade, complementando a Teoria de
-              Charles Darwin.
+          Gregor Mendel nasceu em uma família com recursos limitados na Silésia de língua alemã e foi criado em um ambiente rural. Suas habilidades acadêmicas foram reconhecidas pelo padre local, que persuadiu seus pais a enviá-lo para a escola aos 11 anos. Após concluir o Gymnasium em 1840, Mendel entrou no Instituto Filosófico da Universidade de Olmütz (Olomouc, República Tcheca), onde se destacou em física e matemática, concluindo seus estudos em 1843.
             </Highlight>
         </Text>
 
-        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Nascido e criado em ambiente rural, teve sua
-          capacidade acadêmica reconhecida pelo padre local, o que levou seus
-          pais a o colocarem no colégio aos 11 anos. Seus estudos de Gymnasium
-          (escola secundária) concluídos em 1840, Mendel entrou em um programa
-          de dois anos em filosofia no Instituto Filosófico da Universidade de
-          Olmütz (Olomouc, República Tcheca), onde se destacou em física e
-          matemática, concluindo seus estudos em 1843.
+        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        Seus primeiros anos longe de casa foram difíceis devido à falta de apoio financeiro familiar. Ele deu aulas particulares para sobreviver e sofreu de depressão grave duas vezes, precisando voltar para casa para se recuperar. Como único filho, era esperado que assumisse a fazenda da família, mas Mendel optou por entrar no mosteiro de Altbrünn como noviço da ordem agostiniana, adotando o nome de Gregor. 
         </Text>
 
-        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veniam facere at, atque velit tempore neque qui iste eveniet reiciendis repudiandae maiores id nobis culpa. Voluptas, ab. Odit, obcaecati reprehenderit!
+        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        A mudança para o mosteiro levou Mendel a Brünn, onde encontrou um ambiente intelectual mais estimulante. Como padre, ele achou o trabalho paroquial angustiante e adoecer novamente. O abade Cyril Napp conseguiu para ele uma posição de professor substituto em Znaim (Znojmo, República Tcheca), onde teve sucesso. No entanto, em 1850, Mendel foi reprovado em um exame para certificação de professores e, como resultado, passou dois anos na Universidade de Viena para um novo programa de instrução científica. Em Viena, dedicou-se à física e à matemática, trabalhando com notáveis como Christian Doppler e Andreas von Ettinghausen, e estudou botânica com Franz Unger, um entusiasta da teoria celular e da visão desenvolvimentista da célula.
         </Text>
 
-        <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        {/* <Text fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        O abade Cyril Napp encontrou para ele uma posição de professor substituto em Znaim ( Znojmo , República Tcheca), onde ele provou ser muito bem-sucedido. No entanto, em 1850 Mendel foi reprovado em um exame — introduzido por uma nova legislação para certificação de professores — e foi enviado para a Universidade de Viena por dois anos para se beneficiar de um novo programa de instrução científica.
         </Text>
 
-        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#EBEBEB' marginBottom='10px'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus similique culpa eos modi minima accusantium vero ea dicta. Nisi inventore reiciendis illo voluptatem maiores eum cupiditate, saepe asperiores tenetur blanditiis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur praesentium ratione voluptatum accusamus animi et. Consequatur quaerat eius commodi error mollitia.
-        </Text>
+        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        Assim como em Olmütz, Mendel dedicou seu tempo em Viena à física e à matemática, trabalhando com o físico austríaco Christian Doppler e o físico matemático Andreas von Ettinghausen. Ele também estudou a anatomia e a fisiologia das plantas e o uso do microscópio com o botânico Franz Unger, um entusiasta da teoria celular e um defensor da visão desenvolvimentista (pré-darwiniana) da célula.evolução da vida. Os escritos de Unger sobre o último fizeram dele um alvo de ataque pela imprensa católica romana de Viena pouco antes e durante o tempo de Mendel lá.
+        </Text> */}
+
       </Box>
 
 {/* Page's image */}
