@@ -1,14 +1,20 @@
-import { Box } from '@chakra-ui/react'
-import { Biography } from "../../components/MendelPage/Biography";
-import { Curiosities } from "../../components/MendelPage/Curiosities" 
-import { BlogCards } from "../../components/MendelPage/BlogCards"
-import { CardSection } from "../../components/MendelPage/CardSection"
-import cardsContentsObject from '../../data/cardsContent.json'
+import { BiographyGmendel } from "./BiographyGmendel";
+import { Beginning } from "./Beginning";
+import { Curiosities } from "./Curiosities" 
+import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
+import { TrabsAndimportance } from "./TrabsAndimportance";
+import { Contribuitions } from "./Contribuitions";
 
 export function Mendel(){
     return(
-            <Box>
-                <CardSection objectJson={cardsContentsObject} />
-            </Box>
+            <>
+                <Beginning/>
+                <LayoutBaseModify>
+                    <BiographyGmendel/>
+                </LayoutBaseModify>
+                <TrabsAndimportance/>
+                <Contribuitions/>
+                <Curiosities/>
+           </>
     )
 }

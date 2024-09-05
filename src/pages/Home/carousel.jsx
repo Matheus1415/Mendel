@@ -9,9 +9,9 @@ const MotionFlex = motion(Flex);
 const MotionIcon = motion.div;
 
 export const Carousel = () => {
-    const WFlexServico = useBreakpointValue({ mb: "100%", lg: "250px" });
-    const HServico = useBreakpointValue({ md: "100%", lg: "300px" });
-    const flexDirection = useBreakpointValue({ sm: "column", md: "row" });
+    const WFlexServico = useBreakpointValue({ base: "100%", lg: "250px" });
+    const HServico = useBreakpointValue({ base: "auto", lg: "300px" });
+    const flexDirection = useBreakpointValue({ base: "column", md: "row" });
 
     return (
         <Box
@@ -41,7 +41,7 @@ export const Carousel = () => {
                     <MotionIcon whileHover={{ rotate: 20 }} transition={{ duration: 0.3 }}>
                         <IoBookOutline fontSize={60} />
                     </MotionIcon>
-                    <Text fontSize={16}>MATERIAIS DE ALTA QUALIDADE</Text>
+                    <Text fontSize={16} mt={4}>MATERIAIS DE ALTA QUALIDADE</Text>
                 </MotionFlex>
 
                 <MotionFlex
@@ -54,13 +54,14 @@ export const Carousel = () => {
                     justifyContent="center"
                     align="center"
                     direction="column"
+                    textAlign="center"
                     whileHover={{ scale: 1.05, boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.3)" }}
                     transition={{ duration: 0.3 }}
                 >
                     <MotionIcon whileHover={{ rotate: 20 }} transition={{ duration: 0.3 }}>
                         <GoDatabase fontSize={60} />
                     </MotionIcon>
-                    <Text fontSize={16}>BANCO DE DADOS DE QUESTÕES</Text>
+                    <Text fontSize={16} mt={4}>BANCO DE DADOS DE QUESTÕES</Text>
                 </MotionFlex>
 
                 <MotionFlex
@@ -73,13 +74,14 @@ export const Carousel = () => {
                     justifyContent="center"
                     align="center"
                     direction="column"
+                    textAlign="center"
                     whileHover={{ scale: 1.05, boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.3)" }}
                     transition={{ duration: 0.3 }}
                 >
                     <MotionIcon whileHover={{ rotate: 20 }} transition={{ duration: 0.3 }}>
                         <PiMicroscope fontSize={60} />
                     </MotionIcon>
-                    <Text fontSize={16}>FERRAMENTAS INTERATIVAS</Text>
+                    <Text fontSize={16} mt={4}>FERRAMENTAS INTERATIVAS</Text>
                 </MotionFlex>
 
                 <MotionFlex
@@ -92,13 +94,14 @@ export const Carousel = () => {
                     justifyContent="center"
                     align="center"
                     direction="column"
+                    textAlign="center"
                     whileHover={{ scale: 1.05, boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.3)" }}
                     transition={{ duration: 0.3 }}
                 >
                     <MotionIcon whileHover={{ rotate: 20 }} transition={{ duration: 0.3 }}>
                         <MdOutlineSlowMotionVideo fontSize={60} />
                     </MotionIcon>
-                    <Text fontSize={16}>TUTORIAIS E GUIAS DE ESTUDO</Text>
+                    <Text fontSize={16} mt={4}>TUTORIAIS E GUIAS DE ESTUDO</Text>
                 </MotionFlex>
             </Flex>
         </Box>

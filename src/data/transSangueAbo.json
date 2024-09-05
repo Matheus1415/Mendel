@@ -1,0 +1,32 @@
+[
+    {
+        "title": "TIPO A",
+        "listItems": [
+            "Não podem doar sangue para indivíduos do sangue B, pois as hemácias seriam atacadas pelas aglutininas anti-A.",
+            "Eles podem doar para pessoas com sangue A e pessoas com sangue AB.",
+            "Pessoas com sangue A podem receber doação de pessoas com sangue A ou sangue O."
+        ]
+    },
+    {
+        "title": "TIPO B",
+        "listItems": [
+            "Não podem doar para os de sangue A, pois suas hemácias seriam atacadas pelas aglutininas Anti-B.",
+            "Eles podem doar, portanto, para pessoas com sangue B e pessoas com sangue AB.",
+            "Pessoas com sangue B podem receber doação de pessoas com o mesmo sangue ou sangue O"
+        ]
+    },
+    {
+        "title": "TIPO AB",
+        "listItems": [
+            "Podem receber sangue de qualquer tipo, pois não apresentam aglutininas em seu plasma. Devido a esse motivo, são chamados de receptores universais.",
+            "Esses indivíduos, no entanto, podem apenas doar para indivíduos com sangue AB, pois possuem aglutinogênios A e B em suas hemácia"
+        ]
+    },
+    {
+        "title": "TIPO O",
+        "listItems": [
+            "Podem doar para qualquer pessoa, pois não possuem aglutinogênios nas hemácias. Devido a esse motivo, são conhecidos como doadores universais.",
+            "Esses indivíduos, no entanto, só podem receber sangue tipo O, pois apresentam aglutinina anti-A e anti-B."
+        ]
+    }
+]

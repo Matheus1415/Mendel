@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "alelos": {
+            "pai": ["V", "v"],
+            "mae": ["V", "v"]
+        },
+        "options": [
+            {
+                "id": 1,
+                "name": "SementeAmarelaHeterozigota",
+                "src": "/atv01/option01.png",
+                "alelo": "Vv"
+            },
+            {
+                "id": 2,
+                "name": "SementeAmarelaHeterozigota",
+                "src": "/atv01/option02.png",
+                "alelo": "Vv"
+            },
+            {
+                "id": 3,
+                "name": "SementeAmarelaHomozigotaDominante",
+                "src": "/atv01/option03.png",
+                "alelo": "VV"
+            },
+            {
+                "id": 4,
+                "name": "SementeVerdeHomozigotaRecessiva",
+                "src": "/atv01/option04.png",
+                "alelo": "vv"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "alelos": {
+            "pai": ["R", "r"],
+            "mae": ["R", "r"]
+        },
+        "options": [
+            {
+                "id": 1,
+                "name": "SementeRugosaHeterozigota",
+                "src": "/atv02/option01.png",
+                "alelo": "Rr"
+            },
+            {
+                "id": 2,
+                "name": "SementeRugosaHeterozigota",
+                "src": "/atv02/option02.png",
+                "alelo": "Rr"
+            },
+            {
+                "id": 3,
+                "name": "SementeRugosaHomozigotaDominante",
+                "src": "/atv02/option03.png",
+                "alelo": "RR"
+            },
+            {
+                "id": 4,
+                "name": "SementeLisaHomozigotaRecessiva",
+                "src": "/atv02/option04.png",
+                "alelo": "rr"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "alelos": {
+            "pai": ["B", "b"],
+            "mae": ["B", "b"]
+        },
+        "options": [
+            {
+                "id": 1,
+                "name": "SementeAzulHeterozigota",
+                "src": "/atv03/option01.png",
+                "alelo": "Bb"
+            },
+            {
+                "id": 2,
+                "name": "SementeAzulHeterozigota",
+                "src": "/atv03/option02.png",
+                "alelo": "Bb"
+            },
+            {
+                "id": 3,
+                "name": "SementeAzulHomozigotaDominante",
+                "src": "/atv03/option03.png",
+                "alelo": "BB"
+            },
+            {
+                "id": 4,
+                "name": "SementeVerdeHomozigotaRecessiva",
+                "src": "/atv03/option04.png",
+                "alelo": "bb"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "alelos": {
+            "pai": ["C", "c"],
+            "mae": ["C", "c"]
+        },
+        "options": [
+            {
+                "id": 1,
+                "name": "SementeCastanhaHeterozigota",
+                "src": "/atv04/option01.png",
+                "alelo": "Cc"
+            },
+            {
+                "id": 2,
+                "name": "SementeCastanhaHeterozigota",
+                "src": "/atv04/option02.png",
+                "alelo": "Cc"
+            },
+            {
+                "id": 3,
+                "name": "SementeCastanhaHomozigotaDominante",
+                "src": "/atv04/option03.png",
+                "alelo": "CC"
+            },
+            {
+                "id": 4,
+                "name": "SementeVerdeHomozigotaRecessiva",
+                "src": "/atv04/option04.png",
+                "alelo": "cc"
+            }
+        ]
+    }
+]
