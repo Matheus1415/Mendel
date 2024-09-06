@@ -1,5 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react"
 import { DoubtsCards } from "./DoubtsCards"
+import { DoubtsCardsSection } from "./DoubtsCardsSection"
 import doubts from "../../data/doubts.json"
 
 function showCardsDoubts(){
@@ -44,7 +45,7 @@ export function Doubts(){
                     borderRadius="15px" 
                     p="4"
                 >
-                    <DoubtsCards/>
+                    <DoubtsCardsSection/>
                 </Box>
            </Flex>
         </Flex>
