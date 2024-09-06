@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Excalidraw } from '@excalidraw/excalidraw';
-import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Text, Textarea } from '@chakra-ui/react';
 import quadro2x2 from '../../data/quadro1.json'; 
 import quadro4x4 from '../../data/quadro2.json'; 
 
@@ -25,7 +25,7 @@ const AulaQuadro = () => {
         };
 
     return (
-        <Flex w="100%" h={1200} direction="row" p={20} gap={10} bg="white">
+        <Flex w="100%" h='100vh' m='auto' direction="row" p="3.75rem 7rem " gap={10} bg="white" align='center' >
             <Box w="100%" maxW="60%" h={800}>
                 <Excalidraw
                     key={key}
@@ -34,12 +34,13 @@ const AulaQuadro = () => {
                     initialData={isQuadro2x2 ? quadro2x2 : quadro4x4}
                 />
             </Box>
-            <Box w="100%" maxW="40%" h={800} p={5} borderLeft="2px solid #ddd">
+            <Box w="100%" maxW="40%" h={800} p={5} borderLeft="2px solid #ddd" display='flex' flexDirection='column' alignItems='start'>
                 <Heading mb={4} fontSize="2xl">{annotations.title}</Heading>
                 <Text mb={4}>{annotations.description}</Text>
                 <Button variant="solid" colorScheme="teal" onClick={handleChangeData}>
                     Trocar Quadro
                 </Button>
+                <Textarea placeholder='Digite aqui suas anotações'  flex='1' mt='1rem'/>
             </Box>
         </Flex>
     );
