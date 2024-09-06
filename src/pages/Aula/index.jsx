@@ -25,7 +25,7 @@ const AulaQuadro = () => {
         };
 
     return (
-        <Flex w="100%" h='100vh' m='auto' direction="row" p="3.75rem 7rem " gap={10} bg="white" align='center' >
+        <Flex w="100%" h='100vh' m='auto' direction="row" p="3.5rem 4.5rem " gap={10} bg="white" align='center' >
             <Box w="100%" maxW="60%" h={800}>
                 <Excalidraw
                     key={key}
