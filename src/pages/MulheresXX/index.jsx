@@ -32,22 +32,22 @@ export function MulheresXX() {
 
   return (
     <>
-      {/* Banner inicial */}
       <Flex
         h="100vh"
-        w="full"
+        w="100%"
         direction="column"
         justify="center"
         align="center"
         bg="url('/assets/banner.jpg') no-repeat center center"
         bgSize="cover"
-        mb={8}
+        mb={40} // Ajustado para consistência
+        px={[4, 6, 8]} // Adicionado padding horizontal
       >
         <Heading
           variant="PrimaryTitle"
           color="rgb(86, 101, 115)"
           textAlign="center"
-          fontSize={[25, 25, 40]}
+          fontSize={[25, 30, 40]} // Ajustado o tamanho do texto
         >
           <Highlight
             query="Mulheres"
@@ -63,21 +63,17 @@ export function MulheresXX() {
         <VLibras forceOnload />
       </Flex>
 
-      {/* Seção de conteúdo */}
       <Flex
         direction={{ base: "column", md: "row" }}
-        p={[3, 4, 8]}
-        width="70%"
+        p={[4, 6, 10]} // Ajustado padding
+        width="100%"
         mx="auto"
-        alignItems="flex-start"
-        gap={6}
+        gap={8} // Ajustado o espaço entre os itens
         justify="center"
-        position="relative"
-        overflow="hidden"
-        mb={40}
+        mb={40} // Ajustado para consistência
       >
         <Box>
-          <Image src="/assets/DNA.png" width="600px" />
+          <Image src="/assets/DNA.png" width="100%" maxWidth="600px" />
         </Box>
 
         <Box
@@ -87,25 +83,25 @@ export function MulheresXX() {
           justifyContent="center"
           alignItems="flex-start"
           textAlign="justify"
-          p={4}
-          zIndex="1"
-          maxWidth="500px"
+          p={[4, 6]}
+          maxWidth="600px"
         >
           <Heading
             variant="PrimaryTitle"
-            mb={4}
+            mb={6} // Ajustado para consistência
             textAlign="right"
             fontSize={{ base: "2xl", md: "3xl" }}
           >
             Importância
           </Heading>
-          <Text variant="Paragraph">
+          <Text variant="Paragraph" fontSize={{ base: "md", md: "lg" }}>
             A ciência genética é crucial para entender a hereditariedade e os
             mecanismos moleculares da vida. As mulheres desempenharam papéis
             fundamentais nesse campo, contribuindo significativamente para suas
             descobertas e avanços. Desde o início da genética, elas foram
             pioneiras em desafios ao conhecimento estabelecido e na expansão da
             biologia.
+            <br />
             <br />
             Rosalind Franklin, com suas imagens de raios X do DNA, revelou a
             estrutura em dupla hélice da molécula, transformando a compreensão
@@ -114,6 +110,7 @@ export function MulheresXX() {
             de edição genética CRISPR-Cas9, permitindo manipulação precisa do
             DNA. Essa inovação tem vastas implicações para tratar doenças
             genéticas e melhorar saúde e agricultura.
+            <br />
             <br />
             Essas contribuições demonstram não apenas investigações pioneiras,
             mas também habilidades analíticas e criativas essenciais para o
@@ -130,14 +127,14 @@ export function MulheresXX() {
         width="80%"
         direction="column"
         alignItems="center"
-        p={4}
+        p={[4, 6]}
         mx="auto"
         maxWidth="80%"
-        mb={8}
+        mb={4} // Ajustado para consistência
       >
         <Heading
           variant="PrimaryTitle"
-          mb={20}
+          mb={10} // Ajustado para consistência
           textAlign="center"
           fontSize={{ base: "2xl", md: "3xl" }}
         >
@@ -168,13 +165,13 @@ export function MulheresXX() {
         </Text>
       </Flex>
 
-      <Box p={[4, 6, 8]} mx="auto" width="60%" mb={8}>
+      <Box p={[4, 6, 8]} mx="auto" width="60%" mb={40}>
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
-          gap={6}
-          mb={40}
+          gap={8} // Ajustado o espaço entre os itens
         >
-          <Box borderRadius="md" overflow="hidden">
+          {/* Imagens com padding padrão */}
+          <Box borderRadius="md" overflow="hidden" p={2}>
             <Image
               src="/assets/Rectangle16-3.png"
               alt="Imagem 1"
@@ -191,7 +188,7 @@ export function MulheresXX() {
               cursor="pointer"
             />
           </Box>
-          <Box borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden" p={2}>
             <Image
               src="/assets/Rectangle16-1.png"
               alt="Imagem 2"
@@ -208,7 +205,7 @@ export function MulheresXX() {
               cursor="pointer"
             />
           </Box>
-          <Box borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden" p={2}>
             <Image
               src="/assets/Rectangle16-2.png"
               alt="Imagem 3"
@@ -225,7 +222,7 @@ export function MulheresXX() {
               cursor="pointer"
             />
           </Box>
-          <Box borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden" p={2}>
             <Image
               src="/assets/Rectangle16-4.png"
               alt="Imagem 4"
@@ -242,7 +239,7 @@ export function MulheresXX() {
               cursor="pointer"
             />
           </Box>
-          <Box borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden" p={2}>
             <Image
               src="/assets/Rectangle16.png"
               alt="Imagem 5"
@@ -259,7 +256,7 @@ export function MulheresXX() {
               cursor="pointer"
             />
           </Box>
-          <Box borderRadius="md" overflow="hidden">
+          <Box borderRadius="md" overflow="hidden" p={2}>
             <Image
               src="/assets/Rectangle16-5.png"
               alt="Imagem 6"
@@ -280,102 +277,140 @@ export function MulheresXX() {
       </Box>
 
       <Flex
-        height="80%"
+        height="800%"
+        width="100%"
         direction="column"
+        maxWidth="1500px"
         alignItems="center"
-        p={4}
+        p={[2, 6]} // Padding ajustado
         mx="auto"
-        maxWidth="80%"
-        mb={8}
+        mb={40} // Ajustado para consistência
       >
         <Heading
           variant="PrimaryTitle"
-          mb={4}
+          mb={4} // Ajustado para consistência
           textAlign="center"
           fontSize={{ base: "2xl", md: "3xl" }}
         >
           Desafios e Barreiras Enfrentadas
         </Heading>
         <Grid
-          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-          gap={6}
-          mb={40}
+          templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} // Duas colunas
+          gap={30} // Espaço entre os boxes
+          width="100%"
+          mb={4} // Ajustado para consistência
+          alignItems="center"
         >
-          <Box mb={8}>
+          <Box p={[4, 6]} width="70%">
             <Heading
               variant="PrimaryTitle"
-              mb={2}
+              mb={4} // Ajustado para consistência
+              fontSize={{ base: "xl", md: "2xl" }}
+              textAlign="left"
+            >
+              Sub-Representação em Posições de Liderança
+            </Heading>
+            <Text variant="Paragraph" align="justify">
+              A sub-representação das mulheres em posições de liderança persiste
+              apesar dos avanços em igualdade de gênero. Barreiras estruturais e
+              culturais, estereótipos e a falta de redes de apoio contribuem
+              para essa desigualdade. Mesmo quando mulheres alcançam cargos de
+              liderança, enfrentam desafios adicionais, como a necessidade de
+              provar seu valor com mais frequência que os homens.
+              <br />
+              <br />
+              Além disso, políticas inadequadas de conciliação entre vida
+              profissional e pessoal e a falta de mentorias eficazes dificultam
+              a ascensão das mulheres. Para combater essa disparidade, é crucial
+              que as organizações implementem medidas proativas, como programas
+              de desenvolvimento de liderança e políticas mais inclusivas,
+              promovendo um ambiente que favoreça a equidade de gênero e a
+              diversidade nas decisões estratégicas.
+            </Text>
+          </Box>
+          <Box p={[4, 6]} width="70%">
+            <Heading
+              variant="PrimaryTitle"
+              mb={4} // Ajustado para consistência
               fontSize={{ base: "xl", md: "2xl" }}
               textAlign="right"
             >
-              Título 1
+              desafios da vida profissional e pessoal
             </Heading>
-            <Text variant="Paragraph" align="justify" maxWidth="80%">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              molestias doloribus est perspiciatis ut excepturi distinctio quam
-              rerum, placeat saepe ad doloremque necessitatibus ipsam eum soluta
-              unde voluptatibus et temporibus! Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Commodi maiores dolores ipsa quam
-              recusandae! Ex, sunt? Incidunt praesentium impedit provident
-              maxime quidem exercitationem. Voluptates fugiat, officiis
-              consectetur molestias animi delectus?
+            <Text variant="Paragraph" align="justify">
+              Conciliar a vida profissional e pessoal é um desafio significativo
+              para muitos, especialmente para mulheres. A pressão para
+              equilibrar responsabilidades no trabalho e em casa pode levar a
+              estresse e burnout. Expectativas sociais e profissionais muitas
+              vezes exigem longas horas de trabalho, enquanto as demandas
+              familiares também são intensas, criando um constante conflito de
+              prioridades.
+              <br />
+              <br />
+              Além disso, a falta de políticas adequadas, como licença parental
+              flexível e opções de trabalho remoto, dificulta a criação de um
+              equilíbrio sustentável. Para enfrentar esses desafios, é essencial
+              que as empresas adotem práticas que promovam a flexibilidade e o
+              suporte, permitindo que os indivíduos integrem suas vidas pessoais
+              e profissionais de forma mais harmoniosa e saudável.
             </Text>
           </Box>
-          <Box mb={8}>
+          <Box p={[4, 6]} width="70%">
             <Heading
               variant="PrimaryTitle"
-              mb={2}
+              mb={4} // Ajustado para consistência
               fontSize={{ base: "xl", md: "2xl" }}
+              textAlign="left"
             >
-              Título 2
+              Desigualdade Salarial
             </Heading>
-            <Text variant="Paragraph" align="justify" maxWidth="80%">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              doloremque perspiciatis iure earum alias natus enim dolorem
-              adipisci culpa eligendi quos recusandae deserunt assumenda illo
-              corporis, nesciunt, harum suscipit ab? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Ab sequi voluptate a aut ratione
-              voluptatibus aperiam, doloremque distinctio, minima tempore veniam
-              suscipit inventore rerum commodi. Voluptate vero expedita laborum
-              harum.
+            <Text variant="Paragraph" align="justify">
+              A desigualdade salarial é um problema persistente no mercado de
+              trabalho, refletindo disparidades significativas entre diferentes
+              grupos, especialmente entre gêneros e etnias. Mulheres
+              frequentemente enfrentam uma remuneração inferior à dos homens
+              para desempenharem funções semelhantes, apesar de avanços na
+              educação e na qualificação profissional. Esse gap salarial é
+              exacerbado em setores predominantemente femininos e em cargos de
+              liderança, onde a discrepância é ainda mais pronunciada.
+              <br />
+              <br />A desigualdade salarial é influenciada por fatores como
+              discriminação implícita, falta de oportunidades de avanço e a
+              sub-representação de grupos diversos em posições de tomada de
+              decisão. Para abordar esse problema, é crucial implementar
+              políticas de transparência salarial e promover práticas de
+              contratação e promoção baseadas em mérito, garantindo igualdade de
+              remuneração para trabalho igual e reconhecendo as habilidades e
+              contribuições de todos os colaboradores de forma justa.
             </Text>
           </Box>
-          <Box mb={8}>
+          <Box p={[4, 6]} width="70%">
             <Heading
               variant="PrimaryTitle"
-              mb={2}
+              mb={4} // Ajustado para consistência
               fontSize={{ base: "xl", md: "2xl" }}
+              textAlign="right"
             >
-              Título 3
+              Discriminação
             </Heading>
-            <Text variant="Paragraph" align="justify" maxWidth="80%">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
-              veritatis earum assumenda quo commodi eius sapiente delectus,
-              cumque recusandae quae aliquam doloremque nulla rem illo ipsam,
-              iure inventore! Accusantium, harum. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Quasi fuga dolores natus obcaecati
-              perferendis alias, eligendi corporis eveniet libero consequuntur,
-              expedita cumque! Veritatis velit, voluptate tempore neque
-              recusandae eum consectetur!
-            </Text>
-          </Box>
-          <Box mb={8}>
-            <Heading
-              variant="PrimaryTitle"
-              mb={2}
-              fontSize={{ base: "xl", md: "2xl" }}
-            >
-              Título 4
-            </Heading>
-            <Text variant="Paragraph" align="justify" maxWidth="80%">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Excepturi laboriosam velit nisi ad maxime eum, similique saepe
-              fugit nostrum repudiandae unde sunt rerum fuga perspiciatis,
-              placeat asperiores praesentium cupiditate dignissimos! Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Earum culpa,
-              aliquid animi perferendis maiores excepturi explicabo beatae iure
-              incidunt deserunt cupiditate illum! Amet ipsam rerum ipsum quasi
-              dolorum perferendis officiis.
+            <Text variant="Paragraph" align="justify">
+              A discriminação contra as mulheres no ambiente de trabalho
+              persiste como um desafio significativo para a igualdade de gênero.
+              As mulheres frequentemente enfrentam barreiras invisíveis que
+              limitam suas oportunidades de crescimento e desenvolvimento
+              profissional. Isso inclui desigualdades salariais, falta de
+              reconhecimento por seus desempenhos, e dificuldades em acessar
+              posições de liderança.
+              <br />
+              <br />
+              Além disso, as mulheres podem sofrer discriminação direta ou
+              indireta, como estereótipos de gênero e expectativas desiguais
+              quanto a suas habilidades e capacidades. Tais práticas prejudicam
+              não apenas a carreira individual, mas também a dinâmica e o
+              sucesso organizacional como um todo. É crucial adotar políticas
+              inclusivas e promover uma cultura de respeito para garantir que
+              todas as colaboradoras tenham as mesmas chances de sucesso e
+              realização profissional.
             </Text>
           </Box>
         </Grid>
@@ -389,29 +424,48 @@ export function MulheresXX() {
         align="center"
         bg="url('/assets/Background.png') no-repeat center center"
         bgSize="cover"
-        mb={8}
+        mb={40} // Ajustado para consistência
+        px={[4, 6, 8]} // Adicionado padding horizontal
       >
         <Box
-          p={60}
+          p={[6, 8]}
           borderRadius="md"
           boxShadow="md"
           textAlign="center"
-          maxWidth="1500px"
+          maxWidth="1200px"
           maxHeight="900px"
-          width="100%"
-          height="70%"
-          background="rgba(6, 38, 44, 0.6)" /* Cor de fundo semi-transparente */
-          backdropFilter="blur(10px)" /* Efeito de desfoque */
+          width="80%" // Ajustado para maior consistência
+          height="auto" // Ajustado para manter a proporção
+          background="rgba(6, 38, 44, 0.6)"
+          backdropFilter="blur(10px)"
         >
-          <Heading mb={4}>Título Centralizado</Heading>
-          <Text>
-            Este é um exemplo de texto dentro da Box centralizada na página.
-            Você pode ajustar o conteúdo e o estilo conforme necessário.
-          </Text>
+          <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={6} p={8}>
+            <Box>
+              <Heading
+                variant="PrimaryTitle"
+                mb={40} // Ajustado para consistência
+                fontSize={{ base: "xl", md: "2xl" }}
+              >
+                Título Centralizado
+              </Heading>
+              <Text>
+                Este é um exemplo de texto dentro da Box. Você pode ajustar o
+                conteúdo e o estilo conforme necessário.
+              </Text>
+            </Box>
+            <Box>
+              <Image
+                src="/assets/Rectangle16-1.png"
+                alt="Descrição da Imagem"
+                width="100%"
+                borderRadius="md"
+                boxShadow="md"
+              />
+            </Box>
+          </Grid>
         </Box>
       </Flex>
 
-      {/* Modal para exibir imagem, título e texto */}
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent bg="black" color="white">
@@ -422,7 +476,7 @@ export function MulheresXX() {
               src={selectedImage}
               alt="Imagem selecionada"
               width="100%"
-              mb={4}
+              mb={40}
             />
             <Text>{selectedText}</Text>
           </ModalBody>
