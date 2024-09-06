@@ -3,8 +3,10 @@ import { BlogCardSection } from "./BlogCardSection";
 import { VideoSection } from "./VideoSection";
 import BlogsMendel from "../../data/BlogsMendel.json"
 import VideoMendel from "../../data/VideoMendel.json"
+import { useNavigate } from "react-router-dom";
 
 export function VideosAndBlogs () {
+    const navigate = useNavigate()
     const testeCarousel = []
     
     //feito apenas para teste
@@ -29,8 +31,18 @@ export function VideosAndBlogs () {
                     <BlogCardSection objectJson={BlogsMendel}></BlogCardSection>
 
                     <Flex width="100%" justifyContent="end" gap={4} mt={12}>
-                        <Button variant="nextPage">Ir para a atividade</Button>
-                        <Button variant="nextPage">ir para a próxima página</Button>
+                        <Button 
+                            variant="nextPage" 
+                            onClick={() => navigate("/atividades")}
+                        >
+                            Ir para a atividade
+                        </Button>
+                        <Button 
+                            variant="nextPage"
+                            onClick={() => navigate("/fundamentos")}
+                        >
+                            ir para a próxima página
+                        </Button>
                     </Flex>
                 </Flex>
             </Box>
