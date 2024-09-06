@@ -206,7 +206,7 @@ export const SistemaAbo = () => {
                             />
                         ))}
                     </Grid>
-                    <Image src="./img/tiposanguineo_ilustracao.png" maxW={1100}/>
+                    <Image src="/img/tiposanguineo_ilustração.png" maxW={1100}/>
                 </Flex>
                 {selectedGroup && (
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
