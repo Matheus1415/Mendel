@@ -16,7 +16,7 @@ export const PunnettSquareDraggablePage = () => {
             bg="red.500"
             w="100vw"
             maxW="100%"
-            minH="100vh"
+            minH="1200px"
             backgroundRepeat="no-repeat" 
             backgroundSize="cover" 
             backgroundPosition="center" 
@@ -27,7 +27,7 @@ export const PunnettSquareDraggablePage = () => {
                 width="100%"
                 top={0}
                 left={0}
-                minH="100vh"
+                minH="1200px"
                 bg="#02161fc3"
                 justify='center' 
                 align='center'     

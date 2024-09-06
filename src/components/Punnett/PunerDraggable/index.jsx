@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center, Text } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center, Text, Heading } from '@chakra-ui/react';
 import ModalFeedback from '../../ModalFeedback';
 
 const PunnettSquareDraggable = ({ 
     data = { 
         alelos: { pai: [], mae: [] }, 
-        options: [] 
+        options: [], 
+        title: "" 
     }, 
     onChangeCallback = () => {},
     onHomeCallback = () => {}
@@ -13,6 +14,7 @@ const PunnettSquareDraggable = ({
     const alelosDoPai = data.alelos.pai;
     const alelosDaMae = data.alelos.mae;
     const options = data.options;
+    const title = data.title; 
 
     const quantidadeDeAlelos = alelosDoPai.length;
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
@@ -24,6 +26,7 @@ const PunnettSquareDraggable = ({
     const [totalAnswers, setTotalAnswers] = useState(quantidadeDeAlelos * quantidadeDeAlelos);
     const [checked, setChecked] = useState(false);
     const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+    const [userFeedback, setUserFeedback] = useState(''); // Estado para armazenar o feedback do usuário
 
     useEffect(() => {
         onChangeCallback(matriz);
@@ -95,16 +98,42 @@ const PunnettSquareDraggable = ({
         }
     };
 
+    const submitForm = async () => {
+        const feedbackData = {
+            feedback: userFeedback, // Apenas o feedback do usuário
+        };
+
+        try {
+            const response = await fetch('https://api.sheetmonkey.io/form/z4HmbPWt7Rr2WuYi9NMma', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(feedbackData),
+            });
+
+            if (response.ok) {
+                
+            } else {
+                console.error('Erro ao enviar o feedback:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Erro de rede:', error);
+        }
+    };
+
     return (
         <>
             <Flex direction="row" w="100%" align="center" justifyContent="center">
-                <Flex p={4} direction="column" gap={10} align="start">
+                <Flex p={4} direction="column" gap={4} align="start">
                     {availableOptions.map((option, index) => (
                         <Box 
                             key={index} 
                             p={4}
                             borderRadius="20px"
+                            textAlign="center"
                         >
+                            <Text mb={2} fontWeight="bold" color="white">{option.alelo}</Text>
                             <img
                                 style={{ 'maxWidth': '100px' }}
                                 className="cell"
@@ -122,6 +151,7 @@ const PunnettSquareDraggable = ({
                 </Center>
 
                 <Flex direction="column" align="center" justify="center" w="100%" gap={10}>
+                    <Heading variant="PrimaryTitle">{title}</Heading>
                     <Table 
                         maxW="50%"
                         align="center"
@@ -211,60 +241,59 @@ const PunnettSquareDraggable = ({
                             ))}
                         </Tbody>
                     </Table>
-                    <Flex gap={4}>
-                        <Button
-                            variant="nextPage"
-                            w={300}
-                            borderRadius={8}
-                            onClick={reset}
-                            display={checked ? "none" : "block"}
-                        >
-                            Resetar
-                        </Button>
-                        <Button
-                            variant="nextPage"
-                            w={300}
-                            borderRadius={8}
-                            onClick={checkAnswers}
-                            display={checked ? "none" : "block"}
-                        >
-                            Verificar Respostas
-                        </Button>
-                    </Flex>
-                </Flex>
-                {checked && (
-                    <Flex direction="column" align="start" justify="start" gap={4} mt={4}>
-                        <Text fontSize={30} color="white">
-                            Você acertou {correctAnswers}/{totalAnswers}
-                        </Text>
-                        <Text fontSize={24} color="white">
-                            {getEncouragementMessage()}
-                        </Text>
-                        <Flex direction="row" gap={4}>
+                    {!checked && (
+                        <Flex gap={4}>
                             <Button
                                 variant="nextPage"
-                                w={160}
+                                onClick={checkAnswers}
                                 borderRadius={8}
-                                onClick={() => setIsFeedbackOpen(true)} 
+                                width="200px"
                             >
-                                Feedback
-                            </Button>
-                            <Button
-                                variant="nextPage"
-                                w={160}
-                                borderRadius={8}
-                                onClick={reset}
-                            >
-                                Resetar
+                                Verificar
                             </Button>
                         </Flex>
-                    </Flex>
-                )}
+                    )}
+                    {checked && (
+                        <Flex direction="column" align="start" justify="start" gap={4} mt={4}>
+                            <Text fontSize={30} color="white">
+                                Você acertou {correctAnswers}/{totalAnswers}
+                            </Text>
+                            <Text fontSize={24} color="white">
+                                {getEncouragementMessage()}
+                            </Text>
+                            <Flex direction="row" gap={4}>
+                                <Button
+                                    variant="nextPage"
+                                    onClick={() => setIsFeedbackOpen(true)}
+                                    borderRadius={8}
+                                    width="200px"
+                                >
+                                    Enviar Feedback
+                                </Button>
+                                <Button
+                                    variant="nextPage"
+                                    onClick={reset}
+                                    borderRadius={8}
+                                    width="200px"
+                                >
+                                    Resetar
+                                </Button>
+                            </Flex>
+                        </Flex>
+                    )}
+                </Flex>
             </Flex>
 
-            <ModalFeedback isOpen={isFeedbackOpen} onClose={() => setIsFeedbackOpen(false)} />
+            <ModalFeedback 
+                isOpen={isFeedbackOpen} 
+                onClose={() => setIsFeedbackOpen(false)}
+                onSubmit={submitForm} // Chama a função submitForm ao enviar o feedback
+                feedback={userFeedback}
+                onFeedbackChange={(e) => setUserFeedback(e.target.value)} // Atualiza o feedback do usuário
+            />
         </>
     );
 };
 
 export default PunnettSquareDraggable;
+

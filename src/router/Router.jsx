@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Mendel } from '../pages/Mendel';
 import { Chromosomes } from '../pages/Chromosomes';
-import { MenuMendel } from '../components/Menu';
 import { Atividades } from '../pages/Atividades/';
 import VLibras from "@djpfs/react-vlibras";
 import { Footer } from '../components/Footer/footer';
@@ -18,6 +17,8 @@ import { Fundamentos } from '../pages/Fundamentos';
 import { SistemaAbo } from '../pages/SistemaAbo';
 import { PunnerAtv } from '../pages/PunnettAtv';
 import { Alelos } from '../pages/Alelos';
+import MenuMendel from '../components/Menu';
+import { FatorRh } from '../pages/FatorRH';
 
 export const RouterAsRouter = () => {
   return (
@@ -36,8 +37,8 @@ export const RouterAsRouter = () => {
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/variations" element={<Variations/>} />
         <Route path="/sistema-abo" element={<SistemaAbo />} />
+        <Route path="/sistema-rh" element={<FatorRh />} />
         {/* <Route path="/layout" element={<TesteLayout/>} /> */}
-        <Route path="/punner-a" element={<PunnettSquareDraggablePage/>} />
         <Route path="/punner-arastavel/:id" element={<PunnettSquareDraggablePage/>} />
         <Route path="/punner-arastavel" element={<PunnerAtv/>} />
       </Routes>
