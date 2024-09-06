@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td, Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { rearrangeLetters } from '../../../config/rearrangeLetters';
 
 function isEven(number) {
     return number % 2 === 0;
@@ -64,6 +65,7 @@ const PunnettTable = ({
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.5 }}
+                                        textTransform="none"
                                     >
                                         {allAlleles2[newId]}{allAlleles2[SecoundAllele]}
                                     </MotionTh>
@@ -91,6 +93,7 @@ const PunnettTable = ({
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.5 }}
+                                        textTransform="none"
                                     >
                                         {allAlleles1[newId]}{allAlleles1[SecoundAllele]}
                                     </MotionTh>
@@ -110,7 +113,8 @@ const PunnettTable = ({
                                                 animate={{ opacity: 1 }}
                                                 transition={{ duration: 0.5 }}
                                             >
-                                                {`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`}
+                                                {rearrangeLetters(allAlleles1[newId].toString() + allAlleles2[newId2].toString()) + rearrangeLetters(allAlleles1[SecoundAllele].toString() + allAlleles2[SecoundAllele2].toString())}
+                                                {/* {`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`} */}
                                             </MotionTd>
                                         );
                                     })}
