@@ -46,26 +46,28 @@ export const Informacao = () => {
                     </Text>
                 </Flex>
                 <Flex maxW="50%">
-                    <Image src="/img/Imagem1.png"/>
+                    <Image src="/img/Imagem1.png" onClick={onOpen}/>
                 </Flex>
             </Flex>
-            <Button onClick={onOpen}>Open Modal</Button>
 
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
-                <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody>
-                    
-                </ModalBody>
-
-                <ModalFooter>
-                    <Button colorScheme='blue' mr={3} onClick={onClose}>
-                    Close
-                    </Button>
-                    <Button variant='ghost'>Secondary Action</Button>
-                </ModalFooter>
+                <ModalContent
+                    color="white"
+                    backgroundRepeat="no-repeat"
+                    backgroundSize="cover"
+                    backgroundPosition="center"
+                    backgroundImage="url('/img/Imagem1.png')"
+                    minH={500}
+                    minW={600}
+                    justifyContent="end"
+                    borderRadius={10}
+                >
+                    <ModalHeader color="white">Conheça nossa equipe!</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody bg="white" maxH={140}  borderRadius="10px" p={5} color="black">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quidem aut est nulla quas quisquam iste amet temporibus. Cupiditate atque, mollitia accusamus suscipit debitis reprehenderit itaque possimus ad hic facere.
+                    </ModalBody>
                 </ModalContent>
             </Modal>
         
