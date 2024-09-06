@@ -30,7 +30,7 @@ export const Chromossomes = () => {
                     position='relative'
                 >
                     <Image src='/assets/cromossome-image.png' alt="Cromossomos" />
-                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='top' maxW='fit-content'>
+                    <Tooltip label='O telõmeno é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='top' maxW='fit-content'>
                         <Box 
                             h='14%'
                             w='12%'
@@ -40,7 +40,7 @@ export const Chromossomes = () => {
                             left='1%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='top' maxW='fit-content'>
+                    <Tooltip label='O telõmeno é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='top' maxW='fit-content'>
                         <Box 
                             h='14%'
                             w='13%'
@@ -50,7 +50,7 @@ export const Chromossomes = () => {
                             left='41%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='bottom' maxW='fit-content'>
+                    <Tooltip label='O telõmeno é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='bottom' maxW='fit-content'>
                         <Box 
                             h='15.7%'
                             w='15%'
@@ -60,7 +60,7 @@ export const Chromossomes = () => {
                             left='1.5%'
                         ></Box>
                     </Tooltip>
-                    <Tooltip label='Ele é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='bottom' maxW='fit-content'>
+                    <Tooltip label='O telõmeno é a extremidade do cromossmo e preserva o matérial genético' hasArrow placement='bottom' maxW='fit-content'>
                         <Box 
                             h='16%'
                             w='14%'

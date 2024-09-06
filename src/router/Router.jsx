@@ -18,7 +18,7 @@ import { SistemaAbo } from '../pages/SistemaAbo';
 import { PunnerAtv } from '../pages/PunnettAtv';
 import { Alelos } from '../pages/Alelos';
 import MenuMendel from '../components/Menu';
-import { FatorRh } from '../pages/FatorRH';
+import { FatorRh } from '../pages/FatorRh';
 
 export const RouterAsRouter = () => {
   return (

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Flex, Image, Heading, Text, useBreakpointValue } from '@chakra-ui/react';
 
 export const Alleles = () => {
     const Walleles = useBreakpointValue({ base:"25rem", md:"50rem", lg:"67rem" });
@@ -15,7 +15,8 @@ export const Alleles = () => {
             bgRepeat='no-repeat'
             bgSize='cover'
         >   
-            <Box // BOX TRANSPARENTE DE ALELOS
+            <Flex // BOX TRANSPARENTE DE ALELOS
+                direction={{ base:"column-reverse", lg:"row" }}
                 marginTop='4rem'
                 minWidth={Walleles}
                 minHeight={Halleles}
@@ -24,17 +25,20 @@ export const Alleles = () => {
                 backdropBlur='1rem'
                 padding={{ base:"3.625rem", lg:'5.625rem'}}
                 borderRadius='1.87rem'
+                gap='20px'
+                alignItems='center'
             >
                 <Box maxWidth='25rem'> {/* BOX DENTRO DA BOX TRANSPARENTE QUE CONTÉM O CONTEÚDO */}
-                    <Heading variant='PrimaryTitle'>ALELOS</Heading>
+                    <Heading variant='PrimaryTitle' textAlign={{base: 'center', lg:'left'}}>ALELOS</Heading>
                     <Text variant='Paragraph' textAlign='justify'>
                         Alelos são diferentes versões de um mesmo gene que podem surgir devido a mutações. Eles determinam características específicas, como a cor dos olhos ou o tipo sanguíneo. Cada indivíduo herda dois alelos para cada gene, um de cada progenitor, e esses alelos podem ser idênticos ou diferentes.
                     </Text>
                     <Text variant='Paragraph' textAlign='justify'>
                         A combinação dos alelos que um indivíduo possui influencia as características que ele exibe. Quando ambos os alelos para um gene são idênticos, o indivíduo é chamado de homozigoto para esse gene. Se os alelos são diferentes, o indivíduo é chamado de heterozigoto.
                     </Text>
-                </Box>
-            </Box>
+                </Box>,
+                <Image src='public/assets/ALELOS-image.png' maxH='20rem'></Image>
+            </Flex>
 
             <Box // BOX ZIGOTO E HETEROZIGOTO
                 maxWidth='45rem' 
