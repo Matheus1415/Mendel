@@ -1,3 +1,4 @@
+//a tabela tá tuda em maiusculo
 import React, { useState, useContext, useEffect } from 'react';
 import { Box, Input, Text, Button, Flex, Select, useBreakpointValue } from '@chakra-ui/react';
 import { CaracteristicaContext } from '../../../contexts/CaracteristicaContext';
@@ -14,17 +15,23 @@ const MotionFlex = motion(Flex);
 export const ParentInputPunnet = () => {
   const [parent1, setParent1] = useState(['', '', '', '']);
   const [parent2, setParent2] = useState(['', '', '', '']);
-  const [dominantMother, setDominantMother] = useState('');
-  const [recessiveMother, setRecessiveMother] = useState('');
-  const [dominantFather, setDominantFather] = useState('');
-  const [recessiveFather, setRecessiveFather] = useState('');
+
+  const [characteristicDominant1, setCharacteristicDominant1] = useState('');
+  const [characteristicRecessive1, setCharacteristicRecessive1] = useState('');
+
+  const [characteristicDominant2, setCharacteristicDominant2] = useState('');
+  const [characteristicRecessive2, setCharacteristicRecessive2] = useState('');
+
   const { setParentsAlelo, setCaracteristica, resetContext } = useContext(CaracteristicaContext);
+
   const [alelos1, setAlelos1] = useState([]);
   const [alelos2, setAlelos2] = useState([]);
 
-  const allCharacteristicsFilled = dominantMother && recessiveMother && dominantFather && recessiveFather;
 
-  const handleSelectChange = (index, value) => {
+
+  const allCharacteristicsFilled = characteristicDominant2 && characteristicRecessive2 && characteristicDominant1 && characteristicRecessive1;
+
+  const handleSelectChange1 = (index, value) => {
     setParent1(prev => {
       const newParent1 = [...prev];
       newParent1[index] = value;
@@ -46,22 +53,25 @@ export const ParentInputPunnet = () => {
     const newparent1 = parent1.join('');
     const newparent2 = parent2.join('');
 
+    console.log('data1:',newparent1.split(''))
+    console.log('data2:',newparent2.split(''))
+
     if (newparent1 && newparent2) {
       setParentsAlelo([newparent1.split(''), newparent2.split('')]);
     }
 
-    if (dominantMother && recessiveMother && dominantFather && recessiveFather) {
-      setCaracteristica([dominantMother, recessiveMother, dominantFather, recessiveFather]);
+    if (characteristicDominant2 && characteristicRecessive2 && characteristicDominant1 && characteristicRecessive1) {
+      setCaracteristica([characteristicDominant2, characteristicRecessive2, characteristicDominant1, characteristicRecessive1]);
     }
   };
 
   const handleReset = () => {
     setParent1(['', '', '', '']);
     setParent2(['', '', '', '']);
-    setDominantMother('');
-    setRecessiveMother('');
-    setDominantFather('');
-    setRecessiveFather('');
+    setCharacteristicDominant2('');
+    setCharacteristicRecessive2('');
+    setCharacteristicDominant1('');
+    setCharacteristicRecessive1('');
     setAlelos1([]);
     setAlelos2([]);
     resetContext();
@@ -70,14 +80,14 @@ export const ParentInputPunnet = () => {
   useEffect(() => {
     if (allCharacteristicsFilled) {
       const createAleloOptions = (dominant, recessive) => [
-        { value: dominant.charAt(0).toUpperCase(), label: `${dominant.charAt(0).toUpperCase()} (${dominant})`, fullname: dominant },
+        { value: recessive.charAt(0).toUpperCase(), label: `${recessive.charAt(0).toUpperCase()} (${dominant})`, fullname: dominant },
         { value: recessive.charAt(0).toLowerCase(), label: `${recessive.charAt(0).toLowerCase()} (${recessive})`, fullname: recessive }
       ];
 
-      setAlelos1(createAleloOptions(dominantMother, recessiveMother));
-      setAlelos2(createAleloOptions(dominantFather, recessiveFather));
+      setAlelos1(createAleloOptions(characteristicDominant2, characteristicRecessive2));
+      setAlelos2(createAleloOptions(characteristicDominant1, characteristicRecessive1));
     }
-  }, [dominantMother, recessiveMother, dominantFather, recessiveFather, allCharacteristicsFilled]);
+  }, [characteristicDominant2, characteristicRecessive2, characteristicDominant1, characteristicRecessive1, allCharacteristicsFilled]);
 
   const containerProps = useBreakpointValue({
     base: { direction: 'column', p: '2' },
@@ -118,17 +128,17 @@ export const ParentInputPunnet = () => {
             transition={{ duration: 0.5 }}
           >
             <MotionText fontSize={{ base: 'xl', sm: '2xl' }} mb="4">
-              Características da Mãe
+              Característica 1
             </MotionText>
             
             <Box padding="4" maxW="full" mb="4">
-              <Text mb="2">Característica Dominante da Mãe</Text>
+              <Text mb="2">Característica Dominante 1</Text>
               <MotionInput
                 placeholder="Exemplo: Alto"
-                value={dominantMother}
+                value={characteristicDominant2}
                 color="white"
-                _placeholder={{ color: "white" }}
-                onChange={(e) => setDominantMother(e.target.value)}
+                _placeholder={{ color: "white", opacity:0.75 }}
+                onChange={(e) => setCharacteristicDominant2(e.target.value)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -136,13 +146,13 @@ export const ParentInputPunnet = () => {
             </Box>
             
             <Box padding="4" maxW="full">
-              <Text mb="2">Característica Recessiva da Mãe</Text>
+              <Text mb="2">Característica Recessiva 1</Text>
               <MotionInput
                 placeholder="Exemplo: Baixo"
-                value={recessiveMother}
+                value={characteristicRecessive2}
                 color="white"
-                _placeholder={{ color: "white" }}
-                onChange={(e) => setRecessiveMother(e.target.value)}
+                _placeholder={{ color: "white", opacity:0.75 }}
+                onChange={(e) => setCharacteristicRecessive2(e.target.value)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -165,17 +175,17 @@ export const ParentInputPunnet = () => {
             transition={{ duration: 0.5 }}
           >
             <MotionText fontSize={{ base: 'xl', sm: '2xl' }} mb="4">
-              Características do Pai
+              Característica 2
             </MotionText>
             
             <Box padding="4" maxW="full" mb="4">
-              <Text mb="2">Característica Dominante do Pai</Text>
+              <Text mb="2">Característica Dominante 2</Text>
               <MotionInput
                 placeholder="Exemplo: Amarelo"
-                value={dominantFather}
+                value={characteristicDominant1}
                 color="white"
-                _placeholder={{ color: "white" }}
-                onChange={(e) => setDominantFather(e.target.value)}
+                _placeholder={{ color: "white", opacity:0.75 }}
+                onChange={(e) => setCharacteristicDominant1(e.target.value)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -183,13 +193,13 @@ export const ParentInputPunnet = () => {
             </Box>
             
             <Box padding="4" maxW="full">
-              <Text mb="2">Característica Recessiva do Pai</Text>
+              <Text mb="2">Característica Recessiva 2</Text>
               <MotionInput
                 placeholder="Exemplo: Verde"
-                value={recessiveFather}
+                value={characteristicRecessive1}
                 color="white"
-                _placeholder={{ color: "white" }}
-                onChange={(e) => setRecessiveFather(e.target.value)}
+                _placeholder={{ color: "white", opacity:0.75 }}
+                onChange={(e) => setCharacteristicRecessive1(e.target.value)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -218,7 +228,8 @@ export const ParentInputPunnet = () => {
               Alelos dos Pais
             </MotionText>
             <Flex direction="row" wrap="wrap" justify="center" gap="4">
-              {[0, 1, 2, 3].map(index => (
+              caracmae
+              {[0, 1].map(index => (
                 <Box key={index} padding="2" maxW="125px" flex="1">
                   <MotionSelect
                     bgColor="#fff"
@@ -238,16 +249,57 @@ export const ParentInputPunnet = () => {
                   </MotionSelect>
                 </Box>
               ))}
+              {[0, 1].map(index => (
+                <Box key={index} padding="2" maxW="125px" flex="1">
+                <MotionSelect
+                  bgColor="#fff"
+                  color="#064669"
+                  placeholder="Selecione o alelo"
+                  value={parent1[index]}
+                  onChange={(e) => handleSelectChange1(index, e.target.value)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {alelos1.map(opcao => (
+                    <option key={opcao.value} value={opcao.value}>
+                      {opcao.label}
+                    </option>
+                  ))}
+                </MotionSelect>
+              </Box>
+              ))}
             </Flex>
             <Flex direction="row" wrap="wrap" justify="center" gap="4">
-              {[0, 1, 2, 3].map(index => (
+              caracpae
+              {[0, 1].map(index => (
+                <Box key={index} padding="2" maxW="125px" flex="1">
+                <MotionSelect
+                  bgColor="#fff"
+                  color="#064669"
+                  placeholder="Selecione o alelo"
+                  value={parent2[index]}
+                  onChange={(e) => handleSelectChange2(index, e.target.value)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  >
+                  {alelos2.map(opcao => (
+                    <option key={opcao.value} value={opcao.value}>
+                      {opcao.label}
+                    </option>
+                  ))}
+                </MotionSelect>
+              </Box>
+              ))}
+              {[0, 1].map(index => (
                 <Box key={index} padding="2" maxW="125px" flex="1">
                   <MotionSelect
-                    placeholder="Selecione o alelo"
-                    value={parent1[index]}
                     bgColor="#fff"
                     color="#064669"
-                    onChange={(e) => handleSelectChange(index, e.target.value)}
+                    placeholder="Selecione o alelo"
+                    value={parent1[index]}
+                    onChange={(e) => handleSelectChange1(index, e.target.value)}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
