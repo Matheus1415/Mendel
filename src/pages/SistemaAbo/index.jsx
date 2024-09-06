@@ -161,7 +161,7 @@ export const SistemaAbo = () => {
                         <Heading variant="SecondaryTitle" mb="1rem">
                             AGLUTINOGÊNEO
                         </Heading>
-                        <Image src="./assets/aglutinogeneo.png" maxW={160} alt="Aglutinogêneo" />
+                        <Image src="/img/aglutinogeneo.png" maxW={160} alt="Aglutinogêneo" />
                         <UnorderedList mb="1rem">
                             <ListItem>
                                 <Text align="justify">Aglutinogênios são antígenos presentes na superfície dos glóbulos vermelhos que determinam o tipo sanguíneo ABO de uma pessoa.</Text>
@@ -172,7 +172,7 @@ export const SistemaAbo = () => {
                         <Heading variant="SecondaryTitle" mb="1rem">
                         AGLUTININA
                         </Heading>
-                        <Image src="./img/aglutininas.png" maxW={250} alt="Aglutinogêneo" />
+                        <Image src="/img/aglutininas.png" maxW={250} alt="Aglutinogêneo" />
                         <UnorderedList mb="1rem">
                             <ListItem>
                             <Text align="justify">Aglutininas são anticorpos encontrados no plasma sanguíneo, que reagem contra os antígenos que não estão presentes no próprio sangue.</Text>
@@ -206,7 +206,7 @@ export const SistemaAbo = () => {
                             />
                         ))}
                     </Grid>
-                    <Image src="./img/tiposanguineo_ilustracao.png" maxW={1100}/>
+                    <Image src="/img/tiposanguineo_ilustracao.png" maxW={1100}/>
                 </Flex>
                 {selectedGroup && (
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
@@ -251,7 +251,7 @@ export const SistemaAbo = () => {
                 >
                     <Image
                         maxW={700}
-                        src="./img/trasfusao_illustracao.png" 
+                        src="/img/trasfusao_illustracao.png" 
                         alt="Resumo dos tipos sanguíneos" 
                     />
                 </Box>
