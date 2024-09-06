@@ -20,6 +20,8 @@ export const Gene = () => {
             mb='10rem'
             alignItems={{base:'center'}}
             margin={{base:'auto', lg:'0'}}
+            p={{base:"1rem"}}
+
             >
                 <Heading variant='PrimaryTitle' textAlign='right'>DNA</Heading>
                 <Text variant='Paragraph'>O DNA (ácido desoxirribonucleico) é o material genético que carrega as instruções para o desenvolvimento, funcionamento, crescimento e reprodução de todos os organismos vivos e muitos vírus. Ele é composto por duas cadeias que se enrolam para formar uma estrutura de dupla hélice.</Text>
