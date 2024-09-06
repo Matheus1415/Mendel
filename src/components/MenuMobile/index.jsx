@@ -11,7 +11,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
     const subMenuConteudo = [
         { label: "Gregorio", router: "/mendel" },
         { label: "Fundamentos", router: "/fundamentos" },
-        { label: "Introdução a Genética", router: "/manutencao" },
+        // { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Sistema Sanguíneo", router: "/sistema-abo" },
         {label: "Variações do modelo Menderiano", router: "/variations" },
     ];
@@ -19,6 +19,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "quadro teste", router: "/punner-arastavel" },
         { label: "Atividade", router: "/atividades" },
         { label: "Punntt Alelos", router: "/punntt" },
+        { label: "Ambiente de Aula", router: "/aula" },
     ];
 
     return (
