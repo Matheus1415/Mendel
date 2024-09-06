@@ -1,17 +1,22 @@
 [
-    {"title": "QUANDO É INDICADO?",
-     "firstParagraphy": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-     "secondParagrapy": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years"},
-
-     {"title": "COMO O EXAME É FEITO?",
-     "firstParagraphy": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-     "secondParagrapy": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years"},
-
-     {"title": "QUAL A FUNÇÃO DO EXAME DE FATOR RH NA GRAVIDEZ?",
-     "firstParagraphy": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-     "secondParagrapy": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years"},
-
-     {"title": "QUAL A IMPORTÂNCIA DO PRÉ-NATAL PARA A GESTANTE E PARA O BEBÊ?",
-     "firstParagraphy": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-     "secondParagrapy": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years"}
+    {
+        "title": "QUANDO É INDICADO?",
+        "firstParagraphy": "O exame de fator Rh é indicado para verificar a presença ou ausência do antígeno Rh na superfície das hemácias. Ele é especialmente importante em casos de gravidez, transfusões de sangue, e para determinar a compatibilidade entre doador e receptor em procedimentos transfusionais.",
+        "secondParagrapy": "O exame é recomendado em situações de gravidez para evitar complicações como a doença hemolítica do recém-nascido, além de ser crucial para o planejamento de tratamentos adequados em situações de incompatibilidade Rh."
+    },
+    {
+        "title": "COMO O EXAME É FEITO?",
+        "firstParagraphy": "O exame de fator Rh é realizado através de uma simples coleta de sangue. O sangue é analisado em laboratório para detectar a presença do antígeno Rh na superfície das células vermelhas. Dependendo do resultado, o indivíduo será classificado como Rh positivo ou Rh negativo.",
+        "secondParagrapy": "O processo é rápido e minimamente invasivo. Os resultados do exame ajudam a determinar a necessidade de intervenções adicionais, como a administração de imunoglobulina anti-D em casos de incompatibilidade Rh durante a gravidez."
+    },
+    {
+        "title": "QUAL A FUNÇÃO DO EXAME DE FATOR RH NA GRAVIDEZ?",
+        "firstParagraphy": "Durante a gravidez, o exame de fator Rh é crucial para identificar se a mãe é Rh negativa e se o bebê pode ser Rh positivo. A incompatibilidade Rh pode levar a sérias complicações como a doença hemolítica do recém-nascido, onde os anticorpos da mãe atacam as hemácias do bebê.",
+        "secondParagrapy": "O exame permite que medidas preventivas sejam tomadas, como a administração de imunoglobulina anti-D para evitar a formação de anticorpos que poderiam prejudicar o bebê. Isso ajuda a garantir uma gravidez saudável e reduz o risco de complicações graves."
+    },
+    {
+        "title": "QUAL A IMPORTÂNCIA DO PRÉ-NATAL PARA A GESTANTE E PARA O BEBÊ?",
+        "firstParagraphy": "O pré-natal é essencial para monitorar a saúde da gestante e do bebê ao longo da gravidez. Ele inclui exames regulares, como o exame de fator Rh, que ajudam a detectar e tratar possíveis problemas antes que eles se tornem graves.",
+        "secondParagrapy": "Uma boa assistência pré-natal reduz o risco de complicações durante a gravidez e o parto, assegura que a mãe e o bebê recebam cuidados adequados e promove um ambiente saudável para o desenvolvimento do bebê."
+    }
 ]

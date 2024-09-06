@@ -5,28 +5,29 @@
             "pai": ["V", "v"],
             "mae": ["V", "v"]
         },
+        "title": "Fenótipo Cor da Semente",
         "options": [
             {
                 "id": 1,
-                "name": "SementeAmarelaHeterozigota",
+                "name": "Semente Amarela Heterozigota",
                 "src": "/atv01/option01.png",
                 "alelo": "Vv"
             },
             {
                 "id": 2,
-                "name": "SementeAmarelaHeterozigota",
+                "name": "Semente Amarela Heterozigota",
                 "src": "/atv01/option02.png",
                 "alelo": "Vv"
             },
             {
                 "id": 3,
-                "name": "SementeAmarelaHomozigotaDominante",
+                "name": "Semente Amarela Homozigota Dominante",
                 "src": "/atv01/option03.png",
                 "alelo": "VV"
             },
             {
                 "id": 4,
-                "name": "SementeVerdeHomozigotaRecessiva",
+                "name": "Semente Verde Homozigota Recessiva",
                 "src": "/atv01/option04.png",
                 "alelo": "vv"
             }
@@ -38,28 +39,29 @@
             "pai": ["R", "r"],
             "mae": ["R", "r"]
         },
+        "title": "Fenótipo Textura da Semente",
         "options": [
             {
                 "id": 1,
-                "name": "SementeRugosaHeterozigota",
+                "name": "Semente Rugosa Heterozigota",
                 "src": "/atv02/option01.png",
                 "alelo": "Rr"
             },
             {
                 "id": 2,
-                "name": "SementeRugosaHeterozigota",
+                "name": "Semente Rugosa Heterozigota",
                 "src": "/atv02/option02.png",
                 "alelo": "Rr"
             },
             {
                 "id": 3,
-                "name": "SementeRugosaHomozigotaDominante",
+                "name": "Semente Rugosa Homozigota Dominante",
                 "src": "/atv02/option03.png",
                 "alelo": "RR"
             },
             {
                 "id": 4,
-                "name": "SementeLisaHomozigotaRecessiva",
+                "name": "Semente Lisa Homozigota Recessiva",
                 "src": "/atv02/option04.png",
                 "alelo": "rr"
             }
@@ -71,28 +73,29 @@
             "pai": ["B", "b"],
             "mae": ["B", "b"]
         },
+        "title": "Fenótipo Cor da Flor",
         "options": [
             {
                 "id": 1,
-                "name": "SementeAzulHeterozigota",
+                "name": "Semente Azul Heterozigota",
                 "src": "/atv03/option01.png",
                 "alelo": "Bb"
             },
             {
                 "id": 2,
-                "name": "SementeAzulHeterozigota",
+                "name": "Semente Azul Heterozigota",
                 "src": "/atv03/option02.png",
                 "alelo": "Bb"
             },
             {
                 "id": 3,
-                "name": "SementeAzulHomozigotaDominante",
+                "name": "Semente Azul Homozigota Dominante",
                 "src": "/atv03/option03.png",
                 "alelo": "BB"
             },
             {
                 "id": 4,
-                "name": "SementeVerdeHomozigotaRecessiva",
+                "name": "Semente Verde Homozigota Recessiva",
                 "src": "/atv03/option04.png",
                 "alelo": "bb"
             }
@@ -104,28 +107,29 @@
             "pai": ["C", "c"],
             "mae": ["C", "c"]
         },
+        "title": "Fenótipo Cor da Casca",
         "options": [
             {
                 "id": 1,
-                "name": "SementeCastanhaHeterozigota",
+                "name": "Semente Castanha Heterozigota",
                 "src": "/atv04/option01.png",
-                "alelo": "Cc"
+                "alelo": "cC"
             },
             {
                 "id": 2,
-                "name": "SementeCastanhaHeterozigota",
+                "name": "Semente Castanha Heterozigota",
                 "src": "/atv04/option02.png",
                 "alelo": "Cc"
             },
             {
                 "id": 3,
-                "name": "SementeCastanhaHomozigotaDominante",
+                "name": "Semente Castanha Homozigota Dominante",
                 "src": "/atv04/option03.png",
                 "alelo": "CC"
             },
             {
                 "id": 4,
-                "name": "SementeVerdeHomozigotaRecessiva",
+                "name": "Semente Verde Homozigota Recessiva",
                 "src": "/atv04/option04.png",
                 "alelo": "cc"
             }

@@ -1,8 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
-import { Box, Image, Text, Heading, useBreakpointValue } from "@chakra-ui/react";
+import {
+    Box,
+    Image,
+    Text,
+    Flex,
+    Heading,
+    useBreakpointValue,
+    Card,
+    CardHeader,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Grid,
+    ListItem,
+    UnorderedList
+} from "@chakra-ui/react";
 import AleloCards from "../../components/AleloCards";
 import transSangueAbo from '../../data/transSangueAbo.json';
+import { motion } from "framer-motion";
+
+const MotionCard = motion(Card);
+
+const BloodGroupCard = ({ group, onClick }) => (
+    <MotionCard
+        borderRadius="md"
+        border="1px solid white"
+        boxShadow="md"
+        bg="transparent"
+        color="white"
+        minH={100}
+        minW={255}
+        _hover={{
+            backgroundColor: "#ebebeb", 
+            boxShadow: "lg", 
+            cursor: "pointer", 
+            color: "red.500" 
+        }}
+        onClick={onClick}
+        p={4}
+        transition={{ duration: 0.2 }} 
+        whileHover={{ scale: 1.05 }} 
+    >
+        <CardHeader display="flex" alignItems="center" justifyContent="center">
+            <Text fontSize="30px" fontWeight="bold">
+                {group.id}
+            </Text>
+        </CardHeader>
+    </MotionCard>
+);
 
 export const SistemaAbo = () => {
     const imageWidth = useBreakpointValue({ base: "15rem", sm: "20rem", md: "25rem", lg: "30rem" });
@@ -11,6 +60,31 @@ export const SistemaAbo = () => {
     const textAlign = useBreakpointValue({ base: "center", md: "left" });
     const cardPadding = useBreakpointValue({ base: "1rem", sm: "1.5rem", md: "2rem", lg: "3rem" });
     const gap = useBreakpointValue({ base: "1rem", sm: "2rem", md: "3rem", lg: "4rem" });
+
+    const bloodGroups = [
+        { id: "B+", type: "Com antígeno B e Rh", antibodies: "Anti-A", antigens: "B e Rh" },
+        { id: "B-",  type: "Com antígeno B", antibodies: "Anti-A e Anti-Rh", antigens: "B" },
+        { id: "AB+", type: "Com antígeno A, B e Rh", antibodies: "Nenhum", antigens: "A, B e Rh" },
+        { id: "AB-",  type: "Com antígeno A e B", antibodies: "Anti-Rh", antigens: "A e B" },
+        { id: "O+",  type: "Sem antígeno A ou B, com Rh", antibodies: "Anti-A e Anti-B", antigens: "Rh" },
+        { id: "O-",  type: "Sem antígeno A ou B e sem Rh", antibodies: "Anti-A, Anti-B e Anti-Rh", antigens: "Nenhum" },
+        { id: "AB",  type: "Sem antígeno A ou B e sem Rh", antibodies: "Anti-A, Anti-B e Anti-Rh", antigens: "Nenhum" },
+        { id: "-AB",  type: "Sem antígeno A ou B e sem Rh", antibodies: "Anti-A, Anti-B e Anti-Rh", antigens: "Nenhum" }
+    ];
+    
+
+    const [selectedGroup, setSelectedGroup] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleCardClick = (group) => {
+        setSelectedGroup(group);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedGroup(null);
+    };
 
     return (
         <>
@@ -71,9 +145,8 @@ export const SistemaAbo = () => {
                 border="1px solid"
                 borderRadius="10px"
                 padding={cardPadding}
-                borderColor="gray.200"
-                width="50%"
-                maxWidth="100%"
+                borderColor="#0b4f6e"
+                maxWidth="58%"
                 mx="auto"
                 my="1rem"
             >
@@ -82,19 +155,30 @@ export const SistemaAbo = () => {
                     flexDirection={{ base: "column", sm: "column", md: "row" }}
                     alignItems="center"
                     gap={gap}
+                    p={4}
                 >
-                    <AleloCards
-                        title="AGLUTINOGÊNEO"
-                        imageSrc="/assets/aglutinogenio.svg"
-                        imageAlt="Aglutinogênio"
-                        listItems={["Aglutinogênios são antígenos presentes na superfície dos glóbulos vermelhos que determinam o tipo sanguíneo ABO de uma pessoa."]}
-                    />
-                    <AleloCards
-                        title="AGLUTININA"
-                        imageSrc="/assets/aglutinina.svg"
-                        imageAlt="Aglutinina"
-                        listItems={["Aglutininas são anticorpos encontrados no plasma sanguíneo, que reagem contra os antígenos que não estão presentes no próprio sangue."]}
-                    />
+                    <Flex  align="center" justify="center" color="white"  direction="column" flex="1" textAlign={{ base: "center", md: "left" }}>
+                        <Heading variant="SecondaryTitle" mb="1rem">
+                            AGLUTINOGÊNEO
+                        </Heading>
+                        <Image src="./assets/aglutinogeneo.png" maxW={160} alt="Aglutinogêneo" />
+                        <UnorderedList mb="1rem">
+                            <ListItem>
+                                <Text align="justify">Aglutinogênios são antígenos presentes na superfície dos glóbulos vermelhos que determinam o tipo sanguíneo ABO de uma pessoa.</Text>
+                            </ListItem>
+                        </UnorderedList>
+                    </Flex>
+                    <Flex  align="center" justify="center" color="white"  direction="column" flex="1" textAlign={{ base: "center", md: "left" }}>
+                        <Heading variant="SecondaryTitle" mb="1rem">
+                        AGLUTININA
+                        </Heading>
+                        <Image src="./img/aglutininas.png" maxW={250} alt="Aglutinogêneo" />
+                        <UnorderedList mb="1rem">
+                            <ListItem>
+                            <Text align="justify">Aglutininas são anticorpos encontrados no plasma sanguíneo, que reagem contra os antígenos que não estão presentes no próprio sangue.</Text>
+                            </ListItem>
+                        </UnorderedList>
+                    </Flex> 
                 </Box>
             </Box>
 
@@ -112,10 +196,32 @@ export const SistemaAbo = () => {
                 >
                     TIPOS SANGUÍNEOS
                 </Heading>
-                <Image 
-                    src="/assets/tipssanguineos.svg" 
-                    alt="Tipos Sanguíneos" 
-                />
+                <Flex direction="column" align="center" justifyContent="center" minH={400} gap={20}>
+                    <Grid templateColumns="repeat(4, 1fr)" gap={6} maxW="1200px" mx="auto">
+                        {bloodGroups.map((group) => (
+                            <BloodGroupCard
+                                key={group.id}
+                                group={group}
+                                onClick={() => handleCardClick(group)}
+                            />
+                        ))}
+                    </Grid>
+                    <Image src="./img/tiposanguineo_ilustracao.png" maxW={1100}/>
+                </Flex>
+                {selectedGroup && (
+                    <Modal isOpen={isModalOpen} onClose={closeModal}>
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader>{selectedGroup.id}</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody p={8}>
+                                <Text mt={4}><b>Tipo de Glóbulo Vermelho:</b> {selectedGroup.type}</Text>
+                                <Text><b>Anticorpos:</b> {selectedGroup.antibodies}</Text>
+                                <Text><b>Antígenos:</b> {selectedGroup.antigens}</Text>
+                            </ModalBody>
+                        </ModalContent>
+                    </Modal>
+                )}
             </Box>
 
             <Box>
@@ -144,11 +250,12 @@ export const SistemaAbo = () => {
                     mt="2rem"
                 >
                     <Image
-                        src="/assets/resumoAbo.svg" 
+                        maxW={700}
+                        src="./img/trasfusao_illustracao.png" 
                         alt="Resumo dos tipos sanguíneos" 
                     />
                 </Box>
             </Box>
         </>
     );
-}
+};

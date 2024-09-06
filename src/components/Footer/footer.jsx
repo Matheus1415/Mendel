@@ -1,4 +1,4 @@
-import { Flex, Box, Text, useBreakpointValue, Link } from "@chakra-ui/react";
+import { Flex, Box, Text, useBreakpointValue, Link as ChakraLink, Image } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
 export const Footer = () => {
@@ -16,15 +16,17 @@ export const Footer = () => {
                 p={10}
                 color="white"
                 gap={5}
-                bg="#02161F"  // Adicionando um fundo para maior contraste
+                bg="#02161F"
             >
-                {/* <Text fontSize={{ base: "40px", md: "50px" }} fontWeight="bold">LOGO</Text> */}
+                <RouterLink to="/">
+                    <Image maxW={200} src="/logoMendel.jpeg" alt="Logo Mendel" cursor="pointer" />
+                </RouterLink>
+                
                 <Flex gap={10} direction={flexDirection} wrap="wrap" justifyContent="center">
                     <RouterLink to="/" style={{ color: linkColor }}>Home</RouterLink>
-                    <RouterLink to="/atividade" style={{ color: linkColor }}>Atividade</RouterLink>
-                    <RouterLink to="/conteudo" style={{ color: linkColor }}>Conteúdo</RouterLink>
-                    <RouterLink to="/duvidas" style={{ color: linkColor }}>Dúvidas</RouterLink>
-                    <RouterLink to="/informacao" style={{ color: linkColor }}>Informação</RouterLink>
+                    <RouterLink to="/punner-arastavel" style={{ color: linkColor }}>Atividade</RouterLink>
+                    <RouterLink to="/manutencao" style={{ color: linkColor }}>Dúvidas</RouterLink>
+                    <RouterLink to="/manutencao" style={{ color: linkColor }}>Informação</RouterLink>
                 </Flex>
             </Flex>
 
@@ -33,14 +35,14 @@ export const Footer = () => {
                 w="100%"
                 color="white"
                 p={10}
-                bg="#02161F"  // Adicionando um fundo para maior contraste
+                bg="#02161F"
             >
                 <Box borderTop="2px solid white" width="100%" mb={4} />
                 <Flex
                     justifyContent="space-between"
                     direction={flexDirection}
                     gap={5}
-                    wrap="wrap"  // Garante que o texto não fique quebrado em telas pequenas
+                    wrap="wrap"
                 >
                     <Text fontSize={{ base: "14px", md: "17px" }} textAlign={{ base: "center", md: "left" }}>mendel.web.project@gmail.com</Text>
                     <Text fontSize={{ base: "14px", md: "17px" }} textAlign={{ base: "center", md: "right" }}>© Mendel – Todos os direitos reservados</Text>     
