@@ -34,7 +34,11 @@ const MulheresXX = () => {
   };
 
   return (
+<<<<<<< Updated upstream
     <>
+=======
+<>
+>>>>>>> Stashed changes
       <LayoutIntroduction query="MULHERES">MULHERES da genética</LayoutIntroduction>
       <ImportanceOfWomenInGenetics />
 
@@ -54,6 +58,11 @@ const MulheresXX = () => {
 
 
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 
       <Flex
         width="80%"
