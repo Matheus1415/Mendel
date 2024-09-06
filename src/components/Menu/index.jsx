@@ -27,6 +27,7 @@ const MenuMendel = () => {
         { label: "Atividade Dinâmica", router: "/punner-arastavel" },
         { label: "Atividade", router: "/atividades" },
         { label: "Punntt Alelos", router: "/punntt" },
+        { label: "Ambiente de Aula", router: "/aula" },
     ];
 
     const handleClickOutside = (event) => {

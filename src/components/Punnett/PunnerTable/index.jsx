@@ -106,14 +106,20 @@ const PunnettTable = ({
                                                 border="2px"
                                                 borderColor="blue.600"
                                                 key={`${idx1}-${idx2}`}
-                                                bg={/[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) && /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele]}`) ? backgroundColorDominant :
-                                                /[A-Z]/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) ? backgroundColorDominant2 :
-                                                /[A-Z]/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele]}`) ? backgroundColorDominant3 : backgroundColorRecessive}
+                                                bg={
+                                                    /^[a-z]+$/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`)?
+                                                    backgroundColorRecessive : 
+                                                    /^[a-z]+$/.test(`${allAlleles1[newId]}${allAlleles2[newId2]}`) ?
+                                                     backgroundColorDominant3 :
+                                                    /^[a-z]+$/.test(`${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`) ?
+                                                     backgroundColorDominant2 : backgroundColorDominant
+                                                }
+                                                style={{ color: 'white'}}
                                                 initial={{ opacity: 0 }}
                                                 animate={{ opacity: 1 }}
                                                 transition={{ duration: 0.5 }}
                                             >
-                                                {rearrangeLetters(allAlleles1[newId].toString() + allAlleles2[newId2].toString()) + rearrangeLetters(allAlleles1[SecoundAllele].toString() + allAlleles2[SecoundAllele2].toString())}
+                                                {rearrangeLetters(allAlleles1[newId] + allAlleles2[newId2]) + rearrangeLetters(allAlleles1[SecoundAllele] + allAlleles2[SecoundAllele2])}
                                                 {/* {`${allAlleles1[newId]}${allAlleles2[newId2]}${allAlleles1[SecoundAllele]}${allAlleles2[SecoundAllele2]}`} */}
                                             </MotionTd>
                                         );
