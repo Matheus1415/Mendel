@@ -19,7 +19,7 @@ import VLibras from "@djpfs/react-vlibras";
 import { LayoutIntroduction } from "../../layout/LayoutIntroduction";
 import ImportanceOfWomenInGenetics from "./ImportanceOfWomenInGenetics";
 
-export function MulheresXX() {
+const MulheresXX = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedImage, setSelectedImage] = useState("");
@@ -34,7 +34,6 @@ export function MulheresXX() {
   };
 
   return (
-<<<<<<< Updated upstream
     <>
       <LayoutIntroduction query="MULHERES">MULHERES da genética</LayoutIntroduction>
       <ImportanceOfWomenInGenetics />
@@ -55,9 +54,6 @@ export function MulheresXX() {
 
 
 
-=======
-   <>
->>>>>>> Stashed changes
 
       <Flex
         width="80%"
@@ -442,3 +438,4 @@ export function MulheresXX() {
     </>
   );
 }
+export default MulheresXX;
