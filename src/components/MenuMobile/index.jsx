@@ -14,6 +14,7 @@ const MenuMobile = ({ isOpen, toggleMenu }) => {
         { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Sistema Sanguíneo", router: "/sistema-abo" },
         {label: "Variações do modelo Menderiano", router: "/variations" },
+        { label: "MulheresXX", router: "/mulheresXX" },
     ];
     const subMenuAtividade = [
         { label: "quadro teste", router: "/punner-arastavel" },

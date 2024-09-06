@@ -1,6 +1,5 @@
 import {
   Heading,
-  Highlight,
   Flex,
   Text,
   Box,
@@ -13,11 +12,15 @@ import {
   ModalCloseButton,
   ModalBody,
   useDisclosure,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import { useState } from "react";
 import VLibras from "@djpfs/react-vlibras";
+import { LayoutIntroduction } from "../../layout/LayoutIntroduction";
+import ImportanceOfWomenInGenetics from "./ImportanceOfWomenInGenetics";
 
 export function MulheresXX() {
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedImage, setSelectedImage] = useState("");
   const [selectedTitle, setSelectedTitle] = useState("");
@@ -32,96 +35,25 @@ export function MulheresXX() {
 
   return (
     <>
-      <Flex
-        h="100vh"
-        w="100%"
-        direction="column"
-        justify="center"
-        align="center"
-        bg="url('/assets/banner.jpg') no-repeat center center"
-        bgSize="cover"
-        mb={40} // Ajustado para consistência
-        px={[4, 6, 8]} // Adicionado padding horizontal
-      >
-        <Heading
-          variant="PrimaryTitle"
-          color="rgb(86, 101, 115)"
-          textAlign="center"
-          fontSize={[25, 30, 40]} // Ajustado o tamanho do texto
-        >
-          <Highlight
-            query="Mulheres"
-            styles={{
-              fontSize: "3.5em",
-              color: "rgb(86, 101, 115)",
-              display: "block",
-            }}
-          >
-            Mulheres na Genética
-          </Highlight>
-        </Heading>
-        <VLibras forceOnload />
-      </Flex>
+      <LayoutIntroduction query="MULHERES">MULHERES da genética</LayoutIntroduction>
+      <ImportanceOfWomenInGenetics />
 
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        p={[4, 6, 10]} // Ajustado padding
-        width="100%"
-        mx="auto"
-        gap={8} // Ajustado o espaço entre os itens
-        justify="center"
-        mb={40} // Ajustado para consistência
-      >
-        <Box>
-          <Image src="/assets/DNA.png" width="100%" maxWidth="600px" />
-        </Box>
 
-        <Box
-          flex="1"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="flex-start"
-          textAlign="justify"
-          p={[4, 6]}
-          maxWidth="600px"
-        >
-          <Heading
-            variant="PrimaryTitle"
-            mb={6} // Ajustado para consistência
-            textAlign="right"
-            fontSize={{ base: "2xl", md: "3xl" }}
-          >
-            Importância
-          </Heading>
-          <Text variant="Paragraph" fontSize={{ base: "md", md: "lg" }}>
-            A ciência genética é crucial para entender a hereditariedade e os
-            mecanismos moleculares da vida. As mulheres desempenharam papéis
-            fundamentais nesse campo, contribuindo significativamente para suas
-            descobertas e avanços. Desde o início da genética, elas foram
-            pioneiras em desafios ao conhecimento estabelecido e na expansão da
-            biologia.
-            <br />
-            <br />
-            Rosalind Franklin, com suas imagens de raios X do DNA, revelou a
-            estrutura em dupla hélice da molécula, transformando a compreensão
-            da hereditariedade e confirmando teorias existentes. Recentemente,
-            Jennifer Doudna e Emmanuelle Charpentier avançaram com a tecnologia
-            de edição genética CRISPR-Cas9, permitindo manipulação precisa do
-            DNA. Essa inovação tem vastas implicações para tratar doenças
-            genéticas e melhorar saúde e agricultura.
-            <br />
-            <br />
-            Essas contribuições demonstram não apenas investigações pioneiras,
-            mas também habilidades analíticas e criativas essenciais para o
-            desenvolvimento da genética. Reconhecer o impacto das mulheres na
-            genética é vital, pois seu trabalho é crucial para o progresso da
-            ciência e da prática médica moderna. O legado feminino na genética
-            reflete a importância de sua presença e impacto na ciência
-            contemporânea.
-          </Text>
-        </Box>
-      </Flex>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <Flex
         width="80%"
