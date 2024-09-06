@@ -8,7 +8,6 @@ import { Footer } from '../components/Footer/footer';
 import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
-import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
 import { Home } from '../pages/Home';
 import { PunnettSquareDraggablePage } from '../pages/PunnettSquareDraggable';
 import { Variations } from '../pages/Variations';
@@ -18,6 +17,7 @@ import { SistemaAbo } from '../pages/SistemaAbo';
 import { PunnerAtv } from '../pages/PunnettAtv';
 import { Alelos } from '../pages/Alelos';
 import MenuMendel from '../components/Menu';
+import { Informacao } from '../pages/Informacao';
 import { FatorRh } from '../pages/FatorRh';
 import { Doubts } from '../pages/Duvidas'
 
@@ -38,8 +38,8 @@ export const RouterAsRouter = () => {
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/variations" element={<Variations/>} />
         <Route path="/sistema-abo" element={<SistemaAbo />} />
+        <Route path="/informacao" element={<Informacao />} />
         <Route path="/sistema-rh" element={<FatorRh />} />
-        {/* <Route path="/layout" element={<TesteLayout/>} /> */}
         <Route path="/punner-arastavel/:id" element={<PunnettSquareDraggablePage/>} />
         <Route path="/punner-arastavel" element={<PunnerAtv/>} />
         <Route path='/duvidas' element={<Doubts/>}/>
