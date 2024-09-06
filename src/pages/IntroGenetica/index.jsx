@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Image, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Image, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import { LayoutIntroduction } from "../../layout/LayoutIntroduction";
+import CustomButton from "../../components/customButton";
 
 export const IntroGenetica = () => {
     return (
@@ -23,9 +24,9 @@ export const IntroGenetica = () => {
                 >
                     <Image
                         src="/assets/dnaBig.svg"
-                        alt="Imagem de DNA"
+                        alt="Imagem representando o DNA"
                         maxW="100%"
-                        h="auto"
+                        h="120rem"
                     />
                 </Box>
                 <Box
@@ -48,19 +49,137 @@ export const IntroGenetica = () => {
                     </Text>
                     
                     <Heading variant="PrimaryTitle">ÁREAS DE ESTUDO</Heading>
-                    <Button variant="readMore">
-                        <Image src="public/assets/introGenetica/areaEstudo/geneticaClassica.svg"></Image>
-                        Genética Clássica (Mendeliana)
-                    </Button>
-                    <Button variant="readMore">
-                        <Image src="public/assets/introGenetica/areaEstudo/farmacogenetica.svg"></Image>
-                        Farmacogenética
-                    </Button>
-                    <Button variant="readMore">
-                        <Image src="public/assets/introGenetica/areaEstudo/geneticaMolecular.svg"></Image>
-                        genética molecular
-                    </Button>
-                
+
+                    <Box>
+                        <Box mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaClassica.svg"
+                                altText="Genética Clássica (Mendeliana)"
+                            >
+                                Genética Clássica (Mendeliana)
+                            </CustomButton>
+                        </Box>
+
+                        <SimpleGrid columns={2} spacing={4} mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/farmacogenetica.svg"
+                                altText="Farmacogenética"
+                            >
+                                Farmacogenética
+                            </CustomButton>
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaMolecular.svg"
+                                altText="Genética Molecular"
+                            >
+                                Genética Molecular
+                            </CustomButton>
+                        </SimpleGrid>
+
+                        <Box mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaPopulacoes.svg"
+                                altText="Genética de Populações"
+                            >
+                                Genética de Populações
+                            </CustomButton>
+                        </Box>
+
+                        <SimpleGrid columns={2} spacing={4} mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/genomica.svg"
+                                altText="Genômica"
+                            >
+                                Genômica
+                            </CustomButton>
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/epigenetica.svg"
+                                altText="Epigenética"
+                            >
+                                Epigenética
+                            </CustomButton>
+                        </SimpleGrid>
+
+                        <Box mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaConservacao.svg"
+                                altText="Genética de Conservação"
+                            >
+                                Genética de Conservação
+                            </CustomButton>
+                        </Box>
+
+                        <SimpleGrid columns={2} spacing={4} mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaNutricional.svg"
+                                altText="Nutrigenômica"
+                            >
+                                Nutrigenômica
+                            </CustomButton>
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaQuantitativa.svg"
+                                altText="Genética Quantitativa"
+                            >
+                                Genética Quantitativa
+                            </CustomButton>
+                        </SimpleGrid>
+
+                        <Box mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/ecologica.svg"
+                                altText="Genética Ecológica"
+                            >
+                                Genética Ecológica
+                            </CustomButton>
+                        </Box>
+
+                        <SimpleGrid columns={2} spacing={4} mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaFlorence.svg"
+                                altText="Genética Florence"
+                            >
+                                Genética Florence
+                            </CustomButton>
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaComparativa.svg"
+                                altText="Genética Comparativa"
+                            >
+                                Genética Comparativa
+                            </CustomButton>
+                        </SimpleGrid>
+
+                        <Box mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaDesenvolvimento.svg"
+                                altText="Genética do Desenvolvimento"
+                            >
+                                Genética do Desenvolvimento
+                            </CustomButton>
+                        </Box>
+
+                        <SimpleGrid columns={2} spacing={4} mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaMedica.svg"
+                                altText="Genética Médica"
+                            >
+                                Genética Médica
+                            </CustomButton>
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/geneticaEvolutiva.svg"
+                                altText="Genética Evolutiva"
+                            >
+                                Genética Evolutiva
+                            </CustomButton>
+                        </SimpleGrid>
+
+                        <Box mb="1rem">
+                            <CustomButton
+                                imageSrc="public/assets/introGenetica/areaEstudo/veterinaria.svg"
+                                altText="Veterinária"
+                            >
+                                Veterinária
+                            </CustomButton>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
         </>
