@@ -14,6 +14,10 @@ const MotionFlex = motion(Flex);
 
 export const ParentInputPunnet = () => {
   const [parent1, setParent1] = useState(['', '', '', '']);
+  
+  const [parent3, setParent3] = useState(['', '', '', '']);
+  const [parent4, setParent4] = useState(['', '', '', '']);
+
   const [parent2, setParent2] = useState(['', '', '', '']);
 
   const [characteristicDominant1, setCharacteristicDominant1] = useState('');
@@ -26,7 +30,6 @@ export const ParentInputPunnet = () => {
 
   const [alelos1, setAlelos1] = useState([]);
   const [alelos2, setAlelos2] = useState([]);
-
 
 
   const allCharacteristicsFilled = characteristicDominant2 && characteristicRecessive2 && characteristicDominant1 && characteristicRecessive1;
@@ -47,17 +50,38 @@ export const ParentInputPunnet = () => {
     });
   };
 
+  const handleSelectChange3 = (index, value) => {
+    setParent3(prev => {
+      const newParent3 = [...prev];
+      newParent3[index] = value;
+      return newParent3;
+    });
+  };
+
+  const handleSelectChange4 = (index, value) => {
+    setParent4(prev => {
+      const newParent4 = [...prev];
+      newParent4[index] = value;
+      return newParent4;
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const newparent1 = parent1.join('');
     const newparent2 = parent2.join('');
+    const newparent3 = parent3.join('');
+    const newparent4 = parent4.join('');
 
-    console.log('data1:',newparent1.split(''))
-    console.log('data2:',newparent2.split(''))
+    const maternalAlleles = [...newparent1.split(''), ...newparent2.split('')]
+    const partinalAlleles = [...newparent3.split(''), ...newparent4.split('')]
+
+    console.log('data1:',maternalAlleles)
+    console.log('data2:',partinalAlleles)
 
     if (newparent1 && newparent2) {
-      setParentsAlelo([newparent1.split(''), newparent2.split('')]);
+      setParentsAlelo([maternalAlleles,partinalAlleles]);
     }
 
     if (characteristicDominant2 && characteristicRecessive2 && characteristicDominant1 && characteristicRecessive1) {
@@ -68,6 +92,8 @@ export const ParentInputPunnet = () => {
   const handleReset = () => {
     setParent1(['', '', '', '']);
     setParent2(['', '', '', '']);
+    setParent3(['', '', '', '']);
+    setParent4(['', '', '', '']);
     setCharacteristicDominant2('');
     setCharacteristicRecessive2('');
     setCharacteristicDominant1('');
@@ -235,13 +261,13 @@ export const ParentInputPunnet = () => {
                     bgColor="#fff"
                     color="#064669"
                     placeholder="Selecione o alelo"
-                    value={parent2[index]}
-                    onChange={(e) => handleSelectChange2(index, e.target.value)}
+                    value={parent1[index]}
+                    onChange={(e) => handleSelectChange1(index, e.target.value)}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    {alelos2.map(opcao => (
+                    {alelos1.map(opcao => (
                       <option key={opcao.value} value={opcao.value}>
                         {opcao.label}
                       </option>
@@ -255,13 +281,13 @@ export const ParentInputPunnet = () => {
                   bgColor="#fff"
                   color="#064669"
                   placeholder="Selecione o alelo"
-                  value={parent1[index]}
-                  onChange={(e) => handleSelectChange1(index, e.target.value)}
+                  value={parent2[index]}
+                  onChange={(e) => handleSelectChange2(index, e.target.value)}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  {alelos1.map(opcao => (
+                  {alelos2.map(opcao => (
                     <option key={opcao.value} value={opcao.value}>
                       {opcao.label}
                     </option>
@@ -278,13 +304,13 @@ export const ParentInputPunnet = () => {
                   bgColor="#fff"
                   color="#064669"
                   placeholder="Selecione o alelo"
-                  value={parent2[index]}
-                  onChange={(e) => handleSelectChange2(index, e.target.value)}
+                  value={parent3[index]}
+                  onChange={(e) => handleSelectChange3(index, e.target.value)}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                   >
-                  {alelos2.map(opcao => (
+                  {alelos1.map(opcao => (
                     <option key={opcao.value} value={opcao.value}>
                       {opcao.label}
                     </option>
@@ -298,13 +324,13 @@ export const ParentInputPunnet = () => {
                     bgColor="#fff"
                     color="#064669"
                     placeholder="Selecione o alelo"
-                    value={parent1[index]}
-                    onChange={(e) => handleSelectChange1(index, e.target.value)}
+                    value={parent4[index]}
+                    onChange={(e) => handleSelectChange4(index, e.target.value)}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
-                    {alelos1.map(opcao => (
+                    {alelos2.map(opcao => (
                       <option key={opcao.value} value={opcao.value}>
                         {opcao.label}
                       </option>
