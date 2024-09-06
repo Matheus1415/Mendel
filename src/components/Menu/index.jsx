@@ -62,31 +62,35 @@ const MenuMendel = () => {
             animate={{ width: isOpen ? "250px" : "80px" }}
             transition={{ duration: 0.3 }}
         >
-            <IconButton 
-                icon={<FaBars />} 
-                onClick={toggleMenu} 
-                aria-label="Toggle Menu"
-                mb={4}
-                fontSize={30}
-                colorScheme="teal"
-                bg="transparent"
-            />
-            <MotionFlex 
-                direction="column" 
-                align="center" 
-                w="100%" 
-                gap={4} 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: isOpen ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-            >
-                <Image maxW={100} src="/logoMendel.jpeg" alt="Logo Mendel" />
-                <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" />
-                <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/" subMenu={subMenuAtividade}/>
-                <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/" subMenu={subMenuConteudo} />
-                <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/manutencao" />
-                <MenuItem icon={<FaInfoCircle />} label="Informação" isOpen={isOpen} router="/manutencao" />
-            </MotionFlex>
+            <Box>
+                <IconButton 
+                    icon={<FaBars />} 
+                    onClick={toggleMenu} 
+                    aria-label="Toggle Menu"
+                    mb={4}
+                    fontSize={30}
+                    colorScheme="teal"
+                    bg="transparent"
+                />
+                <MotionFlex 
+                    direction="column" 
+                    align="center" 
+                    w="100%" 
+                    display={isOpen ? "block" : "none"}
+                    gap={4} 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isOpen ? 1 : 0 }}
+                    transition={{ duration: 0.3 }}
+
+                >
+                    <Image maxW={100} src="/logoMendel.jpeg" alt="Logo Mendel" />
+                    <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" />
+                    <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/" subMenu={subMenuAtividade}/>
+                    <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/" subMenu={subMenuConteudo} />
+                    <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/manutencao" />
+                    <MenuItem icon={<FaInfoCircle />} label="Informação" isOpen={isOpen} router="/manutencao" />
+                </MotionFlex>
+            </Box>
         </MotionBox>
     );
 };
