@@ -164,7 +164,7 @@ export function Quiz({questions}){
                 !showResults ? (
                     <Box as='form' p={['5', '10']}  onSubmit={submitQuestion} style={{position:'relative', margin: 0, backgroundColor:'transparent', borderRadius:0 }} >
                         <Badge position="absolute" top={['0.5rem',"1rem"]} right={['0.5rem',"1rem"]} py='0.125rem' px='0.5rem'>{`${currentQuestion}/${questions.length}`}</Badge>
-                        <Heading size='md' mb='1.5rem' textAlign='center'>{questions[currentQuestion - 1].question}</Heading>
+                        <Heading size='md' mb='1.5rem' textAlign='center' whiteSpace='pre-line'>{questions[currentQuestion - 1].question}</Heading>
                         
                         {questions[currentQuestion - 1].image && (
                             <>

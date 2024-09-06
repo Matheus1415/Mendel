@@ -30,7 +30,7 @@ export function ViewQuestion({ currentQuestionData, currentQuestionIndex, questi
         >
             <Flex mb={4} direction="column" maxW={(currentQuestionData.image && currentQuestionData.imageSize <= 400) ? "70%" : "100%"}>
                 <Text fontSize={30} mb={10}>{currentQuestionIndex + 1}/{questionsAmount}</Text>
-                <Heading variant="QuestionTile">
+                <Heading variant="QuestionTile" whiteSpace='pre-line'>
                     {currentQuestionData.question}
                     {currentQuestionData.imageSize > 400 && (
                         <Button

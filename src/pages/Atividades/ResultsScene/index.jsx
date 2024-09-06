@@ -50,11 +50,10 @@ export function ResultsScene({resultState}){
 
 
     console.log(resultState, questionAmount, questionsAnsweredAmountCorrectly, victoriesPercentage, TypeableVictoriesPercentage);
-    
 
     return (
         <Flex height='750px' w='full' justifyContent='space-around' gap='0.75rem'>
-            <Box flex='2.5' maxWidth='70%' overflowY='auto'>
+            <Box flex='2.5' maxWidth='70%' overflowY='auto' decorar>
                 <OrderedList color='white'>
                     {
                         resultState.userResponses.map( (response, index) => {
@@ -81,9 +80,10 @@ export function ResultsScene({resultState}){
                 </Flex>
 
                 <Flex direction='column'>
-                    <Heading variant='SecondTitle' fontSize='2rem' >Múltiplas: {MultiplesItemVictoriesPercentage}%</Heading>
-                    <Heading variant='SecondTitle' fontSize='2rem' >Únicas: {UniqueItemVictoriesPercentage}%</Heading>
-                    <Heading variant='SecondTitle' fontSize='2rem' >Digitaveis: {TypeableVictoriesPercentage}%</Heading>    
+                    {/* TODO: Implementar isso de maneira melhor */}
+                    <Heading variant='SecondTitle' fontSize='2rem' >Múltiplas: {MultiplesItemVictoriesPercentage || 0}%</Heading>
+                    <Heading variant='SecondTitle' fontSize='2rem' >Únicas: {UniqueItemVictoriesPercentage || 0}%</Heading>
+                    <Heading variant='SecondTitle' fontSize='2rem' >Digitaveis: {TypeableVictoriesPercentage || 0}%</Heading>    
                 </Flex>  
 
                 <Flex justifyContent='space-between'>

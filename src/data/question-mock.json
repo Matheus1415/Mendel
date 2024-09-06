@@ -1,6 +1,6 @@
 [
     {
-        "question": "A probabilidade de um casal heterozigótico para um par de alelos ter um descendente homozigoto dominante é de",
+        "question": "(UECE 2024.2 2Fase) A probabilidade de um casal heterozigótico para um par de alelos ter um descendente homozigoto dominante é de",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -22,7 +22,7 @@
         ]
     },
     {
-        "question": "Na lei de Mendel, conhecida como lei da segregação independente, é postulado que",
+        "question": "(UECE 2024.2 2Fase) Na lei de Mendel, conhecida como lei da segregação independente, é postulado que",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "question": "De acordo com a 1ª Lei de Mendel, é correto afirmar que",
+        "question": "(UECE 2022.2 1Fase) De acordo com a 1ª Lei de Mendel, é correto afirmar que",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -66,7 +66,7 @@
         ]
     },
     {
-        "question": "Considerando a Segunda Lei de Mendel, assinale a afirmação verdadeira.",
+        "question": "(UECE 2022.1 2Fase) Considerando a Segunda Lei de Mendel, assinale a afirmação verdadeira.",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -88,7 +88,7 @@
         ]
     },
     {
-        "question": "No que concerne aos genes letais, é correto dizer que",
+        "question": "(UECE 2022.1 2Fase) No que concerne aos genes letais, é correto dizer que",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -110,30 +110,30 @@
         ]
     },
     {
-        "question": "Relacione, corretamente, os grupos sanguíneos apresentados a seguir, com seus possíveis genótipos, numerando a Coluna II de acordo com a Coluna I.\nColuna I\n1.  A\n2.  B\n3.  AB\n4.  O\nColuna II\n(   ) IBIB ou IBi \n(   ) IAIA ou IAi\n(   ) ii \n(   ) IAIB\nA sequência correta, de cima para baixo, é:",
-        "questionType": "MultipleItems",
+        "question": "(UECE 2022.1 1Fase) Relacione, corretamente, os grupos sanguíneos apresentados a seguir, com seus possíveis genótipos, numerando a Coluna II de acordo com a Coluna I.\nColuna I\n1.  A\n2.  B\n3.  AB\n4.  O\nColuna II\n(   ) IBIB ou IBi \n(   ) IAIA ou IAi\n(   ) ii \n(   ) IAIB\nA sequência correta, de cima para baixo, é:",
+        "questionType": "UniqueItem",
         "options": [
             {
-                "content": "IBIB ou IBi",
+                "content": "3, 1, 4, 2",
                 "isCorrect": false
             },
             {
-                "content": "IAIA ou IAi",
+                "content": "1, 2, 3, 4",
                 "isCorrect": false
             },
             {
-                "content": "ii",
-                "isCorrect": false
+                "content": "2, 1, 3, 4",
+                "isCorrect": true
             },
             {
-                "content": "IAIB",
+                "content": "4, 2, 1, 3",
                 "isCorrect": false
             }
         ],
         "explanation": "A sequência correta é: 4 (O), 2 (B), 1 (A), 3 (AB)."
     },
     {
-        "question": "Assinale a opção que corresponde a doenças humanas classificadas como hereditárias.",
+        "question": "(UECE 2021.1 2Fase) Assinale a opção que corresponde a doenças humanas classificadas como hereditárias.",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -155,7 +155,7 @@
         ]
     },
     {
-        "question": "A hemofilia é uma enfermidade recessiva ligada ao cromossomo X e a calvície é uma característica autossômica dominante no homem e recessiva na mulher. Sabendo disso, considere o cruzamento entre os seguintes fenótipos:\nCruzamento 1: XHXh x XhY\nCruzamento 2: XCXc x XCYC\nAssim, é correto afirmar que os genótipos de uma filha hemofílica do Cruzamento 1 e de um filho calvo do Cruzamento 2 são, respectivamente:",
+        "question": "(UECE 2019.2 2Fase) A hemofilia é uma enfermidade recessiva ligada ao cromossomo X e a calvície é uma característica autossômica dominante no homem e recessiva na mulher. Sabendo disso, considere o cruzamento entre os seguintes fenótipos:\nCruzamento 1: XHXh x XhY\nCruzamento 2: XCXc x XCYC\nAssim, é correto afirmar que os genótipos de uma filha hemofílica do Cruzamento 1 e de um filho calvo do Cruzamento 2 são, respectivamente:",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -177,7 +177,7 @@
         ]
     },
     {
-        "question": "Um dos conceitos utilizados para a compreensão de genética diz que a propriedade de um alelo de produzir o mesmo fenótipo tanto em condição homozigótica quanto em condição heterozigótica é causada por um gene",
+        "question": "(UECE 2019.2 1Fase) Um dos conceitos utilizados para a compreensão de genética diz que a propriedade de um alelo de produzir o mesmo fenótipo tanto em condição homozigótica quanto em condição heterozigótica é causada por um gene",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -199,7 +199,7 @@
         ]
     },
     {
-        "question": "A probabilidade de um casal ter dois filhos do sexo masculino e a probabilidade de esse mesmo casal ter dois filhos, sendo uma menina e um menino são respectivamente",
+        "question": "(UECE 2019.1 2Fase) A probabilidade de um casal ter dois filhos do sexo masculino e a probabilidade de esse mesmo casal ter dois filhos, sendo uma menina e um menino são respectivamente",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -221,7 +221,7 @@
         ]
     },
     {
-        "question": "Em heredogramas, o casamento consanguíneo é representado por",
+        "question": "(UECE 2019.2 2Fase) Em heredogramas, o casamento consanguíneo é representado por",
         "questionType": "UniqueItem",
         "options": [
             {
@@ -243,8 +243,8 @@
         ]
     },
     {
-        "question": "No que diz respeito à hemofilia, escreva V ou F conforme seja verdadeiro ou falso o que se afirma nos itens abaixo.\n(   ) A incapacidade de produzir o fator VIII de coagulação sanguínea apresentada pelos hemofílicos pode levar à morte e segue a herança ligada ao sexo.\n(   ) Mulheres do genótipo XhXh e homens do genótipo XhY são hemofílicos; portanto, a hemofilia segue o padrão típico de herança ligada ao cromossomo Y.\n(   ) Os homens hemofílicos não transmitem o alelo mutante para a prole do sexo masculino.\n(   ) As filhas de uma mulher hemofílica são hemofílicas, pois herdam um alelo selvagem da mãe.\nEstá correta, de cima para baixo, a seguinte sequência:",
-        "questionType": "MultipleItems",
+        "question": "(UECE 2019.2 1Fase) No que diz respeito à hemofilia, escreva V ou F conforme seja verdadeiro ou falso o que se afirma nos itens abaixo.\n(   ) A incapacidade de produzir o fator VIII de coagulação sanguínea apresentada pelos hemofílicos pode levar à morte e segue a herança ligada ao sexo.\n(   ) Mulheres do genótipo XhXh e homens do genótipo XhY são hemofílicos; portanto, a hemofilia segue o padrão típico de herança ligada ao cromossomo Y.\n(   ) Os homens hemofílicos não transmitem o alelo mutante para a prole do sexo masculino.\n(   ) As filhas de uma mulher hemofílica são hemofílicas, pois herdam um alelo selvagem da mãe.\nEstá correta, de cima para baixo, a seguinte sequência:",
+        "questionType": "UniqueItem",
         "options": [
             {
                 "content": "V, V, V, F",
