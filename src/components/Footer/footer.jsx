@@ -18,7 +18,7 @@ export const Footer = () => {
                 gap={5}
                 bg="#02161F"  // Adicionando um fundo para maior contraste
             >
-                <Text fontSize={{ base: "40px", md: "50px" }} fontWeight="bold">LOGO</Text>
+                {/* <Text fontSize={{ base: "40px", md: "50px" }} fontWeight="bold">LOGO</Text> */}
                 <Flex gap={10} direction={flexDirection} wrap="wrap" justifyContent="center">
                     <RouterLink to="/" style={{ color: linkColor }}>Home</RouterLink>
                     <RouterLink to="/atividade" style={{ color: linkColor }}>Atividade</RouterLink>
@@ -42,7 +42,7 @@ export const Footer = () => {
                     gap={5}
                     wrap="wrap"  // Garante que o texto não fique quebrado em telas pequenas
                 >
-                    <Text fontSize={{ base: "14px", md: "17px" }} textAlign={{ base: "center", md: "left" }}>email_exemplo@gmail.com</Text>
+                    <Text fontSize={{ base: "14px", md: "17px" }} textAlign={{ base: "center", md: "left" }}>mendel.web.project@gmail.com</Text>
                     <Text fontSize={{ base: "14px", md: "17px" }} textAlign={{ base: "center", md: "right" }}>© Mendel – Todos os direitos reservados</Text>     
                 </Flex>
             </Flex>

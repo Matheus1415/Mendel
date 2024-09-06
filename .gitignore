@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+src/router/Router.jsx
+*.jsx
+src/pages/MulheresXX/index.jsx

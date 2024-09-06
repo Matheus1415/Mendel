@@ -1,19 +1,25 @@
 import { radioAnatomy } from '@chakra-ui/anatomy'
-import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
+import { createMultiStyleConfigHelpers, defineStyleConfig } from '@chakra-ui/react'
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(radioAnatomy.keys)
-// see in documentation about anatomy
-const baseStyle = definePartsStyle({
-  // define the part you're going to style
+
+const QuestionRadio = definePartsStyle({
   control: {
-    borderColor: 'Terciario'
+    borderRadius: '12px', 
+    borderColor: '#19BFCD', 
   },
-  label: {
-      textAlign: 'left', // from the anatomy of the Radio component, I style your label
-      w: 'full'
+  label:{
+    p:2,
+    fontSize:20
+  },
+  container:{
+    marginBottom:2
   }
 })
-  
-const radioTheme = defineMultiStyleConfig({ baseStyle })
-export default radioTheme
+
+export const Radio = defineStyleConfig({
+  variants: {
+    QuestionRadio,
+  }
+})
