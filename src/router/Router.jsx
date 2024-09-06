@@ -17,6 +17,7 @@ import { PunntteUnlimited } from '../pages/PunnttPage';
 import { Fundamentos } from '../pages/Fundamentos';
 import { SistemaAbo } from '../pages/SistemaAbo';
 import { PunnerAtv } from '../pages/PunnettAtv';
+import { IntroGenetica } from '../pages/IntroGenetica';
 
 export const RouterAsRouter = () => {
   return (
@@ -38,6 +39,7 @@ export const RouterAsRouter = () => {
         <Route path="/punner-a" element={<PunnettSquareDraggablePage/>} />
         <Route path="/punner-arastavel/:id" element={<PunnettSquareDraggablePage/>} />
         <Route path="/punner-arastavel" element={<PunnerAtv/>} />
+        <Route path="/introducao-genetica" element={<IntroGenetica/>} />
       </Routes>
       <Footer/> 
     </BrowserRouter>
