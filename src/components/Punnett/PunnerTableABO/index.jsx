@@ -14,7 +14,7 @@ const MotionTr = motion(Tr);
 const MotionTh = motion(Th);
 const MotionTd = motion(Td);
 
-const PunnerTableABO = ({ 
+export const PunnerTableABO = ({ 
     amountAlelo,
     parentsAlelo,
     backgroundColorDominant, 
