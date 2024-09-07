@@ -1,5 +1,4 @@
-import { Container, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Container } from '@chakra-ui/react';
 import PunerAll from '../../components/PunnerAll';
 
 export const Puner = () => {

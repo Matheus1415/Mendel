@@ -1,8 +1,6 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from '../pages/Home';
-import { Alelos } from '../pages/Alelos';
-import { Puner } from '../pages/Puner';
+//import { Alelos } from '../pages/Alelos';
 import { FatorRh } from '../pages/FatorRh';
 import { Mendel } from '../pages/Mendel';
 import  PunerAll from '../components/PunnerAll';
@@ -13,7 +11,7 @@ import { Footer } from '../components/Footer/footer';
 import { Page404 } from '../pages/Page404';
 import MaintenancePage from '../pages/Manuntecao';
 import AulaQuadro from '../pages/Aula';
-// import { TesteLayout } from '../pages/TesteLayout/TesteLayout';
+
 export const RouterAsRouter = () => {
   return (
     <BrowserRouter>
@@ -23,7 +21,7 @@ export const RouterAsRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/alelos" element={<Alelos />} />
+
         <Route path="/puner" element={<PunerAll />} />
         <Route path="/fator-rh" element={<FatorRh />} />
 

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { CaracteristicaProvider } from '../../contexts/CaracteristicaContext';
 import { PunerContainer } from './PunnerContainer';
