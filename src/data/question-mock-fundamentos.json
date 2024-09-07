@@ -1,0 +1,222 @@
+[
+    {
+        "question": "(UECE 2020.2 - 2ª Fase) Qual é a diferença entre um alelo dominante e um alelo recessivo?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "O alelo dominante é expresso apenas em homozigose, enquanto o recessivo é expresso em heterozigose.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo dominante e o recessivo são expressos igualmente em heterozigose.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo recessivo é expresso em todas as condições, enquanto o dominante é expresso apenas em homozigose.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo dominante é expresso em heterozigose, enquanto o recessivo só é expresso em homozigose.",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2023.2 - 2ª Fase) O que caracteriza uma célula haploide em comparação com uma célula diploide?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Possui um conjunto de cromossomos e não é essencial para a reprodução sexual.",
+                "isCorrect": false
+            },
+            {
+                "content": "Possui 46 cromossomos duplicados em cada célula.",
+                "isCorrect": false
+            },
+            {
+                "content": "Possui dois conjuntos completos de cromossomos, totalizando 46 em humanos.",
+                "isCorrect": false
+            },
+            {
+                "content": "Possui um único conjunto de cromossomos, totalizando 23 em humanos, e é essencial para a reprodução sexual.",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2021.2 - 2ª Fase) Qual é a diferença entre um genótipo e um fenótipo?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Genótipo é a aparência física; fenótipo é a constituição genética.",
+                "isCorrect": false
+            },
+            {
+                "content": "Genótipo e fenótipo são sinônimos e significam a mesma coisa.",
+                "isCorrect": false
+            },
+            {
+                "content": "Genótipo é o conjunto de genes de um organismo; fenótipo é a expressão observável dessas características.",
+                "isCorrect": true
+            },
+            {
+                "content": "Genótipo é a expressão observável das características; fenótipo é o conjunto de genes.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2024.1 - 2ª Fase) O que ocorre com os cromossomos durante o processo de mitose?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Os cromossomos se duplicam e são distribuídos igualmente entre duas células filhas.",
+                "isCorrect": true
+            },
+            {
+                "content": "Os cromossomos se reduzem à metade e são distribuídos igualmente entre duas células filhas.",
+                "isCorrect": false
+            },
+            {
+                "content": "Os cromossomos se duplicam e se distribuem aleatoriamente entre as células filhas.",
+                "isCorrect": false
+            },
+            {
+                "content": "Os cromossomos se rompem e se reorganizam em uma nova configuração genética.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2021.1 - 1ª Fase) O que diferencia o DNA do RNA em termos de estrutura e função?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "O DNA e o RNA são ambos cadeias duplas e contêm uracila.",
+                "isCorrect": false
+            },
+            {
+                "content": "O DNA é uma cadeia simples e contém adenina; RNA é uma dupla hélice e contém citosina.",
+                "isCorrect": false
+            },
+            {
+                "content": "O DNA é uma dupla hélice e contém timina; RNA é uma cadeia simples e contém uracila.",
+                "isCorrect": true
+            },
+            {
+                "content": "O DNA é uma cadeia simples e contém uracila; RNA é uma dupla hélice e contém timina.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2020.1 - 1ª Fase) Como a herança ligada ao sexo afeta a expressão de características genéticas?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Características ligadas ao sexo são determinadas por genes nos cromossomos autossômicos, não sendo afetadas pelo sexo.",
+                "isCorrect": false
+            },
+            {
+                "content": "Características ligadas ao sexo são expressas igualmente em todos os indivíduos, independentemente do sexo.",
+                "isCorrect": false
+            },
+            {
+                "content": "Características ligadas ao sexo são determinadas por genes nos cromossomos sexuais, afetando a expressão com base no sexo.",
+                "isCorrect": true
+            },
+            {
+                "content": "Características ligadas ao sexo são determinadas por genes que se expressam apenas em um tipo específico de célula.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2022.1 - 1ª Fase) O que é um fenótipo e como ele é influenciado?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Fenótipo é a expressão observável das características de um organismo, influenciada pelo genótipo e fatores ambientais.",
+                "isCorrect": true
+            },
+            {
+                "content": "Fenótipo é o conjunto de genes de um organismo, influenciado apenas pelo genótipo.",
+                "isCorrect": false
+            },
+            {
+                "content": "Fenótipo é a informação genética contida no DNA, influenciada apenas por fatores ambientais.",
+                "isCorrect": false
+            },
+            {
+                "content": "Fenótipo é a constituição genética que não é afetada por fatores externos.",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2023.1 - 1ª Fase) Qual é a função principal da meiose em organismos multicelulares?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Produzir células somáticas geneticamente idênticas para a regeneração tecidual.",
+                "isCorrect": false
+            },
+            {
+                "content": "Duplicar o número de cromossomos em células somáticas para o crescimento e desenvolvimento.",
+                "isCorrect": false
+            },
+            {
+                "content": "Manter a constância do número de cromossomos em células germinativas.",
+                "isCorrect": false
+            },
+            {
+                "content": "Produzir células haploides para a reprodução sexual e promover a variabilidade genética.",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2022.2 - 2ª Fase) Como os cromossomos homólogos se comportam durante a meiose?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "Eles se duplicam e permanecem independentes sem interação.",
+                "isCorrect": false
+            },
+            {
+                "content": "Eles se segregam aleatoriamente em células-filhas sem emparelhamento.",
+                "isCorrect": false
+            },
+            {
+                "content": "Eles se dividem igualmente em células-filhas sem troca de material genético.",
+                "isCorrect": false
+            },
+            {
+                "content": "Eles se emparelham e podem trocar segmentos de DNA através do crossing-over.",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "(UECE 2024.1 - 1ª Fase) Qual é a diferença entre um alelo dominante e um alelo recessivo?",
+        "questionType": "UniqueItem",
+        "options": [
+            {
+                "content": "O alelo dominante e o recessivo são expressos igualmente em heterozigose.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo recessivo é expresso em todas as condições, enquanto o dominante é expresso apenas em homozigose.",
+                "isCorrect": false
+            },
+            {
+                "content": "O alelo dominante é expresso em heterozigose, enquanto o recessivo só é expresso em homozigose.",
+                "isCorrect": true
+            },
+            {
+                "content": "O alelo dominante é expresso apenas em homozigose, enquanto o recessivo é expresso em heterozigose.",
+                "isCorrect": false
+            }
+        ]
+    }
+]

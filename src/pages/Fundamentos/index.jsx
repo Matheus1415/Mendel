@@ -6,7 +6,8 @@ import { Chromossomes } from "./chromossomes";
 import { Gene } from "./gene";
 import { Alleles } from "./alleles";
 import { GenoPhenoTypes } from "./genoPhenoTypes";
-
+import { Quiz } from '../../components/Quiz'
+import questionMock from '../../data/question-mock-fundamentos.json'
 export const Fundamentos = () => {
 return (
         <>
@@ -17,6 +18,7 @@ return (
                 <Gene/>
                 <Alleles/>
                 <GenoPhenoTypes/>
+                <Quiz questions={questionMock}/>
             </Flex>
         </>
     );
