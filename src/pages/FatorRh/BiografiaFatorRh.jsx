@@ -1,12 +1,12 @@
-import {Heading, Flex, Box, useBreakpointValue, Text, Image} from '@chakra-ui/react';
+import { Heading, Flex, Box, useBreakpointValue, Text, Image } from '@chakra-ui/react';
 
 const BiographyFatorRh = () => {
+
     const flexDirection = useBreakpointValue({ base: "column", sm: "column", md: "row" });
     const contentWidth = useBreakpointValue({  base: "100%",  sm: "100%", md: '50%'});
     const flexAlignContent = useBreakpointValue({  base: "center",  sm: "center", md: ''});
-
+    
     return(
-        
         <Box>
             <Heading 
                 variant="PrimaryTitle" 
@@ -82,9 +82,7 @@ const BiographyFatorRh = () => {
                 </Flex>
             </Box>
         </Box>
-             
-       
-    );
-}
+    )
+}    
 
 export default BiographyFatorRh;
