@@ -67,14 +67,14 @@ const HistoricPionners = () => {
             {/* Imagens com padding padrão */}
             <Box borderRadius="md" overflow="hidden" p={2}>
               <Image
-                src="/assets/Rectangle16-3.png"
+                src="/assets/Rectangle 16.png"
                 alt="Imagem 1"
                 objectFit="cover"
                 width="100%"
                 height="auto"
                 onClick={() =>
                   handleImageClick(
-                    "/assets/Rectangle16-3.png",
+                    "/assets/Rectangle 16.png",
                     "May-Britt Moser",
                     "May-Britt Moser, junto com Edvard I. Moser e John O’Keefe, fez descobertas fundamentais sobre como o cérebro mapeia o espaço através das células de localização. Seu trabalho elucidou os mecanismos neurais que permitem a navegação espacial e a percepção do ambiente. Essas descobertas avançaram significativamente a compreensão das funções cognitivas e das bases genéticas do comportamento. Moser foi laureada com o Prêmio Nobel de Medicina em 2014, refletindo a importância de suas contribuições para a neurociência."
                   )
@@ -84,14 +84,14 @@ const HistoricPionners = () => {
             </Box>
             <Box borderRadius="md" overflow="hidden" p={2}>
               <Image
-                src="/assets/Rectangle16-1.png"
+                src="/assets/Rectangle 16 (1).png"
                 alt="Imagem 2"
                 objectFit="cover"
                 width="100%"
                 height="auto"
                 onClick={() =>
                   handleImageClick(
-                    "/assets/Rectangle16-1.png",
+                    "/assets/Rectangle 16 (1).png",
                     "Jennifer Doudna",
                     "Jennifer Doudna revolucionou a biologia molecular com o desenvolvimento da tecnologia CRISPR-Cas9, uma ferramenta precisa para a edição de DNA. Sua inovação permitiu avanços significativos na pesquisa genética e terapia, oferecendo novas possibilidades para o tratamento de doenças genéticas. O trabalho de Doudna, em colaboração com Emmanuelle Charpentier, transformou a abordagem científica à manipulação do genoma. Seu impacto na ciência é vasto, expandindo as fronteiras da genética e da medicina."
                   )
@@ -101,14 +101,14 @@ const HistoricPionners = () => {
             </Box>
             <Box borderRadius="md" overflow="hidden" p={2}>
               <Image
-                src="/assets/Rectangle16-2.png"
+                src="/assets/Rectangle 16 (2).png"
                 alt="Imagem 3"
                 objectFit="cover"
                 width="100%"
                 height="auto"
                 onClick={() =>
                   handleImageClick(
-                    "/assets/Rectangle16-2.png",
+                    "/assets/Rectangle 16 (2).png",
                     "Emmanuelle Charpentier",
                     "Emmanuelle Charpentier, em colaboração com Jennifer Doudna, desenvolveu a tecnologia CRISPR-Cas9, que revolucionou a edição genética. Esta ferramenta inovadora permite a manipulação precisa do DNA, abrindo novas possibilidades para a pesquisa e a terapia de doenças genéticas. Seu trabalho transformou a biologia molecular, oferecendo um poderoso recurso para a ciência e a medicina. Charpentier é amplamente reconhecida por seu impacto duradouro na área da genética."
                   )
@@ -118,14 +118,14 @@ const HistoricPionners = () => {
             </Box>
             <Box borderRadius="md" overflow="hidden" p={2}>
               <Image
-                src="/assets/Rectangle16-4.png"
+                src="/assets/Rectangle 16 (3).png"
                 alt="Imagem 4"
                 objectFit="cover"
                 width="100%"
                 height="auto"
                 onClick={() =>
                   handleImageClick(
-                    "/assets/Rectangle16-4.png",
+                    "/assets/Rectangle 16 (3).png",
                     "Mary-Claire King",
                     "Mary-Claire King é reconhecida por identificar o gene BRCA1, associado ao risco hereditário de câncer de mama e ovário, revolucionando o diagnóstico e a prevenção dessas doenças. Seu trabalho permitiu o desenvolvimento de testes genéticos para identificar indivíduos em risco, transformando as abordagens de triagem e tratamento. Além disso, King também pioneira na utilização de técnicas de DNA para resolver casos de desaparecimentos e direitos humanos. Suas contribuições são essenciais para a genética médica e a saúde pública."
                   )
@@ -135,14 +135,14 @@ const HistoricPionners = () => {
             </Box>
             <Box borderRadius="md" overflow="hidden" p={2}>
               <Image
-                src="/assets/Rectangle16.png"
+                src="/assets/Rectangle 16 (4).png"
                 alt="Imagem 5"
                 objectFit="cover"
                 width="100%"
                 height="auto"
                 onClick={() =>
                   handleImageClick(
-                    "/assets/Rectangle16.png",
+                    "/assets/Rectangle 16 (4).png",
                     "Françoise Barré-Sinoussi",
                     "Francoise Barré-Sinoussi, juntamente com Luc Montagnier, identificou o HIV em 1983, um avanço crucial para a compreensão da AIDS. Sua descoberta não apenas elucidou a causa da doença, mas também possibilitou o desenvolvimento de tratamentos antirretrovirais que transformaram a vida de milhões. Barré-Sinoussi recebeu o Prêmio Nobel de Medicina em 2008, reconhecendo o impacto significativo de seu trabalho na luta contra a infecção viral. Sua contribuição continua a influenciar profundamente a pesquisa e o tratamento de doenças infecciosas."
                   )
@@ -152,14 +152,14 @@ const HistoricPionners = () => {
             </Box>
             <Box borderRadius="md" overflow="hidden" p={2}>
               <Image
-                src="/assets/Rectangle16-5.png"
+                src="/assets/Rectangle 16 (5).png"
                 alt="Imagem 6"
                 objectFit="cover"
                 width="100%"
                 height="auto"
                 onClick={() =>
                   handleImageClick(
-                    "/assets/Rectangle16-5.png",
+                    "/assets/Rectangle 16 (5).png",
                     "Martha Chase",
                     "Martha Chase, em colaboração com Alfred Hershey, realizou o famoso experimento Hershey-Chase em 1952, que comprovou que o DNA é o material genético responsável pela herança. Esse trabalho foi crucial para consolidar a teoria de que o DNA carrega as informações genéticas, marcando um avanço fundamental na biologia molecular. Sua pesquisa ajudou a estabelecer a base para o entendimento moderno da genética e da transmissão de características hereditárias. Chase é lembrada por sua contribuição significativa para a ciência genética."
                   )
