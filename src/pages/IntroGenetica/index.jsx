@@ -12,23 +12,22 @@ export const IntroGenetica = () => {
             <Box
                 as="section"
                 w="100%"
+                m={0}
+                p={0}
                 minHeight="50rem"
                 display="flex"
                 flexDirection={{ base: "column", md: "row" }}
                 textAlign="left"
             >
-                <Box
+
+                <Image
                     flex="1"
-                    p={{ base: "1rem", md: "2rem" }}
                     borderRight={{ base: "none", md: "1px solid gray.300" }}
-                >
-                    <Image
-                        src="/assets/dnaBig.svg"
-                        alt="Imagem representando o DNA"
-                        maxW="100%"
-                        h="120rem"
-                    />
-                </Box>
+                    src="/assets/dnaBig.svg"
+                    alt="Imagem representando o DNA"
+                    maxW="100%"
+                    h="120rem"
+                />
                 <Box
                     flex="1"
                     p={{ base: "1rem", md: "2rem" }}
