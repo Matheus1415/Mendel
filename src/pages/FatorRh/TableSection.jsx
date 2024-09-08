@@ -39,17 +39,19 @@ export function TableSection() {
                     textAlign='justify' 
                     fontSize={["14px", "16px", "17px"]} // Responsivo
                     maxW={["100%", "100%", 1110]} // Responsivo
+                    marginBottom="80px"
                 >
                     Pessoas com sangue Rh positivo podem receber tanto sangue Rh positivo quanto negativo, mas pessoas com sangue Rh negativo só podem receber sangue Rh negativo, para evitar reações imunológicas. A incompatibilidade de Rh é uma condição séria, especialmente durante a gravidez, quando uma mãe Rh- pode produzir anticorpos contra o feto Rh+.
                 </Text>
             </Box>
-            <Box margin="0 auto" width="95%" marginTop="30px" h={imageH}  > 
+            <Box margin="0 auto" width="95%"  h={imageH}  > 
                 <Image
                     src={ilustracao_tabela}
                     width="100%"
                     height="100%"
                     maxW="1110px"
                     margin="0 auto"
+                    marginTop="30px"
                 />
             </Box>
         </Box>

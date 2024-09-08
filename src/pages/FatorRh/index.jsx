@@ -103,7 +103,7 @@ export const FatorRh = ({
 
                 <TableSection />
                 <ExamFactorRh />
-                {/* <VideosAndBlogs /> */}
+                <VideosAndBlogs />
             </Box>
             <PreviousNextPageNavigator 
                 previousPageRoute="/variations"
