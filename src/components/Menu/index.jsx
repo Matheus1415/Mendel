@@ -17,11 +17,11 @@ const MenuMendel = () => {
 
     const subMenuConteudo = [
         { label: "Gregorio", router: "/mendel" },
+        // { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Fundamentos", router: "/fundamentos" },
-        { label: "Introdução a Genética", router: "/manutencao" },
-        { label: "Sistema Sanguíneo", router: "/sistema-abo" },
         { label: "Variações do modelo Menderiano", router: "/variations" },
         { label: "Fator RH", router: "/sistema-rh" },
+        { label: "Sistema Sanguíneo", router: "/sistema-abo" }, 
     ];
     const subMenuAtividade = [
         { label: "Atividade Dinâmica", router: "/punner-arastavel" },

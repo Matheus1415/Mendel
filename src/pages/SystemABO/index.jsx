@@ -22,6 +22,7 @@ import {
 import AleloCards from "../../components/AleloCards";
 import transSangueAbo from '../../data/transSangueAbo.json';
 import { motion } from "framer-motion";
+import { PreviousNextPageNavigator } from "../../components/PreviousNextPageNavigator";
 
 const MotionCard = motion(Card);
 
@@ -256,6 +257,9 @@ export const SistemaAbo = () => {
                     />
                 </Box>
             </Box>
+            <PreviousNextPageNavigator 
+                previousPageRoute="/sistema-rh"
+            />
         </>
     );
 };
