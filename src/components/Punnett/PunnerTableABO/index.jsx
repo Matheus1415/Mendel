@@ -14,7 +14,7 @@ const MotionTr = motion(Tr);
 const MotionTh = motion(Th);
 const MotionTd = motion(Td);
 
-const PunnettTable = ({ 
+export const PunnerTableABO = ({ 
     amountAlelo,
     parentsAlelo,
     backgroundColorDominant, 
@@ -201,4 +201,4 @@ const PunnettTable = ({
     );
 };
 
-export default PunnettTable;
+export default PunnerTableABO;

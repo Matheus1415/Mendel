@@ -12,9 +12,9 @@ export const CaracteristicaProvider = ({ children }) => {
 
     // Cores relacionadas ao azul
     const [backgroundColorRecessive, setBackgroundColorRecessive] = useState('#5DADE2'); // Azul claro
-    const [backgroundColorDominant, setBackgroundColorDominant] = useState('#2E86C1'); // Azul médio
+    const [backgroundColorDominant3, setBackgroundColorDominant3] = useState('#2E86C1'); // Azul médio
     const [backgroundColorDominant2, setBackgroundColorDominant2] = useState('#1F618D'); // Azul escuro
-    const [backgroundColorDominant3, setBackgroundColorDominant3] = useState(   '#154360'); // Azul muito escuro
+    const [backgroundColorDominant, setBackgroundColorDominant] = useState( '#154360'); // Azul muito escuro
 
     const [parentsAlelo, setParentsAlelo] = useState([[], []]); 
 

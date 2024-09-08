@@ -16,7 +16,6 @@ export function ExamFactorRh() {
                     color='#fff' 
                     fontSize='30px' 
                     fontWeight='275' 
-                    maxW='350px' 
                     marginBottom='40px' 
                     textAlign={styleTexts(index, 'left', 'right')}
                 >
@@ -26,7 +25,6 @@ export function ExamFactorRh() {
                     fontSize='17px' 
                     fontWeight='275' 
                     color='#FFFFFF' 
-                    maxW='350px' 
                     textAlign='justify' 
                     marginBottom='40px'
                 >
@@ -36,7 +34,6 @@ export function ExamFactorRh() {
                     fontSize='17px' 
                     fontWeight='275' 
                     color='#FFFFFF' 
-                    maxW='350px' 
                     textAlign='justify'
                 >
                     {Value.secondParagrapy}
@@ -60,16 +57,19 @@ export function ExamFactorRh() {
                 EXAME DO FATOR RH
             </Heading>
             <Box 
-                display={displayForContentBox} 
+                display='flex'
+                gap='3rem'
+                // tirei o valor que vem do useBreakpoint para tornar as divs mais tornar o tamanho mais relativo
+                // {displayForContentBox} 
                 margin='0 auto' 
                 width='1110px' 
                 justifyContent='space-between'
             >
-                <Box textAlign='center'>
+                <Box textAlign='center' flex='1' maxW='400px'>
                     {showContentBoxes()[0]}
                     {showContentBoxes()[2]}
                 </Box>
-                <Box>
+                <Box flex='1' maxW='400px'>
                     {showContentBoxes()[1]}
                     {showContentBoxes()[3]}
                 </Box>
