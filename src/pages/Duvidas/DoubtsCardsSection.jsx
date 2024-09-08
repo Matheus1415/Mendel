@@ -5,7 +5,7 @@ export function DoubtsCardsSection(){
 
     function showCardsDoubts(){
         return doubts.map((value) => {
-           return <DoubtsCards headerContent={value.headerContent} bodyContent={value.bodyContent}/>
+           return <DoubtsCards key={value.headerContent} headerContent={value.headerContent} bodyContent={value.bodyContent}/>
         })
     }
     return(
