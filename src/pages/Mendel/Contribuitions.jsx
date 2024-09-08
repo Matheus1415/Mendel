@@ -45,7 +45,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href={"https://books.google.com.br/books?hl=pt-BR&lr=&id=3jM-mIbWUSwC&oi=fnd&pg=PA4&dq=Mendel,+G.+(1866).+%22Experiments+in+Plant+Hybridization.%22+Verhandlungen+des+Naturforschenden+Vereins+zu+Br%C3%BCnn.&ots=RPkZJ9LH2u&sig=Zf7AJQQwFaZbuGcxNNFpHgxFCvM#v=onepage&q&f=false"} isExternal>
+                                            <Link href={"https://books.google.com.br/books?hl=pt-BR&lr=&id=3jM-mIbWUSwC&oi=fnd&pg=PA4&dq=Mendel,+G.+(1866).+%22Experiments+in+Plant+Hybridization.%22+Verhandlungen+des+Naturforschenden+Vereins+zu+Br%C3%BCnn.&ots=RPkZJ9LH2u&sig=Zf7AJQQwFaZbuGcxNNFpHgxFCvM#v=onepage&q&f=false"} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -76,7 +78,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href={"https://www.ncbi.nlm.nih.gov/books/NBK26854/"} isExternal>
+                                            <Link href={"https://www.ncbi.nlm.nih.gov/books/NBK26854/"} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -108,7 +112,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href="https://www.ncbi.nlm.nih.gov/books/NBK26854/" isExternal>
+                                            <Link href="https://www.ncbi.nlm.nih.gov/books/NBK26854/" isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -140,8 +146,10 @@ export function Contribuitions () {
                                             px={9}
                                             borderRadius="lg"
                                             lineHeight={6}
-                                        >
-                                            <Link href={"https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x"} isExternal>
+                                            >
+                                            <Link href={"https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x"} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -178,7 +186,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href={"https://www.tandfonline.com/doi/abs/10.1080/00033799800200111"} isExternal>
+                                            <Link href={"https://www.tandfonline.com/doi/abs/10.1080/00033799800200111"} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -209,7 +219,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href={"https://pubs.acs.org/doi/abs/10.1021/cb500651d"} isExternal>
+                                            <Link href={"https://pubs.acs.org/doi/abs/10.1021/cb500651d"} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -244,7 +256,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href={'https://www.sciencedirect.com/science/article/abs/pii/S0160932703000656'} isExternal>
+                                            <Link href={'https://www.sciencedirect.com/science/article/abs/pii/S0160932703000656'} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
@@ -275,7 +289,9 @@ export function Contribuitions () {
                                             borderRadius="lg"
                                             lineHeight={6}
                                         >
-                                            <Link href={"https://www.science.org/doi/abs/10.1126/science.18.456.396"} isExternal>
+                                            <Link href={"https://www.science.org/doi/abs/10.1126/science.18.456.396"} isExternal style={{
+                                                textDecoration:'none'
+                                            }}>
                                                 Saiba Mais
                                             </Link>
                                         </Button>
