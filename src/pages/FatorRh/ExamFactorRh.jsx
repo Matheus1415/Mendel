@@ -43,7 +43,7 @@ export function ExamFactorRh() {
     }
 
     return (
-        <Box>
+        <Box >
             <Heading 
                 color='white' 
                 fontSize={40} 
@@ -57,12 +57,12 @@ export function ExamFactorRh() {
                 EXAME DO FATOR RH
             </Heading>
             <Box 
-                display='flex'
+                display={displayForContentBox}
                 gap='3rem'
                 // tirei o valor que vem do useBreakpoint para tornar as divs mais tornar o tamanho mais relativo
                 // {displayForContentBox} 
                 margin='0 auto' 
-                width='1110px' 
+                maxWidth='1110px' 
                 justifyContent='space-between'
             >
                 <Box textAlign='center' flex='1' maxW='400px'>
