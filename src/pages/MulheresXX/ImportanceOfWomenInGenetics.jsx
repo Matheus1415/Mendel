@@ -80,8 +80,8 @@ const ImportanceOfWomenInGenetics = () => {
           w="lg"
           borderRadius="2xl"
           objectFit="cover"
-          src="/assets/DNA.png"
-          alt="DNA"
+          src="./public/img/DNA.png"
+          alt="DNA.png"
         />
       </Flex>
     </Box>
