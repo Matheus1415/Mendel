@@ -1,7 +1,11 @@
-import { Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Image, useBreakpointValue } from "@chakra-ui/react";
 import ilustracao_tabela from "../../images/ilustracao_tabelaRH.png"
+import { m } from "framer-motion";
 
 export function TableSection() {
+
+    const imageH = useBreakpointValue({base: '150px', sm:"150px", m: '150px', lg:"300px"})
+
     return (
         <Box>
             <Heading 
@@ -39,12 +43,11 @@ export function TableSection() {
                     Pessoas com sangue Rh positivo podem receber tanto sangue Rh positivo quanto negativo, mas pessoas com sangue Rh negativo só podem receber sangue Rh negativo, para evitar reações imunológicas. A incompatibilidade de Rh é uma condição séria, especialmente durante a gravidez, quando uma mãe Rh- pode produzir anticorpos contra o feto Rh+.
                 </Text>
             </Box>
-            <Box margin="0 auto" width="90%" marginTop="30px" h="140px" > 
+            <Box margin="0 auto" width="95%" marginTop="30px" h={imageH}  > 
                 <Image
                     src={ilustracao_tabela}
                     width="100%"
                     height="100%"
-                    maxH="140px"
                     maxW="1110px"
                     margin="0 auto"
                 />
