@@ -65,11 +65,11 @@ export function ExamFactorRh() {
                 maxWidth='1110px' 
                 justifyContent='space-between'
             >
-                <Box textAlign='center' flex='1' maxW='400px'>
+                <Box textAlign='center' flex='1' maxW='400px' margin="20px">
                     {showContentBoxes()[0]}
                     {showContentBoxes()[2]}
                 </Box>
-                <Box flex='1' maxW='400px'>
+                <Box flex='1' maxW='400px' margin="20px">
                     {showContentBoxes()[1]}
                     {showContentBoxes()[3]}
                 </Box>
