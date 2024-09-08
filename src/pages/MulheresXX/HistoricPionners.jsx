@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Grid, Text, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, useDisclosure } from "@chakra-ui/react";
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
 const HistoricPionners = () => {
@@ -13,9 +14,6 @@ const HistoricPionners = () => {
     setSelectedTitle(title);
     setSelectedText(text);
     onOpen();
-
-
-
   };
 
   return (
@@ -30,6 +28,7 @@ const HistoricPionners = () => {
         >
           <Heading
             variant="PrimaryTitle"
+            mt="131px"
             mb={10} // Ajustado para consistência
             textAlign="center"
           >
@@ -59,7 +58,7 @@ const HistoricPionners = () => {
           </Text>
         </Flex>
 
-        <Box p={[4, 6, 8]} mx="auto" width="85%" mb={40}>
+        <Box mx="auto" width="80%">
           <Grid
             templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
             gap={8} // Ajustado o espaço entre os itens
@@ -179,7 +178,7 @@ const HistoricPionners = () => {
                src={selectedImage}
                alt="Imagem selecionada"
                width="100%"
-               mb={40}
+               mb={10}
              />
              <Text>{selectedText}</Text>
            </ModalBody>

@@ -3,32 +3,30 @@ const ChallengesAndBarriersFaced = () => {
   return(
     <Flex
       direction="column"
-      maxWidth="1500px"
-      alignItems="center"
-      p={[2, 6]} // Padding ajustado
-      mx="auto"
-      mb={40} // Ajustado para consistência
+      px={4} // Padding horizontal no contêiner Flex
+      py={6} // Padding vertical no contêiner Flex (opcional)
+      mx="auto" // Centraliza o Flex horizontalmente
+      maxWidth="container.lg" // Define uma largura máxima para o contêiner Flex (ajuste conforme necessário)
     >
       <Heading
         variant="PrimaryTitle"
-        mb={4} // Ajustado para consistência
         textAlign="center"
+        mt="137px"
+        mb={10}
       >
         Desafios e Barreiras Enfrentadas
       </Heading>
       <Grid
-        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} // Duas colunas
-        gap={30} // Espaço entre os boxes
+        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
+        gap="92px" // Espaçamento entre os itens do grid
         width="100%"
-        mb={4} // Ajustado para consistência
         alignItems="center"
       >
-        <Box width="70%">
+        <Box width="100%">
           <Heading
             variant="SecondTitle"
-            mb={4} // Ajustado para consistência
             textAlign="left"
-
+            mb={10}
           >
             Sub-Representação em Posições de Liderança
           </Heading>
@@ -39,8 +37,8 @@ const ChallengesAndBarriersFaced = () => {
             para essa desigualdade. Mesmo quando mulheres alcançam cargos de
             liderança, enfrentam desafios adicionais, como a necessidade de
             provar seu valor com mais frequência que os homens.
-            <br />
-            <br />
+          </Text>
+          <Text variant="Paragraph" align="justify">
             Além disso, políticas inadequadas de conciliação entre vida
             profissional e pessoal e a falta de mentorias eficazes dificultam
             a ascensão das mulheres. Para combater essa disparidade, é crucial
@@ -50,14 +48,13 @@ const ChallengesAndBarriersFaced = () => {
             diversidade nas decisões estratégicas.
           </Text>
         </Box>
-        <Box p={[4, 6]} width="70%">
+        <Box width="100%">
           <Heading
-            variant="PrimaryTitle"
-            mb={4} // Ajustado para consistência
-            fontSize={{ base: "xl", md: "2xl" }}
+            variant="SecondTitle"
             textAlign="right"
+            mb={10}
           >
-            desafios da vida profissional e pessoal
+            Desafios da Vida Profissional e Pessoal
           </Heading>
           <Text variant="Paragraph" align="justify">
             Conciliar a vida profissional e pessoal é um desafio significativo
@@ -67,8 +64,8 @@ const ChallengesAndBarriersFaced = () => {
             vezes exigem longas horas de trabalho, enquanto as demandas
             familiares também são intensas, criando um constante conflito de
             prioridades.
-            <br />
-            <br />
+          </Text>
+          <Text variant="Paragraph" align="justify">
             Além disso, a falta de políticas adequadas, como licença parental
             flexível e opções de trabalho remoto, dificulta a criação de um
             equilíbrio sustentável. Para enfrentar esses desafios, é essencial
@@ -77,12 +74,11 @@ const ChallengesAndBarriersFaced = () => {
             e profissionais de forma mais harmoniosa e saudável.
           </Text>
         </Box>
-        <Box p={[4, 6]} width="70%">
+        <Box width="100%">
           <Heading
-            variant="PrimaryTitle"
-            mb={4} // Ajustado para consistência
-            fontSize={{ base: "xl", md: "2xl" }}
+            variant="SecondTitle"
             textAlign="left"
+            mb={10}
           >
             Desigualdade Salarial
           </Heading>
@@ -95,8 +91,9 @@ const ChallengesAndBarriersFaced = () => {
             educação e na qualificação profissional. Esse gap salarial é
             exacerbado em setores predominantemente femininos e em cargos de
             liderança, onde a discrepância é ainda mais pronunciada.
-            <br />
-            <br />A desigualdade salarial é influenciada por fatores como
+          </Text>
+          <Text variant="Paragraph" align="justify">
+            A desigualdade salarial é influenciada por fatores como
             discriminação implícita, falta de oportunidades de avanço e a
             sub-representação de grupos diversos em posições de tomada de
             decisão. Para abordar esse problema, é crucial implementar
@@ -106,12 +103,11 @@ const ChallengesAndBarriersFaced = () => {
             contribuições de todos os colaboradores de forma justa.
           </Text>
         </Box>
-        <Box p={[4, 6]} width="70%">
+        <Box width="100%">
           <Heading
-            variant="PrimaryTitle"
-            mb={4} // Ajustado para consistência
-            fontSize={{ base: "xl", md: "2xl" }}
+            variant="SecondTitle"
             textAlign="right"
+            mb={10}
           >
             Discriminação
           </Heading>
@@ -123,8 +119,8 @@ const ChallengesAndBarriersFaced = () => {
             profissional. Isso inclui desigualdades salariais, falta de
             reconhecimento por seus desempenhos, e dificuldades em acessar
             posições de liderança.
-            <br />
-            <br />
+          </Text>
+          <Text variant="Paragraph" align="justify">
             Além disso, as mulheres podem sofrer discriminação direta ou
             indireta, como estereótipos de gênero e expectativas desiguais
             quanto a suas habilidades e capacidades. Tais práticas prejudicam
@@ -137,6 +133,8 @@ const ChallengesAndBarriersFaced = () => {
         </Box>
       </Grid>
     </Flex>
+
+
   )
 }
 
