@@ -4,7 +4,7 @@ import data from "../../data/PunnerSquareDraggable.json";
 import { useParams } from "react-router-dom";
 
 export const PunnettSquareDraggablePage = () => {
-    const { id } = useParams();  // Obtém o id da URL
+    const { id } = useParams();  
 
     // Filtra os dados com base no id
     const filteredData = data.find(item => item.id === parseInt(id, 10));

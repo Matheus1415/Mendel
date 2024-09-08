@@ -17,11 +17,11 @@ const MenuMendel = () => {
 
     const subMenuConteudo = [
         { label: "Gregorio", router: "/mendel" },
-        // { label: "Introdução a Genética", router: "/manutencao" },
         { label: "Fundamentos", router: "/fundamentos" },
         { label: "Variações do modelo Menderiano", router: "/variations" },
         { label: "Fator RH", router: "/sistema-rh" },
         { label: "Sistema Sanguíneo", router: "/sistema-abo" }, 
+        { label: "Introdução a Genética", router: "/introducao-genetica" },
     ];
     const subMenuAtividade = [
         { label: "Atividade Dinâmica", router: "/punner-arastavel" },
@@ -87,7 +87,7 @@ const MenuMendel = () => {
                     <MenuItem icon={<FaHome />} label="Home" isOpen={isOpen} router="/" />
                     <MenuItem icon={<FaTasks />} label="Atividades" isOpen={isOpen} router="/" subMenu={subMenuAtividade}/>
                     <MenuItem icon={<FaBook />} label="Conteúdo" isOpen={isOpen} router="/" subMenu={subMenuConteudo} />
-                    <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/manutencao" />
+                    <MenuItem icon={<FaQuestion />} label="Dúvida" isOpen={isOpen} router="/duvidas" />
                     <MenuItem icon={<FaInfoCircle />} label="Informação" isOpen={isOpen} router="/manutencao" />
                 </MotionFlex>
             </Box>

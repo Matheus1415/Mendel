@@ -25,7 +25,7 @@ export const Footer = () => {
                 <Flex gap={10} direction={flexDirection} wrap="wrap" justifyContent="center">
                     <RouterLink to="/" style={{ color: linkColor }}>Home</RouterLink>
                     <RouterLink to="/punner-arastavel" style={{ color: linkColor }}>Atividade</RouterLink>
-                    <RouterLink to="/manutencao" style={{ color: linkColor }}>Dúvidas</RouterLink>
+                    <RouterLink to="/duvidas" style={{ color: linkColor }}>Dúvidas</RouterLink>
                     <RouterLink to="/manutencao" style={{ color: linkColor }}>Informação</RouterLink>
                 </Flex>
             </Flex>

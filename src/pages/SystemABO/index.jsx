@@ -259,6 +259,7 @@ export const SistemaAbo = () => {
             </Box>
             <PreviousNextPageNavigator 
                 previousPageRoute="/sistema-rh"
+                nextPageRoute="/introducao-genetica"
             />
         </>
     );

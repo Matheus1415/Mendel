@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Image, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import { LayoutIntroduction } from "../../layout/LayoutIntroduction";
 import CustomButton from "../../components/customButton";
+import { PreviousNextPageNavigator } from "../../components/PreviousNextPageNavigator";
 
 export const IntroGenetica = () => {
     return (
@@ -181,6 +182,10 @@ export const IntroGenetica = () => {
                     </Box>
                 </Box>
             </Box>
+            <a href="#opa">opaaaaaaaaaaaaaaaaaaaa</a>
+            <PreviousNextPageNavigator 
+                previousPageRoute="/sistema-abo"
+            />
         </>
     );
 };

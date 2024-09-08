@@ -253,8 +253,8 @@ export const ParentInputPunnet = () => {
             <MotionText fontSize={{ base: 'lg', sm: 'xl' }} mb="4">
               Alelos dos Pais
             </MotionText>
-            <Flex direction="row" wrap="wrap" justify="center" gap="4">
-              caracmae
+            <Flex direction="row" wrap="wrap" justify="center" gap="4" alignItems="center">
+             características da mãe
               {[0, 1].map(index => (
                 <Box key={index} padding="2" maxW="125px" flex="1">
                   <MotionSelect
@@ -296,8 +296,8 @@ export const ParentInputPunnet = () => {
               </Box>
               ))}
             </Flex>
-            <Flex direction="row" wrap="wrap" justify="center" gap="4">
-              caracpae
+            <Flex direction="row" wrap="wrap" justify="center" gap="4" alignItems="center">
+            características do pai
               {[0, 1].map(index => (
                 <Box key={index} padding="2" maxW="125px" flex="1">
                 <MotionSelect

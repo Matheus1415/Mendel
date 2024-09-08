@@ -35,7 +35,9 @@ export function Doubts(){
                 justify='center' 
                 align='center'     
            >
-                <Box
+                <Flex
+                    justify='center' 
+                    align='center' 
                     width="100%"
                     maxW="1080px"
                     minH="800px"
@@ -46,7 +48,7 @@ export function Doubts(){
                     p="4"
                 >
                     <DoubtsCardsSection/>
-                </Box>
+                </Flex>
            </Flex>
         </Flex>
         </>

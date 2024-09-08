@@ -4,17 +4,22 @@ import { useNavigate } from "react-router-dom"
 export const PreviousNextPageNavigator = ({ nextPageRoute, previousPageRoute }) => {
     const navigate = useNavigate()
 
+    const handleNavigation = (route) => {
+        navigate(route)
+        window.scrollTo(0, 0)  // Redireciona para o topo da página
+    }
+
     return (
         <Flex width="100%" height="80px" px="128px" alignItems="center" justifyContent="end" gap={4} mt={12}>
             {previousPageRoute && <Button 
                 variant="nextPage" 
-                onClick={() => navigate(previousPageRoute)}
+                onClick={() => handleNavigation(previousPageRoute)}
             >
                 Ir para a página anterior
             </Button>}
             {nextPageRoute && <Button 
                 variant="nextPage"
-                onClick={() => navigate(nextPageRoute)}
+                onClick={() => handleNavigation(nextPageRoute)}
             >
                 Ir para a próxima página
             </Button>}

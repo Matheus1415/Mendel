@@ -133,7 +133,7 @@ const PunnettSquareDraggable = ({
                             borderRadius="20px"
                             textAlign="center"
                         >
-                            <Text mb={2} fontWeight="bold" color="white">{option.alelo}</Text>
+                            <Text mb={2} fontWeight="bold" color="white">{option.AleloTitle}</Text>
                             <img
                                 style={{ 'maxWidth': '100px' }}
                                 className="cell"

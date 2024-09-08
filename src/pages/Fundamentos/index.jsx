@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { LayoutIntroduction } from "../../layout/LayoutIntroduction"
 import { Cells } from "./cells";
 import { Chromossomes } from "./chromossomes";
@@ -19,6 +19,7 @@ return (
                 <Gene/>
                 <Alleles/>
                 <GenoPhenoTypes/>
+                <Box minH={100}></Box>
                 <Quiz questions={questionMock}/>
                 <PreviousNextPageNavigator
                     previousPageRoute="/mendel"

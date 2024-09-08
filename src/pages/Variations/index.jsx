@@ -43,6 +43,7 @@ export const Variations = () => {
                         ))}
                     </SimpleGrid>
                 </Box>
+                <Box minH={100}></Box>
                 <Box
                     textAlign="center">
                     <Quiz questions={questionMock} />

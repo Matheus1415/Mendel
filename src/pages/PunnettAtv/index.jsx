@@ -14,6 +14,7 @@ export const PunnerAtv = () => {
             justify="center"
             align="center"
             w="100vw"
+            maxW="100%"
             h="100vh"
             bg="red.500"
             backgroundRepeat="no-repeat"
@@ -23,7 +24,6 @@ export const PunnerAtv = () => {
             position="relative"
             overflow="hidden"
         >
-            {/* Fundo fosco sobre a imagem de fundo */}
             <Box
                 position="absolute"
                 top="0"
@@ -33,8 +33,6 @@ export const PunnerAtv = () => {
                 bg="rgba(0, 0, 0, 0.5)"
                 zIndex="1"
             />
-
-            {/* Grid para organizar os cards */}
             <Grid
                 templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} // 1 coluna em telas pequenas, 3 em maiores
                 gap={6}
