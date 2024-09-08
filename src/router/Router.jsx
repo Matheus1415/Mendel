@@ -12,28 +12,7 @@ import { Home } from '../pages/Home';
 import { PunnettSquareDraggablePage } from '../pages/PunnettSquareDraggable';
 import { Variations } from '../pages/Variations';
 import { PunntteUnlimited } from '../pages/PunnttPage';
-// import { PunnettABOComponent } from '../pages/SystemABO';
-
-
-
-
-
-
-
-import { PunnttABOPage } from '../pages/PunnttABOPage'
-
-
-
-
-
-import { Fundamentos } from '../pages/Fundamentos';
-import { SistemaAbo } from '../pages/SystemABO';
-import { PunnerAtv } from '../pages/PunnettAtv';
-import { Alelos } from '../pages/Alelos';
-import MenuMendel from '../components/Menu';
-import { Informacao } from '../pages/Informacao';
-import { FatorRh } from '../pages/FatorRh';
-import { Doubts } from '../pages/Duvidas'
+import { IntroGenetica } from '../pages/IntroGenetica';
 
 export const RouterAsRouter = () => {
   return (
@@ -60,6 +39,7 @@ export const RouterAsRouter = () => {
         <Route path="/punner-arastavel/:id" element={<PunnettSquareDraggablePage/>} />
         <Route path="/punner-arastavel" element={<PunnerAtv/>} />
         <Route path='/duvidas' element={<Doubts/>}/>
+        <Route path="/introducao-genetica" element={<IntroGenetica/>} />
       </Routes>
       <Footer/> 
     </BrowserRouter>
