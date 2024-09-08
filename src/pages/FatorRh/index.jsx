@@ -4,6 +4,7 @@ import BiographyFatorRh from './BiographyFatorRh';
 import { TableSection } from './TableSection';
 import { ExamFactorRh } from './ExamFactorRh';
 import { VideosAndBlogs } from './VideosAndBlogs';
+import { PreviousNextPageNavigator } from '../../components/PreviousNextPageNavigator';
 
 export const FatorRh = ({
     isImage = true,
@@ -104,6 +105,10 @@ export const FatorRh = ({
                 <ExamFactorRh />
                 {/* <VideosAndBlogs /> */}
             </Box>
+            <PreviousNextPageNavigator 
+                previousPageRoute="/variations"
+                nextPageRoute="/sistema-abo"
+            />
         </>
     );
 };

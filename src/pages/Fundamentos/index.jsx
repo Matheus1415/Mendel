@@ -8,6 +8,7 @@ import { Alleles } from "./alleles";
 import { GenoPhenoTypes } from "./genoPhenoTypes";
 import { Quiz } from '../../components/Quiz'
 import questionMock from '../../data/question-mock-fundamentos.json'
+import { PreviousNextPageNavigator } from '../../components/PreviousNextPageNavigator';
 export const Fundamentos = () => {
 return (
         <>
@@ -19,6 +20,10 @@ return (
                 <Alleles/>
                 <GenoPhenoTypes/>
                 <Quiz questions={questionMock}/>
+                <PreviousNextPageNavigator
+                    previousPageRoute="/mendel"
+                    nextPageRoute="/variations"
+                /> 
             </Flex>
         </>
     );

@@ -5,6 +5,7 @@ import { AleloCards } from '../../components/AleloCards';
 import conteudoAlelos from '../../data/conteudoAlelos.json';
 import { Quiz } from '../../components/Quiz';
 import questionMock from '../../data/question-mock-alelos.json';
+import { PreviousNextPageNavigator } from '../../components/PreviousNextPageNavigator';
 
 export const Variations = () => {
     const headingFontSize = useBreakpointValue({ base: '2xl', md: '3xl', lg: '4xl' });
@@ -47,6 +48,10 @@ export const Variations = () => {
                     <Quiz questions={questionMock} />
                 </Box>
             </Box>
+            <PreviousNextPageNavigator
+                previousPageRoute="/fundamentos"
+                nextPageRoute="/sistema-rh"
+            />
         </>
     );
 };
