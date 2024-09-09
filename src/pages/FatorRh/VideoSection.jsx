@@ -50,7 +50,7 @@ export function VideoSection({ objectJson }) {
             </Button>
             <Box 
                 display='flex' 
-                flexDirection='row' 
+                flexDirection={["column", "row"]}
                 w={["100%", "1140px"]} 
                 overflow='hidden'
                 gap="27px" 

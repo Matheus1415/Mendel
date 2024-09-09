@@ -50,7 +50,7 @@ export function BlogCardSection({ objectJson }) {
             </Button>
             <Box 
                 display='flex' 
-                flexDirection='row' 
+                flexDirection={["column", "row"]}
                 w={["100%", "1140px"]} // Largura responsiva
                 overflow='hidden' 
                 gap='25px'
