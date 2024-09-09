@@ -45,7 +45,7 @@ export function VideosAndBlogs() {
 
                 <BlogCardSection objectJson={testeCarousel} />
 
-                <Flex 
+                {/* <Flex 
                     width="100%"
                     justifyContent="center" 
                     gap={4}
@@ -58,7 +58,7 @@ export function VideosAndBlogs() {
                     <Button variant="nextPage" width={["100%", "auto"]}>
                         Ir para a próxima página
                     </Button>
-                </Flex>
+                </Flex> */}
             </Flex>
         </Box>
     );
