@@ -158,7 +158,7 @@ export const ParentInputPunnet = () => {
             </MotionText>
             
             <Box padding="4" maxW="full" mb="4">
-              <Text mb="2">Característica Dominante 1</Text>
+              <Text mb="2">Alelo Dominante 1</Text>
               <MotionInput
                 placeholder="Exemplo: Alto"
                 value={characteristicDominant2}
@@ -172,7 +172,7 @@ export const ParentInputPunnet = () => {
             </Box>
             
             <Box padding="4" maxW="full">
-              <Text mb="2">Característica Recessiva 1</Text>
+              <Text mb="2">Alelo Recessivo 1</Text>
               <MotionInput
                 placeholder="Exemplo: Baixo"
                 value={characteristicRecessive2}
@@ -205,7 +205,7 @@ export const ParentInputPunnet = () => {
             </MotionText>
             
             <Box padding="4" maxW="full" mb="4">
-              <Text mb="2">Característica Dominante 2</Text>
+              <Text mb="2">Alelo Dominante 2</Text>
               <MotionInput
                 placeholder="Exemplo: Amarelo"
                 value={characteristicDominant1}
@@ -219,7 +219,7 @@ export const ParentInputPunnet = () => {
             </Box>
             
             <Box padding="4" maxW="full">
-              <Text mb="2">Característica Recessiva 2</Text>
+              <Text mb="2">Alelo Recessivo 2</Text>
               <MotionInput
                 placeholder="Exemplo: Verde"
                 value={characteristicRecessive1}
@@ -254,7 +254,7 @@ export const ParentInputPunnet = () => {
               Alelos dos Pais
             </MotionText>
             <Flex direction="row" wrap="wrap" justify="center" gap="4" alignItems="center">
-             características da mãe
+             Genótipo materno
               {[0, 1].map(index => (
                 <Box key={index} padding="2" maxW="125px" flex="1">
                   <MotionSelect
@@ -297,7 +297,7 @@ export const ParentInputPunnet = () => {
               ))}
             </Flex>
             <Flex direction="row" wrap="wrap" justify="center" gap="4" alignItems="center">
-            características do pai
+            Genótipo paterno
               {[0, 1].map(index => (
                 <Box key={index} padding="2" maxW="125px" flex="1">
                 <MotionSelect
