@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center, Text, Heading } from '@chakra-ui/react';
 import ModalFeedback from '../../ModalFeedback';
+import { rearrangeLetters } from '../../../config/rearrangeLetters';
 
 const PunnettSquareDraggable = ({ 
     data = { 
@@ -72,8 +73,9 @@ const PunnettSquareDraggable = ({
                 const aleloPai = alelosDoPai[cIdx];
                 const aleloMae = alelosDaMae[rIdx];
                 const combinedAlelo = aleloPai + aleloMae;
-
-                const matchingOption = options.find(option => option.name === nome && option.alelo === combinedAlelo);
+                const matchingOption = options.find(option => option.name === matriz[rIdx][cIdx] && rearrangeLetters(option.alelo) === rearrangeLetters(combinedAlelo))
+                
+                console.log(matchingOption)
                 if (matchingOption) {
                     correct++;
                 }
@@ -133,7 +135,7 @@ const PunnettSquareDraggable = ({
                             borderRadius="20px"
                             textAlign="center"
                         >
-                            <Text mb={2} fontWeight="bold" color="white">{option.AleloTitle}</Text>
+                            <Text mb={2} fontWeight="bold" color="white">{rearrangeLetters(option.alelo)}</Text>
                             <img
                                 style={{ 'maxWidth': '100px' }}
                                 className="cell"
@@ -231,7 +233,7 @@ const PunnettSquareDraggable = ({
                                                 w={250} 
                                                 h={180}
                                                 borderRadius={10}
-                                                border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && option.alelo === alelosDoPai[colIndex] + alelosDaMae[rowIndex]) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
+                                                border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && rearrangeLetters(option.alelo) === rearrangeLetters(alelosDoPai[colIndex] + alelosDaMae[rowIndex])) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
                                             >
                                                 {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
                                             </Flex>                                            

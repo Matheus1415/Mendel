@@ -116,8 +116,8 @@
     {
       "id": 4,
       "alelos": {
-        "pai": ["C", "c"],
-        "mae": ["C", "c"]
+        "pai": ["A", "a"],
+        "mae": ["A", "a"]
       },
       "title": "Fenótipo Cor da Casca",
       "options": [
@@ -125,28 +125,28 @@
           "id": 1,
           "name": "Semente Castanha Heterozigota",
           "src": "/atv04/option01.png",
-          "alelo": "cC",
+          "alelo": "aA",
           "AleloTitle": "C"
         },
         {
           "id": 2,
           "name": "Semente Castanha Heterozigota",
           "src": "/atv04/option02.png",
-          "alelo": "Cc",
+          "alelo": "Aa",
           "AleloTitle": "C"
         },
         {
           "id": 3,
           "name": "Semente Castanha Homozigota Dominante",
           "src": "/atv04/option03.png",
-          "alelo": "CC",
+          "alelo": "AA",
           "AleloTitle": "C"
         },
         {
           "id": 4,
           "name": "Semente Verde Homozigota Recessiva",
           "src": "/atv04/option04.png",
-          "alelo": "cc",
+          "alelo": "aa",
           "AleloTitle": "c"
         }
       ]
