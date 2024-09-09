@@ -23,6 +23,10 @@ export function TrabsAndimportance () {
                             <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">Mendel estabeleceu a Lei da Segregação, que afirma que alelos se separam na formação dos gametas, e a Lei da Distribuição Independente, que afirma que alelos de diferentes características são distribuídos independentemente.</ListItem>
                             <ListItem fontSize={16} lineHeight={8} fontWeight="light" textAlign="justify" color="Primary">As descobertas de Mendel foram redescobertas no início do século XX, impactando profundamente a biologia. Suas leis formaram a base da genética científica, influenciando a biologia molecular, a medicina e a engenharia genética.</ListItem>
                         </UnorderedList>
+
+                        <Button variant="readMore" _hover={{background:'linear-gradient(to left, #007A87 0%, #01414C) 100%'}} color="Primary" lineHeight={7} fontSize={20} px={9} py={0.5} sx={{ background:'linear-gradient(to right, #007A87 0%, #01414C) 100%'}}>
+                            Conheça as leis de mendel
+                        </Button>
                     </Box>
                 </Flex>
 
