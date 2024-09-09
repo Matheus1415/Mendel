@@ -9,7 +9,7 @@ const FuturePerspectives = () => {
         left="0"
         right="0"
         bottom="0"
-        bg="url('/assets/Rectangle 5.png') no-repeat center center"
+        bg="url('/assets/Background.png') no-repeat center center"
         bgSize="cover"
         zIndex="-1"
         filter="brightness(50%)" // Adiciona um filtro de escurecimento
