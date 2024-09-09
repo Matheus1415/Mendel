@@ -2,8 +2,9 @@ import { Heading } from "@chakra-ui/react";
 import { useContext, useEffect } from 'react';
 import {AtividadesContext} from '../../../contexts/AtividadesContextProvider'
 import {ViewQuestion} from '../../../components/ViewQuestion'
-import questionMock from '../../../data/question-mock.json'
+import { allQuestion } from '../../../config/allQuestions.js'
 import { ResultsScene } from "../ResultsScene";
+import { StartScreen } from "../StartScreen/index.jsx";
 
 // meu onde acontece tudo
 
@@ -12,17 +13,17 @@ export function AtividadesConteiner(){
     console.log('no conteiner',state);
         
 
-    useEffect( ()=>{
-        dispatch({
-            type: "SET_QUESTIONS",
-            newQuestions: questionMock
-        })
-        dispatch({
-            type: "UPDATE_STAGE_ACTIVITY",
-            newStage: 1
-        })
+    // useEffect( ()=>{
+    //     dispatch({
+    //         type: "SET_QUESTIONS",
+    //         newQuestions: allQuestion
+    //     })
+    //     dispatch({
+    //         type: "UPDATE_STAGE_ACTIVITY",
+    //         newStage: 1
+    //     })
 
-    } , [] )
+    // } , [] )
     
     function handleSubmit(e){
         e.preventDefault();
@@ -68,6 +69,12 @@ export function AtividadesConteiner(){
                 (
                     function (){
                         switch (state.stage){
+                            case 'start':
+                                return(
+                                    <StartScreen
+                                        
+                                    />)
+
                             case 'playing':
                                 return(
                                     <ViewQuestion
