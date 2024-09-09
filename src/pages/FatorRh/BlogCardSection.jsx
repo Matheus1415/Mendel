@@ -6,7 +6,7 @@ import { useState } from 'react';
 export function BlogCardSection({ objectJson }) {
     const [index, setIndex] = useState(0);
 
-    const endOfTheArray = (objectJson.length * 543) - 1086;
+    const endOfTheArray = (objectJson.length * 548) - 1096;
 
     function showCards() {
         return objectJson.map((value) => (
@@ -21,11 +21,11 @@ export function BlogCardSection({ objectJson }) {
     }
 
     function moveToLeft() {
-        setIndex((prevIndex) => prevIndex === 0 ? endOfTheArray : prevIndex - 543);
+        setIndex((prevIndex) => prevIndex === 0 ? endOfTheArray : prevIndex - 548);
     }
 
     function moveToRight() {
-        setIndex((prevIndex) => prevIndex === endOfTheArray ? 0 : prevIndex + 543);
+        setIndex((prevIndex) => prevIndex === endOfTheArray ? 0 : prevIndex + 548);
     }
 
     return (
@@ -51,9 +51,9 @@ export function BlogCardSection({ objectJson }) {
             <Box 
                 display='flex' 
                 flexDirection='row' 
-                w={["100%", "1066px"]} // Largura responsiva
+                w={["100%", "1140px"]} // Largura responsiva
                 overflow='hidden' 
-                gap='20px'
+                gap='25px'
                 p={["5px", "0"]} // Padding responsivo
             >
                 {showCards()}

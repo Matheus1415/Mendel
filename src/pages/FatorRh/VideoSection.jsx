@@ -51,9 +51,9 @@ export function VideoSection({ objectJson }) {
             <Box 
                 display='flex' 
                 flexDirection='row' 
-                w={["100%", "1080px"]} 
-                overflow='hidden' 
-                gap='27px'
+                w={["100%", "1140px"]} 
+                overflow='hidden'
+                gap="27px" 
                 p={["5px", "0"]} 
             >
                 {showCards()}
