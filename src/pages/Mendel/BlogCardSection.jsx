@@ -25,13 +25,13 @@ function moveToRight(){
 
 return(
     <Flex direction='row' justifyContent='center' alignItems='center' gap='20px'>
-        <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}}>          
+        <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}} display={['none', 'block']}>          
             <HiChevronLeft size={37} color="#19BFCD80"/>
         </Button>
-        <Box display='flex' flexDirection='row' w='1066px' overflow='hidden' gap='20px'>
+        <Box display='flex' flexDirection={["column", "row"]} w={["100%", "1066px"]} overflow='hidden' gap='20px'>
             {showCards()}
         </Box>
-        <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}}>   
+        <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}} display={['none', 'block']}>   
             <HiChevronRight size={37} color="#19BFCD80"/>
         </Button>
     </Flex>
