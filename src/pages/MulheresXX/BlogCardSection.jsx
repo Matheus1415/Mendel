@@ -66,7 +66,7 @@ export function BlogCardSection({ objectJson }) {
                 display={["none", "block"]} // Botão oculto em telas pequenas
             >   
                 <HiChevronRight 
-                    size={["24px", "37px"]} // Tamanho do ícone responsivo
+                    size={["24px", "38px"]} // Tamanho do ícone responsivo
                     color="#19BFCD80"
                 />
             </Button>

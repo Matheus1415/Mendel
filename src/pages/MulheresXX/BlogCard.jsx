@@ -23,7 +23,7 @@ export function BlogCard({title, description, link, indexTransition}) {
 }
 
 BlogCard.defaultProps = {
-    title: 'YOUR TITLE HERE',
+    title: 'YOUR TITLE ',
     description: 'YOUR DESCRIPTION HERE',
     link: ''
 }
