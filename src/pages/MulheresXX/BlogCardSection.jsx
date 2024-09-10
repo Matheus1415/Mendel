@@ -11,7 +11,6 @@ export function BlogCardSection({ objectJson }) {
     function showCards() {
         return objectJson.map((value) => (
             <BlogCard 
-                key={value.title} 
                 title={value.title} 
                 description={value.description} 
                 link={value.link} 
@@ -25,7 +24,7 @@ export function BlogCardSection({ objectJson }) {
     }
 
     function moveToRight() {
-        setIndex((prevIndex) => prevIndex === endOfTheArray ? 0 : prevIndex + 543);
+        setIndex((prevIndex) => prevIndex >= endOfTheArray ? 0 : prevIndex + 543);
     }
 
     return (

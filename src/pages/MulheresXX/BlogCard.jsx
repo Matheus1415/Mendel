@@ -3,7 +3,7 @@ export function BlogCard({title, description, link, indexTransition}) {
 
   return(
     <Box>
-        <Card w={['300px', '523px']} h='127px' backgroundColor='#0D6067' borderRadius='15px' 
+        <Card w='523px' h='135px' backgroundColor='#0D6067' borderRadius='15px' 
         transform={`translateX(-${indexTransition}px) `} transition='transform 0.8s ease-in-out'>
 
             <CardHeader display='flex' flexDirection='row' justifyContent='space-between' alignItems='center'>           

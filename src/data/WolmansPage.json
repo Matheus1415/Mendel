@@ -1,31 +1,31 @@
 [
     {
-        "tilte": "Your title here",
+        "title": "GeneWatch Blog",
+        "description": "Este blog é uma extensão do GeneWatch UK, que aborda questões de genética e biotecnologia. Ele é frequentemente atualizado por cientistas e especialistas, incluindo mulheres que escrevem sobre tópicos relacionados à genética e ética.",
+        "link": "https://www.genewatch.org/"
+    },
+    {
+        "title": "Genetics Unzipped",
+        "description": "É um podcast e blog da Genetic Society, com contribuições de várias cientistas, incluindo mulheres. Eles discutem uma ampla gama de tópicos em genética e frequentemente apresentam posts escritos por pesquisadoras.",
+        "link": "https://geneticsunzipped.com/"
+    },
+    {
+        "title": "National Human Genome Research Institute",
+        "description": "Your description here",
+        "link": "https://www.genome.gov/about-genomics/fact-sheets/Deoxyribonucleic-Acid-Fact-Sheet#:~:text=Deoxyribonucleic%20acid%20(DNA)%20is%20a,to%20their%20offspring%20during%20reproduction."
+    },
+    {
+        "title": "Your title here",
         "description": "Your description here",
         "link": "#"
     },
     {
-        "tilte": "Your title here",
+        "title": "Your title here",
         "description": "Your description here",
         "link": "#"
     },
     {
-        "tilte": "Your title here",
-        "description": "Your description here",
-        "link": "#"
-    },
-    {
-        "tilte": "Your title here",
-        "description": "Your description here",
-        "link": "#"
-    },
-    {
-        "tilte": "Your title here",
-        "description": "Your description here",
-        "link": "#"
-    },
-    {
-        "tilte": "6. Your title here",
+        "title": "6. Your title here",
         "description": "Your description here",
         "link": "#"
     }
