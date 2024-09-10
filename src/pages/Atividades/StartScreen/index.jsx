@@ -46,22 +46,32 @@ export function StartScreen(){
     }
 
     return(
-        <>  
-            <Flex direction='column' h='800px'>
-                <Heading variant='PrimaryTitle' textAlign='center'>Selecione as questões que deseja realizar:</Heading>
-                <Box flex='1'>
-                    <Heading variant='SecondTitle' my='2rem' fontSize='2rem'>Tipo de Questão:</Heading>
-                    <CheckboxGroup >
-                        <Flex direction='row' justify='space-evenly'>
+        <Flex direction="row" gap={30}>  
+                <Flex 
+                    flex='1'  
+                    direction='column'
+                    border="2px solid #EBEBEB30"
+                    bg="#0638443e" 
+                    backdropFilter="blur(23px)" 
+                    borderRadius="15px" 
+                    p="4"
+                    maxW={300}
+                >
+                    <Heading variant='SecondTitle' my='2rem' fontSize='2rem'>Tipo de Questão</Heading>
+                    <CheckboxGroup>
+                        <Flex direction='column' gap={5}>
                             <Checkbox color='white' size='lg' value='UniqueItem' onChange={e => handleChangeTypeCheckbox(e)}>Item único</Checkbox>
                             <Checkbox color='white' size='lg' value='MultipleItems' onChange={e => handleChangeTypeCheckbox(e)}>Múltiplos itens</Checkbox>
                             <Checkbox color='white' size='lg' value='' disabled>Digitáveis</Checkbox>
                             <Checkbox color='white' size='lg' value='' disabled>Quadro de Punnett</Checkbox>
+                            <Button variant='nextPage' maxW={250} onClick={startActivity} >Começar a atividade</Button>
                         </Flex>
                     </CheckboxGroup>
-                </Box>
-                <Button variant='readMore' onClick={startActivity} _hover={{transform: 'scale(1)', background: 'linear-gradient(to right, #007A87 0%, #01414C) 100%', fontSize: '20px', transition: 'all 0.2s'}}>Começar a atividade</Button>
-            </Flex>
-        </>
+                </Flex>
+                <Flex direction='column' h='800px'>
+                    <Heading variant='PrimaryTitle' textAlign='center'>Selecione as questões que deseja realizar:</Heading>
+                    
+                </Flex>
+        </Flex>
     )
 }

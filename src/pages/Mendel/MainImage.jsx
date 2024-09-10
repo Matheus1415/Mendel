@@ -34,18 +34,7 @@ return(
                 cursor='pointer'
                 marginRight='20px'
                 position='absolute'
-                sx={{transition: ' opacity 0.8s ease'}}
-                _hover={{opacity: 0}}/>
-
-            <Image
-                src={Anotacoes_Mendel}
-                alt='Anotações do Mendel'
-                boxSize='100%'
-                w={[240, 240, 510, 500, 552]}
-                h={[346, 346, 646, 646, 780]}
-                marginRight='20px'
-                borderRadius='15px'
-                cursor='pointer' />
+                />
         </Flex>
     </Flex>
 )

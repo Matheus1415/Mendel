@@ -1,6 +1,7 @@
 import { Box, Button, Divider, Flex, Heading, OrderedList } from "@chakra-ui/react";
 import { QuestionHistory } from "../QuestionHistory";
 import { truncateDecimal } from "../../../config/truncateDecimal";
+import { PreviousNextPageNavigator } from "../../../components/PreviousNextPageNavigator";
 
 export function ResultsScene({resultState}){
 
@@ -87,8 +88,9 @@ export function ResultsScene({resultState}){
                 </Flex>  
 
                 <Flex justifyContent='space-between'>
-                    <Button variant='nextPage' >Voltar</Button> 
-                    <Button variant='nextPage' >Atividade</Button>
+                    <PreviousNextPageNavigator 
+                        previousPageRoute="/"
+                    />
                 </Flex>
             </Box>
         </Flex>

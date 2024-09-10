@@ -1,12 +1,36 @@
+import React from 'react';
 import { Box, Flex, Heading, Image, Text, Tooltip } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+
+// Define animações usando Framer Motion
+const MotionBox = motion(Box);
+const MotionFlex = motion(Flex);
+
+const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+};
 
 export const Chromossomes = () => {
     return (
         <Box as='section' mb='10rem' bgImage="/assets/bgFundamentos/bgChromo.jpg" bgRepeat='no-repeat' bgPosition="center" bgSize="cover">
-            <Heading variant="PrimaryTitle" textAlign="center" mb="5rem" mt={{base:"2rem", lg:"0"}} pt="10rem">
-                CROMOSSOMOS
-            </Heading>
-            <Flex
+            <MotionBox
+                variants={fadeInUp}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8 }}
+                pt="10rem"
+            >
+                <Heading variant="PrimaryTitle" textAlign="center" mb="5rem" mt={{base:"2rem", lg:"0"}}>
+                    CROMOSSOMOS
+                </Heading>
+            </MotionBox>
+            <MotionFlex
+                variants={fadeInUp}
+                initial="initial"
+                animate="animate"
+                transition={{ duration: 0.8, delay: 0.2 }}
                 textAlign='center'
                 alignItems='center'
                 justifyContent='space-around'
@@ -81,63 +105,63 @@ export const Chromossomes = () => {
                         ></Box>
                     </Tooltip>
                     <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='left' maxW='20rem'>
-        <Box // BRAÇO ESQUERDO SUPERIOR DO CROMOSSMO)
-          h='32%'
-          w='10.5%'
-          top='15%'
-          left='7%'
-          position='absolute'
-          transform='auto'
-          rotate='-25deg'
-          borderTopLeftRadius='15%'
-          borderBottomLeftRadius='60%'
-          borderBottomRightRadius='36%'
-        ></Box>
-        </Tooltip>
-      <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='right' maxW='20rem'>
-        <Box // BRAÇO DIREITO SUPERIOR DO CROMOSSMO)
-          h='30%'
-          w='10%'
-          top='17.9%'
-          left='38%'
-          position='absolute'
-          transform='auto'
-          rotate='25deg'
-          borderTopLeftRadius='15%'
-          borderTopRightRadius='30%'
-          borderBottomLeftRadius='20%'
-          borderBottomRightRadius='60%'
-        ></Box>
-      </Tooltip>
-      <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='left' maxW='20rem'>
-        <Box // BRAÇO ESQUERDO INFERIOR DO CROMOSSMO)
-          w='10.5%'
-          h='30%'
-          top='53%'
-          left='8%'
-          position='absolute'
-          transform='auto'
-          rotate='25deg'
-          borderTopLeftRadius='35%'
-          borderBottomRightRadius='25%'
-        ></Box>
-      </Tooltip>
-      <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='right' maxW='20rem'>
-        <Box // BRAÇO DIREIRO INFERIOR DO CROMOSSMO)
-          w='12%'
-          h='32%'
-          top='52%'
-          left='36%'
-          position='absolute'
-          transform='auto'
-          rotate='-22deg'
-          borderTopLeftRadius='30%'
-          borderTopRightRadius='45%'
-          borderBottomLeftRadius='15%'
-        ></Box>
-      </Tooltip>
+                        <Box 
+                            h='32%'
+                            w='10.5%'
+                            top='15%'
+                            left='7%'
+                            position='absolute'
+                            transform='auto'
+                            rotate='-25deg'
+                            borderTopLeftRadius='15%'
+                            borderBottomLeftRadius='60%'
+                            borderBottomRightRadius='36%'
+                        ></Box>
+                    </Tooltip>
+                    <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='right' maxW='20rem'>
+                        <Box 
+                            h='30%'
+                            w='10%'
+                            top='17.9%'
+                            left='38%'
+                            position='absolute'
+                            transform='auto'
+                            rotate='25deg'
+                            borderTopLeftRadius='15%'
+                            borderTopRightRadius='30%'
+                            borderBottomLeftRadius='20%'
+                            borderBottomRightRadius='60%'
+                        ></Box>
+                    </Tooltip>
+                    <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='left' maxW='20rem'>
+                        <Box 
+                            w='10.5%'
+                            h='30%'
+                            top='53%'
+                            left='8%'
+                            position='absolute'
+                            transform='auto'
+                            rotate='25deg'
+                            borderTopLeftRadius='35%'
+                            borderBottomRightRadius='25%'
+                        ></Box>
+                    </Tooltip>
+                    <Tooltip label='Os braços do cromossomo são as regiões que se estendem a partir do centrômero e contêm os genes que são responsáveis pelas características herdadas.' hasArrow placement='right' maxW='20rem'>
+                        <Box 
+                            w='12%'
+                            h='32%'
+                            top='52%'
+                            left='36%'
+                            position='absolute'
+                            transform='auto'
+                            rotate='-22deg'
+                            borderTopLeftRadius='30%'
+                            borderTopRightRadius='45%'
+                            borderBottomLeftRadius='15%'
+                        ></Box>
+                    </Tooltip>
                 </Box>
-            </Flex>
+            </MotionFlex>
         </Box>
     )
 }

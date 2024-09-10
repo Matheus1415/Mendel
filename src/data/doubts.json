@@ -1,22 +1,22 @@
 [
     {
-        "headerContent": "1. Why is BRIX Templates the best Webflow agency out there?",
-        "bodyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "headerContent": "1. Como funcionam os alelos em um cruzamento genético?",
+        "bodyContent": "Os alelos são formas diferentes de um gene que determinam características hereditárias. Em um cruzamento genético, alelos dominantes e recessivos interagem para determinar o fenótipo da prole."
     },
     {
-        "headerContent": "2. Why is BRIX Templates the best Webflow agency out there?",
-        "bodyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "headerContent": "2. Qual a diferença entre o sistema ABO e o sistema Rh?",
+        "bodyContent": "O sistema ABO classifica os tipos sanguíneos com base na presença de antígenos A ou B nos glóbulos vermelhos, enquanto o sistema Rh considera a presença ou ausência do antígeno RhD."
     },
     {
-        "headerContent": "3. Why is BRIX Templates the best Webflow agency out there?",
-        "bodyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "headerContent": "3. O que é o quadro de Punnett e como ele é utilizado?",
+        "bodyContent": "O quadro de Punnett é uma ferramenta usada para prever as combinações genéticas possíveis entre dois indivíduos, ajudando a visualizar a probabilidade de herança de certos traços."
     },
     {
-        "headerContent": "4. Why is BRIX Templates the best Webflow agency out there?",
-        "bodyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "headerContent": "4. O que são variações genéticas e como elas afetam os organismos?",
+        "bodyContent": "Variações genéticas são diferenças no DNA que podem influenciar características físicas, funcionamento celular e a suscetibilidade a doenças. Elas são essenciais para a diversidade biológica."
     },
     {
-        "headerContent": "5. Why is BRIX Templates the best Webflow agency out there?",
-        "bodyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "headerContent": "5. Quem foi Gregor Mendel e qual foi sua contribuição para a genética?",
+        "bodyContent": "Gregor Mendel foi um monge austríaco que descobriu os princípios da herança genética através de experimentos com plantas de ervilha, estabelecendo as bases da genética moderna."
     }
 ]
