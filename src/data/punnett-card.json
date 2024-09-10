@@ -2,21 +2,21 @@
     {
         "id": 1,
         "title": "Cruzamento Vv x Vv",
-        "description": "Este cruzamento envolve duas plantas homozigotas dominantes, ambas com o alelo V para a cor da semente. Neste caso, o alelo dominante V resulta em sementes de cor amarela, enquanto o alelo recessivo v resulta em sementes verdes."
+        "description": "Este cruzamento envolve duas plantas heterozigotas, ambas com o alelo V para a cor da semente. Neste caso, o alelo dominante V resulta em sementes de cor amarela, enquanto o alelo recessivo v resulta em sementes verdes."
     },
     {
         "id": 2,
         "title": "Cruzamento Rr x Rr",
-        "description": "Neste cruzamento, duas plantas heterozigotas (Rr) são cruzadas, onde R representa o alelo dominante para sementes rugosas e r o alelo recessivo para sementes lisas. "
+        "description": "Neste cruzamento, duas plantas heterozigotas (Rr) são cruzadas, onde R representa o alelo dominante para sementes lisas e r o alelo recessivo para sementes rugosas. "
     },
     {
         "id": 3,
-        "title": "Cruzamento Aa x Aa",
-        "description": "Neste cruzamento, plantas heterozigotas (Aa) são cruzadas para explorar a relação entre altura das plantas, onde A é o alelo dominante que resulta em plantas altas, e a é o alelo recessivo que resulta em plantas baixas. "
+        "title": "Cruzamento Bb x Bb",
+        "description": "Neste cruzamento, plantas heterozigotas (Bb) são cruzadas para explorar a relação entre altura das plantas, onde B é o alelo dominante que resulta em plantas altas, e b é o alelo recessivo que resulta em plantas baixas. "
     },
     {
         "id": 4,
-        "title": "Cruzamento Cc x Cc",
-        "description": "Neste experimento de cruzamento, duas plantas com genótipos heterozigotos (Cc) são analisadas, onde C é o alelo dominante que confere uma cor verde à vagem, e c é o alelo recessivo que resulta em vagens amarelas.  "
+        "title": "Cruzamento Aa x Aa",
+        "description": "Neste experimento de cruzamento, duas plantas com genótipos heterozigotos (Aa) são analisadas, onde A é o alelo dominante que confere uma cor verde à vagem, e a é o alelo recessivo que resulta em vagens amarelas.  "
     }
 ]

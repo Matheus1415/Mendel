@@ -1,0 +1,14 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .form-iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 800px;
+    border: none;
+  }
+  
