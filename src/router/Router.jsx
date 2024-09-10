@@ -21,6 +21,7 @@ import { Informacao } from '../pages/Informacao';
 import { FatorRh } from '../pages/FatorRh';
 import { PunnerAtv } from '../pages/PunnettAtv';
 import { Doubts } from '../pages/Duvidas';
+import FormPage from '../pages/FormPage'; // Importe o novo componente
 
 export const RouterAsRouter = () => {
   return (
@@ -35,7 +36,6 @@ export const RouterAsRouter = () => {
         <Route path="/punntt-abo" element={<PunnttABOPage/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
         <Route path="/fundamentos" element={<Fundamentos/>} />
-        <Route path="*" element={<Page404/>}/>
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
         <Route path="/variations" element={<Variations/>} />
@@ -46,9 +46,10 @@ export const RouterAsRouter = () => {
         <Route path="/punner-arastavel" element={<PunnerAtv/>} />
         <Route path='/duvidas' element={<Doubts/>}/>
         <Route path="/introducao-genetica" element={<IntroGenetica/>} />
+        <Route path="*" element={<Page404/>}/>
+        <Route path="/form" element={<FormPage/>} /> Adicione a nova rota
       </Routes>
       <Footer/> 
     </BrowserRouter>
   );
 };
-
