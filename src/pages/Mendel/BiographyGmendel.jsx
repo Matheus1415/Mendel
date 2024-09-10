@@ -13,7 +13,7 @@ export function BiographyGmendel() {
     <Flex aling="center" direction={flexDirection} padding="24px 24px" margin='0 auto'>
       <Box marginTop={marginTitle}>
         
-        <Heading fontSize='40px' fontWeight='275' lineHeight='60px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' w='216px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
+        <Heading fontSize='40px' fontWeight='275' lineHeight='60px' bgGradient='linear(to-r, #0D606780, #19BFCD80)' bgClip='text' w='218px' h='60px' margin={['0 auto', '0 auto', '0 auto', '0 auto', '0']}>
           BIOGRAFIA
         </Heading>
 
