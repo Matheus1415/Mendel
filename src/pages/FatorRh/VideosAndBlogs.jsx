@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 import { BlogCardSection } from "./BlogCardSection";
 import { VideoSection } from "./VideoSection";
 import VideosFatorRH from '../../data/VideosFatorRH.json'
+import BlogsFatorRH from '../../data/BlogsFatorRH.json'
 
 export function VideosAndBlogs() {
     const testeCarousel = [];
@@ -44,7 +45,7 @@ export function VideosAndBlogs() {
 
                 <VideoSection objectJson={VideosFatorRH} />
 
-                <BlogCardSection objectJson={testeCarousel} />
+                <BlogCardSection objectJson={BlogsFatorRH} />
 
                 {/* <Flex 
                     width="100%"
