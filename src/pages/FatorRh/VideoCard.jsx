@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Flex, Bo
 export function VideoCard ({title, author, description, img, link, indexTransition}) {
     return(
         <Box>
-            <Card w='342px' borderRadius='lg' bgColor="#0D6067" transform={`translateX(-${indexTransition}px) `} transition='transform 0.8s ease-in-out'>
+            <Card w='342px' borderRadius='lg' bgColor="#0D6067" transform={`translateX(-${indexTransition}px) `} transition='transform 0.8s ease-in-out' marginBottom='20px'>
 
                 <CardHeader h={44} borderTopRadius='lg' bgColor="gray" backgroundSize="cover" backgroundRepeat='no-repeat' backgroundPosition="center" backdropFilter='auto' filter='brightness(0.9)' bgImage={img}>
 

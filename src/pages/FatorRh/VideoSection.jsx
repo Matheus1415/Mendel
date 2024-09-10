@@ -1,10 +1,11 @@
-import { Flex, Button, Box } from '@chakra-ui/react';
+import { Flex, Button, Box, useBreakpointValue } from '@chakra-ui/react';
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { useState } from 'react';
 import { VideoCard } from './VideoCard';
 
 export function VideoSection({ objectJson }) {
     const [index, setIndex] = useState(0);
+    const boxW = useBreakpointValue({base: '100%', sm: '100%', m: '724px', lg:'1140px'})
 
     const endOfTheArray = (objectJson.length * 369) - 1107;
 
@@ -49,9 +50,10 @@ export function VideoSection({ objectJson }) {
                 />
             </Button>
             <Box 
-                display='flex' 
+                display={['column', 'flex']}
+                gridTemplateColumns="repeat(2, 342px)"
                 flexDirection={["column", "row"]}
-                w={["100%", "1140px"]} 
+                w={boxW} 
                 overflow='hidden'
                 gap="27px" 
                 p={["5px", "0"]} 

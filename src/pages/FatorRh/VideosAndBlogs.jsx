@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 import { BlogCardSection } from "./BlogCardSection";
 import { VideoSection } from "./VideoSection";
+import VideosFatorRH from '../../data/VideosFatorRH.json'
 
 export function VideosAndBlogs() {
     const testeCarousel = [];
@@ -41,7 +42,7 @@ export function VideosAndBlogs() {
                     COLETÂNEA DE VIDEOAULAS E BLOGS
                 </Heading>
 
-                <VideoSection objectJson={testeCarousel} />
+                <VideoSection objectJson={VideosFatorRH} />
 
                 <BlogCardSection objectJson={testeCarousel} />
 
