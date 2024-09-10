@@ -50,8 +50,8 @@ const AlleleTable = ({ isTable = false }) => {
       labels: [
         `Dominante | ${caracteristica[0]} ${caracteristica[2]}`, 
         `Recessivo | ${caracteristica[1]} ${caracteristica[3]}`, 
-        `Dominante | ${caracteristica[0]} ${caracteristica[2]}`, 
-        `Recessivo | ${caracteristica[1]} ${caracteristica[3]}`
+        `Dominante | ${caracteristica[0]} ${caracteristica[3]}`, 
+        `Recessivo | ${caracteristica[1]} ${caracteristica[2]}`
       ],
       datasets: [
         {
@@ -119,22 +119,26 @@ const AlleleTable = ({ isTable = false }) => {
               </Thead>
               <Tbody>
                 <Tr>
-                  <Td>Dominante</Td>
+                  {/* <Td>Dominante</Td> */}
+                  <Td>{caracteristica[0]} {caracteristica[2]}</Td>
                   <Td>{countDominant}</Td>
                 </Tr>
                 <Tr>
-                  <Td>Recessivo</Td>
+                  {/* <Td>Recessivo</Td> */}
+                  <Td>{caracteristica[1]} {caracteristica[3]}</Td>
                   <Td>{countRecessive}</Td>
                 </Tr>
                 {countDominant2 !== undefined && countDominant2 !== null && (
                   <Tr>
-                    <Td>Dominante2</Td>
+                    {/* <Td>Dominante2</Td> */}
+                    <Td>{caracteristica[0]} {caracteristica[3]}</Td>
                     <Td>{countDominant2}</Td>
                   </Tr>
                 )}
                 {countDominant3 !== undefined && countDominant3 !== null && (
                   <Tr>
-                    <Td>Dominante3</Td>
+                    {/* <Td>Dominante3</Td> */}
+                    <Td>{caracteristica[1]} {caracteristica[2]}</Td>
                     <Td>{countDominant3}</Td>
                   </Tr>
                 )}
