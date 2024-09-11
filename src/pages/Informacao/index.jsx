@@ -14,20 +14,10 @@ import {
     useDisclosure,
     Button, } from '@chakra-ui/react';
 import React from 'react';
-import { UnorderedList, ListItem } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
 
 export const Informacao = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const MotionBox = motion(Box);
-    const MotionHeading = motion(Heading);
-    const MotionImage = motion(Image);
-    const MotionListItem = motion(ListItem);
-    const MotionUnorderedList = motion(UnorderedList);
-
-
-
     const fadeInUp = {
         initial: { opacity: 0, y: 50 },
         animate: { opacity: 1, y: 0 },
