@@ -35,17 +35,17 @@ export const IntroGenetica = () => {
                 >
                     <Heading variant="PrimaryTitle">O QUE É GENÉTICA?</Heading>
                     <Text variant="Paragraph">
-                        Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e tipografia. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma caixa de tipos e a embaralhou para fazer um livro de amostras de tipos. Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e tipografia. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma caixa de tipos e a embaralhou para fazer um livro de amostras de tipos. Ao contrário da crença popular, Lorem Ipsum não é apenas um texto aleatório. Tem raízes em um pedaço de literatura latina clássica de 45 a.C., tornando-o mais de 2000 anos.
+                        A genética é o ramo da biologia que estuda os genes, a hereditariedade e a variação dos organismos. Ela examina como os traços e características são passados de uma geração para a próxima e como as variações genéticas contribuem para a diversidade biológica.
                     </Text>
 
                     <Heading variant="PrimaryTitle">HISTÓRIA</Heading>
                     <Text variant="Paragraph">
-                        Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e tipografia. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma caixa de tipos e a embaralhou para fazer um livro de amostras de tipos. Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e tipografia. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma caixa de tipos e a embaralhou para fazer um livro de amostras de tipos.
+                        A história da genética remonta aos experimentos de Gregor Mendel no século XIX, onde ele descreveu as leis da hereditariedade através do estudo de plantas de ervilha. Desde então, a genética evoluiu significativamente, levando ao desenvolvimento da genética molecular, que desvenda a estrutura e função do DNA.
                     </Text>
 
                     <Heading variant="PrimaryTitle">IMPORTÂNCIA</Heading>
                     <Text variant="Paragraph">
-                        Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e tipografia. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma caixa de tipos e a embaralhou para fazer um livro de amostras de tipos. Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e tipografia. Lorem Ipsum tem sido o texto fictício padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma caixa de tipos e a embaralhou para fazer um livro de amostras de tipos.
+                        A genética é fundamental para a compreensão da vida e da evolução. Ela tem aplicações em áreas como medicina, agricultura e biotecnologia, permitindo avanços em tratamentos médicos, melhoramento de culturas agrícolas e muito mais.
                     </Text>
                     
                     <Heading variant="PrimaryTitle">ÁREAS DE ESTUDO</Heading>
@@ -182,7 +182,6 @@ export const IntroGenetica = () => {
                     </Box>
                 </Box>
             </Box>
-            <a href="#opa">opaaaaaaaaaaaaaaaaaaaa</a>
             <PreviousNextPageNavigator 
                 previousPageRoute="/sistema-abo"
             />
