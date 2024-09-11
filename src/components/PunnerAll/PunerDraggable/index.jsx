@@ -54,20 +54,19 @@ const PunnettSquareDraggable = ({
 
     return (
         <Flex direction="column" align="center" justify="center" wrap="wrap" m="4">
-            <Text variant="h3" align="center">Quadro de Punnett Draggable</Text>
             <Table border="2px" borderColor="gray.300" mb="4">
                 <Thead>
                     <Tr>
                         <Th border="2px" borderColor="gray.300" bg="gray.400" sx={{ textTransform: 'none' }}></Th>
                         {alelosDoPai.map((alelo, idx) => (
-                            <Th key={idx} border="2px" borderColor="gray.300" sx={{ textTransform: 'none' }}>{alelo}</Th>
+                            <Th key={idx} border="2px" borderColor="gray.300" color='white' sx={{ textTransform: 'none' }}>{alelo}</Th>
                         ))}
                     </Tr>
                 </Thead>
                 <Tbody>
                     {grid.map((row, rowIndex) => (
                         <Tr key={rowIndex}>
-                            <Th border="2px" borderColor="gray.300">{alelosDaMae[rowIndex]}</Th>
+                            <Th border="2px" borderColor="gray.300" color='white'>{alelosDaMae[rowIndex]}</Th>
                             {row.map((src, colIndex) => (
                                 <Td
                                     key={colIndex}

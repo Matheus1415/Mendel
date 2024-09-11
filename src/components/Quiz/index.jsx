@@ -262,7 +262,7 @@ export function Quiz({questions}){
                                             options={questions[currentQuestion - 1].options}
                                             onChangeCallback={setAnswersMatrixInPunnhettDraggable}
                                         />
-                                        <Input type='text' name='answersForMatrix' value={JSON.stringify(answersMatrixInPunnhettDraggable)} readOnly />
+                                        <Input type='text' hidden name='answersForMatrix' value={JSON.stringify(answersMatrixInPunnhettDraggable)} readOnly />
                                     </>
                                     
                                 )
