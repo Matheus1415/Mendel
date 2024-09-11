@@ -45,7 +45,7 @@ export const RouterAsRouter = () => {
           element={<PunnettSquareDraggablePage />}
         />
         <Route path="/punner-arastavel" element={<PunnerAtv />} />
-        <Route path="/MulheresXX" element={<MulheresXX />} />
+        <Route path="/mulheresGenetica" element={<MulheresXX />} />
       </Routes>
       <Footer />
     </BrowserRouter>
