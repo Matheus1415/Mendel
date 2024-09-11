@@ -1,5 +1,6 @@
 import { 
     Flex, 
+    Box,
     Heading, 
     Image, 
     Text,
@@ -13,10 +14,25 @@ import {
     useDisclosure,
     Button, } from '@chakra-ui/react';
 import React from 'react';
+import { UnorderedList, ListItem } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 export const Informacao = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const MotionBox = motion(Box);
+    const MotionHeading = motion(Heading);
+    const MotionImage = motion(Image);
+    const MotionListItem = motion(ListItem);
+    const MotionUnorderedList = motion(UnorderedList);
+
+
+
+    const fadeInUp = {
+        initial: { opacity: 0, y: 50 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
     return (
         <>
             <Flex
@@ -38,7 +54,7 @@ export const Informacao = () => {
             >
                 <Flex direction="column" maxW="50%">
                     <Heading variant="SecondTitle">
-                        História de projeto
+                        História do projeto
                     </Heading>
                     <Text variant="Paragraph">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, nulla at! Qui quisquam modi amet perferendis, nostrum aspernatur consequuntur quos omnis natus iusto, sed incidunt est nobis repellendus obcaecati aut.
@@ -46,7 +62,7 @@ export const Informacao = () => {
                     </Text>
                 </Flex>
                 <Flex maxW="50%">
-                    <Image src="/img/Imagem1.png" onClick={onOpen}/>
+                    <Image src="../img/equipe-mendel.jpeg" title='Equipe Mendel' borderRadius='5%' onClick={onOpen}/>
                 </Flex>
             </Flex>
 
@@ -57,20 +73,34 @@ export const Informacao = () => {
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
                     backgroundPosition="center"
-                    backgroundImage="url('/img/Imagem1.png')"
+                    backgroundImage="url(../img/equipe-mendel.jpeg)"
                     minH={500}
                     minW={600}
                     justifyContent="end"
                     borderRadius={10}
                 >
-                    <ModalHeader color="white">Conheça nossa equipe!</ModalHeader>
+                    <ModalHeader color="white" borderColor='black'>Conheça nossa equipe!</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody bg="white" maxH={140}  borderRadius="10px" p={5} color="black">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quidem aut est nulla quas quisquam iste amet temporibus. Cupiditate atque, mollitia accusamus suscipit debitis reprehenderit itaque possimus ad hic facere.
                     </ModalBody>
                 </ModalContent>
             </Modal>
-        
+
+            <Flex as='section' justify='center' py="10" px="20" gap='10px'>
+                <Flex alignItems='center' maxW='50%'>
+                    <Image src='../img/imagem2.png'></Image>
+                </Flex>
+                <Flex direction='column' maxW='50%'>
+                    <Heading variant='SecondTitle'>
+                        Metodologia
+                    </Heading>
+                    <Text variant='Paragraph'>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto laboriosam iusto. Exercitationem, dolores voluptatum? Voluptate saepe delectus dolor a, libero nemo unde voluptatem, soluta ipsam assumenda alias, beatae sint?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae maxime consectetur, nemo molestias voluptate quia laudantium vel id hic repellendus eum exercitationem illum, ab velit, officiis fugiat libero? Vitae, provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non adipisci nemo rem voluptate veritatis est atque? Quibusdam architecto, aut labore officia rem, reiciendis ut illo voluptates amet, commodi quam quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quaerat rem consequuntur dignissimos quibusdam amet tempore, blanditiis temporibus, architecto delectus id tenetur ut! Similique voluptate, qui laborum deserunt commodi recusandae.
+                    </Text>
+                </Flex>
+            </Flex>
         </>
     );
 };
