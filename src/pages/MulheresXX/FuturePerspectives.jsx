@@ -22,7 +22,7 @@ const FuturePerspectives = () => {
         left="0"
         right="0"
         bottom="0"
-        bg="rgba(0, 0, 0, 0.4)" // Ajuste a opacidade para escurecer mais ou menos
+        bg="rgba(0, 0, 0, 0.1)" // Ajuste a opacidade para escurecer mais ou menos
       />
 
       <Box
