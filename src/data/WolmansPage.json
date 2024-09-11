@@ -1,32 +1,32 @@
 [
-    {
-        "title": "GeneWatch Blog",
-        "description": "Este blog é uma extensão do GeneWatch UK, que aborda questões de genética e biotecnologia. Ele é frequentemente atualizado por cientistas e especialistas, incluindo mulheres que escrevem sobre tópicos relacionados à genética e ética.",
-        "link": "https://www.genewatch.org/"
-    },
-    {
-        "title": "Genetics Unzipped",
-        "description": "É um podcast e blog da Genetic Society, com contribuições de várias cientistas, incluindo mulheres. Eles discutem uma ampla gama de tópicos em genética e frequentemente apresentam posts escritos por pesquisadoras.",
-        "link": "https://geneticsunzipped.com/"
-    },
-    {
-        "title": "National Human Genome Research Institute",
-        "description": "Your description here",
-        "link": "https://www.genome.gov/about-genomics/fact-sheets/Deoxyribonucleic-Acid-Fact-Sheet#:~:text=Deoxyribonucleic%20acid%20(DNA)%20is%20a,to%20their%20offspring%20during%20reproduction."
-    },
-    {
-        "title": "Your title here",
-        "description": "Your description here",
-        "link": "#"
-    },
-    {
-        "title": "Your title here",
-        "description": "Your description here",
-        "link": "#"
-    },
-    {
-        "title": "6. Your title here",
-        "description": "Your description here",
-        "link": "#"
-    }
+  {
+    "title": "GeneWatch Blog",
+    "description": "Este blog é uma extensão do GeneWatch UK, que aborda questões de genética e biotecnologia. Ele é frequentemente atualizado por cientistas e especialistas, incluindo mulheres que escrevem sobre tópicos relacionados à genética e ética.",
+    "link": "https://www.genewatch.org/"
+  },
+  {
+    "title": "Genetics Unzipped",
+    "description": "É um podcast e blog da Genetic Society, com contribuições de várias cientistas, incluindo mulheres. Eles discutem uma ampla gama de tópicos em genética e frequentemente apresentam posts escritos por pesquisadoras.",
+    "link": "https://geneticsunzipped.com/"
+  },
+  {
+    "title": "National Human Genome Research Institute",
+    "description": "O National Human Genome Research Institute (NHGRI) faz parte do NIH e se concentra na pesquisa do genoma humano para entender a genética e suas implicações na saúde. O instituto apoia projetos como o Projeto Genoma Humano e promove a aplicação clínica das descobertas genéticas. Além disso, oferece recursos educacionais e colabora com outras instituições",
+    "link": "https://www.genome.gov/about-genomics/fact-sheets/Deoxyribonucleic-Acid-Fact-Sheet#:~:text=Deoxyribonucleic%20acid%20(DNA)%20is%20a,to%20their%20offspring%20during%20reproduction."
+  },
+  {
+    "title": "The Genetic Detective",
+    "description": "Este blog é mantido por uma cientista e detetive genética que explora como a genética está transformando a resolução de crimes e a genealogia.",
+    "link": "https://www.imdb.com/title/tt12390140/"
+  },
+  {
+    "title": "Nature Genetics Blog",
+    "description": "A revista Nature Genetics tem um blog onde várias cientistas publicam artigos e posts sobre as últimas pesquisas e descobertas em genética",
+    "link": "https://www.nature.com/ng/"
+  },
+  {
+    "title": "Your DNA Guide Blog",
+    "description": "Roberta Estes, uma conhecida especialista em genética e genealogia, mantém um blog que explora a genética e a ancestralidade de forma acessível e informativa.",
+    "link": "https://www.yourdnaguide.com/ydgblog"
+  }
 ]
