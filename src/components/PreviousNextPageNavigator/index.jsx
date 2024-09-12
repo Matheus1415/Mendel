@@ -1,7 +1,7 @@
 import { Button, Flex } from "@chakra-ui/react"
 import { useNavigate } from "react-router-dom"
 
-export const PreviousNextPageNavigator = ({ nextPageRoute, previousPageRoute }) => {
+export const PreviousNextPageNavigator = ({ nextPageRoute, previousPageRoute, nextPageLabel, previousPageLabel }) => {
     const navigate = useNavigate()
 
     const handleNavigation = (route) => {
@@ -15,13 +15,13 @@ export const PreviousNextPageNavigator = ({ nextPageRoute, previousPageRoute }) 
                 variant="nextPage" 
                 onClick={() => handleNavigation(previousPageRoute)}
             >
-                Ir para a página anterior
+                {previousPageLabel || "Ir para a página anterior"}
             </Button>}
             {nextPageRoute && <Button 
                 variant="nextPage"
                 onClick={() => handleNavigation(nextPageRoute)}
             >
-                Ir para a próxima página
+                {nextPageLabel || "Ir para a próxima página"}
             </Button>}
         </Flex>
     )

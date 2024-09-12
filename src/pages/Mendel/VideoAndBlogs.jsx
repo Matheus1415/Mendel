@@ -4,6 +4,7 @@ import { VideoSection } from "./VideoSection";
 import BlogsMendel from "../../data/BlogsMendel.json"
 import VideoMendel from "../../data/VideoMendel.json"
 import { useNavigate } from "react-router-dom";
+import { PreviousNextPageNavigator } from "../../components/PreviousNextPageNavigator";
 
 export function VideosAndBlogs () {
     const navigate = useNavigate()
@@ -31,18 +32,9 @@ export function VideosAndBlogs () {
                     <BlogCardSection objectJson={BlogsMendel}></BlogCardSection>
 
                     <Flex width="100%" justifyContent="end" gap={4} mt={12}>
-                        <Button 
-                            variant="nextPage" 
-                            onClick={() => navigate("/atividades")}
-                        >
-                            Ir para a atividade
-                        </Button>
-                        <Button 
-                            variant="nextPage"
-                            onClick={() => navigate("/fundamentos")}
-                        >
-                            ir para a próxima página
-                        </Button>
+                        <PreviousNextPageNavigator
+                            nextPageRoute={"/leis-de-mendel"}
+                        />
                     </Flex>
                 </Flex>
             </Box>

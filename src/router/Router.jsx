@@ -23,6 +23,7 @@ import { FatorRh } from '../pages/FatorRh';
 import { PunnerAtv } from '../pages/PunnettAtv';
 import { Doubts } from '../pages/Duvidas';
 import FormPage from '../pages/FormPage'; // Importe o novo componente
+import { MulheresXX } from '../pages/MulheresXX';
 
 export const RouterAsRouter = () => {
   return (
@@ -42,6 +43,7 @@ export const RouterAsRouter = () => {
         <Route path="/leis-de-mendel" element={<LeisMendel/>} />
         <Route path="/variations" element={<Variations/>} />
         <Route path="/sistema-abo" element={<SistemaAbo/>} />
+        <Route path="/mulheres-genetica" element={<MulheresXX />} />
         <Route path="/informacao" element={<Informacao/>} />
         <Route path="/sistema-rh" element={<FatorRh />} />
         <Route path="/punner-arastavel/:id" element={<PunnettSquareDraggablePage/>} />

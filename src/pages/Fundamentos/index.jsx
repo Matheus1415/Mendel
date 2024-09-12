@@ -22,7 +22,7 @@ return (
                 <Box minH={100}></Box>
                 <Quiz questions={questionMock}/>
                 <PreviousNextPageNavigator
-                    previousPageRoute="/mendel"
+                    previousPageRoute="/introducao-genetica"
                     nextPageRoute="/variations"
                 /> 
             </Flex>

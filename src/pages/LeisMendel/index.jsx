@@ -1,7 +1,10 @@
 import { LayoutIntroduction } from '../../layout/LayoutIntroduction';
-import { Box, Text, Heading, Image, UnorderedList, ListItem } from '@chakra-ui/react';
+import { Box, Text, Heading, Image, UnorderedList, ListItem, Flex, Button } from '@chakra-ui/react';
+import { useNavigate } from "react-router-dom";
+import { PreviousNextPageNavigator } from '../../components/PreviousNextPageNavigator';
 
 export const LeisMendel = () => {
+    const navigate = useNavigate();
     return (
         <>
             <LayoutIntroduction query="LEIS DE MENDEL">
@@ -175,7 +178,14 @@ export const LeisMendel = () => {
                             m="2rem" 
                         />
                     </Box>
+                    
                 </Box>
+                <Flex width="100%" justifyContent="end" gap={4} mt={12}>
+                    <PreviousNextPageNavigator 
+                        previousPageRoute={"/mendel"}
+                        nextPageRoute={"/introducao-genetica"}
+                    />
+                </Flex>
             </Box>
         </>
     );

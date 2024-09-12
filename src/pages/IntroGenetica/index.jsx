@@ -183,7 +183,8 @@ export const IntroGenetica = () => {
                 </Box>
             </Box>
             <PreviousNextPageNavigator 
-                previousPageRoute="/sistema-abo"
+                previousPageRoute="/leis-de-mendel"
+                nextPageRoute={"/fundamentos"}                
             />
         </>
     );
