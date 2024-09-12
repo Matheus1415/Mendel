@@ -62,18 +62,13 @@ const ImportanceOfWomenInGenetics = () => {
             <br />
             Essas contribuições demonstram não apenas investigações pioneiras,
             mas também habilidades analíticas e criativas essenciais para o
-            desenvolvimento da genética. Reconhecer o impacto das mulheres na
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
-            ducimus nobis atque natus maxime provident eos! Eum quas illum,
-            quaerat, ducimus inventore magni illo at doloribus facilis deserunt
-            deleniti provident! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Numquam necessitatibus impedit odio? Quaerat
-            deleniti ut consectetur neque fugit obcaecati ratione asperiores
-            tempore. Optio vitae alias repellat, rerum sapiente adipisci ipsa.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quos
-            impedit fugiat illum. Ut tenetur praesentium libero, fuga ipsam sit
-            vel, corrupti vitae consectetur, dicta tempore illo? Deserunt, saepe
-            fuga.
+            desenvolvimento da genética. Reconhecer o impacto das mulheres na 
+            Reconhecer o impacto das mulheres na ciência genética é essencial 
+            para valorizar a diversidade nas pesquisas. Suas contribuições, 
+            muitas vezes subestimadas, impulsionaram avanços importantes e 
+            inspiraram novas gerações a seguirem carreiras científicas. Ao 
+            destacar esses feitos, promove-se uma ciência mais inclusiva e 
+            inovadora, enriquecida por diversas perspectivas e abordagens.
           </Text>
         </Flex>
         <Image
