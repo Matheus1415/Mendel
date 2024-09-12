@@ -1,5 +1,6 @@
 import { Flex, Box, Text, useBreakpointValue, Button, Image } from "@chakra-ui/react";
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 
 const MotionButton = motion(Button);
 const MotionImage = motion(Image);
@@ -8,6 +9,8 @@ const MotionBox = motion(Box);
 export const Action = () => {
     const flexDirection = useBreakpointValue({ base: "column", md: "row" });
     const imgWidth = useBreakpointValue({ base: "100%", md: "50%" });
+
+    const navigate = useNavigate();
 
     return (
         <Flex 
@@ -50,6 +53,7 @@ export const Action = () => {
                 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
+                onClick={()=> {navigate("/atividades"); window.scrollTo(0, 0); }}
             >
                 PRATIQUE
             </MotionButton>

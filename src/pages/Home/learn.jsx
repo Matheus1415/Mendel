@@ -1,4 +1,5 @@
 import { Flex, Box, Text, useBreakpointValue, Button, Image } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 export const Learn = () => {
     const Wintroducao = useBreakpointValue({ base: "100%", md: "40%" });
@@ -8,6 +9,8 @@ export const Learn = () => {
     const padding = useBreakpointValue({ base: "10", md: "30" });
     const gap = useBreakpointValue({ base: "10", md: "30" });
     const displayImages = useBreakpointValue({ base: "none", md: "flex" });
+
+    const navigate = useNavigate()
 
     return (
         <Box p={padding} color="white">
@@ -34,6 +37,7 @@ export const Learn = () => {
                             transform: "scale(1.05)",
                             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" 
                         }}
+                        onClick={()=> {navigate("/mendel"); window.scrollTo(0, 0); }}
                     >
                         APROFUNDE-SE
                     </Button>

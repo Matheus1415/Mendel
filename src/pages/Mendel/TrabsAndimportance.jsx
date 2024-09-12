@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
@@ -7,6 +8,8 @@ const MotionImage = motion(Image);
 const MotionButton = motion(Button);
 
 export function TrabsAndimportance() {
+    const navigate = useNavigate();
+
     return (
         <MotionBox 
             backgroundRepeat="repeat" 
@@ -74,6 +77,7 @@ export function TrabsAndimportance() {
                             initial={{ scale: 0.8 }}
                             whileHover={{ scale: 1.1 }}
                             transition={{ duration: 0.3 }}
+                            onClick={()=> {navigate("/leis-de-mendel"); window.scrollTo(0, 0); }}
                         >
                             Conheça as leis de Mendel
                         </MotionButton>

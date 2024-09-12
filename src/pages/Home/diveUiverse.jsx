@@ -1,6 +1,7 @@
 import { Flex, Box, Text, useBreakpointValue, Button } from "@chakra-ui/react";
 import contentHome from "../../data/contentHome.json";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const BoxImage = motion(Box);
 const MotionText = motion(Text);
@@ -15,6 +16,8 @@ export const DiveUiverse = () => {
     const padding = useBreakpointValue({ base: "5", md: "20" });
     const fontSizeTitle = useBreakpointValue({ base: "24px", md: "48px" });
     const fontSizeSubtitle = useBreakpointValue({ base: "16px", md: "28px" });
+
+    const navigate = useNavigate();
 
     return (
         <Box 
@@ -76,6 +79,7 @@ export const DiveUiverse = () => {
                             transform: "scale(1.05)",
                             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)" 
                         }}
+                        onClick={()=> {navigate("/mendel"); window.scrollTo(0, 0); }}
                     >
                         Saiba Mais
                     </Button>
