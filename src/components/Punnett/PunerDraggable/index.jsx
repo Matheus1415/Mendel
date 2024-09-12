@@ -154,35 +154,16 @@ const PunnettSquareDraggable = ({
 
                 <Flex direction="column" align="center" justify="center" w="100%" gap={10}>
                     <Heading variant="PrimaryTitle">{title}</Heading>
-                    <Table 
-                        maxW="50%"
-                        align="center"
-                    >
-                        <Thead>
-                            <Tr>
-                                <Th borderBottom="none">
-                                    <Flex 
-                                        bg="#ebebebaf" 
-                                        justify='center' 
-                                        align='center' 
-                                        p={10}
-                                        w={250} 
-                                        h={180}
-                                        borderRadius={10}
-                                        border="1px solid #ffff"
-                                    >
-                                    </Flex>
-                                </Th>
-                                {alelosDoPai.map((alelo, idx) => (
-                                    <Th 
-                                        fontSize={25} 
-                                        textAlign="center"  
-                                        key={idx}   
-                                        color="white" 
-                                        sx={{ textTransform: 'none' }}
-                                        borderBottom="none"
-                                    >
+                    <Flex direction={!checked?"column":"row"} align="start" gap={10} justify="center">
+                        <Table 
+                            maxW="50%"
+                            align="center"
+                        >
+                            <Thead>
+                                <Tr>
+                                    <Th borderBottom="none">
                                         <Flex 
+                                            bg="#ebebebaf" 
                                             justify='center' 
                                             align='center' 
                                             p={10}
@@ -191,98 +172,119 @@ const PunnettSquareDraggable = ({
                                             borderRadius={10}
                                             border="1px solid #ffff"
                                         >
-                                            {alelo}
                                         </Flex>
                                     </Th>
-                                ))}
-                            </Tr>
-                        </Thead>
-                        <Tbody>
-                            {grid.map((row, rowIndex) => (
-                                <Tr key={rowIndex}>
-                                    <Th 
-                                        fontSize={25}  
-                                        color="white" 
-                                        sx={{ textTransform: 'none' }}   
-                                        borderBottom="none"
-                                    >   
-                                        <Flex 
-                                            justify='center' 
-                                            align='center' 
-                                            p={10}
-                                            w={250} 
-                                            h={180}
-                                            borderRadius={10}
-                                            border="1px solid #ffff"
-                                        >
-                                            {alelosDaMae[rowIndex]}       
-                                        </Flex>
-                                    </Th>
-                                    {row.map((src, colIndex) => (
-                                        <Td
-                                            key={colIndex}
-                                            onDrop={() => handleDrop(rowIndex, colIndex)}
-                                            onDragOver={handleDragOver}
+                                    {alelosDoPai.map((alelo, idx) => (
+                                        <Th 
+                                            fontSize={25} 
+                                            textAlign="center"  
+                                            key={idx}   
+                                            color="white" 
+                                            sx={{ textTransform: 'none' }}
                                             borderBottom="none"
                                         >
                                             <Flex 
-                                                bg={src ? '' : '#6886af'} 
                                                 justify='center' 
                                                 align='center' 
                                                 p={10}
                                                 w={250} 
                                                 h={180}
                                                 borderRadius={10}
-                                                border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && rearrangeLetters(option.alelo) === rearrangeLetters(alelosDoPai[colIndex] + alelosDaMae[rowIndex])) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
+                                                border="1px solid #ffff"
                                             >
-                                                {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
-                                            </Flex>                                            
-                                        </Td>
+                                                {alelo}
+                                            </Flex>
+                                        </Th>
                                     ))}
                                 </Tr>
-                            ))}
-                        </Tbody>
-                    </Table>
-                    {!checked && (
-                        <Flex gap={4}>
-                            <Button
-                                variant="nextPage"
-                                onClick={checkAnswers}
-                                borderRadius={8}
-                                width="200px"
-                            >
-                                Verificar
-                            </Button>
-                        </Flex>
-                    )}
-                    {checked && (
-                        <Flex direction="column" align="start" justify="start" gap={4} mt={4}>
-                            <Text fontSize={30} color="white">
-                                Você acertou {correctAnswers}/{totalAnswers}
-                            </Text>
-                            <Text fontSize={24} color="white">
-                                {getEncouragementMessage()}
-                            </Text>
-                            <Flex direction="row" gap={4}>
+                            </Thead>
+                            <Tbody>
+                                {grid.map((row, rowIndex) => (
+                                    <Tr key={rowIndex}>
+                                        <Th 
+                                            fontSize={25}  
+                                            color="white" 
+                                            sx={{ textTransform: 'none' }}   
+                                            borderBottom="none"
+                                        >   
+                                            <Flex 
+                                                justify='center' 
+                                                align='center' 
+                                                p={10}
+                                                w={250} 
+                                                h={180}
+                                                borderRadius={10}
+                                                border="1px solid #ffff"
+                                            >
+                                                {alelosDaMae[rowIndex]}       
+                                            </Flex>
+                                        </Th>
+                                        {row.map((src, colIndex) => (
+                                            <Td
+                                                key={colIndex}
+                                                onDrop={() => handleDrop(rowIndex, colIndex)}
+                                                onDragOver={handleDragOver}
+                                                borderBottom="none"
+                                            >
+                                                <Flex 
+                                                    bg={src ? '' : '#6886af'} 
+                                                    justify='center' 
+                                                    align='center' 
+                                                    p={10}
+                                                    w={250} 
+                                                    h={180}
+                                                    borderRadius={10}
+                                                    border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && rearrangeLetters(option.alelo) === rearrangeLetters(alelosDoPai[colIndex] + alelosDaMae[rowIndex])) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
+                                                >
+                                                    {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
+                                                </Flex>                                            
+                                            </Td>
+                                        ))}
+                                    </Tr>
+                                ))}
+                            </Tbody>
+                        </Table>
+                        {!checked && (
+                            <Flex gap={4}>
                                 <Button
                                     variant="nextPage"
-                                    onClick={() => setIsFeedbackOpen(true)}
+                                    onClick={checkAnswers}
                                     borderRadius={8}
                                     width="200px"
                                 >
-                                    Enviar Feedback
-                                </Button>
-                                <Button
-                                    variant="nextPage"
-                                    onClick={reset}
-                                    borderRadius={8}
-                                    width="200px"
-                                >
-                                    Resetar
+                                    Verificar
                                 </Button>
                             </Flex>
-                        </Flex>
-                    )}
+                        )}
+                        {checked && (
+                            <Flex direction="column" align="start" justify="start" gap={4} mt={4}>
+                                <Text fontSize={30} color="white">
+                                    Você acertou {correctAnswers}/{totalAnswers}
+                                </Text>
+                                <Text fontSize={24} color="white">
+                                    {getEncouragementMessage()}
+                                </Text>
+                                <Flex direction="row" gap={4}>
+                                    <Button
+                                        variant="nextPage"
+                                        onClick={() => setIsFeedbackOpen(true)}
+                                        borderRadius={8}
+                                        width="200px"
+                                    >
+                                        Enviar Feedback
+                                    </Button>
+                                    <Button
+                                        variant="nextPage"
+                                        onClick={reset}
+                                        borderRadius={8}
+                                        width="200px"
+                                    >
+                                        Resetar
+                                    </Button>
+                                </Flex>
+                            </Flex>
+                        )}
+                    </Flex>
                 </Flex>
             </Flex>
 
