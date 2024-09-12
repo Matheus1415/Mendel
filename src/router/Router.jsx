@@ -31,7 +31,7 @@ export const RouterAsRouter = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/atividades' element={<Atividades/>} />
-        <Route path="/alelos" element={<Alelos/>} />
+        {/* <Route path="/alelos" element={<Alelos/>} /> */}
         <Route path="/punntt" element={<PunntteUnlimited/>} />
         <Route path="/punntt-abo" element={<PunnttABOPage/>} />
         <Route path="/manutencao" element={<MaintenancePage/>}/>
