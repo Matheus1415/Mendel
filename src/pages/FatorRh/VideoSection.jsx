@@ -17,6 +17,7 @@ export function VideoSection({ objectJson }) {
                 description={value.description} 
                 link={value.link} 
                 indexTransition={index}
+                img={value.image}
             />
         ));
     }
