@@ -15,6 +15,7 @@ import { PunntteUnlimited } from '../pages/PunnttPage';
 import { IntroGenetica } from '../pages/IntroGenetica';
 import MenuMendel from '../components/Menu';
 import { Alelos } from '../pages/Alelos';
+import { LeisMendel } from '../pages/LeisMendel';
 import { PunnttABOPage } from '../pages/PunnttABOPage';
 import { SistemaAbo } from '../pages/SystemABO';
 import { Informacao } from '../pages/Informacao';
@@ -38,6 +39,7 @@ export const RouterAsRouter = () => {
         <Route path="/fundamentos" element={<Fundamentos/>} />
         <Route path="/mendel" element={<Mendel />} />
         <Route path="/aula" element={<AulaQuadro/>} />
+        <Route path="/leis-de-mendel" element={<LeisMendel/>} />
         <Route path="/variations" element={<Variations/>} />
         <Route path="/sistema-abo" element={<SistemaAbo/>} />
         <Route path="/informacao" element={<Informacao/>} />
