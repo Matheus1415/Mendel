@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GeneWatch Blog",
+    "description": "Este blog é uma extensão do GeneWatch UK, que aborda questões de genética e biotecnologia. Ele é frequentemente atualizado por cientistas e especialistas, incluindo mulheres que escrevem sobre tópicos relacionados à genética e ética.",
+    "link": "https://www.genewatch.org/"
+  },
+  {
+    "title": "Genetics Unzipped",
+    "description": "É um podcast e blog da Genetic Society, com contribuições de várias cientistas, incluindo mulheres. Eles discutem uma ampla gama de tópicos em genética e frequentemente apresentam posts escritos por pesquisadoras.",
+    "link": "https://geneticsunzipped.com/"
+  },
+  {
+    "title": "The Genetic Detective",
+    "description": "Este blog é mantido por uma cientista e detetive genética que explora como a genética está transformando a resolução de crimes e a genealogia.",
+    "link": "https://www.imdb.com/title/tt12390140/"
+  },
+  {
+    "title": "Nature Genetics Blog",
+    "description": "A revista Nature Genetics tem um blog onde várias cientistas publicam artigos e posts sobre as últimas pesquisas e descobertas em genética",
+    "link": "https://www.nature.com/ng/"
+  },
+  {
+    "title": "Your DNA Guide Blog",
+    "description": "Roberta Estes, uma conhecida especialista em genética e genealogia, mantém um blog que explora a genética e a ancestralidade de forma acessível e informativa.",
+    "link": "https://www.yourdnaguide.com/ydgblog"
+  }
+]
