@@ -2,7 +2,7 @@ import { Flex, Text, Collapse, Box } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
-const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
+const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
   const location = useLocation();
   const isActive = location.pathname === router;
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
@@ -17,6 +17,10 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
     if (subMenu.length > 0) {
       setSubMenuOpen(false);
     }
+  };
+
+  const handleClick = () => {
+    setIsOpen(false); // Fecha o menu ao clicar
   };
 
   return (
@@ -46,7 +50,7 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
           transition="transform 0.2s"
         >
           {subMenu.length === 0 ? (
-            <Link to={router}>
+            <Link to={router} onClick={handleClick}>
               {icon}
             </Link>
           ) : (
@@ -54,7 +58,7 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
           )}
         </Flex>
         {subMenu.length === 0 ? (
-          <Link to={router}>
+          <Link to={router} onClick={handleClick}>
             <Text ml={2} fontSize="16px">
               {label}
             </Text>
@@ -76,7 +80,7 @@ const MenuItem = ({ icon, label, isOpen, router, subMenu = [] }) => {
           {subMenu.map((subItem, index) => {
             const isSubItemActive = location.pathname === subItem.router;
             return (
-              <Link to={subItem.router} key={index}>
+              <Link to={subItem.router} key={index} onClick={handleClick}>
                 <Text
                   ml={2}
                   fontSize="14px"

@@ -13,7 +13,7 @@ export const LayoutBaseModify = ({
     const flexDirection = useBreakpointValue({ base: "column", sm: "column", md: isRowReverse?'row-reverse':'row'});
     const contentWidth = useBreakpointValue({  base: "100%",  sm: "100%", md: '50%'});
     const felxAlignContent = useBreakpointValue({  base: "center",  sm: "center", md: ''});
-
+    console.log(titleSyleOverrides);
     return(
         <Box 
         backgroundRepeat="repeat" 
@@ -30,7 +30,7 @@ export const LayoutBaseModify = ({
                 >
                     <Heading 
                         variant={titleVariant}
-                        sx={titleSyleOverrides}                            
+                        style={titleSyleOverrides}                            
                     >{title}</Heading>
                     {children}
                 </Flex>

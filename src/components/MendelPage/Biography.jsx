@@ -1,13 +1,17 @@
 import { Box, Flex, Heading, Highlight, Text, useBreakpointValue } from "@chakra-ui/react";
-import {MainImage} from '../../components/MendelPage/MainImage'
+import {MainImage} from './MainImage'
+import { LayoutBaseModify } from "../../layout/LayoutBaseModify";
 
 export function Biography() {
+
+  
 
   const flexDirection = useBreakpointValue({base: 'column-reverse', sm: 'column-reverse', md: 'column-reverse', lg: 'column-reverse', xl: 'row', '2xl':'row'})
   const marginTitle = useBreakpointValue({sm: '0px', md:'0px', lg:'20px'})
   const textSize = useBreakpointValue({base:'13px', sm:'17px', md:'17px', lg:'17px'}) 
 
   return (
+    <LayoutBaseModify>
   <Flex aling="Center" direction="column" bg='#02161F' w='100%' height='100%'>
 
     <Flex aling="center" direction={flexDirection} padding="24px 24px" margin='0 auto'>
@@ -28,7 +32,7 @@ export function Biography() {
             </Highlight>
         </Text>
 
-        <Text  fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
+        <Text  variant="Paragraph"fontSize={textSize} w = {[300, 450, 550, 700, 600]} textAlign='justify' aling="center" fontWeight='275' color='#ffffff' marginBottom='10px'>
           Nascido e criado em ambiente rural, teve sua
           capacidade acadêmica reconhecida pelo padre local, o que levou seus
           pais a o colocarem no colégio aos 11 anos. Seus estudos de Gymnasium
@@ -65,5 +69,6 @@ export function Biography() {
         </Box>
     </Flex>
   </Flex>
+  </LayoutBaseModify>
   )
 }

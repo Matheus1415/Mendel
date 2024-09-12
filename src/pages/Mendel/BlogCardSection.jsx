@@ -1,0 +1,39 @@
+import {Flex, Button, Box} from '@chakra-ui/react'
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
+import {BlogCards} from './BlogCards'
+import { useState } from 'react'
+
+export function BlogCardSection({objectJson}){
+const [index, setIndex] = useState(0)
+
+const endOfTheArray = (objectJson.length * 543) - 1086
+
+function showCards(){
+
+    return objectJson.map((value) => (
+        <BlogCards key={value.title} title={value.title} description={value.description} link={value.link} indexTransition={index}/>
+    ))
+}
+
+function moveToLeft(){
+    setIndex((prevIndex) => prevIndex === 0? endOfTheArray :prevIndex -543)
+}
+
+function moveToRight(){
+    setIndex((prevIndex) => prevIndex === endOfTheArray ? 0 : prevIndex +543)
+}
+
+return(
+    <Flex direction='row' justifyContent='center' alignItems='center' gap='20px'>
+        <Button onClick={moveToLeft} bg='transparent' _hover={{}} _active={{}} display={['none', 'block']}>          
+            <HiChevronLeft size={37} color="#19BFCD80"/>
+        </Button>
+        <Box display='flex' flexDirection={["column", "row"]} w={["100%", "1066px"]} overflow='hidden' gap='20px'>
+            {showCards()}
+        </Box>
+        <Button onClick={moveToRight} bg='transparent' _hover={{}} _active={{}} display={['none', 'block']}>   
+            <HiChevronRight size={37} color="#19BFCD80"/>
+        </Button>
+    </Flex>
+)
+}

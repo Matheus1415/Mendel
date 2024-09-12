@@ -7,7 +7,7 @@ const PrimaryTitle = defineStyle({
     fontWeight: 275,
     fontWeight: 'light',
     textTransform: 'uppercase',
-    bg: 'linear-gradient(to right, #19BFCD 0%, #0D6067 100%)',
+    bg: 'linear-gradient(to right, #19BFCD 0%, #137a83 100%)',
     bgClip: 'text'
 })
 
@@ -21,9 +21,19 @@ const SecondTitle = defineStyle({
     color: 'white'
 })
 
+const QuestionTile = defineStyle({
+    fontSize: 20,
+    fontWeight: 275,
+    fontWeight: 'light',
+    textTransform: 'uppercase',
+    color: 'white',
+    textAlign:"justify"
+})
+
 export const Heading = defineStyleConfig({
     variants: {
         PrimaryTitle,
-        SecondTitle
+        SecondTitle,
+        QuestionTile
     }
 })

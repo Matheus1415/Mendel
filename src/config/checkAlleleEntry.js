@@ -30,11 +30,6 @@ export const checkAlleleEntry = (
     return;
   }
 
-  if (parent1.length > maxAllele || parent2.length > maxAllele) {
-    showAlert(`Ops! A quantidade de alelos ultrapassou o máximo permitido de ${maxAllele}.`, 'warning');
-    return;
-  }
-
   const areAllAllelesValid = (parent) => parent.every(isValidNotNumber);
   if (!areAllAllelesValid(parent1) || !areAllAllelesValid(parent2)) {
     showAlert('Ops! Todos os alelos devem ser letras maiúsculas ou minúsculas.', 'error');
@@ -48,7 +43,7 @@ export const checkAlleleEntry = (
   }
 
   // Validação das características
-  if (!Array.isArray(caracteristicas) || caracteristicas.length !== 2) {
+  if (!Array.isArray(caracteristicas) || (caracteristicas.length !== 2 && caracteristicas.length !== 4)) {
     showAlert('Certifique-se de que há duas características.', 'error');
     return;
   }

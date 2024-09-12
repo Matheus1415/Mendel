@@ -1,13 +1,21 @@
 import { Radio, RadioGroup, Checkbox, CheckboxGroup, FormControl, FormLabel, Input } from "@chakra-ui/react"
 
 export function Options({questionType, questionOptions}){
+
+    const alphabet = [
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+        'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+        'u', 'v', 'w', 'x', 'y', 'z'
+      ];
+
+
     function renderOptionsFromQuestionType(type, options) {
         
         switch (type) {
             case "UniqueItem":
                 const radiosJsx = options.map( (option, index) => {
                         return(
-                            <Radio w='full' key={index} value={option.content} name='options'>{option.content}</Radio>
+                            <Radio w='full' key={index} value={option.content} name='options'> {alphabet[index]}) {option.content}</Radio>
                         )
                 } )
                 //key para o radio group
