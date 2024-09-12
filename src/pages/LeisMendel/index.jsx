@@ -129,7 +129,7 @@ export const LeisMendel = () => {
                 padding="2rem"
             >
                 <Heading 
-                    variant="SecondTitle" 
+                    variant="PrimaryTitle" 
                     bgGradient="linear(270deg, rgba(25, 191, 205, 0.5) 0%, rgba(13, 96, 103, 0.5) 100%)"
                     bgClip="text"
                     fontSize="4xl"

@@ -16,12 +16,14 @@ const MenuMendel = () => {
     const menuRef = useRef(); 
 
     const subMenuConteudo = [
-        { label: "Gregorio", router: "/mendel" },
-        { label: "Introdução a Genética", router: "/introducao-genetica" },
-        { label: "Fundamentos", router: "/fundamentos" },
-        { label: "Fator RH", router: "/sistema-rh" },
-        { label: "Sistema Sanguíneo", router: "/sistema-abo" }, 
-        { label: "Variações do modelo Menderiano", router: "/variations" },
+        { label: "Gregorio", router: "/mendel" }, //
+        { label: "Leis de Mendel", router: "/leis-de-mendel" }, //
+        { label: "Introdução a Genética", router: "/introducao-genetica" },//
+        { label: "Fundamentos", router: "/fundamentos" },//
+        { label: "Variações do modelo Menderiano", router: "/variations" },//
+        { label: "Fator RH", router: "/sistema-rh" },//
+        { label: "Sistema Sanguíneo", router: "/sistema-abo" }, //
+        //mulheres
     ];
     const subMenuAtividade = [
         { label: "Atividade Dinâmica", router: "/punner-arastavel" },
