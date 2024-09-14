@@ -23,12 +23,12 @@ const MenuMendel = () => {
         { label: "Variações do modelo Menderiano", router: "/variations" },//
         { label: "Fator RH", router: "/sistema-rh" },//
         { label: "Sistema Sanguíneo", router: "/sistema-abo" }, //
-        { label: "Mulheres XX", router: "/mulheres-genetica" }//
+        { label: "Mulheres", router: "/mulheres-genetica" }//
     ];
     const subMenuAtividade = [
         { label: "Atividade Dinâmica", router: "/punner-arastavel" },
         { label: "Atividade", router: "/atividades" },
-        { label: "Punntt Alelos", router: "/punntt" },
+        { label: "Punnett Alelos", router: "/punntt" },
         { label: "Ambiente de Aula", router: "/aula" },
     ];
 
