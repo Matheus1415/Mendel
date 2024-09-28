@@ -215,7 +215,7 @@ const PunnettSquareDraggable = ({
                     />
                 </Center>
 
-                <Flex direction={flexDirection} align="center" justify="center" w="100%" >
+                <Flex direction="column" align="center" justify="center" w="100%" >
                     <Heading variant="PrimaryTitle" fontSize={titleSize}>{title}</Heading>
                     <Flex direction={!checked?"column":"row"} align="start" gap={10} justify="center">
                         <Table 
@@ -310,21 +310,22 @@ const PunnettSquareDraggable = ({
                                 ))}
                             </Tbody>
                         </Table>
+                        {checked && (
+                        <Flex direction="column" align="center" justify="center" gap={10}>
+                            <Flex direction="column" align="center" justify="center" gap={4}>
+                                <Text fontWeight="bold" color="white" fontSize={23}>{getEncouragementMessage()}</Text>
+                                <Text fontWeight="bold" color="white" fontSize={17}>Você acertou {correctAnswers} de {totalAnswers}</Text>
+                            </Flex>
+                            <Flex>
+                                <Button variant="nextPage" onClick={reset} mr={4}>
+                                    Resetar
+                                </Button>
+                                <Button variant="nextPage" onClick={() => setIsFeedbackOpen(true)}>
+                                    Enviar Feedback
+                                </Button>
+                            </Flex>
+                        </Flex>)}
                     </Flex>
-                    {checked && (<Flex direction={flexDirection} align="center" justify="center" gap={10}>
-                        <Flex direction={flexDirection} align="center" justify="center" gap={4}>
-                            <Text fontWeight="bold" color="white" fontSize={23}>{getEncouragementMessage()}</Text>
-                            <Text fontWeight="bold" color="white" fontSize={17}>Você acertou {correctAnswers} de {totalAnswers}</Text>
-                        </Flex>
-                        <Flex>
-                            <Button variant="nextPage" onClick={reset} mr={4}>
-                                Resetar
-                            </Button>
-                            <Button variant="nextPage" onClick={() => setIsFeedbackOpen(true)}>
-                                Enviar Feedback
-                            </Button>
-                        </Flex>
-                    </Flex>)}
                     
                     {!checked && (
                         <Flex gap={4} >
