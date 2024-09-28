@@ -12,11 +12,11 @@ export const PunnettSquareDraggablePage = () => {
     return (
         <Flex 
             justify='center' 
-            align='center' 
+            align='center'  
             bg="red.500"
             w="100vw"
             maxW="100%"
-            minH="1200px"
+            minH="1100px"
             backgroundRepeat="no-repeat" 
             backgroundSize="cover" 
             backgroundPosition="center" 
@@ -27,22 +27,23 @@ export const PunnettSquareDraggablePage = () => {
                 width="100%"
                 top={0}
                 left={0}
-                minH="1200px"
+                minH="1100px"
                 bg="#02161fc3"
                 justify='center' 
-                align='center'     
+                align='flex-start'
+                p={10}  
             >    
                 <Flex
                     border='4px'
                     borderColor='#ebebeb7e'                 
                     width="90%"
-                    minH="800px"
+                    minH="400px"
                     bg="#0638443e" 
                     backdropFilter="blur(23px)" 
                     borderRadius="15px" 
-                    p="4"
                     justify='center' 
-                    align='center'         
+                    align='flex-start'   
+                    p={10}      
                 >
                     {filteredData ? (
                         <PunnettSquareDraggable data={filteredData} />

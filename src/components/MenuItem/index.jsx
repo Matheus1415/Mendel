@@ -47,7 +47,7 @@ const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
           h="40px"
           fontSize="24px"
           _hover={subMenu.length === 0 ? { transform: "scale(1.1)" } : {}}
-          transition="transform 0.2s"
+          transition="transform 1s"
         >
           {subMenu.length === 0 ? (
             <Link to={router} onClick={handleClick}>
@@ -59,12 +59,12 @@ const MenuItem = ({ setIsOpen, icon, label, isOpen, router, subMenu = [] }) => {
         </Flex>
         {subMenu.length === 0 ? (
           <Link to={router} onClick={handleClick}>
-            <Text ml={2} fontSize="16px">
+            <Text ml={2} fontSize="16px" color="white">
               {label}
             </Text>
           </Link>
         ) : (
-          <Text ml={2} fontSize="16px">
+          <Text ml={2} fontSize="16px" color="white">
             {label}
           </Text>
         )}

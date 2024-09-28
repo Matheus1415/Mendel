@@ -12,33 +12,60 @@ const PunnettSquareDraggable = ({
     onChangeCallback = () => {},
     onHomeCallback = () => {}
 }) => {
+    // Obtendo os alelos do pai e da mãe, opções e título a partir dos dados
     const alelosDoPai = data.alelos.pai;
     const alelosDaMae = data.alelos.mae;
     const options = data.options;
     const title = data.title; 
 
+    // Definindo a quantidade de alelos e criando a matriz/grid inicial
     const quantidadeDeAlelos = alelosDoPai.length;
     const [grid, setGrid] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [matriz, setMatriz] = useState(Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null)));
     const [availableOptions, setAvailableOptions] = useState(options);
-    const [draggedImgSrc, setDraggedImgSrc] = useState('');
-    const [draggedNome, setDraggedNome] = useState('');
-    const [correctAnswers, setCorrectAnswers] = useState(0);
-    const [totalAnswers, setTotalAnswers] = useState(quantidadeDeAlelos * quantidadeDeAlelos);
-    const [checked, setChecked] = useState(false);
-    const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+    const [draggedImgSrc, setDraggedImgSrc] = useState(''); // Estado para armazenar a fonte da imagem arrastada
+    const [draggedNome, setDraggedNome] = useState(''); // Estado para armazenar o nome arrastado
+    const [correctAnswers, setCorrectAnswers] = useState(0); // Estado para contar as respostas corretas
+    const [totalAnswers, setTotalAnswers] = useState(quantidadeDeAlelos * quantidadeDeAlelos); // Total de respostas
+    const [checked, setChecked] = useState(false); // Estado para verificar se algo foi checado
+    const [isFeedbackOpen, setIsFeedbackOpen] = useState(false); // Estado para controlar a exibição do feedback
     const [userFeedback, setUserFeedback] = useState(''); // Estado para armazenar o feedback do usuário
 
+    // Efeito que chama a função de callback sempre que a matriz é atualizada
     useEffect(() => {
         onChangeCallback(matriz);
     }, [matriz]);
 
+    // Função para iniciar o arraste da imagem
     const handleDragStart = (e, src, nome) => {
-        setDraggedImgSrc(src);
-        setDraggedNome(nome);
+        setDraggedImgSrc(src); // Armazena a fonte da imagem arrastada
+        setDraggedNome(nome); // Armazena o nome da imagem arrastada
     };
 
+    // Função para selecionar a imagem ao clicar
+    const handleClickSelect = (src, nome) => {
+        setDraggedImgSrc(src); // Define a imagem arrastada
+        setDraggedNome(nome); // Define o nome arrastado
+    };
+
+    // Função para lidar com o clique na célula da matriz
+    const handleCellClick = (rowIndex, colIndex) => {
+        if (draggedImgSrc) { // Verifica se existe uma imagem arrastada
+            // Atualiza o grid e a matriz com a imagem e nome arrastados
+            const newGrid = grid.map((row, rIdx) =>
+                row.map((src, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? draggedImgSrc : src))
+            );
+            const newMatriz = matriz.map((row, rIdx) =>
+                row.map((nome, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? draggedNome : nome))
+            );
+            setGrid(newGrid);
+            setMatriz(newMatriz);
+        }
+    };
+
+    // Função para lidar com a soltura da imagem na célula
     const handleDrop = (rowIndex, colIndex) => {
+        // Atualiza o grid e a matriz com a imagem e nome arrastados
         const newGrid = grid.map((row, rIdx) =>
             row.map((src, cIdx) => (rIdx === rowIndex && cIdx === colIndex ? draggedImgSrc : src))
         );
@@ -47,48 +74,58 @@ const PunnettSquareDraggable = ({
         );
         setGrid(newGrid);
         setMatriz(newMatriz);
-
-        setAvailableOptions(availableOptions.filter(option => option.src !== draggedImgSrc));
     };
 
+    // Função para permitir o arraste sobre a célula
     const handleDragOver = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Impede o comportamento padrão do arraste
     };
 
+
+    // Função para redefinir a matriz e o grid para o estado inicial
     const reset = () => {
+        // Cria uma nova matriz com o tamanho de alelos e preenchida com null
         const newMatriz = Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null));
-        setMatriz(newMatriz);
+        setMatriz(newMatriz); // Atualiza a matriz no estado
+
+        // Cria um novo grid com o mesmo tamanho e preenchido com null
         const newGrid = Array.from({ length: quantidadeDeAlelos }, () => Array.from({ length: quantidadeDeAlelos }, () => null));
-        setGrid(newGrid);
+        setGrid(newGrid); // Atualiza o grid no estado
+
+        // Restaura as opções disponíveis
         setAvailableOptions(options); 
-        setCorrectAnswers(0);
-        setChecked(false);
+        setCorrectAnswers(0); // Reseta o contador de respostas corretas
+        setChecked(false); // Reseta o estado de verificação
     };
 
+    // Função para verificar as respostas
     const checkAnswers = () => {
-        let correct = 0;
+        let correct = 0; // Contador de respostas corretas
 
+        // Percorre cada linha da matriz
         matriz.forEach((row, rIdx) => {
             row.forEach((nome, cIdx) => {
-                const aleloPai = alelosDoPai[cIdx];
-                const aleloMae = alelosDaMae[rIdx];
-                const combinedAlelo = aleloPai + aleloMae;
-                const matchingOption = options.find(option => option.name === matriz[rIdx][cIdx] && rearrangeLetters(option.alelo) === rearrangeLetters(combinedAlelo))
+                const aleloPai = alelosDoPai[cIdx]; // Obtém o alelo do pai
+                const aleloMae = alelosDaMae[rIdx]; // Obtém o alelo da mãe
+                const combinedAlelo = aleloPai + aleloMae; // Combina os alelos
+                // Verifica se a combinação do alelo corresponde à opção correta
+                const matchingOption = options.find(option => option.name === matriz[rIdx][cIdx] && rearrangeLetters(option.alelo) === rearrangeLetters(combinedAlelo));
                 
-                console.log(matchingOption)
-                if (matchingOption) {
-                    correct++;
+                if (matchingOption) { // Se a opção correspondente for encontrada
+                    correct++; // Incrementa o contador de respostas corretas
                 }
             });
         });
 
-        setCorrectAnswers(correct);
-        setChecked(true);
+        setCorrectAnswers(correct); // Atualiza o número de respostas corretas no estado
+        setChecked(true); // Marca que a verificação foi realizada
     };
 
+    // Função para obter uma mensagem de encorajamento com base nas respostas corretas
     const getEncouragementMessage = () => {
-        const percentage = (correctAnswers / totalAnswers) * 100;
+        const percentage = (correctAnswers / totalAnswers) * 100; // Calcula a porcentagem de acertos
 
+        // Retorna uma mensagem com base na porcentagem de acertos
         if (percentage === 100) {
             return "Parabéns! Você acertou todas as combinações!";
         } else if (percentage === 0) {
@@ -100,9 +137,10 @@ const PunnettSquareDraggable = ({
         }
     };
 
+
     const submitForm = async () => {
         const feedbackData = {
-            feedback: userFeedback, // Apenas o feedback do usuário
+            feedback: userFeedback,
         };
 
         try {
@@ -115,7 +153,7 @@ const PunnettSquareDraggable = ({
             });
 
             if (response.ok) {
-                
+                // Feedback enviado com sucesso
             } else {
                 console.error('Erro ao enviar o feedback:', response.statusText);
             }
@@ -134,16 +172,22 @@ const PunnettSquareDraggable = ({
                             p={4}
                             borderRadius="20px"
                             textAlign="center"
+                            onClick={() => handleClickSelect(option.src, option.name)}
+                            cursor="pointer"
                         >
-                            <Text mb={2} fontWeight="bold" color="white">{rearrangeLetters(option.alelo)}</Text>
-                            <img
-                                style={{ 'maxWidth': '100px' }}
-                                className="cell"
-                                src={option.src}
-                                alt={option.name}
-                                draggable="true"
-                                onDragStart={(e) => handleDragStart(e, option.src, option.name)}
-                            />
+                            {!checked && (
+                                <>
+                                    <Text mb={2} fontWeight="bold" color="white">{rearrangeLetters(option.alelo)}</Text>
+                                    <img
+                                        style={{ 'maxWidth': '100px' }}
+                                        className="cell"
+                                        src={option.src}
+                                        alt={option.name}
+                                        draggable="true"
+                                        onDragStart={(e) => handleDragStart(e, option.src, option.name)}
+                                    />
+                                </>
+                            )}
                         </Box>
                     ))}
                 </Flex>
@@ -152,7 +196,7 @@ const PunnettSquareDraggable = ({
                     <Divider orientation='vertical' />
                 </Center>
 
-                <Flex direction="column" align="center" justify="center" w="100%" gap={10}>
+                <Flex direction="column" align="center" justify="center" w="100%" >
                     <Heading variant="PrimaryTitle">{title}</Heading>
                     <Flex direction={!checked?"column":"row"} align="start" gap={10} justify="center">
                         <Table 
@@ -224,80 +268,60 @@ const PunnettSquareDraggable = ({
                                                 key={colIndex}
                                                 onDrop={() => handleDrop(rowIndex, colIndex)}
                                                 onDragOver={handleDragOver}
+                                                onClick={() => handleCellClick(rowIndex, colIndex)}
                                                 borderBottom="none"
                                             >
                                                 <Flex 
-                                                    bg={src ? '' : '#6886af'} 
+                                                    bg={src ? '' : '#6886af33'} 
                                                     justify='center' 
                                                     align='center' 
                                                     p={10}
                                                     w={250} 
                                                     h={180}
                                                     borderRadius={10}
-                                                    border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && rearrangeLetters(option.alelo) === rearrangeLetters(alelosDoPai[colIndex] + alelosDaMae[rowIndex])) ? "2px solid green" : "2px solid red") : "1px solid #ffff"}
+                                                    border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && rearrangeLetters(option.alelo) === rearrangeLetters(alelosDoPai[colIndex] + alelosDaMae[rowIndex])) ? "2px solid green" : "2px solid #ff11006a") : "1px solid #ffff"}
                                                 >
                                                     {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
                                                 </Flex>                                            
+
                                             </Td>
                                         ))}
                                     </Tr>
                                 ))}
                             </Tbody>
                         </Table>
-                        {!checked && (
-                            <Flex gap={4}>
-                                <Button
-                                    variant="nextPage"
-                                    onClick={checkAnswers}
-                                    borderRadius={8}
-                                    width="200px"
-                                >
-                                    Verificar
+                        {checked && (<Flex direction="column" align="center" justify="center" gap={10}>
+                            <Flex direction="column" align="center" justify="center" gap={4}>
+                                <Text fontWeight="bold" color="white" fontSize={23}>{getEncouragementMessage()}</Text>
+                                <Text fontWeight="bold" color="white" fontSize={17}>Você acertou {correctAnswers} de {totalAnswers}</Text>
+                            </Flex>
+                            <Flex>
+                                <Button variant="nextPage" onClick={reset} mr={4}>
+                                    Resetar
+                                </Button>
+                                <Button variant="nextPage" onClick={() => setIsFeedbackOpen(true)}>
+                                    Enviar Feedback
                                 </Button>
                             </Flex>
-                        )}
-                        {checked && (
-                            <Flex direction="column" align="start" justify="start" gap={4} mt={4}>
-                                <Text fontSize={30} color="white">
-                                    Você acertou {correctAnswers}/{totalAnswers}
-                                </Text>
-                                <Text fontSize={24} color="white">
-                                    {getEncouragementMessage()}
-                                </Text>
-                                <Flex direction="row" gap={4}>
-                                    <Button
-                                        variant="nextPage"
-                                        onClick={() => setIsFeedbackOpen(true)}
-                                        borderRadius={8}
-                                        width="200px"
-                                    >
-                                        Enviar Feedback
-                                    </Button>
-                                    <Button
-                                        variant="nextPage"
-                                        onClick={reset}
-                                        borderRadius={8}
-                                        width="200px"
-                                    >
-                                        Resetar
-                                    </Button>
-                                </Flex>
-                            </Flex>
-                        )}
+                        </Flex>)}
                     </Flex>
+                    
+                    {!checked && (
+                        <Flex gap={4} >
+                            <Button variant="nextPage" onClick={checkAnswers} w="850px" textAlign="left">Verificar</Button>
+                        </Flex>
+                    )}
                 </Flex>
             </Flex>
 
             <ModalFeedback 
-                isOpen={isFeedbackOpen} 
+                isOpen={isFeedbackOpen}
                 onClose={() => setIsFeedbackOpen(false)}
-                onSubmit={submitForm} // Chama a função submitForm ao enviar o feedback
-                feedback={userFeedback}
-                onFeedbackChange={(e) => setUserFeedback(e.target.value)} // Atualiza o feedback do usuário
+                setUserFeedback={setUserFeedback}
+                submitForm={submitForm}
             />
         </>
     );
 };
 
 export default PunnettSquareDraggable;
-
