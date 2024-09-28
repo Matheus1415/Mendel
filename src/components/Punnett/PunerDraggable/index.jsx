@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center, Text, Heading } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, Flex, Box, Button, Divider, Center, Text, Heading, useBreakpointValue } from '@chakra-ui/react';
 import ModalFeedback from '../../ModalFeedback';
 import { rearrangeLetters } from '../../../config/rearrangeLetters';
 
@@ -12,6 +12,17 @@ const PunnettSquareDraggable = ({
     onChangeCallback = () => {},
     onHomeCallback = () => {}
 }) => {
+    //Breakpoint da tabela
+    const flexDirection = useBreakpointValue({ base: "column", md: "row" });
+    const flexDirectionInverse = useBreakpointValue({ base: "row", md: "column" });
+    const widthBTN = useBreakpointValue({ base: "300px", md: "850px" });
+    const widthTD = useBreakpointValue({ base: "80px", md: "250px" });
+    const heigthTD = useBreakpointValue({ base: "80px", md: "180px" });
+    const widthImage = useBreakpointValue({ base: "70px", md: "150px" });
+    const titleSize = useBreakpointValue({ base: "20px", md: "50px" });
+    const tdSize = useBreakpointValue({ base: "15px", md: "25px" });
+    const padding = useBreakpointValue({ base: 5, md: 10 });
+
     // Obtendo os alelos do pai e da mãe, opções e título a partir dos dados
     const alelosDoPai = data.alelos.pai;
     const alelosDaMae = data.alelos.mae;
@@ -164,8 +175,8 @@ const PunnettSquareDraggable = ({
 
     return (
         <>
-            <Flex direction="row" w="100%" align="center" justifyContent="center">
-                <Flex p={4} direction="column" gap={4} align="start">
+            <Flex direction={flexDirection} w="100%" align="center" justifyContent="center">
+                <Flex p={4} direction={flexDirectionInverse} gap={4} align="start">
                     {availableOptions.map((option, index) => (
                         <Box 
                             key={index} 
@@ -174,12 +185,13 @@ const PunnettSquareDraggable = ({
                             textAlign="center"
                             onClick={() => handleClickSelect(option.src, option.name)}
                             cursor="pointer"
+                            w={widthImage}
                         >
                             {!checked && (
                                 <>
                                     <Text mb={2} fontWeight="bold" color="white">{rearrangeLetters(option.alelo)}</Text>
                                     <img
-                                        style={{ 'maxWidth': '100px' }}
+                                        style={{ 'Width': widthImage }}
                                         className="cell"
                                         src={option.src}
                                         alt={option.name}
@@ -192,12 +204,19 @@ const PunnettSquareDraggable = ({
                     ))}
                 </Flex>
                 
-                <Center height={checked ? "" : "800px"}>
-                    <Divider orientation='vertical' />
+                <Center 
+                    height={checked ? "auto" : "800px"} // Use "auto" em vez de "" para melhor compatibilidade
+                    display={flexDirection === "column" ? "none" : "block"} // Ajuste de exibição baseado na direção
+                >
+                    <Divider 
+                        orientation={flexDirection === "column" ? "horizontal" : "vertical"} // Altera a orientação do Divider
+                        height={flexDirection === "column" ? "1px" : "100%"} // Altura de acordo com a direção
+                        width={flexDirection === "column" ? "100%" : "1px"} // Largura de acordo com a direção
+                    />
                 </Center>
 
-                <Flex direction="column" align="center" justify="center" w="100%" >
-                    <Heading variant="PrimaryTitle">{title}</Heading>
+                <Flex direction={flexDirection} align="center" justify="center" w="100%" >
+                    <Heading variant="PrimaryTitle" fontSize={titleSize}>{title}</Heading>
                     <Flex direction={!checked?"column":"row"} align="start" gap={10} justify="center">
                         <Table 
                             maxW="50%"
@@ -211,8 +230,8 @@ const PunnettSquareDraggable = ({
                                             justify='center' 
                                             align='center' 
                                             p={10}
-                                            w={250} 
-                                            h={180}
+                                            w={widthTD} 
+                                            h={heigthTD}
                                             borderRadius={10}
                                             border="1px solid #ffff"
                                         >
@@ -220,7 +239,7 @@ const PunnettSquareDraggable = ({
                                     </Th>
                                     {alelosDoPai.map((alelo, idx) => (
                                         <Th 
-                                            fontSize={25} 
+                                            fontSize={tdSize} 
                                             textAlign="center"  
                                             key={idx}   
                                             color="white" 
@@ -231,8 +250,8 @@ const PunnettSquareDraggable = ({
                                                 justify='center' 
                                                 align='center' 
                                                 p={10}
-                                                w={250} 
-                                                h={180}
+                                                w={widthTD} 
+                                                h={heigthTD}
                                                 borderRadius={10}
                                                 border="1px solid #ffff"
                                             >
@@ -255,8 +274,8 @@ const PunnettSquareDraggable = ({
                                                 justify='center' 
                                                 align='center' 
                                                 p={10}
-                                                w={250} 
-                                                h={180}
+                                                w={widthTD} 
+                                                h={heigthTD}
                                                 borderRadius={10}
                                                 border="1px solid #ffff"
                                             >
@@ -270,18 +289,19 @@ const PunnettSquareDraggable = ({
                                                 onDragOver={handleDragOver}
                                                 onClick={() => handleCellClick(rowIndex, colIndex)}
                                                 borderBottom="none"
+                                                p={padding}
                                             >
                                                 <Flex 
                                                     bg={src ? '' : '#6886af33'} 
                                                     justify='center' 
                                                     align='center' 
-                                                    p={10}
-                                                    w={250} 
-                                                    h={180}
+                                                    w={widthTD} 
+                                                    h={heigthTD}
+                                                    p={2}
                                                     borderRadius={10}
                                                     border={checked ? (matriz[rowIndex][colIndex] && options.find(option => option.name === matriz[rowIndex][colIndex] && rearrangeLetters(option.alelo) === rearrangeLetters(alelosDoPai[colIndex] + alelosDaMae[rowIndex])) ? "2px solid green" : "2px solid #ff11006a") : "1px solid #ffff"}
                                                 >
-                                                    {src && <img style={{ 'maxWidth': '100px' }} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
+                                                    {src && <img style={{width: widthImage,display: 'block', margin: 'auto'}} src={src} alt={`cell-${rowIndex}-${colIndex}`} />}     
                                                 </Flex>                                            
 
                                             </Td>
@@ -290,25 +310,25 @@ const PunnettSquareDraggable = ({
                                 ))}
                             </Tbody>
                         </Table>
-                        {checked && (<Flex direction="column" align="center" justify="center" gap={10}>
-                            <Flex direction="column" align="center" justify="center" gap={4}>
-                                <Text fontWeight="bold" color="white" fontSize={23}>{getEncouragementMessage()}</Text>
-                                <Text fontWeight="bold" color="white" fontSize={17}>Você acertou {correctAnswers} de {totalAnswers}</Text>
-                            </Flex>
-                            <Flex>
-                                <Button variant="nextPage" onClick={reset} mr={4}>
-                                    Resetar
-                                </Button>
-                                <Button variant="nextPage" onClick={() => setIsFeedbackOpen(true)}>
-                                    Enviar Feedback
-                                </Button>
-                            </Flex>
-                        </Flex>)}
                     </Flex>
+                    {checked && (<Flex direction={flexDirection} align="center" justify="center" gap={10}>
+                        <Flex direction={flexDirection} align="center" justify="center" gap={4}>
+                            <Text fontWeight="bold" color="white" fontSize={23}>{getEncouragementMessage()}</Text>
+                            <Text fontWeight="bold" color="white" fontSize={17}>Você acertou {correctAnswers} de {totalAnswers}</Text>
+                        </Flex>
+                        <Flex>
+                            <Button variant="nextPage" onClick={reset} mr={4}>
+                                Resetar
+                            </Button>
+                            <Button variant="nextPage" onClick={() => setIsFeedbackOpen(true)}>
+                                Enviar Feedback
+                            </Button>
+                        </Flex>
+                    </Flex>)}
                     
                     {!checked && (
                         <Flex gap={4} >
-                            <Button variant="nextPage" onClick={checkAnswers} w="850px" textAlign="left">Verificar</Button>
+                            <Button variant="nextPage" onClick={checkAnswers} w={widthBTN} textAlign="left">Verificar</Button>
                         </Flex>
                     )}
                 </Flex>

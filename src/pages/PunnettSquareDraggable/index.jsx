@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import PunnettSquareDraggable from "../../components/Punnett/PunerDraggable";
 import data from "../../data/PunnerSquareDraggable.json";
 import { useParams } from "react-router-dom";
@@ -8,6 +8,10 @@ export const PunnettSquareDraggablePage = () => {
 
     // Filtra os dados com base no id
     const filteredData = data.find(item => item.id === parseInt(id, 10));
+    const borderColor = useBreakpointValue({ base: "", md: '1px solid #ebebeb7e' });
+    const bdColor = useBreakpointValue({ base: "", md: '#0638443e' });
+    const padding = useBreakpointValue({ base: "", md: '10px' });
+    const backdropFilter = useBreakpointValue({ base: "", md: 'blur(23px)' });
 
     return (
         <Flex 
@@ -34,16 +38,15 @@ export const PunnettSquareDraggablePage = () => {
                 p={10}  
             >    
                 <Flex
-                    border='4px'
-                    borderColor='#ebebeb7e'                 
-                    width="90%"
+                    border={borderColor}                
+                    width="100%"
                     minH="400px"
-                    bg="#0638443e" 
-                    backdropFilter="blur(23px)" 
+                    bg={bdColor} 
+                    backdropFilter={backdropFilter} 
                     borderRadius="15px" 
                     justify='center' 
                     align='flex-start'   
-                    p={10}      
+                    p={padding}      
                 >
                     {filteredData ? (
                         <PunnettSquareDraggable data={filteredData} />
